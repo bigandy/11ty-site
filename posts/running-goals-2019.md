@@ -1,16 +1,15 @@
 ---
-title: Running Goals.
+title: Running Goals for 2019.
 description: In this post I finally write down the goals I want to achieve in running.
 date: 2019-03-17
 layout: layouts/post.njk
 ---
-
-## 2019 Running Goals
+This year I really would like to achieve some cool things in running. Here are some of them:
 - sub 20 minute 5k (first on a treadmill, then in real-life e.g. park run)
 - sub 40 minute 10k (this will have to be done on strava)
-- Complete a trail half-marathon.
-
-- Run Further than I know how to: (See how far I can run).
+- Complete a trail half-marathon. I have signed up
+- Enter some crazy running events!
+- Run Further than I know how to: (See how far I can run):
 	- 12 miles. (done! [12.11 miles - 11.03.2019](https://www.strava.com/activities/2206638011))
 	- 13 miles.
 	- 14 miles
@@ -27,4 +26,4 @@ layout: layouts/post.njk
 	- 25 miles
 	- 26 miles
 	- 26.2 miles+
-- Enter some crazy events!
+

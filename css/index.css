@@ -37,6 +37,17 @@ p,
   line-height: 1.45;
 }
 
+.tmpl-post__inner {
+	display: grid;
+
+	/* time on the left, content in the right. */
+	grid-template-columns: max-content auto;
+}
+
+.tmpl-post__content {
+	/* background-color: red; */
+}
+
 a[href] {
   color: var(--blue);
 }
