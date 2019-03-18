@@ -4,9 +4,11 @@ tags:
   - nav
 navtitle: Archive
 permalink: /posts/
+templateClass: tmpl-post
+date: 2018-01-02
 ---
 
 <h1>Archive</h1>
 
 {% set postslist = collections.posts | pastPosts %}
-{% include "postslist.njk" %}
+{% include "components/postslist.njk" %}
