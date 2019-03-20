@@ -41,7 +41,7 @@ p,
 	display: grid;
 
 	/* time on the left, content in the right. */
-	grid-template-columns: max-content auto;
+	grid-template-columns: 100px auto;
 }
 
 .tmpl-post__content {
