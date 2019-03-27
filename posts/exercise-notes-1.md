@@ -4,8 +4,7 @@ description: This is the first of many exercise notes where I focus on what exer
 date: 2019-03-20
 layout: layouts/post.njk
 tags:
-- exercisenotes
-
+    - exercise
 ---
 
 In the first of possibly more than one I review what I have been doing in terms of exercise in the last week. I will see how I feel about them. Could be changed to monthly.
