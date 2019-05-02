@@ -44,10 +44,6 @@ p,
 	grid-template-columns: 100px auto;
 }
 
-.tmpl-post__content {
-	/* background-color: red; */
-}
-
 a[href] {
   color: var(--blue);
 }
