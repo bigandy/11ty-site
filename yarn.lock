@@ -19,10 +19,10 @@
   dependencies:
     prismjs "^1.15.0"
 
-"@11ty/eleventy@^0.8.2":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-0.8.2.tgz#bc87576eb9b4773377e8367c4e66b82717a31f6c"
-  integrity sha512-CqSwSTdYxYXr/CzwX8tOOA4f+UUk5dSjkB43352pdFaJoJfJnxK0kQo54w2oCd1Tf5XyMzIZ2i+IT+Rhm1w5IA==
+"@11ty/eleventy@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-0.8.3.tgz#94c417f7b658e78ab5f9ce64b91ff32b4ae5de31"
+  integrity sha512-TehjvEuVQaocz3R/rYMJdujg8a2SL4Wt+ZUPKfXZS926Wd14JqLpWtR/dTNPOh3JzAovZDNrOpFmwN3/urX6gQ==
   dependencies:
     browser-sync "^2.26.3"
     chalk "^2.4.2"
@@ -2235,10 +2235,15 @@ luxon@^1.0.0:
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.11.4.tgz#c5d8c1f795cee26c162e95a4686632abcec50442"
   integrity sha512-zTQ1DCShOGHIdNpa56yjDpUCowKDsBqeFVuEG2XBcrAM2udxN0g3N5RTZzbw94OkDiBgECsuDgLNnQTo73yghw==
 
-luxon@^1.12.0, luxon@^1.12.1:
+luxon@^1.12.0:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.12.1.tgz#924bd61404f70b0cc5168918cb0ac108e52aacc4"
   integrity sha512-Zv/qJb2X1ESTrlniAViWx2aqGwi2cVpeoZFTbPdPiCu4EsadKsmb/QCH8HQjMUpDZKKJIHKHsJxV5Rwpq47HKQ==
+
+luxon@^1.16.1:
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.16.1.tgz#62568d483989fa108f5c87178a05bcc707f7698b"
+  integrity sha512-3aYYMFpIRdEQJl00ki+NDr2zx/Ulf7ZgohBUb6ifZQuVkP8/KCYJluISl0YNbvZXBdzCbVhpQnS4M6Svjpn7EA==
 
 map-cache@^0.2.0, map-cache@^0.2.2:
   version "0.2.2"
@@ -2252,15 +2257,26 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-it-anchor@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.0.2.tgz#cdd917a05b7bf92fb736a6dae3385c6d0d0fa552"
-  integrity sha512-AFM/woBI8QDJMS/9+MmsBMT5/AR+ImfOsunQZTZhzcTmna3rIzAzbOh5E0l6mlFM/i9666BpUtkqQ9bS7WApCg==
+markdown-it-anchor@^5.2.4:
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.2.4.tgz#d39306fe4c199705b4479d3036842cf34dcba24f"
+  integrity sha512-n8zCGjxA3T+Mx1pG8HEgbJbkB8JFUuRkeTZQuIM8iPY6oQ8sWOPRZJDFC9a/pNg2QkHEjjGkhBEl/RSyzaDZ3A==
 
 markdown-it@^8.4.2:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
   integrity sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
+  dependencies:
+    argparse "^1.0.7"
+    entities "~1.1.1"
+    linkify-it "^2.0.0"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.5"
+
+markdown-it@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-9.0.0.tgz#804e9285d2a0e2457216ed6a1d96e219483f2fb1"
+  integrity sha512-bUVTYGt/K/mYr3HlE+PBe6TOTyWghcpSZqOD9t+NFRlwJMhp9Kp6WQ8fJ26I6v1Xo71UmPYt1S4Hc9Lq8GZx2Q==
   dependencies:
     argparse "^1.0.7"
     entities "~1.1.1"
