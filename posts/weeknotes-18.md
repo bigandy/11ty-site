@@ -3,7 +3,7 @@ title: 'Weeknotes #18'
 date: 2019-03-26 11:09:37
 draft: false
 description: "Beautiful spring weather has finally arrived; Arthur mastered cycling; Emma is climbing the stairs and the cycling season has started."
-tags: ['life','weeknotes']
+tags: ['weeknotes']
 ---
 
 Beautiful spring weather has finally arrived, Arthur mastered cycling, Emma is climbing the stairs and the cycling season has started proper.

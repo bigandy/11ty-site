@@ -3,7 +3,7 @@ title: 'Weeknotes #17'
 date: 2019-03-19 08:58:47
 draft: false
 description: ""
-tags: ['life','weeknotes']
+tags: ['weeknotes']
 ---
 
 This was the last week for me:

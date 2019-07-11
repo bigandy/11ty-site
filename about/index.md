@@ -1,10 +1,9 @@
 ---
-layout: layouts/post.njk
+layout: layouts/page.njk
 title: About Me
 tags:
     - nav
 navtitle: About
-templateClass: tmpl-post
 date: 2018-01-03
 ---
 

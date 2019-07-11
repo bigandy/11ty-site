@@ -37,11 +37,12 @@ p,
   line-height: 1.45;
 }
 
-.tmpl-post__inner {
-	display: grid;
+.tmpl-post__content {
+	margin-top: 1rem;
+}
 
-	/* time on the left, content in the right. */
-	grid-template-columns: 100px auto;
+.tmpl-post__content ul {
+	padding-left: 1rem;
 }
 
 a[href] {

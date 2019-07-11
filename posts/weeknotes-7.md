@@ -3,7 +3,7 @@ title: 'Weeknotes #7'
 date: 2018-10-18 07:31:57
 draft: false
 description: "This week was mostly about learning and reading."
-tags: ['life','weeknotes']
+tags: ['weeknotes']
 ---
 
 This week has mostly been about:

@@ -8,20 +8,22 @@ templateClass: tmpl-post
 date: 2017-01-01
 ---
 
+Last updated: 7 July 2019.
+
 ## Life
 
-I'm living in Wallingford with my wife Marion and our two children Arthur, 4, and Emma, 11 months. I am considering if I want to train for a marathon after seeing London Marathon on Sunday.
+I'm living in Wallingford with my wife Marion and our two children Arthur, 4, and Emma, 13 months. I am learning to swim freestyle!
 
 ## Learning
 
-At the moment I am learning about Express and Node and Webhooks.
+At the moment I am learning about Gatsby and Eleventy and serverless.
 
 ## Fitness
 
-Running and going to the gym regularly. Watched the London Marathon on Sunday and inspired to think about entering a marathon. Not London or a city one, would love to run along the trails!
+Running and going to the gym, plus swimming two or three times a week as I am having freestyle swimming lessons. What's next? I'd like to be able to swim
 
 ## Family
 
-Emma has been ill all week and is on medication. She is not sleeping well and this makes us super tired. Arthur woke up last night and because we have just had new blinds fitted it was too dark and he was scared. Need to install a night light or get some glow in the dark stars.
+Marion is well although her company are restructuring so a bit of stress there. The kids are well, Arthur is going to start Primary School in September and has a couple of taster sessions for him to get used to the place. Arthur will go to France for 10 days with the grandparents (hoping they will take both kids next year!)
 
 Credit for now page: [first seen on Derek Sivers now page](https://sivers.org/now)

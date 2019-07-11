@@ -3,7 +3,7 @@ title: 'Weeknotes #14'
 date: 2019-02-13 10:24:42
 draft: false
 description: ""
-tags: ['life','weeknotes']
+tags: ['weeknotes']
 ---
 
 *   Arthur had his fourth birthday and with 3 other equally aged friends had a joint birthday party with pirate ship, push cars, pass the parcel amongst other fun things. My parents, brother and his g/f stayed over for the weekend and it was great to catch up.

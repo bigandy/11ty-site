@@ -1,9 +1,9 @@
 const { DateTime } = require('luxon');
 
+const todaysDate = Date.now().toString();
+
 // Get the past/present not future posts.
 const pastPosts = array => {
-	const todaysDate = Date.now().toString();
-
 	let retArray = array.filter(post => {
 		const postDate = DateTime.fromJSDate(post.data.date, {
 			zone: 'utc'

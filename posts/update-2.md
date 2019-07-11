@@ -3,7 +3,7 @@ title: 'update'
 date: 2010-11-04 13:41:55
 draft: false
 description: ""
-tags: ['life','web-design']
+tags: ['web-design']
 ---
 
 ### current

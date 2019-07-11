@@ -3,7 +3,7 @@ title: 'Weeknotes #15'
 date: 2019-03-01 11:54:30
 draft: false
 description: "Hot winter weather, a date day at the Spa and weekend at the parents were followed by an exciting week of Electron development."
-tags: ['life','weeknotes']
+tags: ['weeknotes']
 ---
 
 This week was:

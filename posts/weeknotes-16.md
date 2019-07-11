@@ -3,7 +3,7 @@ title: 'Weeknotes #16'
 date: 2019-03-11 09:20:40
 draft: false
 description: "Last week was holiday time with Marion, Emma and Arthur."
-tags: ['life','weeknotes']
+tags: ['weeknotes']
 ---
 
 *   Last week we were on holiday to Wiltshire and Centre Parcs.

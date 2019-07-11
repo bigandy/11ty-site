@@ -3,7 +3,7 @@ title: 'Weeknotes #3'
 date: 2018-02-04 15:57:36
 draft: false
 description: "We put the house on the market, I worked on a PWA, and I continued my juggling practice."
-tags: ['life','weeknotes']
+tags: ['weeknotes']
 ---
 
 This week we stepped up our house searching, put our house on the market. I spent most of the working week putting the finishing touches to a PWA.
