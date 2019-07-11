@@ -20,7 +20,7 @@ At the moment I am learning about Gatsby and Eleventy and serverless.
 
 ## Fitness
 
-Running and going to the gym, plus swimming two or three times a week as I am having freestyle swimming lessons. What's next? I'd like to be able to swim
+Running and going to the gym, plus swimming two or three times a week as I am having freestyle swimming lessons. What's next? I'd like to be able to swim 10 lengths without stopping. Future far fetched goal is to swim 2.4 miles without stopping (Ironman distance) but that'll take a few more sessions;)
 
 ## Family
 
