@@ -9,9 +9,10 @@ templateClass: tmpl-post
 
 <p>I'm a front-end developer and here's my eleventy blog. I am based in Oxfordshire and work at Venture Harbour.</p>
 
-<h2>Latest 3 Posts</h2>
+{% set postsNumber = 10 %}
+<h2>Latest {{ postsNumber }} Posts</h2>
 
-{% set postslist = collections.posts | firstNElements(-10) %}
+{% set postslist = collections.posts | firstNElements(-postsNumber) %}
 {% include "components/postslist.njk" %}
 
 <p>All posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
