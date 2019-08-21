@@ -1,0 +1,10 @@
+{
+	"editor.fontSize": 22,
+	"window.zoomLevel": 2,
+	"workbench.colorCustomizations": {
+		"titleBar.activeBackground": "#ffcc00",
+		"titleBar.activeForeground": "#000000",
+		"titleBar.inactiveBackground": "#ffcc0080",
+		"titleBar.inactiveForeground": "#ffffff"
+	}
+}
