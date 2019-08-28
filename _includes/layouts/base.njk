@@ -6,7 +6,6 @@
     <title>{{ renderData.title or title or metadata.title }} - Andrew JD Hudson</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    {# <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}"> #}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
   <body>
@@ -25,8 +24,6 @@
       {{ content | safe }}
     </main>
 
-    {% include "components/footer.njk" %}
-
-    <!-- Current page: {{ page.url | url }} -->
+    {% include "./footer.njk" %}
   </body>
 </html>
