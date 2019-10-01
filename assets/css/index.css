@@ -7,10 +7,23 @@
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
+
+
+  --link-unvisited: var(--blue);
+  --link-visited: var(--navy);
+  --color: var(--darkgray);
+  --background-color: var(--white);
 }
 
 * {
   box-sizing: border-box;
+}
+
+[data-user-color-scheme="dark"] {
+  --link-unvisited: white;
+  --link-visited: white;
+  --background-color: black;
+  --color: white;
 }
 
 html,
@@ -18,8 +31,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: var(--darkgray);
-  background-color: var(--white);
+  color: var(--color);
+  background-color: var(--background-color);
 }
 
 p:last-child {
@@ -46,11 +59,11 @@ p,
 }
 
 a[href] {
-  color: var(--blue);
+  color: var(--link-unvisited);
 }
 
 a[href]:visited {
-  color: var(--navy);
+  color: var(--link-visited);
 }
 
 footer,
@@ -188,7 +201,7 @@ pre {
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
-  color: var(--darkgray);
+  color: var(--color);
 }
 
 .postlist-date {
@@ -218,7 +231,7 @@ pre {
   padding: 2px 4px;
   margin-left: 0.8em; /* 8px /10 */
   background-color: var(--red);
-  color: var(--white);
+  color: var(--color);
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
 }
@@ -256,4 +269,37 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.button {
+  margin-left: 3rem;
+  margin-top: 0.6rem;
+  background-color: var(--color);
+  color: var(--background-color);
+  border-radius: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.button:focus:hover {
+  outline: 0;
+}
+
+.button:focus,
+.button:hover {
+  filter: brightness(1.2);
 }

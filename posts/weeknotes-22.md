@@ -1,5 +1,5 @@
 ---
-title: 'Weeknotes w/c 19th August 2019 (Weeknotes #22)'
+title: 'Weeknotes #22'
 date: 2019-08-21
 draft: false
 description: "Didcot Demolition, Graduation for Arthur, sleepless nights for Emma and all"

@@ -27,8 +27,9 @@ module.exports = function(config) {
 	// Collections
 	config.addCollection('tagList', require('./_11ty/getTagList'));
 
-	config.addPassthroughCopy('img');
-	config.addPassthroughCopy('css');
+	config.addPassthroughCopy('assets/img');
+	config.addPassthroughCopy('assets/css');
+	config.addPassthroughCopy('assets/js');
 
 	/* Markdown Plugins */
 	let markdownIt = require('markdown-it');
