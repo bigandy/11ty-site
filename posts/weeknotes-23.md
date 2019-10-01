@@ -1,6 +1,6 @@
 ---
 title: 'Weeknotes #23'
-date: 2019-08-21
+date: 2019-10-01
 draft: true
 description: "October Already!"
 tags: ['weeknotes']

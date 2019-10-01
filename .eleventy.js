@@ -20,8 +20,12 @@ module.exports = function(config) {
 	// https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
 	const now = new Date();
 	const livePosts = p => p.date <= now;
+	const removeDrafts = p => p.data.draft !== true;
 	config.addCollection('posts', collection => {
-		return collection.getFilteredByGlob('./posts/*.md').filter(livePosts);
+		return collection
+			.getFilteredByGlob('./posts/*.md')
+			.filter(livePosts)
+			.filter(removeDrafts);
 	});
 
 	// Collections
