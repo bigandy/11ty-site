@@ -303,3 +303,8 @@ a[href].direct-link:focus:visited,
 .button:hover {
   filter: brightness(1.2);
 }
+
+.button:focus:not(:hover) {
+  outline: 1px solid var(--color-action-text);
+  outline-offset: -4px;
+}

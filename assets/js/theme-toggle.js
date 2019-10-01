@@ -109,5 +109,3 @@ class ThemeToggle extends HTMLElement {
 if ('customElements' in window) {
 	customElements.define('theme-toggle', ThemeToggle);
 }
-
-export default ThemeToggle;
