@@ -211,6 +211,7 @@ pre {
 .postlist-link {
   display: inline-block;
   padding: 0.25em 0.1875em; /* 4px 3px /16 */
+  font-weight: 700;
 }
 
 .postlist-item-active .postlist-link {
@@ -219,7 +220,6 @@ pre {
 
 .tmpl-home .postlist-link {
   font-size: 1.1875em; /* 19px /16 */
-  font-weight: 700;
 }
 
 /* Tags */
