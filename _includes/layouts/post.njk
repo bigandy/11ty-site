@@ -13,8 +13,7 @@ templateClass: tmpl-post
 		{{ content | safe }}
 	</div>
 
-
-	{%- if tags.length > 0 -%}
+	{%- if tags.length > 1 -%}
 		<p class="post-taglist-label">Tagged: </p>
 		<ul class="post-taglist list--inline">
 			{% for tag in tags %}
