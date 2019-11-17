@@ -6,13 +6,30 @@ templateClass: tmpl-post
 
 <div class="tmpl-post__inner">
 	{% if date %}
-  		<time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+		<time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
 	{% endif %}
-
 
 	<div class="tmpl-post__content">
 		{{ content | safe }}
 	</div>
+
+
+	{%- if tags.length > 0 -%}
+		<p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			{% for tag in tags %}
+				{%- if tag != "posts" -%}
+					{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+					<li>
+						<a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+					</li>
+				{%- endif -%}
+			{% endfor %}
+		</ul>
+	{%- endif -%}
+
 </div>
 
-<p><a href="{{ '/' | url }}">← Home</a></p>
+<p>
+	<a href="{{ '/' | url }}">← Home</a>
+</p>

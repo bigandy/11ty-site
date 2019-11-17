@@ -4,6 +4,7 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlDateString = require('./_filters/htmlDateString.js');
 const readableDate = require('./_filters/readableDate.js');
 const firstNElements = require('./_filters/firstNElements.js');
+const tagList = require('./_11ty/getTagList');
 
 module.exports = function(config) {
 	config.addPlugin(pluginSyntaxHighlight);
@@ -11,16 +12,30 @@ module.exports = function(config) {
 
 	config.addLayoutAlias('post', 'layouts/post.njk');
 
-	// Filters
-	config.addFilter('readableDate', readableDate);
-	config.addFilter('htmlDateString', htmlDateString);
-	config.addFilter('firstNElements', firstNElements);
-
 	// Present and past posts only
 	// https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
 	const now = new Date();
 	const livePosts = p => p.date <= now;
+	const removeDraftsFromTagsList = drafts => {
+		return drafts.filter(draft => {
+			if (!draft.data) {
+				return;
+			}
+
+			if (draft.data.draft !== true) {
+				return draft;
+			}
+		});
+	};
+
 	const removeDrafts = p => p.data.draft !== true;
+
+	// Filters
+	config.addFilter('readableDate', readableDate);
+	config.addFilter('htmlDateString', htmlDateString);
+	config.addFilter('firstNElements', firstNElements);
+	config.addFilter('removeDraftsFromTagsList', removeDraftsFromTagsList);
+
 	config.addCollection('posts', collection => {
 		return collection
 			.getFilteredByGlob('./posts/*.md')
@@ -29,7 +44,7 @@ module.exports = function(config) {
 	});
 
 	// Collections
-	config.addCollection('tagList', require('./_11ty/getTagList'));
+	config.addCollection('tagList', tagList);
 
 	config.addPassthroughCopy('assets/img');
 	config.addPassthroughCopy('assets/css');
