@@ -8,22 +8,22 @@ templateClass: tmpl-post
 date: 2017-01-01
 ---
 
-Last updated: 7 July 2019.
+Last updated: 2 December 2019.
 
 ## Life
 
-I'm living in Wallingford with my wife Marion and our two children Arthur, 4, and Emma, 13 months. I am learning to swim freestyle!
+I'm living in Wallingford with my wife Marion and our two children Arthur, 4, and Emma, 18 months. I am getting ready for Christmas and running more than before.
 
 ## Learning
 
-At the moment I am learning about Gatsby and Eleventy and serverless.
+At the moment I am learning about the newer aspects of React, including styled-components, and Next.js.
 
 ## Fitness
 
-Running and going to the gym, plus swimming two or three times a week as I am having freestyle swimming lessons. What's next? I'd like to be able to swim 10 lengths without stopping. Future far fetched goal is to swim 2.4 miles without stopping (Ironman distance) but that'll take a few more sessions;)
+Running and going to the gym, plus running two or three times a week. Now I am just happy to be running when I can and entering 10k and 5k races when I feel like it. In 2020 I want to enter some longer races (i.e. anything more than 13 miles).
 
 ## Family
 
-Marion is well although her company are restructuring so a bit of stress there. The kids are well, Arthur is going to start Primary School in September and has a couple of taster sessions for him to get used to the place. Arthur will go to France for 10 days with the grandparents (hoping they will take both kids next year!)
+Marion and the kids are well. Arthur started Primary School in September and is having a great time. Everyone is looking forward to the Christmas break.
 
 Credit for now page: [first seen on Derek Sivers now page](https://sivers.org/now)

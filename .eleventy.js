@@ -48,6 +48,7 @@ module.exports = function(config) {
 
 	config.addPassthroughCopy('assets/img');
 	config.addPassthroughCopy('assets/css');
+	config.addPassthroughCopy('assets/fonts');
 	config.addPassthroughCopy('assets/js');
 
 	/* Markdown Plugins */
@@ -82,7 +83,7 @@ module.exports = function(config) {
 	});
 
 	return {
-		templateFormats: ['md', 'njk', 'html', 'liquid'],
+		templateFormats: ['md', 'njk', 'html', 'liquid', '11ty.js'],
 
 		// If your site lives in a different subdirectory, change this.
 		// Leading or trailing slashes are all normalized away, so don’t worry about it.
@@ -90,7 +91,7 @@ module.exports = function(config) {
 		// This is only used for URLs (it does not affect your file structure)
 		pathPrefix: '/',
 
-		markdownTemplateEngine: 'liquid',
+		markdownTemplateEngine: 'njk',
 		htmlTemplateEngine: 'njk',
 		dataTemplateEngine: 'njk',
 		passthroughFileCopy: true,

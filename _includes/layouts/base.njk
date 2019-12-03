@@ -3,13 +3,15 @@
     {% include "components/header.njk" %}
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
+      <div class="container">
+        {{ content | safe }}
+      </div>
     </main>
 
     {% include "components/footer.njk" %}
 
     <script>
-      {% include "../..//assets/js/theme-toggle.js" %}
+      {% include "../../assets/js/theme-toggle.js" %}
     </script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 ---
 title: 'Weeknotes #24'
 date: 2019-11-16
-draft: true
+draft: false
 description: So much rain!
 tags: ['weeknotes']
 ---
