@@ -6,7 +6,7 @@ templateClass: tmpl-post
 
 <div class="tmpl-post__inner">
 	{% if date %}
-		<time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+		<p>Posted on: <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time></p>
 	{% endif %}
 
 	<div class="tmpl-post__content">

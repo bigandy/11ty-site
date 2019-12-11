@@ -1,6 +1,6 @@
 ---
 title: 'Weeknotes #25'
-date: 2019-11-16
+date: 2019-12-02
 draft: false
 description: Running Races!
 tags: ['weeknotes']

@@ -4,7 +4,7 @@ title: CV
 tags:
     - nav
 navtitle: CV
-templateClass: tmpl-post
+templateClass: tmpl-post cv
 date: 2018-01-01
 ---
 
@@ -13,7 +13,7 @@ date: 2018-01-01
 <div class="tel">077 36063 671</div>
 
 <h2>Personal Statement</h2>
-<p>I am a front-end developer with 8 years product and agency experience looking take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
+<p>I am a front-end developer with 9 years product and agency experience looking take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
 <h2>Skills</h2>
 <ul>
 	<li>React, Webpack and ESNext JavaScript</li>
@@ -66,71 +66,53 @@ date: 2018-01-01
 	<li>Excellent communication with designers, project managers, and fellow dev team members</li>
 	<li>Knowledge Sharing through weekly masterclass sessions (I ran three : WordPress; CSS3; and Sass)</li>
 </ul>
+
 <h2>Relevant Experience</h2>
-<p>Here are a selection of the latest sites that I have made:</p>
-<ul>
+
+<p>Here are a selection of the sites, app and browser extensions that I have made:</p>
+
+<ul class="cv-portfolio-list">
+	<li>
+		<a href="https://www.sereneapp.com" rel="noopener" target="_blank">Serene App</a> – Productivity Application for MacOS users using Electron, React and nodejs.
+	</li>
+	<li>
+		<a href="https://chrome.google.com/webstore/detail/serene-extension/nbealbhmmmaiiiddmianmjoecmipnjij" rel="noopener" target="_blank">Serene Chrome Extension</a> and <a href="https://addons.mozilla.org/en-GB/firefox/addon/serene-extension/Firefox" rel="noopener" target="_blank">Firefox addon</a>  using React, socket.io, and WebExtensions API.
+	</li>
+	<li>
+		<a href="https://brokernotes.co" rel="noopener" target="_blank">brokernotes.co</a> – turn into Progressive Web App (PWA) and add new features with React, the WordPress Rest API and WordPress.
+	</li>
 	<li>
 		<a href="https://www.ventureharbour.com" rel="noopener" target="_blank">ventureharbour.com</a> – turn into Progressive Web App (PWA) and add new features.
 	</li>
 	<li>
-		<a href="http://newsroom.taylorandfrancisgroup.com/" rel="noopener" target="_blank">newsroom.taylorandfrancisgroup.com</a> – front-end development with Expression Engine backend
+		<a href="https://www.photocrowd.com" rel="noopener" target="_blank">photocrowd.com</a> – front-end development with React/Relay, Less, and webpack
 	</li>
 	<li>
-		<a href="https://www.photocrowd.com">photocrowd.com</a> – front-end development with React/Relay, Less, and webpack
+		<a href="https://electrichosting.net" rel="noopener" target="_blank">electrichosting.net</a> – WordPress site using ACF Pro so any part of the site was manageable by the client
 	</li>
 	<li>
-		<a href="https://electrichosting.net">electrichosting.net</a> – WordPress site using ACF Pro so any part of the site was manageable by the client
+		<a href="https://www.allistergodfrey.com/" rel="noopener" target="_blank">allistergodfrey.com</a> – custom responsive WordPress site with many interactive features, galleries, and css transitions
 	</li>
 	<li>
-		<a href="http://www.allistergodfrey.com/">allistergodfrey.com</a> – custom responsive WordPress site with many interactive features, galleries, and css transitions
+		<a href="https://www.ojwmanagement.com/" rel="noopener" target="_blank">ojwmanagement.com</a> – single page responsive WordPress site with flexbox, responsive images, and SVG
 	</li>
 	<li>
-		<a href="https://www.christmasforest.co.uk/" rel="noopener" target="_blank">christmasforest.co.uk</a> – custom Woocommerce using the WordPress WP-API, custom Google maps with postcode checking
-	</li>
-	<li>
-		<a href="http://www.ojwmanagement.com/" rel="noopener" target="_blank">ojwmanagement.com</a> – single page responsive WordPress site with flexbox, responsive images, and SVG
-	</li>
-	<li>
-		<a href="http://www.radiusequity.com/" rel="noopener" target="_blank">radiusequity.com</a> – responsive slick marketing WordPress site
-	</li>
-	<li>
-		<a href="http://blog.oup.com/" rel="noopener" target="_blank">blog.oup.com</a> – responsive WordPress blog for Oxford University Press
-	</li>
-	<li>
-		<a href="http://community.oxforddictionaries.com/" rel="noopener" target="_blank">community.oxforddictionaries.com</a> – responsive bbPress powered forum
+		<a href="https://blog.oup.com/" rel="noopener" target="_blank">blog.oup.com</a> – responsive WordPress blog for Oxford University Press
 	</li>
 	<li>
 		<a href="http://www.douglasorde.com/" rel="noopener" target="_blank">douglasorde.com</a> – high end furniture e-commerce with Woocommerce, SVG, and flexbox
 	</li>
 	<li>
-		<a href="http://about.mtcqs.co.uk/" rel="noopener" target="_blank">about.mtcqs.co.uk</a> – responsive WordPress site featuring interactive table, and SVG
+		<a href="https://www.isobelweddings.com/" rel="noopener" target="_blank">isobelweddings.com</a> – beautiful responsive Wedding Planner WordPress site
 	</li>
 	<li>
-		<a href="http://www.thesurfacewithin.co.uk/" rel="noopener" target="_blank">thesurfacewithin.co.uk</a> – highly visual responsive WordPress site
+		<a href="https://www.epf.cc/" rel="noopener" target="_blank">epf.cc</a> – responsive single page WordPress site
 	</li>
 	<li>
-		<a href="http://www.isobelweddings.com/" rel="noopener" target="_blank">isobelweddings.com</a> – beautiful responsive Wedding Planner WordPress site
+		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.com/bigandy</a> – my GitHub account
 	</li>
 	<li>
-		<a href="http://www.satyayoga.co.uk/" rel="noopener" target="_blank">satyayoga.co.uk</a> – WordPress blog and marketing site
-	</li>
-	<li>
-		<a href="http://www.epf.cc/" rel="noopener" target="_blank">epf.cc</a> – responsive single page WordPress site
-	</li>
-	<li>
-		<a href="http://accessfertility.co.uk/" rel="noopener" target="_blank">accessfertility.co.uk</a> – responsive WordPress site built with Foundation, shortcodes, metaboxes, and custom Google map
-	</li>
-	<li>
-		<a href="https://big-andy.co.uk" rel="noopener" target="_blank">big-andy.co.uk</a> – customised responsive WordPress, HTML5, CSS3, PostCSS, and deployed automatically with DeployHQ. Offline with ServiceWorker
-	</li>
-	<li>
-		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.combigandy</a> – my GitHub account
-	</li>
-	<li>
-		<a href="https://bigandy.github.io" rel="noopener" target="_blank">bigandy.github.io</a> – powered by Jekyll, available offline with ServiceWorker
-	</li>
-	<li>
-		<a href="https://bigandy.netlify.com" rel="noopener" target="_blank">bigandy.netlify.com</a> – powered by Gatsby, GraphQL and pulls in Strava, WordPress, and Contentful data.
+		<a href="https://andrewhudson.blog">andrewhudson.blog</a> – Eleventy site using data exported from my old WordPress site. PostCSS for the CSS.
 	</li>
 </ul>
 
