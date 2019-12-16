@@ -1,7 +1,7 @@
 ---
 title: '2019 Summary'
 date: 2019-12-13
-draft: false
+draft: true
 description: 2019 in Review
 tags: []
 ---

@@ -3,7 +3,7 @@
 	"version": "1.0.1",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
-		"dev": "npx eleventy --serve --quiet",
+		"dev": "npx eleventy --serve --quiet dev",
 		"build": "npx eleventy",
 		"watch": "npx eleventy --watch",
 		"debug": "DEBUG=* npx eleventy"
