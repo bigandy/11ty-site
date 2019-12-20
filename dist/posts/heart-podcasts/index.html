@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I heart Podcasts - Andrew JD Hudson</title>
+    <meta name="Description" content="So I&#39;ve finally started to listen to Serial, downloaded a Podcasting app, and fell in love with This American Life, restarting my affair with podcasts.">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Andrew&#39;s Blog">
+    <link rel="preload" href="/assets/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+	  <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+	<div class="container">
+		<h1 class="home"><a href="/">Andrew&#39;s Blog</a></h1>
+		<ul class="nav"><li class="nav-item">
+			<a href="/">Home</a>
+		</li><li class="nav-item">
+			<a href="/about/">About</a>
+		</li><li class="nav-item">
+			<a href="/posts/">Archive</a>
+		</li><li class="nav-item">
+			<a href="/cv/">CV</a>
+		</li><li class="nav-item">
+			<a href="/now/">Now</a>
+		</li><li class="nav-item">
+			<a href="/design/">Design</a>
+		</li></ul>
+		<theme-toggle></theme-toggle>
+
+	</div>
+</header>
+
+
+    <main class="tmpl-post">
+      <div class="container">
+        <h1>I heart Podcasts</h1>
+
+<div class="tmpl-post__inner">
+	
+		<p>Posted on: <time class="postlist-date" datetime="2014-12-03">03-12-2014</time></p>
+	
+
+	<div class="tmpl-post__content">
+		<p>So I've finally started to listen to <a href="http://serialpodcast.org/">Serial</a>, downloaded a <a href="https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts">Podcasting app</a>, and fell in love with <a href="http://www.thisamericanlife.org">This American Life</a>, restarting my affair with podcasts. I used to listed to a lot of tech podcasts about 4 years ago when Zeldman was at the start of his <a href="http://5by5.tv/bigwebshow/1">Big Web Show</a> series, and before that with <a href="http://twit.tv/show/this-week-in-tech">TWIT</a> but somewhere in between I lost interest. Perhaps it was listening about the day job while relaxing after doing the day job had lost its appeal. The quality of the output of Serial, This American Life and others is outstanding, and listening to interesting stories is an excellent way of relaxing, there's even a way of listening through my Sonos to Serial (isn't it amazing, technology adapting to different trends of use!) It is so simple to listen to, any room in the house, or at work or on my phone. What are the great podcasts to listen to? Which ones should I check out next (once I have caught up with Serial)? This post was inspired by the video in <a href="http://www.theverge.com/2014/11/28/7302227/the-future-is-podcasts">this verge article</a></p>
+
+	</div><p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			
+					<li>
+						<a href="/tags/technology/" class="tag">technology</a>
+					</li>
+		</ul></div>
+
+<p>
+	<a href="/">← Home</a>
+</p>
+
+      </div>
+    </main>
+
+    <footer>
+	<div class="container">
+		<p>&copy; 2019 Andrew JD hudson</p>
+	</div>
+</footer>
+
+
+    <script>
+      // For syntax highlighting only
+const html = String.raw;
+
+class ThemeToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		this.STORAGE_KEY = 'user-color-scheme';
+		this.COLOR_MODE_KEY = '--color-mode';
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	getCSSCustomProp(propKey) {
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
+
+		// Tidy up the string if there’s something to work with
+		if (response.length) {
+			response = response.replace(/\'|"/g, '').trim();
+		}
+
+		// Return the string response by default
+		return response;
+	}
+
+	applySetting(passedSetting) {
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
+
+		if (currentSetting) {
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
+			this.setButtonLabelAndStatus(currentSetting);
+		} else {
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
+		}
+	}
+
+	toggleSetting() {
+		let currentSetting = localStorage.getItem(this.STORAGE_KEY);
+
+		switch (currentSetting) {
+			case null:
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
+				break;
+			case 'light':
+				currentSetting = 'dark';
+				break;
+			case 'dark':
+				currentSetting = 'light';
+				break;
+		}
+
+		localStorage.setItem(this.STORAGE_KEY, currentSetting);
+
+		return currentSetting;
+	}
+
+	setButtonLabelAndStatus(currentSetting) {
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
+		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
+	}
+
+	render() {
+		this.innerHTML = html`
+			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
+					Dark theme
+				</button>
+			</div>
+		`;
+
+		this.afterRender();
+	}
+
+	afterRender() {
+		this.modeToggleButton = document.querySelector('.js-mode-toggle');
+		this.modeStatusElement = document.querySelector('.js-mode-status');
+
+		this.modeToggleButton.addEventListener('click', evt => {
+			evt.preventDefault();
+
+			this.applySetting(this.toggleSetting());
+		});
+
+		this.applySetting();
+	}
+}
+
+if ('customElements' in window) {
+	customElements.define('theme-toggle', ThemeToggle);
+}
+
+    </script>
+  </body>
+</html>

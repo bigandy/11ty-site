@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 - one hundred - Andrew JD Hudson</title>
+    <meta name="Description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Andrew&#39;s Blog">
+    <link rel="preload" href="/assets/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+	  <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+	<div class="container">
+		<h1 class="home"><a href="/">Andrew&#39;s Blog</a></h1>
+		<ul class="nav"><li class="nav-item">
+			<a href="/">Home</a>
+		</li><li class="nav-item">
+			<a href="/about/">About</a>
+		</li><li class="nav-item">
+			<a href="/posts/">Archive</a>
+		</li><li class="nav-item">
+			<a href="/cv/">CV</a>
+		</li><li class="nav-item">
+			<a href="/now/">Now</a>
+		</li><li class="nav-item">
+			<a href="/design/">Design</a>
+		</li></ul>
+		<theme-toggle></theme-toggle>
+
+	</div>
+</header>
+
+
+    <main class="tmpl-post">
+      <div class="container">
+        <h1>100 - one hundred</h1>
+
+<div class="tmpl-post__inner">
+	
+		<p>Posted on: <time class="postlist-date" datetime="2008-07-25">25-07-2008</time></p>
+	
+
+	<div class="tmpl-post__content">
+		<p>yes so another beautiful day in paradise. this day spent reading in the garden, finishing &quot;Shalimar the Clown&quot; by Salmand Rushdie, last Sunday's newspaper about films music and books. Yes just did 100 situps as my posture has got to a stage where I need to make it better. Been juggling in the garden, left shoulder really hurts still. Yesterday: cycled on hottest day of year to my parents, 11 miles in 45mins. Along roads and quite often subject to side and face-on winds. Great. Have now found my cycling shorts so ready for next week's twice daily commute to-from work:) Hot hot hot. Yes so the reason for yesterday's visit was to see my grandma, and my parents too. M met me there and we helped cook dindins: lasagne and then rhubarb crumble (i made the crumble: 9oz (1/4 white flour, 1/4 wholemeal flour, 1/2 oats), 4.5oz butter, 4.5oz sugar) for topping). Makes huge difference not taking the car every/anywhere and I am liking it very much.</p>
+
+	</div><p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			
+					<li>
+						<a href="/tags/life/" class="tag">life</a>
+					</li>
+		</ul></div>
+
+<p>
+	<a href="/">← Home</a>
+</p>
+
+      </div>
+    </main>
+
+    <footer>
+	<div class="container">
+		<p>&copy; 2019 Andrew JD hudson</p>
+	</div>
+</footer>
+
+
+    <script>
+      // For syntax highlighting only
+const html = String.raw;
+
+class ThemeToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		this.STORAGE_KEY = 'user-color-scheme';
+		this.COLOR_MODE_KEY = '--color-mode';
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	getCSSCustomProp(propKey) {
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
+
+		// Tidy up the string if there’s something to work with
+		if (response.length) {
+			response = response.replace(/\'|"/g, '').trim();
+		}
+
+		// Return the string response by default
+		return response;
+	}
+
+	applySetting(passedSetting) {
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
+
+		if (currentSetting) {
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
+			this.setButtonLabelAndStatus(currentSetting);
+		} else {
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
+		}
+	}
+
+	toggleSetting() {
+		let currentSetting = localStorage.getItem(this.STORAGE_KEY);
+
+		switch (currentSetting) {
+			case null:
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
+				break;
+			case 'light':
+				currentSetting = 'dark';
+				break;
+			case 'dark':
+				currentSetting = 'light';
+				break;
+		}
+
+		localStorage.setItem(this.STORAGE_KEY, currentSetting);
+
+		return currentSetting;
+	}
+
+	setButtonLabelAndStatus(currentSetting) {
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
+		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
+	}
+
+	render() {
+		this.innerHTML = html`
+			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
+					Dark theme
+				</button>
+			</div>
+		`;
+
+		this.afterRender();
+	}
+
+	afterRender() {
+		this.modeToggleButton = document.querySelector('.js-mode-toggle');
+		this.modeStatusElement = document.querySelector('.js-mode-status');
+
+		this.modeToggleButton.addEventListener('click', evt => {
+			evt.preventDefault();
+
+			this.applySetting(this.toggleSetting());
+		});
+
+		this.applySetting();
+	}
+}
+
+if ('customElements' in window) {
+	customElements.define('theme-toggle', ThemeToggle);
+}
+
+    </script>
+  </body>
+</html>

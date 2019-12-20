@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weeknotes #22 - Andrew JD Hudson</title>
+    <meta name="Description" content="Didcot Demolition, Graduation for Arthur, sleepless nights for Emma and all">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Andrew&#39;s Blog">
+    <link rel="preload" href="/assets/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+	  <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+	<div class="container">
+		<h1 class="home"><a href="/">Andrew&#39;s Blog</a></h1>
+		<ul class="nav"><li class="nav-item">
+			<a href="/">Home</a>
+		</li><li class="nav-item">
+			<a href="/about/">About</a>
+		</li><li class="nav-item">
+			<a href="/posts/">Archive</a>
+		</li><li class="nav-item">
+			<a href="/cv/">CV</a>
+		</li><li class="nav-item">
+			<a href="/now/">Now</a>
+		</li><li class="nav-item">
+			<a href="/design/">Design</a>
+		</li></ul>
+		<theme-toggle></theme-toggle>
+
+	</div>
+</header>
+
+
+    <main class="tmpl-post">
+      <div class="container">
+        <h1>Weeknotes #22</h1>
+
+<div class="tmpl-post__inner">
+	
+		<p>Posted on: <time class="postlist-date" datetime="2019-08-21">21-08-2019</time></p>
+	
+
+	<div class="tmpl-post__content">
+		<h2 id="family">Family <a class="direct-link" href="#family">#</a></h2>
+<p>This week has been a sleepless one with Emma waking up multiple times a night making us all very tired. On the plus side she can walk confidently and climb the stairs solo, so maybe not a plus side because we have to keep an eye on her continuously.</p>
+<p>On Saturday it was Arthur's graduation from nursery, which means there are only a few more weeks of dropping him there before he goes to Primary School. He now has all the uniform and this afternoon his school shoes arrived in the post. Changing times!</p>
+<p>On Sunday morning we were up early in the morning to see the demolition of the final 3 cooling towers of Didcot Power Station. Over in a flash, waiting 5 seconds for the blast noise to reach us on the hill above Wallingford, I almost missed it as Arthur asked me a question.</p>
+<h2 id="work">Work <a class="direct-link" href="#work">#</a></h2>
+<p>I have been working like crazy on implementing a React version of a part of a WordPress site. Mangling with Webpack, our WordPress API endpoint with futuristic javascript. Great fun!</p>
+<p>This Friday we are going to hack together a Nerf Gun powered by image recognition. Really looking forward to that!</p>
+<h2 id="reading">Reading <a class="direct-link" href="#reading">#</a></h2>
+<p>I am reading Stephen King's &quot;On Writing&quot; and am inspired to get better at writing, write more frequently.</p>
+<h2 id="sport">Sport <a class="direct-link" href="#sport">#</a></h2>
+<p>I've been running more often - 3 times a week - which is great but it has meant that I've not been swimming in a number of weeks (it was in the sea in Brighton!).</p>
+<p>The last couple of days I have one hell of a nasty sore throat so I will have to take my vitamins and get plenty of rest.</p>
+<p>I started a Strava club for my work colleagues and I, hopefully it will encourage more activity and sharing on Strava!</p>
+
+	</div><p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			
+					<li>
+						<a href="/tags/weeknotes/" class="tag">weeknotes</a>
+					</li>
+		</ul></div>
+
+<p>
+	<a href="/">← Home</a>
+</p>
+
+      </div>
+    </main>
+
+    <footer>
+	<div class="container">
+		<p>&copy; 2019 Andrew JD hudson</p>
+	</div>
+</footer>
+
+
+    <script>
+      // For syntax highlighting only
+const html = String.raw;
+
+class ThemeToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		this.STORAGE_KEY = 'user-color-scheme';
+		this.COLOR_MODE_KEY = '--color-mode';
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	getCSSCustomProp(propKey) {
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
+
+		// Tidy up the string if there’s something to work with
+		if (response.length) {
+			response = response.replace(/\'|"/g, '').trim();
+		}
+
+		// Return the string response by default
+		return response;
+	}
+
+	applySetting(passedSetting) {
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
+
+		if (currentSetting) {
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
+			this.setButtonLabelAndStatus(currentSetting);
+		} else {
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
+		}
+	}
+
+	toggleSetting() {
+		let currentSetting = localStorage.getItem(this.STORAGE_KEY);
+
+		switch (currentSetting) {
+			case null:
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
+				break;
+			case 'light':
+				currentSetting = 'dark';
+				break;
+			case 'dark':
+				currentSetting = 'light';
+				break;
+		}
+
+		localStorage.setItem(this.STORAGE_KEY, currentSetting);
+
+		return currentSetting;
+	}
+
+	setButtonLabelAndStatus(currentSetting) {
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
+		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
+	}
+
+	render() {
+		this.innerHTML = html`
+			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
+					Dark theme
+				</button>
+			</div>
+		`;
+
+		this.afterRender();
+	}
+
+	afterRender() {
+		this.modeToggleButton = document.querySelector('.js-mode-toggle');
+		this.modeStatusElement = document.querySelector('.js-mode-status');
+
+		this.modeToggleButton.addEventListener('click', evt => {
+			evt.preventDefault();
+
+			this.applySetting(this.toggleSetting());
+		});
+
+		this.applySetting();
+	}
+}
+
+if ('customElements' in window) {
+	customElements.define('theme-toggle', ThemeToggle);
+}
+
+    </script>
+  </body>
+</html>

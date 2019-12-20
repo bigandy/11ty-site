@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Runner - Andrew JD Hudson</title>
+    <meta name="Description" content="Some people might say that there is never enough time in the day to go running. But there is always time. In the morning before everyone is up!">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Andrew&#39;s Blog">
+    <link rel="preload" href="/assets/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+	  <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+	<div class="container">
+		<h1 class="home"><a href="/">Andrew&#39;s Blog</a></h1>
+		<ul class="nav"><li class="nav-item">
+			<a href="/">Home</a>
+		</li><li class="nav-item">
+			<a href="/about/">About</a>
+		</li><li class="nav-item">
+			<a href="/posts/">Archive</a>
+		</li><li class="nav-item">
+			<a href="/cv/">CV</a>
+		</li><li class="nav-item">
+			<a href="/now/">Now</a>
+		</li><li class="nav-item">
+			<a href="/design/">Design</a>
+		</li></ul>
+		<theme-toggle></theme-toggle>
+
+	</div>
+</header>
+
+
+    <main class="tmpl-post">
+      <div class="container">
+        <h1>Morning Runner</h1>
+
+<div class="tmpl-post__inner">
+	
+		<p>Posted on: <time class="postlist-date" datetime="2016-07-08">08-07-2016</time></p>
+	
+
+	<div class="tmpl-post__content">
+		<p>Some people might say that there is never enough time in the day to go running, especially with a toddler and a full-time job. But there is always time for something you want to make time for.</p>
+<h3 id="excuses">Excuses <a class="direct-link" href="#excuses">#</a></h3>
+<p>The year and a half since Arthur was born there was never time for running. After commuting back from work, then playing with Arthur in the evening, giving him his bath and putting him to bed. After this dinner, relax, bed. Where is there time for running?</p>
+<h3 id="solution">Solution <a class="direct-link" href="#solution">#</a></h3>
+<p>There is a solution! Go running before Arthur wakes up, before work when it is quiet and the grass smells of dew. I've been doing this for the last two weeks. It is incredible! Once I get back I've already completed something challenging so that day is always going to be a successful one.</p>
+<h3 id="outcome">Outcome <a class="direct-link" href="#outcome">#</a></h3>
+<p>I set up my running kit the night before, everything is ready so that I just have a glass of water and put my kit on and go. Anything that prevents you from running is a mental barrier so having organised the kit the decision has been made. Go running!</p>
+
+	</div><p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			
+					<li>
+						<a href="/tags/Running/" class="tag">Running</a>
+					</li>
+		</ul></div>
+
+<p>
+	<a href="/">← Home</a>
+</p>
+
+      </div>
+    </main>
+
+    <footer>
+	<div class="container">
+		<p>&copy; 2019 Andrew JD hudson</p>
+	</div>
+</footer>
+
+
+    <script>
+      // For syntax highlighting only
+const html = String.raw;
+
+class ThemeToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		this.STORAGE_KEY = 'user-color-scheme';
+		this.COLOR_MODE_KEY = '--color-mode';
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	getCSSCustomProp(propKey) {
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
+
+		// Tidy up the string if there’s something to work with
+		if (response.length) {
+			response = response.replace(/\'|"/g, '').trim();
+		}
+
+		// Return the string response by default
+		return response;
+	}
+
+	applySetting(passedSetting) {
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
+
+		if (currentSetting) {
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
+			this.setButtonLabelAndStatus(currentSetting);
+		} else {
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
+		}
+	}
+
+	toggleSetting() {
+		let currentSetting = localStorage.getItem(this.STORAGE_KEY);
+
+		switch (currentSetting) {
+			case null:
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
+				break;
+			case 'light':
+				currentSetting = 'dark';
+				break;
+			case 'dark':
+				currentSetting = 'light';
+				break;
+		}
+
+		localStorage.setItem(this.STORAGE_KEY, currentSetting);
+
+		return currentSetting;
+	}
+
+	setButtonLabelAndStatus(currentSetting) {
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
+		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
+	}
+
+	render() {
+		this.innerHTML = html`
+			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
+					Dark theme
+				</button>
+			</div>
+		`;
+
+		this.afterRender();
+	}
+
+	afterRender() {
+		this.modeToggleButton = document.querySelector('.js-mode-toggle');
+		this.modeStatusElement = document.querySelector('.js-mode-status');
+
+		this.modeToggleButton.addEventListener('click', evt => {
+			evt.preventDefault();
+
+			this.applySetting(this.toggleSetting());
+		});
+
+		this.applySetting();
+	}
+}
+
+if ('customElements' in window) {
+	customElements.define('theme-toggle', ThemeToggle);
+}
+
+    </script>
+  </body>
+</html>

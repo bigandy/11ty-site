@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>huzzah c&#39;est presque le weekend - Andrew JD Hudson</title>
+    <meta name="Description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Andrew&#39;s Blog">
+    <link rel="preload" href="/assets/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+	  <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+	<div class="container">
+		<h1 class="home"><a href="/">Andrew&#39;s Blog</a></h1>
+		<ul class="nav"><li class="nav-item">
+			<a href="/">Home</a>
+		</li><li class="nav-item">
+			<a href="/about/">About</a>
+		</li><li class="nav-item">
+			<a href="/posts/">Archive</a>
+		</li><li class="nav-item">
+			<a href="/cv/">CV</a>
+		</li><li class="nav-item">
+			<a href="/now/">Now</a>
+		</li><li class="nav-item">
+			<a href="/design/">Design</a>
+		</li></ul>
+		<theme-toggle></theme-toggle>
+
+	</div>
+</header>
+
+
+    <main class="tmpl-post">
+      <div class="container">
+        <h1>huzzah c&#39;est presque le weekend</h1>
+
+<div class="tmpl-post__inner">
+	
+		<p>Posted on: <time class="postlist-date" datetime="2008-09-26">26-09-2008</time></p>
+	
+
+	<div class="tmpl-post__content">
+		<p>good morning folks, it's almost the weekend almost the end of september and the sun's a shining and the blue skies are a blazing. Have started my first ever French course after leaving school, 10 years since dossing through GCSE French (now wished I'd paid more attention to Monsieur Leam and Madame Emmery back in those dark distant school days). So far two lessons done and learning regular and now irregular verbs. It's coming back and although I know quite a lot of words there's huge vast space in my vocabulary that remains vacant. So here's to all those learning French! Come on Bro, you know you want to keep up with me, come on everyone else. Only been running once in September. Studying at lunchtime (french) and studying when I get home (IT) which leaves a small amount of time to talk to Marion, relax and have something to eat. What about at the weekends? We'll see. I am really missing running. Been listening to a lot of new music lately. Currently &quot;Underground Railroad&quot;. But &quot;Mercury Rev&quot;, &quot;Kings of Leon&quot;, &quot;Metallica&quot; &quot;Gaslight Experience&quot;, some french music: &quot;Tyro&quot;, &quot;les cowboys fringantes&quot;, and recently &quot;doba caracol&quot; which are very good imho.</p>
+
+	</div><p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			
+					<li>
+						<a href="/tags/life/" class="tag">life</a>
+					</li>
+		</ul></div>
+
+<p>
+	<a href="/">← Home</a>
+</p>
+
+      </div>
+    </main>
+
+    <footer>
+	<div class="container">
+		<p>&copy; 2019 Andrew JD hudson</p>
+	</div>
+</footer>
+
+
+    <script>
+      // For syntax highlighting only
+const html = String.raw;
+
+class ThemeToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		this.STORAGE_KEY = 'user-color-scheme';
+		this.COLOR_MODE_KEY = '--color-mode';
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	getCSSCustomProp(propKey) {
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
+
+		// Tidy up the string if there’s something to work with
+		if (response.length) {
+			response = response.replace(/\'|"/g, '').trim();
+		}
+
+		// Return the string response by default
+		return response;
+	}
+
+	applySetting(passedSetting) {
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
+
+		if (currentSetting) {
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
+			this.setButtonLabelAndStatus(currentSetting);
+		} else {
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
+		}
+	}
+
+	toggleSetting() {
+		let currentSetting = localStorage.getItem(this.STORAGE_KEY);
+
+		switch (currentSetting) {
+			case null:
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
+				break;
+			case 'light':
+				currentSetting = 'dark';
+				break;
+			case 'dark':
+				currentSetting = 'light';
+				break;
+		}
+
+		localStorage.setItem(this.STORAGE_KEY, currentSetting);
+
+		return currentSetting;
+	}
+
+	setButtonLabelAndStatus(currentSetting) {
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
+		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
+	}
+
+	render() {
+		this.innerHTML = html`
+			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
+					Dark theme
+				</button>
+			</div>
+		`;
+
+		this.afterRender();
+	}
+
+	afterRender() {
+		this.modeToggleButton = document.querySelector('.js-mode-toggle');
+		this.modeStatusElement = document.querySelector('.js-mode-status');
+
+		this.modeToggleButton.addEventListener('click', evt => {
+			evt.preventDefault();
+
+			this.applySetting(this.toggleSetting());
+		});
+
+		this.applySetting();
+	}
+}
+
+if ('customElements' in window) {
+	customElements.define('theme-toggle', ThemeToggle);
+}
+
+    </script>
+  </body>
+</html>

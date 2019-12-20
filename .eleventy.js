@@ -50,7 +50,7 @@ if (process.argv)
 
 		config.addCollection('posts', collection => {
 			return collection
-				.getFilteredByGlob('./posts/*.md')
+				.getFilteredByGlob('./src/site/posts/*.md')
 				.filter(livePosts)
 				.filter(removeDrafts);
 		});
@@ -58,10 +58,10 @@ if (process.argv)
 		// Collections
 		config.addCollection('tagList', tagList);
 
-		config.addPassthroughCopy('src/assets/img');
-		config.addPassthroughCopy('src/assets/css');
-		config.addPassthroughCopy('src/assets/fonts');
-		config.addPassthroughCopy('src/assets/js');
+		config.addPassthroughCopy('src/site/assets/img');
+		config.addPassthroughCopy('src/site/assets/css');
+		config.addPassthroughCopy('src/site/assets/fonts');
+		config.addPassthroughCopy('src/site/assets/js');
 
 		/* Markdown Plugins */
 		let markdownIt = require('markdown-it');
@@ -86,7 +86,7 @@ if (process.argv)
 		config.setBrowserSyncConfig({
 			callbacks: {
 				ready: function(err, browserSync) {
-					const content_404 = fs.readFileSync('src/_site/404.html');
+					const content_404 = fs.readFileSync('src/site/404.md');
 
 					browserSync.addMiddleware('*', (req, res) => {
 						// Provides the 404 content without redirect.
@@ -111,10 +111,9 @@ if (process.argv)
 			dataTemplateEngine: 'njk',
 			passthroughFileCopy: true,
 			dir: {
-				input: 'src',
-				includes: '_includes',
+				input: 'src/site',
 				data: '_data',
-				output: '_site'
+				output: 'dist'
 			}
 		};
 	};

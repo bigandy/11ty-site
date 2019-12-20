@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lent Begins! - Andrew JD Hudson</title>
+    <meta name="Description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Andrew&#39;s Blog">
+    <link rel="preload" href="/assets/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+	  <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+	<div class="container">
+		<h1 class="home"><a href="/">Andrew&#39;s Blog</a></h1>
+		<ul class="nav"><li class="nav-item">
+			<a href="/">Home</a>
+		</li><li class="nav-item">
+			<a href="/about/">About</a>
+		</li><li class="nav-item">
+			<a href="/posts/">Archive</a>
+		</li><li class="nav-item">
+			<a href="/cv/">CV</a>
+		</li><li class="nav-item">
+			<a href="/now/">Now</a>
+		</li><li class="nav-item">
+			<a href="/design/">Design</a>
+		</li></ul>
+		<theme-toggle></theme-toggle>
+
+	</div>
+</header>
+
+
+    <main class="tmpl-post">
+      <div class="container">
+        <h1>Lent Begins!</h1>
+
+<div class="tmpl-post__inner">
+	
+		<p>Posted on: <time class="postlist-date" datetime="2009-02-25">25-02-2009</time></p>
+	
+
+	<div class="tmpl-post__content">
+		<p><strong>Now something totally different</strong>: Lent. Not a believer in any god or religion but full of belief that too much of one thing doesn't do you any good, I am giving up chocolate and crisps for lent. For the last I don't know how long Marion and I have been eating too much sweet food. We watch a film and have some chocolate, we feel like baking and make some chocolate chip chocolate muffins or brownies or something sweet, we go to visit a town and what's the number one priority: find some cafe with a good selection of cakes hot chocolate and sweets. Not good if you do it all the time! So we're giving up chocolate from today until Easter Sunday (40 days away). Marion is giving up chocolate, having alcohol except on special occasions. I am giving up chocolate and crisps, and having sweet deserts except on special occasions. Check back for more updates! <strong>Kidderminster</strong>. Tonight I take the train to Kidderminster for the next part of my Masters CIW training course. I am now on CIW Foundations (part 3 out of 5) which deals with the basics of web-design, re-covers networking, and introduces project management. Hopefully I will arrive in time to see some football in a pub. A couple of days away from work, it seems as though all my holiday has been taken away by going on these IT courses in Kidderminster, will be good and nice to relax on the train and get some reading done. <strong>Football</strong>. It's Champions League week this week (quarter finals first leg) and last night ManU drew with Inter in Milan. It was a great game but ManU should have taken a few goals back to Manchester for the return leg in two weeks. The first half was a lot better in terms of possession and chances for ManU (how did they not score?) but then in the second-half Inter got back into the game and had a few chances themselves. ManU, however, should have scorred with the final kick of the game from a free-kick from Ronaldo which (luckily for the keeper who hadn't seen the flight of the ball) was at the keeper. I watched it round my friend Cesar's house, cheers Cesar for the beer and pizza! Tonight it's: Chelsea v Juventus Villarreal v Panathinaikos Sporting Lisbon v Bayern Munich Real Madrid v Liverpool <strong>Running</strong>. I've not been running in a couple of weeks. Lazy me. But I will go running soon I promise. It's a viscious cycle when you stop running. You want to go and you feel that you need to go but you feel that the days since you went running last are counting against you in some mad crazy way. Plus it's sometimes easier just to stay inside and not go running. Now it's getting lighter and lighter in the evenings the excuse or reason that I was too tired at work to go running is becoming non-valid so I can go running along the river in my evenings after work. I much prefer going running in clean air along a river, than along a canal and along roads (as I do at work). We'll see how I get on in the next few weeks!</p>
+
+	</div><p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			
+					<li>
+						<a href="/tags/life/" class="tag">life</a>
+					</li>
+		</ul></div>
+
+<p>
+	<a href="/">← Home</a>
+</p>
+
+      </div>
+    </main>
+
+    <footer>
+	<div class="container">
+		<p>&copy; 2019 Andrew JD hudson</p>
+	</div>
+</footer>
+
+
+    <script>
+      // For syntax highlighting only
+const html = String.raw;
+
+class ThemeToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		this.STORAGE_KEY = 'user-color-scheme';
+		this.COLOR_MODE_KEY = '--color-mode';
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	getCSSCustomProp(propKey) {
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
+
+		// Tidy up the string if there’s something to work with
+		if (response.length) {
+			response = response.replace(/\'|"/g, '').trim();
+		}
+
+		// Return the string response by default
+		return response;
+	}
+
+	applySetting(passedSetting) {
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
+
+		if (currentSetting) {
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
+			this.setButtonLabelAndStatus(currentSetting);
+		} else {
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
+		}
+	}
+
+	toggleSetting() {
+		let currentSetting = localStorage.getItem(this.STORAGE_KEY);
+
+		switch (currentSetting) {
+			case null:
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
+				break;
+			case 'light':
+				currentSetting = 'dark';
+				break;
+			case 'dark':
+				currentSetting = 'light';
+				break;
+		}
+
+		localStorage.setItem(this.STORAGE_KEY, currentSetting);
+
+		return currentSetting;
+	}
+
+	setButtonLabelAndStatus(currentSetting) {
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
+		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
+	}
+
+	render() {
+		this.innerHTML = html`
+			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
+					Dark theme
+				</button>
+			</div>
+		`;
+
+		this.afterRender();
+	}
+
+	afterRender() {
+		this.modeToggleButton = document.querySelector('.js-mode-toggle');
+		this.modeStatusElement = document.querySelector('.js-mode-status');
+
+		this.modeToggleButton.addEventListener('click', evt => {
+			evt.preventDefault();
+
+			this.applySetting(this.toggleSetting());
+		});
+
+		this.applySetting();
+	}
+}
+
+if ('customElements' in window) {
+	customElements.define('theme-toggle', ThemeToggle);
+}
+
+    </script>
+  </body>
+</html>

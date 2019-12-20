@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed!!! - Andrew JD Hudson</title>
+    <meta name="Description" content="I am writing about my experiences as a naval navel-gazer.">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Andrew&#39;s Blog">
+    <link rel="preload" href="/assets/fonts/Inter-roman.var.woff2" as="font" type="font/woff2" crossorigin>
+	  <link rel="stylesheet" href="/css/styles.css">
+  </head>
+
+  <body>
+    <header>
+	<div class="container">
+		<h1 class="home"><a href="/">Andrew&#39;s Blog</a></h1>
+		<ul class="nav"><li class="nav-item">
+			<a href="/">Home</a>
+		</li><li class="nav-item">
+			<a href="/about/">About</a>
+		</li><li class="nav-item">
+			<a href="/posts/">Archive</a>
+		</li><li class="nav-item">
+			<a href="/cv/">CV</a>
+		</li><li class="nav-item">
+			<a href="/now/">Now</a>
+		</li><li class="nav-item">
+			<a href="/design/">Design</a>
+		</li></ul>
+		<theme-toggle></theme-toggle>
+
+	</div>
+</header>
+
+
+    <main class="tmpl-post">
+      <div class="container">
+        <h1>Speed!!!</h1>
+
+<div class="tmpl-post__inner">
+	
+		<p>Posted on: <time class="postlist-date" datetime="2011-05-26">26-05-2011</time></p>
+	
+
+	<div class="tmpl-post__content">
+		<p>Lately I seem to be totally obsessed with speed and tonight I have made two fantastic advances in my quest for online speed:</p>
+<ol>
+<li>I installed a wireless N network card on my computer which finally grants me access to super-fast speeds of 30 meg broadband. The old wireless usb stick could only handle wireless g and maxed out at 5-10 meg. I disabled the option on the router to broadcast in wireless n and wireless g/b because I was only getting the same as if I had wireless g i.e. slow slow slow.</li>
+<li>I have finished <a href="http://blog.big-andy.co.uk/wordpress/website-optimisation/" title="Where I talk about how I am optimising my blog">optimising my blog</a> (hopefully soon I will turn my whole website into a wordpress driven website) using the W3 Total Cache plugin, and some excellent online tutorials because it's not very easy to get the plugin working properly. I had big problems with the minification of css and javascript files and this <a href="https://wordpress.org/support/topic/plugin-w3-total-cache-how-i-got-my-w3tc-working-with-minify-gzip?replies=5&amp;utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+W3TOTALCACHE+%28W3+Total+Cache+by+W3+EDGE%29#post-2121518" title="how to fix w3 total cache plugin minification problem">fantastic tutorial</a>. I am now getting scores (with the Firefox addon PageSpeed) 97-99% ratings.</li>
+</ol>
+<h3 id="future">Future <a class="direct-link" href="#future">#</a></h3>
+<p>Now I have achieved success in the optimisation of my blog, what is next on the list of things that I want to do? First of all I have started to learn how to use Git. If you don't know what it is then here's a quick explanation. For a group of developers to work on the same code at the same time, to track what they have done, we need a version control system and git is one of the excellent alternatives out there, as well as Mercurial and SVN (both of which I use at work). I had a basic introduction earlier this month when I was doing the <a href="http://chirontransformation.com">Chiron Transformation Website</a> but beyond that I knew very little how to do more than the most basic of functions, so I want to learn more! Otherwise I want to turn my website <a href="http://www.big-andy.co.uk" title="big-andy website">big-andy.co.uk</a> fully into a wordpress website, improve this blog and add some more features (e.g. HTML5 to the form), and write more often on this blog about what I am doing. I also want to add a portfolio section where I document which websites I have made and how I did them.</p>
+<h3 id="weekend">Weekend <a class="direct-link" href="#weekend">#</a></h3>
+<p>This weekend I am going to Buxton in Derbyshire walking with the entire Pidgeon (my mum's side of the family) clan. I really can't wait!</p>
+
+	</div><p class="post-taglist-label">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			
+					<li>
+						<a href="/tags/life/" class="tag">life</a>
+					</li>
+		</ul></div>
+
+<p>
+	<a href="/">← Home</a>
+</p>
+
+      </div>
+    </main>
+
+    <footer>
+	<div class="container">
+		<p>&copy; 2019 Andrew JD hudson</p>
+	</div>
+</footer>
+
+
+    <script>
+      // For syntax highlighting only
+const html = String.raw;
+
+class ThemeToggle extends HTMLElement {
+	constructor() {
+		super();
+
+		this.STORAGE_KEY = 'user-color-scheme';
+		this.COLOR_MODE_KEY = '--color-mode';
+	}
+
+	connectedCallback() {
+		this.render();
+	}
+
+	getCSSCustomProp(propKey) {
+		let response = getComputedStyle(
+			document.documentElement
+		).getPropertyValue(propKey);
+
+		// Tidy up the string if there’s something to work with
+		if (response.length) {
+			response = response.replace(/\'|"/g, '').trim();
+		}
+
+		// Return the string response by default
+		return response;
+	}
+
+	applySetting(passedSetting) {
+		let currentSetting =
+			passedSetting || localStorage.getItem(this.STORAGE_KEY);
+
+		if (currentSetting) {
+			document.documentElement.setAttribute(
+				'data-user-color-scheme',
+				currentSetting
+			);
+			this.setButtonLabelAndStatus(currentSetting);
+		} else {
+			this.setButtonLabelAndStatus(
+				this.getCSSCustomProp(this.COLOR_MODE_KEY)
+			);
+		}
+	}
+
+	toggleSetting() {
+		let currentSetting = localStorage.getItem(this.STORAGE_KEY);
+
+		switch (currentSetting) {
+			case null:
+				currentSetting =
+					this.getCSSCustomProp(this.COLOR_MODE_KEY) === 'dark'
+						? 'light'
+						: 'dark';
+				break;
+			case 'light':
+				currentSetting = 'dark';
+				break;
+			case 'dark':
+				currentSetting = 'light';
+				break;
+		}
+
+		localStorage.setItem(this.STORAGE_KEY, currentSetting);
+
+		return currentSetting;
+	}
+
+	setButtonLabelAndStatus(currentSetting) {
+		this.modeToggleButton.innerText = `${
+			currentSetting === 'dark' ? 'Light' : 'Dark'
+		} theme`;
+		this.modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
+	}
+
+	render() {
+		this.innerHTML = html`
+			<div class="[ theme-toggle ] [ md:ta-right gap-top-500 ]">
+				<div
+					role="status"
+					class="[ visually-hidden ][ js-mode-status ]"
+				></div>
+				<button
+					class="[ button ] [ font-base text-base weight-bold ] [ js-mode-toggle ]"
+				>
+					Dark theme
+				</button>
+			</div>
+		`;
+
+		this.afterRender();
+	}
+
+	afterRender() {
+		this.modeToggleButton = document.querySelector('.js-mode-toggle');
+		this.modeStatusElement = document.querySelector('.js-mode-status');
+
+		this.modeToggleButton.addEventListener('click', evt => {
+			evt.preventDefault();
+
+			this.applySetting(this.toggleSetting());
+		});
+
+		this.applySetting();
+	}
+}
+
+if ('customElements' in window) {
+	customElements.define('theme-toggle', ThemeToggle);
+}
+
+    </script>
+  </body>
+</html>
