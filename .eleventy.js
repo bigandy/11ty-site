@@ -1,10 +1,10 @@
 const fs = require('fs');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
-const htmlDateString = require('./_filters/htmlDateString.js');
-const readableDate = require('./_filters/readableDate.js');
-const firstNElements = require('./_filters/firstNElements.js');
-const tagList = require('./_11ty/getTagList');
+const htmlDateString = require('./src/_11ty/filters/htmlDateString.js');
+const readableDate = require('./src/_11ty/filters/readableDate.js');
+const firstNElements = require('./src/_11ty/filters/firstNElements.js');
+const tagList = require('./src/_11ty/getTagList');
 const isDev = process.argv.includes('dev');
 
 if (process.argv)
@@ -50,7 +50,7 @@ if (process.argv)
 
 		config.addCollection('posts', collection => {
 			return collection
-				.getFilteredByGlob('./posts/*.md')
+				.getFilteredByGlob('./src/site/posts/*.md')
 				.filter(livePosts)
 				.filter(removeDrafts);
 		});
@@ -58,10 +58,10 @@ if (process.argv)
 		// Collections
 		config.addCollection('tagList', tagList);
 
-		config.addPassthroughCopy('assets/img');
-		config.addPassthroughCopy('assets/css');
-		config.addPassthroughCopy('assets/fonts');
-		config.addPassthroughCopy('assets/js');
+		config.addPassthroughCopy('src/site/assets/img');
+		config.addPassthroughCopy('src/site/assets/css');
+		config.addPassthroughCopy('src/site/assets/fonts');
+		config.addPassthroughCopy('src/site/assets/js');
 
 		/* Markdown Plugins */
 		let markdownIt = require('markdown-it');
@@ -86,7 +86,7 @@ if (process.argv)
 		config.setBrowserSyncConfig({
 			callbacks: {
 				ready: function(err, browserSync) {
-					const content_404 = fs.readFileSync('_site/404.html');
+					const content_404 = fs.readFileSync('src/site/404.md');
 
 					browserSync.addMiddleware('*', (req, res) => {
 						// Provides the 404 content without redirect.
@@ -98,7 +98,7 @@ if (process.argv)
 		});
 
 		return {
-			templateFormats: ['md', 'njk', 'html', 'liquid', '11ty.js'],
+			templateFormats: ['md', 'njk', '11ty.js'],
 
 			// If your site lives in a different subdirectory, change this.
 			// Leading or trailing slashes are all normalized away, so don’t worry about it.
@@ -111,10 +111,9 @@ if (process.argv)
 			dataTemplateEngine: 'njk',
 			passthroughFileCopy: true,
 			dir: {
-				input: '.',
-				includes: '_includes',
+				input: 'src/site',
 				data: '_data',
-				output: '_site'
+				output: 'dist'
 			}
 		};
 	};
