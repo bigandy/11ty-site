@@ -1,8 +1,8 @@
 ---
 title: 'Weeknotes #27'
 date: 2019-12-16
-draft: true
-description: Almost Christmas
+draft: false
+description: Almost Christmas. A marathon?
 tags: ['weeknotes']
 ---
 
