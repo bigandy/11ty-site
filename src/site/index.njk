@@ -5,12 +5,9 @@ tags:
 navtitle: Home
 templateClass: tmpl-post
 ---
-<h1>andrewhudson.blog</h1>
-
-<p>I'm a front-end developer and here's my eleventy blog. I am based in Oxfordshire and work at Venture Harbour.</p>
 
 {% set postsNumber = 10 %}
-<h2>Latest Posts</h2>
+<h1>Latest Posts</h1>
 
 {% set postslist = collections.posts | firstNElements(-postsNumber) %}
 {% include "components/postslist.njk" %}
