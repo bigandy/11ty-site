@@ -55,6 +55,13 @@ if (process.argv)
 				.filter(removeDrafts);
 		});
 
+		// Nunjucks filters
+
+		config.addNunjucksFilter('year', function() {
+			const date = new Date();
+			return date.getFullYear();
+		});
+
 		// Collections
 		config.addCollection('tagList', tagList);
 
