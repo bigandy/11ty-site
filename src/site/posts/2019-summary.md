@@ -1,9 +1,9 @@
 ---
 title: '2019 Review'
 date: 2019-12-31
-draft: true
+draft: false
 description: 2019 in Review
-tags: []
+tags: ['review']
 ---
 
 ## What a year 2019 has been!
