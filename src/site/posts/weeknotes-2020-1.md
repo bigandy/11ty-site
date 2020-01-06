@@ -10,7 +10,7 @@ tags: ['weeknotes']
 
 - First thing I received when I got home was a blast of chilly water in my face. The pipe connection under our sink had broken and the water leaked straight into my face and legs. Fortunately I could stop the flow quickly. Currently waiting for a plumber to call.
 
-- We spent a week in Brittany in a place not far from the coastal (summer) resort town of Sables d'Or les Pins in the North of the Brittany. The town had an enormous and gloriously golden sandy beach which we went to every day. When the tide was out it was out a very long way because the shelving was super shallow.
+- We spent a week in Brittany in a place not far from the coastal (summer) resort town of Sables d'Or les Pins on the North coast of Brittany. The town had an enormous and gloriously golden sandy beach which we went to every day. When the tide was out it was out a very long way because the shelving was super shallow.
 
 - I ran three times and we walked a lot (as much as you can when there's a bitingly cold wind, with two young children). I have started taking selfies when I run so I can remember where I ran though this might change now that I am back in the UK and running in the dark again.
 
