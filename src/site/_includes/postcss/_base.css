@@ -95,6 +95,14 @@ p,
 	}
 }
 
+li p {
+	margin-bottom: 0;
+}
+
+strong {
+	font-variation-settings: 'wght' 666;
+}
+
 a[href] {
 	color: var(--link-unvisited);
 }
