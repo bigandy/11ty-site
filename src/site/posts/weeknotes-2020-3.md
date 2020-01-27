@@ -1,12 +1,12 @@
 ---
 title: 'Weeknotes 2020 #3'
-date: 2020-01-12
+date: 2020-01-19
 draft: false
 description: We had our winter work retreat in Oxford, friends over and started sorting out our garage.
 tags: ['weeknotes']
 ---
 
-- From Monday until Thursday I was in Oxford with Venture Harbour work colleagues for our Winter Retreat.
+- From Monday until Thursday I was in Oxford with my Venture Harbour work colleagues for our Winter Retreat. As well as
 
 - Our friends Marielle, John, and Alejandro came round our house for dinner on Saturday and stayed over and we went for a really great pub walk on Sunday. The weather was cold, but with crystal blue skies and sunshine, and the kids loved jumping in icy puddles.
 
