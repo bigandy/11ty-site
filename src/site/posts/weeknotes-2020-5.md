@@ -2,7 +2,7 @@
 title: 'Weeknotes 2020 #5'
 date: 2020-02-02
 draft: false
-description: <WRITE DESCRIPTION>
+description: Finished reading The Three Body Problem, running lots, went to Newbury
 tags: ['weeknotes']
 ---
 
