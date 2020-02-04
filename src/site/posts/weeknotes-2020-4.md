@@ -12,7 +12,7 @@ tags: ['weeknotes']
 
 - Work has been switching to a more remote-first approach in terms of where we work so I worked Tue, Fri and half of Wednesday remote. Working on getting better in my Habits - setting up my desk for tomorrow, drinking more water, getting out of the house - so I can enjoy working from home more. Since I joined Venture Harbour in 2017 We have always been at least one day remote a week, but recently with new hires it has made more sense to go towards a fully remote-first approach.
 
-- We've been watching Sex Education]() on Netflix. Really funny!
+- We've been watching [Sex Education](https://www.netflix.com/title/80197526) on Netflix. Really funny!
 
 - Exercise: Running Monday, Wednesday, and Friday. Walking most days including lots in London. 40 Vitality Points!
 
