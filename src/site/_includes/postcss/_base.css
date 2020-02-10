@@ -79,11 +79,6 @@ p,
 
 .tmpl-post,
 .tmpl-post__content {
-	ol,
-	ul {
-		padding-left: 0;
-	}
-
 	ol ol,
 	ol ul,
 	ul ul {
@@ -93,6 +88,11 @@ p,
 	li {
 		margin-bottom: 0.5rem;
 	}
+}
+
+ul {
+	margin-left: 1.5rem;
+	padding-left: 0;
 }
 
 li p {
@@ -113,7 +113,7 @@ a[href]:visited {
 
 footer,
 main {
-	padding: 1rem;
+	padding: 1rem 0;
 }
 
 main :first-child {
@@ -229,9 +229,6 @@ pre {
 
 /* Posts list */
 .postlist {
-	/* list-style: none; */
-	padding: 0;
-
 	li {
 		margin-bottom: 0.5rem;
 	}
@@ -362,4 +359,20 @@ a[href].direct-link:focus:visited,
 .container {
 	max-width: 1800px;
 	margin: 0 auto;
+	padding: 0 1em;
+}
+
+.page-selector {
+	margin: 3rem 0 0 0.5rem;
+}
+
+.page-pagination {
+	border: 1px solid black;
+	border-radius: .25rem;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+}
+
+.page-total {
+	margin: 0 1rem;
 }

@@ -3,12 +3,34 @@ layout: layouts/home.njk
 tags:
   - nav
 navtitle: Archive
-permalink: /archive/
 templateClass: tmpl-post
 date: 2018-01-02
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+permalink: /archive/{% if pagination.pageNumber >- 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 ---
 
-<h1>Archive</h1>
+<h1>Archive {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>
 
-{% set postslist = collections.posts %}
+{% set postslist = pagination.items | reverse %}
 {% include "components/postslist.njk" %}
+
+<div class="page-selector">
+	{% if pagination.previousPageHref %}
+	<a href="{{ pagination.previousPageHref }}" class="page-numbers page-pagination">
+		Previous
+	</a>
+	{% else %}
+	<span class="page-numbers">Previous</span>
+	{% endif %}
+	<span class="page-numbers page-total">
+	Page: {{ pagination.pageNumber + 1 }} of {{ pagination.links | length  }}
+	</span>
+	{% if pagination.nextPageHref %}
+	<a href="{{ pagination.nextPageHref }}" class="page-numbers page-pagination">Next</a>
+	{% else %}
+	<span class="page-numbers">Next</span>
+	{% endif %}
+</div>
