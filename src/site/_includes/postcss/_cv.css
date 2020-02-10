@@ -1,0 +1,12 @@
+.cv {
+	h2 {
+		margin-top: 1.5em;
+		margin-bottom: 0;
+		border-bottom: 2px solid green;
+		display: inline-block;
+	}
+
+	ul {
+		margin-left: 1.5em;
+	}
+}

@@ -15,29 +15,30 @@ date: 2018-01-01
 <h2>Personal Statement</h2>
 <p>I am a front-end developer with 9 years product and agency experience looking take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
 <h2>Skills</h2>
-<ul>
-	<li>React, Webpack and ESNext JavaScript</li>
-	<li>BEM CSS with pre-processors (Sass/Less/PostCSS)</li>
-	<li>Build tools: Webpack, Gulp and npm</li>
-	<li>Internet of Things (Raspberry Pi)</li>
-	<li>JavaScript, HTML5, CSS3, and PHP</li>
-	<li>Cross browser and device debugging</li>
-	<li>Git / continuous deployment</li>
-	<li>User Experience, Usability, and Accessibility</li>
-	<li>Project management, training and customer support</li>
-	<li>WordPress development (bespoke theme, plugin and functionality)</li>
-</ul>
+
+- React, ESNext JavaScript
+- Electron and Browser Extensions
+- Gatsby, Next, Eleventy
+- BEM CSS with pre-processors (Sass/Less/PostCSS)
+- Build tools: Webpack, Gulp and npm
+- Internet of Things (Raspberry Pi)
+- JavaScript, HTML5, CSS3, and PHP
+- Cross browser and device debugging
+- Git / continuous deployment
+- User Experience, Usability, and Accessibility
+- Project management, training and customer support
+- WordPress development (bespoke theme, plugin and functionality)
+
 <h2>Experience</h2>
 <h3>Venture Harbour – <em>Front-end Developer</em> – 10/2017 – Present</h3>
-<ul>
-	<li>Create PWA for <a href="https://www.ventureharbour.com">https://www.ventureharbour.com</a>&nbsp;and <a href="https://brokernotes.co">https://brokernotes.co</a>
-	</li>
-	<li>Electron and Chrome Extension development with React and nodejs</li>
-	<li>Focus on performance of websites</li>
-	<li>Work across multiple ventures</li>
-	<li>Create new templates in WordPress</li>
-	<li>Optimise Performance of each of our sites and products and automate testing and CI for each deployment.</li>
-</ul>
+
+- Create PWA for <a href="https://www.ventureharbour.com">https://www.ventureharbour.com</a>&nbsp;and <a href="https://brokernotes.co">https://brokernotes.co</a>
+- Electron and Chrome Extension development with React and nodejs
+- Focus on performance of websites
+- Work across multiple ventures
+- Create new templates in WordPress
+- Optimise Performance of each of our sites and products and automate testing and CI for each deployment.
+
 <h3>Taylor &amp; Francis – <em>Web Developer</em> – 10/2016 – 09/2017</h3>
 <ul>
 	<li>Create custom performant WordPress and Expression Engine sites conforming to latest Accessibility and Web Standards</li>
@@ -116,12 +117,12 @@ date: 2018-01-01
 	</li>
 </ul>
 
-## Education
+<h2>Education</h2>
 
 -   Masters CIW Web Designer
 -   MChem (hons) Chemistry – University of Manchester
 
-## Interests
+<h2>Interests</h2>
 
 -   Cycling
 -   Running

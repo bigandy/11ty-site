@@ -1,8 +1,8 @@
 {% include "components/head.njk" %}
-  <body>
+  <body {% if templateClass %} class="{{ templateClass }}"{% endif %}>
     {% include "components/header.njk" %}
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main>
       <div class="container">
         {{ content | safe }}
       </div>
