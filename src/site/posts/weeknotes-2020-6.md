@@ -14,7 +14,5 @@ tags: ['weeknotes']
 
 - **Reading**: On the train up to Sheffield I finished listening to ["Atomic Habits"](https://jamesclear.com/atomic-habits), and on the way back down I continued to listen to ["Deep Work"](https://www.calnewport.com/books/deep-work/). When not travelling the country by train I continued reading ["The Best Interface is No Interface"](http://www.nointerface.com/book/).
 
-- We've finished the second season of [Sex Education](https://www.netflix.com/title/80197526) on Netflix.
-
-- Exercise: Running Tuesday, Thursday, Friday and Sunday. Less energy this week. 40 Vitality Points!
+- Exercise: Running Wednesday and Saturday. Gym on Tuesday! 40 Vitality Points!
 
