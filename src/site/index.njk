@@ -12,4 +12,4 @@ templateClass: tmpl-post
 {% set postslist = collections.posts | firstNElements(-postsNumber) %}
 {% include "components/postslist.njk" %}
 
-<p>All posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<p>All posts can be found in <a href="{{ '/archive/' | url }}">the archive</a>.</p>
