@@ -6,4 +6,4 @@ description: ""
 tags: ['hide']
 ---
 
-Here's an inline SVG image. ![kiwi](http://big-andy.co.uk/content/uploads/kiwi.svg)
+Here's an inline SVG image. ![kiwi](https://big-andy.co.uk/content/uploads/kiwi.svg)
