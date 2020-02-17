@@ -1,6 +1,6 @@
 ---
 title: 'Weeknotes 2020 #6'
-date: 2020-02-02
+date: 2020-02-09
 draft: false
 description: Arthur turned 5 and I went to Sheffield for Frontend North Conference.
 tags: ['weeknotes']

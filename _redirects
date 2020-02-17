@@ -4,4 +4,4 @@
 https://andrewhudson.blog/* https://andrewhudson.dev/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
-https://unruffled-bhabha-811d0b.netlify.com/* 
+https://unruffled-bhabha-811d0b.netlify.com/* https://andrewhudson.dev/:splat 301!
