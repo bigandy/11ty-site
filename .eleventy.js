@@ -69,6 +69,7 @@ if (process.argv)
 		config.addPassthroughCopy('src/site/assets/css');
 		config.addPassthroughCopy('src/site/assets/fonts');
 		config.addPassthroughCopy('src/site/assets/js');
+		config.addPassthroughCopy('_redirects');
 
 		/* Markdown Plugins */
 		let markdownIt = require('markdown-it');
