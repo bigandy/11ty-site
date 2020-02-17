@@ -1,5 +1,5 @@
 ---
-title: 'Weeknotes 2020 #6'
+title: 'Weeknotes 2020 #7'
 date: 2020-02-16
 draft: false
 description: A week of solo parenting and reading books.
