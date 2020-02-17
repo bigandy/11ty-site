@@ -2,7 +2,7 @@
 title: 'Weeknotes 2020 #6'
 date: 2020-02-16
 draft: false
-description: Arthur turned 5 and I went to Sheffield for Frontend North Conference.
+description: A week of solo parenting and reading books.
 tags: ['weeknotes']
 ---
 
