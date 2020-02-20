@@ -6,7 +6,7 @@
 		display: inline-block;
 	}
 
-	ul {
+	ul:not(.nav) {
 		margin-left: 1.5em;
 	}
 }
