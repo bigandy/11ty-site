@@ -12,5 +12,5 @@ tags: ['weeknotes']
 
 - **Reading**: I start reading ["Cabin Porn: Inside"](hhttps://www.amazon.co.uk/Cabin-Porn-Inside-Zach-Klein/dp/0241388546) by Zach Klein - amazing book and pictures! I continued reading the second book of the Three Body problem Trilogy ["The Dark Forest"](https://www.goodreads.com/book/show/23168817-the-dark-forest) but progress is slow.
 
-- Exercise: Running Tuesday, Thursday, Friday and Sunday. Walked most other days. 40 Vitality Points.
+- Exercise: Running Wednesday, Friday and Sunday. Walked most other days. 40 Vitality Points.
 
