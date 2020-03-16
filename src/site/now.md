@@ -8,15 +8,15 @@ templateClass: tmpl-post
 date: 2017-01-01
 ---
 
-Last updated: 10 February 2020.
+Last updated: 16 March 2020.
 
 ## Life
 
-I'm living in Wallingford with my wife Marion and our two children Arthur, 5, and Emma, 20 months. I am getting ready for half-term and running more than before.
+The World is in the midst of the Corvid-19 pandemic. We are on the cusp of Spring.
 
 ## Learning
 
-At the moment I am learning about Atomic Habits and Deep Work. I am keeping this site spruced up and learning a lot about 11ty and in the process doing more writing which I am getting slowly better at. At work I am keeping a habits diary and I am starting to notice trends and eliminate bad habits, its amazing what you see if you keep a moment by moment diary! Its amazing what a good first hour has on the rest of the day, and vice versa. Its amazing how much water and good music have too.
+At the moment I am learning about React Native. At work I am moving on to another React project which will be exciting as it is almost totally from scratch.
 
 ## Fitness
 
