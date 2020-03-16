@@ -20,12 +20,12 @@ At the moment I am learning about React Native. At work I am moving on to anothe
 
 ## Fitness
 
-Running is taking most of my time and enjoyment which is great because I love running in the mud and cooler weather. As of last week I have also just started going back to the gym again after a few months away so I will be using that to improve my upper body strength and get some variation from something that is not running. So I am running three or four times a week, and gyming once or twice.
+Running is taking most of my time and enjoyment which is great because I love running in the mud and cooler weather. I have not been to the gym which is something that will change when I am able after the Virus. I am running three or four times a week, totalling 20+ miles a week. I think I will increase this to 25 miles a week in the next few weeks now that Spring is almost here.
 
-I'm keeping my eye out for some good running races to enter.
+I'm still keeping my eye out for some good running races to enter.
 
 ## Family
 
-Marion and the kids are well. Marion's currently in South Africa for work so I'm looking after the children. Arthur started Primary School last September and is having a great time. Everyone is looking forward to the half-term break.
+Marion and the kids are well. Easter is on the horizon and I am looking forward to having a proper holiday with the family.
 
 Credit for now page: [first seen on Derek Sivers now page](https://sivers.org/now)
