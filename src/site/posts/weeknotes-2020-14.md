@@ -1,7 +1,7 @@
 ---
 title: 'Weeknotes 2020 #14'
 date: 2020-04-05
-draft: true
+draft: false
 description: School and Work week number Two.
 tags: ['weeknotes']
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'Weeknotes 2020 #13'
 date: 2020-03-29
-draft: true
+draft: false
 description: School and Work week number One.
 tags: ['weeknotes']
 ---

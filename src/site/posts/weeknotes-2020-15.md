@@ -1,7 +1,7 @@
 ---
 title: 'Weeknotes 2020 #15'
 date: 2020-04-12
-draft: true
+draft: false
 description: Holiday on Lockdown.
 tags: ['weeknotes']
 ---
