@@ -1,13 +1,13 @@
 {
   "title": "Andrew's Blog",
-  "url": "https://andrewhudson.blog/",
+  "url": "https://andrewhudson.dev/",
   "description": "I am writing about my experiences as a naval navel-gazer.",
   "feed": {
     "subtitle": "I am writing about my experiences as a naval navel-gazer.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "url": "https://andrewhudson.blog/feed/feed.xml",
-    "id": "https://andrewhudson.blog/"
+    "url": "https://andrewhudson.dev/feed/feed.xml",
+    "id": "https://andrewhudson.dev/"
   },
   "author": {
     "name": "Andrew Hudson",
