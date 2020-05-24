@@ -74,10 +74,10 @@ date: 2018-01-01
 
 <ul class="cv-portfolio-list">
 	<li>
-		<a href="https://www.sereneapp.com" rel="noopener" target="_blank">Serene App</a> – Productivity Application for MacOS users using Electron, React and nodejs.
+		<a href="https://www.sereneapp.com" rel="noopener" target="_blank">Serene App</a> – Productivity Application for MacOS users using Electron, Firebase, React and nodejs.
 	</li>
 	<li>
-		<a href="https://chrome.google.com/webstore/detail/serene-extension/nbealbhmmmaiiiddmianmjoecmipnjij" rel="noopener" target="_blank">Serene Chrome Extension</a> and <a href="https://addons.mozilla.org/en-GB/firefox/addon/serene-extension/Firefox" rel="noopener" target="_blank">Firefox addon</a>  using React, socket.io, and WebExtensions API.
+		<a href="https://chrome.google.com/webstore/detail/serene-extension/nbealbhmmmaiiiddmianmjoecmipnjij" rel="noopener" target="_blank">Serene Chrome Extension</a> using React, socket.io, Firebase and WebExtensions API.
 	</li>
 	<li>
 		<a href="https://brokernotes.co" rel="noopener" target="_blank">brokernotes.co</a> – turn into Progressive Web App (PWA) and add new features with React, the WordPress Rest API and WordPress.
@@ -101,9 +101,6 @@ date: 2018-01-01
 		<a href="https://blog.oup.com/" rel="noopener" target="_blank">blog.oup.com</a> – responsive WordPress blog for Oxford University Press
 	</li>
 	<li>
-		<a href="http://www.douglasorde.com/" rel="noopener" target="_blank">douglasorde.com</a> – high end furniture e-commerce with Woocommerce, SVG, and flexbox
-	</li>
-	<li>
 		<a href="https://www.isobelweddings.com/" rel="noopener" target="_blank">isobelweddings.com</a> – beautiful responsive Wedding Planner WordPress site
 	</li>
 	<li>
@@ -113,7 +110,7 @@ date: 2018-01-01
 		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.com/bigandy</a> – my GitHub account
 	</li>
 	<li>
-		<a href="https://andrewhudson.blog">andrewhudson.blog</a> – Eleventy site using data exported from my old WordPress site. PostCSS for the CSS.
+		<a href="https://andrewhudson.dev">andrewhudson.dev</a> – This site - powered currently by Eleventy using data exported from my old WordPress site. PostCSS for the CSS.
 	</li>
 </ul>
 
