@@ -1,6 +1,6 @@
 ---
 title: 'Weeknotes 2020 #21'
-date: 2020-05-03
+date: 2020-05-24
 draft: false
 description: Goodbye Digital Ocean.
 tags: ['weeknotes']
