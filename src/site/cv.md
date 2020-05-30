@@ -8,17 +8,21 @@ templateClass: tmpl-post cv
 date: 2018-01-01
 ---
 
+<div class="grid grid--halfs">
+
 <a class="email" href="mailto:andy@big-andy.co.uk">andy@big-andy.co.uk</a>
 
 <div class="tel">077 36063 671</div>
 
-<h2>Personal Statement</h2>
+</div>
+
+<h2 id="personal-statement">Personal Statement</h2>
 
 <p>I am a front-end developer with 9 years product and agency experience looking take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
 
-<h2>Skills</h2>
+<h2 id="skills">Skills</h2>
 
-<ul class="skills">
+<ul class="grid grid--halfs">
 	<li>React, ES Next JavaScript</li>
 	<li>Electron</li>
 	<li>Browser Extension</li>
@@ -33,7 +37,8 @@ date: 2018-01-01
 	<li>WordPress development (bespoke theme, plugin and functionality)</li>
 </ul>
 
-<h2>Experience</h2>
+<h2 id="experience">Experience</h2>
+
 <h3>Venture Harbour – <em>Front-end Developer</em> – 10/2017 – Present</h3>
 
 -   Desktop Application and Chrome Extension development with React, nodejs, web sockets, and Firebase.
@@ -72,7 +77,7 @@ date: 2018-01-01
 	<li>Knowledge Sharing through weekly masterclass sessions (I ran three : WordPress; CSS3; and Sass)</li>
 </ul>
 
-<h2>Relevant Experience</h2>
+<h2 id="relevant-experience">Relevant Experience</h2>
 
 <p>Here are a selection of the sites, app and browser extensions that I have made:</p>
 
@@ -121,13 +126,17 @@ date: 2018-01-01
 	</li>
 </ul>
 
-<h2>Education</h2>
+<h2 id="education">Education</h2>
 
--   Masters CIW Web Designer
--   MChem (hons) Chemistry – University of Manchester
+<ul class="grid">
+<li>Masters CIW Web Designer</li>
+<li>MChem (hons) Chemistry – University of Manchester</li>
+</ul>
 
-<h2>Interests</h2>
+<h2 id="interests">Interests</h2>
 
--   Cycling
--   Running
--   Music
+<ul class="grid grid--thirds">
+<li>Cycling</li>
+<li>Running</li>
+<li>Music</li>
+</ul>

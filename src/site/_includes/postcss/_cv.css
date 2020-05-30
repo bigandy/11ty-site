@@ -20,21 +20,38 @@
 
 		h2 {
 			border-bottom-color: inherit;
+			margin-top: 1rem;
 		}
 
 		ul.skills {
 			margin-left: 1rem;
 		}
 
-		.skills {
+		.grid {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(var(--grid-number, 1), 1fr);
+
+			&--halfs {
+				--grid-number: 2;
+			}
+
+			&--thirds {
+				--grid-number: 3;
+			}
 
 			li {
-				padding-right: 1rem;
+				padding-right: 1.5rem;
 			}
 		}
+
+		ul {
+			&:last-child {
+				margin-bottom: 0;
+		   }
+		}
+
+		main {
+			padding-bottom: 0;
+		}
 	}
-
-
 }
