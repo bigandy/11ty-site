@@ -128,15 +128,15 @@ date: 2018-01-01
 
 <h2 id="education">Education</h2>
 
-<ul class="grid">
-<li>Masters CIW Web Designer</li>
-<li>MChem (hons) Chemistry – University of Manchester</li>
+<ul class="grid grid--halfs">
+	<li>Masters CIW Web Designer</li>
+	<li>MChem (hons) Chemistry – University of Manchester</li>
 </ul>
 
 <h2 id="interests">Interests</h2>
 
-<ul class="grid grid--thirds">
-<li>Cycling</li>
-<li>Running</li>
-<li>Music</li>
+<ul class="grid grid--halfs">
+	<li>Cycling</li>
+	<li>Running</li>
+	<li>Music</li>
 </ul>

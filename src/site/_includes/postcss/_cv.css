@@ -18,6 +18,14 @@
 			display: none;
 		}
 
+		h1 {
+			margin-bottom: 2rem;
+
+			&::before {
+				content: "Andrew JD Hudson - ";
+			}
+		}
+
 		h2 {
 			border-bottom-color: inherit;
 			margin-top: 1rem;
