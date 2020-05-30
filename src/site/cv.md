@@ -13,31 +13,35 @@ date: 2018-01-01
 <div class="tel">077 36063 671</div>
 
 <h2>Personal Statement</h2>
+
 <p>I am a front-end developer with 9 years product and agency experience looking take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
+
 <h2>Skills</h2>
 
-- React, ESNext JavaScript
-- Electron and Browser Extensions
-- Gatsby, Next, Eleventy
-- BEM CSS with pre-processors (Sass/Less/PostCSS)
-- Build tools: Webpack, Gulp and npm
-- Internet of Things (Raspberry Pi)
-- JavaScript, HTML5, CSS3, and PHP
-- Cross browser and device debugging
-- Git / continuous deployment
-- User Experience, Usability, and Accessibility
-- Project management, training and customer support
-- WordPress development (bespoke theme, plugin and functionality)
+<ul class="skills">
+	<li>React, ES Next JavaScript</li>
+	<li>Electron</li>
+	<li>Browser Extension</li>
+	<li>SSGs including Gatsby, Next.js, Eleventy</li>
+	<li>BEM CSS with pre-processors (Sass/Less/PostCSS)</li>
+	<li>Build tools: Webpack, Gulp and npm</li>
+	<li>JavaScript, HTML5, CSS3, and PHP</li>
+	<li>Cross browser and device debugging</li>
+	<li>Git / continuous deployment</li>
+	<li>User Experience, Usability, and Accessibility</li>
+	<li>Project management, training and customer support</li>
+	<li>WordPress development (bespoke theme, plugin and functionality)</li>
+</ul>
 
 <h2>Experience</h2>
 <h3>Venture Harbour – <em>Front-end Developer</em> – 10/2017 – Present</h3>
 
-- Create PWA for <a href="https://www.ventureharbour.com">https://www.ventureharbour.com</a>&nbsp;and <a href="https://brokernotes.co">https://brokernotes.co</a>
-- Electron and Chrome Extension development with React and nodejs
-- Focus on performance of websites
-- Work across multiple ventures
-- Create new templates in WordPress
-- Optimise Performance of each of our sites and products and automate testing and CI for each deployment.
+-   Desktop Application and Chrome Extension development with React, nodejs, web sockets, and Firebase.
+-   Beautiful Styling with CSS-in-JS (styled-jsx and styled components) and scss.
+-   Created PWA for both <a href="https://www.ventureharbour.com">https://www.ventureharbour.com</a> and <a href="https://brokernotes.co">https://brokernotes.co</a>
+-   Work across multiple projects in 6-week cycles, demoing work to team in regular weekly meetings, with daily standup and excellent communication via Slack, Hangouts and documentation in Notion.
+-   Optimise Performance of each of our sites and products and automate testing and CI for each deployment.
+-   6-weekly internal conference presentations on advanced CSS and web components.
 
 <h3>Taylor &amp; Francis – <em>Web Developer</em> – 10/2016 – 09/2017</h3>
 <ul>
@@ -110,7 +114,10 @@ date: 2018-01-01
 		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.com/bigandy</a> – my GitHub account
 	</li>
 	<li>
-		<a href="https://andrewhudson.dev">andrewhudson.dev</a> – This site - powered currently by Eleventy using data exported from my old WordPress site. PostCSS for the CSS.
+		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - powered currently by Eleventy using data exported from my old WordPress site. PostCSS for the CSS.
+	</li>
+	<li>
+		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
 	</li>
 </ul>
 

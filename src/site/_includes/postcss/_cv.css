@@ -10,3 +10,31 @@
 		margin-left: 1.5em;
 	}
 }
+
+@media print {
+	.cv {
+		header,
+		footer {
+			display: none;
+		}
+
+		h2 {
+			border-bottom-color: inherit;
+		}
+
+		ul.skills {
+			margin-left: 1rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+
+			li {
+				padding-right: 1rem;
+			}
+		}
+	}
+
+
+}
