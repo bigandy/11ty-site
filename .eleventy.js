@@ -9,16 +9,23 @@ const firstNElements = require('./src/_11ty/filters/firstNElements.js');
 const tagList = require('./src/_11ty/getTagList');
 const isDev = process.argv.includes('dev');
 
-const workboxOptions = {
-	cacheId: 'andrewhudson-dev',
-	swDest: './dist/sw.js',
-	globPatterns: ['**/*.html', 'js/offline.js', 'assets/**/*', 'css/*.css'],
-	importScripts: ['js/worker.js'],
-	skipWaiting: false,
-};
-
 if (process.argv)
 	module.exports = function (config) {
+		const workboxOptions = {
+			cacheId: 'andrewhudson-dev',
+			swDest: './dist/sw.js',
+			globPatterns: [
+				'**/*.html',
+				'js/offline.js',
+				'assets/**/*',
+				'css/*.css',
+			],
+			importScripts: ['js/worker.js'],
+			skipWaiting: false,
+		};
+
+		console.log(collections);
+
 		// Plugins
 		config.addPlugin(pluginSyntaxHighlight);
 		config.addPlugin(pluginPWA, workboxOptions);

@@ -12,11 +12,10 @@ module.exports = class {
 			__dirname,
 			`../_includes/postcss/${fileName}`
 		);
-		console.log(rawFilepath);
 		return {
 			permalink: `css/${fileName}`,
 			rawFilepath,
-			rawCss: await fs.readFileSync(rawFilepath)
+			rawCss: await fs.readFileSync(rawFilepath),
 		};
 	}
 
@@ -27,9 +26,9 @@ module.exports = class {
 			require('postcss-import'),
 			require('postcss-mixins'),
 			require('postcss-color-mix'),
-			require('cssnano')
+			require('cssnano'),
 		])
 			.process(rawCss, { from: rawFilepath })
-			.then(result => result.css);
+			.then((result) => result.css);
 	}
 };
