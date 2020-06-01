@@ -13,5 +13,9 @@
     <script>
       {% include "../../assets/js/theme-toggle.js" %}
     </script>
+
+	{% if build.env !== 'production' %}
+        <script src="{{ '/js/offline.js' | url }}" async defer></script>
+        {% endif %}
   </body>
 </html>

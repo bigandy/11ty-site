@@ -2,13 +2,6 @@
   "title": "Andrew's Blog",
   "url": "https://andrewhudson.dev/",
   "description": "Andrew JD Hudson's front-end development blog",
-  "feed": {
-    "subtitle": "Andrew JD Hudson's front-end development blog.",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "url": "https://andrewhudson.dev/feed/feed.xml",
-    "id": "https://andrewhudson.dev/"
-  },
   "author": {
     "name": "Andrew Hudson",
     "email": "ahudson@gmail.com"

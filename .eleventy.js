@@ -1,6 +1,7 @@
 const fs = require('fs');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+const pluginPWA = require('eleventy-plugin-pwa');
 
 const htmlDateString = require('./src/_11ty/filters/htmlDateString.js');
 const readableDate = require('./src/_11ty/filters/readableDate.js');
@@ -8,9 +9,22 @@ const firstNElements = require('./src/_11ty/filters/firstNElements.js');
 const tagList = require('./src/_11ty/getTagList');
 const isDev = process.argv.includes('dev');
 
+const workboxOptions = {
+	cacheId: 'andrewhudson-dev',
+	swDest: './dist/sw.js',
+	globPatterns: ['**/*.html', 'js/scripts/offline.js'],
+	globIgnores: ['email/**/*', '404/**/*'],
+	importScripts: ['/js/worker.js'],
+	skipWaiting: false,
+};
+
 if (process.argv)
 	module.exports = function (config) {
+		// Plugins
 		config.addPlugin(pluginSyntaxHighlight);
+		config.addPlugin(pluginPWA, workboxOptions);
+		config.addPlugin(pluginRss);
+
 		config.setDataDeepMerge(true);
 
 		config.addLayoutAlias('post', 'layouts/post.njk');
@@ -56,8 +70,6 @@ if (process.argv)
 				.filter(removeDrafts);
 		});
 
-		config.addPlugin(pluginRss);
-
 		// Nunjucks filters
 
 		config.addNunjucksFilter('year', function () {
@@ -69,9 +81,9 @@ if (process.argv)
 		config.addCollection('tagList', tagList);
 
 		config.addPassthroughCopy('src/site/assets/img');
-		config.addPassthroughCopy('src/site/assets/css');
 		config.addPassthroughCopy('src/site/assets/fonts');
 		config.addPassthroughCopy('src/site/assets/js');
+		config.addPassthroughCopy('src/site/js');
 		config.addPassthroughCopy('_redirects');
 
 		/* Markdown Plugins */
