@@ -12,7 +12,7 @@ const isDev = process.argv.includes('dev');
 const workboxOptions = {
 	cacheId: 'andrewhudson-dev',
 	swDest: './dist/sw.js',
-	globPatterns: ['**/*.html', 'js/offline.js', 'assets/**/*'],
+	globPatterns: ['**/*.html', 'js/offline.js', 'assets/**/*', 'css/*.css'],
 	importScripts: ['js/worker.js'],
 	skipWaiting: false,
 };
