@@ -1,9 +1,9 @@
 {
   "title": "Andrew's Blog",
   "url": "https://andrewhudson.dev/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Andrew JD Hudson's front-end development blog",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Andrew JD Hudson's front-end development blog.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "url": "https://andrewhudson.dev/feed/feed.xml",

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 const htmlDateString = require('./src/_11ty/filters/htmlDateString.js');
 const readableDate = require('./src/_11ty/filters/readableDate.js');
@@ -8,7 +9,7 @@ const tagList = require('./src/_11ty/getTagList');
 const isDev = process.argv.includes('dev');
 
 if (process.argv)
-	module.exports = function(config) {
+	module.exports = function (config) {
 		config.addPlugin(pluginSyntaxHighlight);
 		config.setDataDeepMerge(true);
 
@@ -17,13 +18,13 @@ if (process.argv)
 		// Present and past posts only
 		// https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
 		const now = new Date();
-		const livePosts = p => p.date <= now;
-		const removeDraftsFromTagsList = drafts => {
+		const livePosts = (p) => p.date <= now;
+		const removeDraftsFromTagsList = (drafts) => {
 			if (isDev) {
 				return drafts;
 			}
 
-			return drafts.filter(draft => {
+			return drafts.filter((draft) => {
 				if (!draft.data) {
 					return;
 				}
@@ -34,7 +35,7 @@ if (process.argv)
 			});
 		};
 
-		const removeDrafts = p => {
+		const removeDrafts = (p) => {
 			if (isDev) {
 				return p;
 			}
@@ -48,16 +49,18 @@ if (process.argv)
 		config.addFilter('firstNElements', firstNElements);
 		config.addFilter('removeDraftsFromTagsList', removeDraftsFromTagsList);
 
-		config.addCollection('posts', collection => {
+		config.addCollection('posts', (collection) => {
 			return collection
 				.getFilteredByGlob('./src/site/posts/*.md')
 				.filter(livePosts)
 				.filter(removeDrafts);
 		});
 
+		config.addPlugin(pluginRss);
+
 		// Nunjucks filters
 
-		config.addNunjucksFilter('year', function() {
+		config.addNunjucksFilter('year', function () {
 			const date = new Date();
 			return date.getFullYear();
 		});
@@ -77,13 +80,13 @@ if (process.argv)
 		let options = {
 			html: true,
 			breaks: true,
-			linkify: true
+			linkify: true,
 		};
 
 		let opts = {
 			permalink: true,
 			permalinkClass: 'direct-link',
-			permalinkSymbol: '#'
+			permalinkSymbol: '#',
 		};
 
 		config.setLibrary(
@@ -93,7 +96,7 @@ if (process.argv)
 
 		config.setBrowserSyncConfig({
 			callbacks: {
-				ready: function(err, browserSync) {
+				ready: function (err, browserSync) {
 					const content_404 = fs.readFileSync('src/site/404.md');
 
 					browserSync.addMiddleware('*', (req, res) => {
@@ -101,8 +104,8 @@ if (process.argv)
 						res.write(content_404);
 						res.end();
 					});
-				}
-			}
+				},
+			},
 		});
 
 		return {
@@ -121,7 +124,7 @@ if (process.argv)
 			dir: {
 				input: 'src/site',
 				data: '_data',
-				output: 'dist'
-			}
+				output: 'dist',
+			},
 		};
 	};
