@@ -79,7 +79,7 @@ if (process.argv)
 		// Collections
 		config.addCollection('tagList', tagList);
 
-		config.addPassthroughCopy('src/site/assets/img');
+		config.addPassthroughCopy('src/site/assets/images');
 		config.addPassthroughCopy('src/site/assets/fonts');
 		config.addPassthroughCopy('src/site/assets/js');
 		config.addPassthroughCopy('src/site/js');
