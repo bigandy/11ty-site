@@ -65,7 +65,7 @@ function refresh() {
 
 // Build an display a message to announce an updated Service Worker
 function showNewVersionNotice() {
-	const onUpdate = () => worker.postMessage({ action: 'skipWaiting' });
+	const onUpdate = () => worker.postMessage({ action: 'SKIP_WAITING' });
 	const content = document.createElement('div');
 	const msg = document.createElement('p');
 	const updateBtn = document.createElement('button');
