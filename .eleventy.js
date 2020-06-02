@@ -1,4 +1,6 @@
 const fs = require('fs');
+const path = require('path');
+const postcss = require('postcss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginPWA = require('eleventy-plugin-pwa');
@@ -11,24 +13,9 @@ const isDev = process.argv.includes('dev');
 
 if (process.argv)
 	module.exports = function (config) {
-		const workboxOptions = {
-			cacheId: 'andrewhudson-dev',
-			swDest: './dist/sw.js',
-			globPatterns: [
-				'**/*.html',
-				'js/offline.js',
-				'assets/**/*',
-				'css/*.css',
-			],
-			importScripts: ['js/worker.js'],
-			skipWaiting: false,
-		};
-
-		console.log(collections);
-
 		// Plugins
 		config.addPlugin(pluginSyntaxHighlight);
-		config.addPlugin(pluginPWA, workboxOptions);
+
 		config.addPlugin(pluginRss);
 
 		config.setDataDeepMerge(true);
@@ -70,10 +57,43 @@ if (process.argv)
 		config.addFilter('removeDraftsFromTagsList', removeDraftsFromTagsList);
 
 		config.addCollection('posts', (collection) => {
-			return collection
+			const returnPostCollection = collection
 				.getFilteredByGlob('./src/site/posts/*.md')
 				.filter(livePosts)
 				.filter(removeDrafts);
+
+			const workboxOptions = {
+				cacheId: 'andrewhudson-dev',
+				swDest: './dist/sw.js',
+				globPatterns: [
+					...[
+						...new Set(
+							returnPostCollection
+								.map(
+									(post) =>
+										`${post.template.parsed.name}/index.html`
+								)
+								.reverse()
+								.slice(0, 10)
+						),
+					],
+					'index.html',
+					'about/index.html',
+					'archive/index.html',
+					'cv/index.html',
+					'now/index.html',
+					'design/index.html',
+					'js/offline.js',
+					'assets/**/*',
+					'css/*.css',
+				],
+				importScripts: ['js/worker.js'],
+				skipWaiting: false,
+			};
+
+			config.addPlugin(pluginPWA, workboxOptions);
+
+			return returnPostCollection;
 		});
 
 		// Nunjucks filters
