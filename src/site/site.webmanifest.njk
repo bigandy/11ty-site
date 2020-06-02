@@ -9,14 +9,15 @@ permalink: manifest.json
     "description": "{{ metadata.description }}",
     "icons": [
         {
-            "src": "/assets/images/favicon/android-chrome-192x192.png",
+            "src": "/assets/images/favicon/icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/images/favicon/android-chrome-512x512.png",
+            "src": "/assets/images/favicon/icon-512x512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+			"purpose": "maskable"
         }
     ],
     "theme_color": "{{ metadata.themeColor }}",
@@ -24,6 +25,6 @@ permalink: manifest.json
     "start_url": "/",
     "display": "standalone",
     "orientation": "natural",
-	"version": "1.0",
+	"version": "1.1",
 	"manifest_version": 2
 }
