@@ -1,7 +1,8 @@
 {
-  "title": "Andrew's Blog",
+  "title": "Andrew Hudsons Site",
   "url": "https://andrewhudson.dev/",
   "description": "Andrew JD Hudson's front-end development blog",
+  "shortname": "AH",
   "author": {
     "name": "Andrew Hudson",
     "email": "ahudson@gmail.com"
