@@ -1,6 +1,4 @@
 const fs = require('fs');
-const path = require('path');
-const postcss = require('postcss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginPWA = require('eleventy-plugin-pwa');
@@ -58,46 +56,46 @@ if (process.argv)
 
 		config.addCollection('posts', (collection) => {
 			const returnPostCollection = collection
-				.getFilteredByGlob('./src/site/posts/*.md')
+				.getFilteredByGlob('./src/content/posts/*.md')
 				.filter(livePosts)
 				.filter(removeDrafts);
 
-			const workboxOptions = {
-				cacheId: 'andrewhudson-dev',
-				swDest: './dist/sw.js',
-				globPatterns: [
-					...[
-						...new Set(
-							returnPostCollection
-								.map(
-									(post) =>
-										`${post.template.parsed.name}/index.html`
-								)
-								.reverse()
-								.slice(0, 10)
-						),
+			if (process.env.ELEVENTY_ENV === 'production') {
+				const workboxOptions = {
+					cacheId: 'andrewhudson-dev',
+					swDest: './dist/sw.js',
+					globPatterns: [
+						...[
+							...new Set(
+								returnPostCollection
+									.map(
+										(post) =>
+											`${post.template.parsed.name}/index.html`
+									)
+									.reverse()
+									.slice(0, 10)
+							),
+						],
+						'index.html',
+						'about/index.html',
+						'archive/index.html',
+						'cv/index.html',
+						'now/index.html',
+						'design/index.html',
+						'js/offline.js',
+						'assets/**/*',
+						'css/*.css',
 					],
-					'index.html',
-					'about/index.html',
-					'archive/index.html',
-					'cv/index.html',
-					'now/index.html',
-					'design/index.html',
-					'js/offline.js',
-					'assets/**/*',
-					'css/*.css',
-				],
-				importScripts: ['js/worker.js'],
-				skipWaiting: false,
-			};
-
-			config.addPlugin(pluginPWA, workboxOptions);
+					importScripts: ['js/worker.js'],
+					skipWaiting: false,
+				};
+				config.addPlugin(pluginPWA, workboxOptions);
+			}
 
 			return returnPostCollection;
 		});
 
 		// Nunjucks filters
-
 		config.addNunjucksFilter('year', function () {
 			const date = new Date();
 			return date.getFullYear();
@@ -106,10 +104,9 @@ if (process.argv)
 		// Collections
 		config.addCollection('tagList', tagList);
 
-		config.addPassthroughCopy('src/site/assets/images');
-		config.addPassthroughCopy('src/site/assets/fonts');
-		config.addPassthroughCopy('src/site/assets/js');
-		config.addPassthroughCopy('src/site/js');
+		config.addPassthroughCopy('src/assets/images');
+		config.addPassthroughCopy('src/assets/fonts');
+		config.addPassthroughCopy('src/assets/js');
 		config.addPassthroughCopy('_redirects');
 
 		/* Markdown Plugins */
@@ -135,7 +132,7 @@ if (process.argv)
 		config.setBrowserSyncConfig({
 			callbacks: {
 				ready: function (err, browserSync) {
-					const content_404 = fs.readFileSync('src/site/404.md');
+					const content_404 = fs.readFileSync('src/404.md');
 
 					browserSync.addMiddleware('*', (req, res) => {
 						// Provides the 404 content without redirect.
@@ -160,9 +157,9 @@ if (process.argv)
 			dataTemplateEngine: 'njk',
 			passthroughFileCopy: true,
 			dir: {
-				input: 'src/site',
-				data: '_data',
+				input: 'src',
 				output: 'dist',
+				data: '_data',
 			},
 		};
 	};

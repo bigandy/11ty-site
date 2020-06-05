@@ -4,7 +4,7 @@
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
 		"dev": "npx eleventy --serve --quiet dev",
-		"build": "npm run clean && npx eleventy",
+		"build": "npm run clean && ELEVENTY_ENV=production eleventy",
 		"watch": "npx eleventy --watch",
 		"debug": "DEBUG=* npx eleventy",
 		"clean": "del-cli dist"

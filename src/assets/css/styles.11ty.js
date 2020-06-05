@@ -10,7 +10,7 @@ module.exports = class {
 	async data() {
 		const rawFilepath = path.join(
 			__dirname,
-			`../_includes/postcss/${fileName}`
+			`../../_includes/postcss/${fileName}`
 		);
 		return {
 			permalink: `css/${fileName}`,
