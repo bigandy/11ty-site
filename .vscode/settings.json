@@ -16,5 +16,9 @@
 		"statusBarItem.hoverBackground": "#cca300",
 		"statusBar.foreground": "#15202b"
 	},
-	"peacock.color": "#ffcc00"
+	"peacock.color": "#ffcc00",
+	"markdown.format.wrapAttributes": "force",
+
+	// Maximum amount of characters per line (0 = disable).
+	"markdown.format.wrapLineLength": 80,
 }
