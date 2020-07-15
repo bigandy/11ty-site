@@ -10,7 +10,7 @@ tags: ['weeknotes']
 
 -   On Sunday I got up super early went for a run and then when I got back we went to Pangbourne where Marion and friends had a paddleboard booked for an hour. I entertained the kids. Then it was our turn and I pumped up the canoe and went for a trip along the river. Emma had different ideas and cried constantly so we had to go back with her so it was just Arthur and I on the boat. I really enjoy going on the river!
 
--   I ran four times this week which took me over 20 miles for the first time since March.
+-   I ran four times this week:
 
     -   Mon: [River Consitution Hill Ridgeway](https://www.strava.com/activities/3720462823). Constitution Hill is a super steep hill and running up it leads into the countryside parallel to the Ridgeway.
     -   Wed: [Wet Parallel Lines Ridegway](https://www.strava.com/activities/3730304675) continuing along the route up Constitution Hill this was longer and hillier and wet as it was raining. Good route!
