@@ -1,5 +1,5 @@
 ---
-title: 'Weeknotes 2020 #28'
+title: 'Weeknotes 2020 #29'
 date: 2020-07-19
 draft: false
 description: Family Picnic!
