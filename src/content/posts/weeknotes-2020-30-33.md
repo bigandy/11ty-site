@@ -1,7 +1,7 @@
 ---
 title: 'Weeknotes 2020 #30 #31 #32 #33'
 date: 2020-08-16
-draft: true
+draft: false
 description: France!
 tags: ['weeknotes']
 ---
