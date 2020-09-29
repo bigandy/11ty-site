@@ -45,9 +45,15 @@ h3 {
 }
 
 h1 {
-	font-size: 100px;
+	font-size: 50px;
 	margin-bottom: 0.4em;
 	margin-top: 0;
+}
+
+@media (min-width: 700px) {
+	h1 {
+		font-size: 100px;
+	}
 }
 
 * {
