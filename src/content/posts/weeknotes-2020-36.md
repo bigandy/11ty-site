@@ -1,7 +1,7 @@
 ---
 title: 'Weeknotes 2020 #36'
 date: 2020-09-06
-draft: false
+draft: true
 description: Upvote SignOff on Product Hunt!
 tags: ['weeknotes']
 ---

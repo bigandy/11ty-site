@@ -10,7 +10,7 @@
 		"clean": "del-cli dist"
 	},
 	"author": {
-		"name": "Andrew Hudson",
+		"name": "Andrew JD Hudson",
 		"url": "https://andrewhudson.dev"
 	},
 	"license": "MIT",

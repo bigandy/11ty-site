@@ -15,10 +15,12 @@ The design of this site is a work in progress. Here are some sites that I take i
 -   <a href="https://overreacted.io/" target="_blank" rel="nofollow noopener">Dan Abramov</a>
 
 ## Ideas
-
 - Better design
-- Service Worker / Offline Experience
+-   ~~Service Worker / Offline Experience~~
 -   ~~Dark/Light mode switch~~
 -   ~~Custom CSS Variables~~
 -   ~~Variable Font~~
 
+## Performance Improvements
+- [ ] Inline the CSS
+- [ ] Local fonts
