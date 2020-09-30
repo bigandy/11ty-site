@@ -20,6 +20,11 @@ if (process.argv)
 
 		config.addLayoutAlias('post', 'layouts/post.njk');
 
+		config.addNunjucksAsyncShortcode(
+			'postcss',
+			require('./src/utils/transform-css')
+		);
+
 		// Present and past posts only
 		// https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
 		const now = new Date();
@@ -84,7 +89,6 @@ if (process.argv)
 						'design/index.html',
 						'js/offline.js',
 						'assets/**/*',
-						'css/*.css',
 					],
 					importScripts: ['js/worker.js'],
 					skipWaiting: false,

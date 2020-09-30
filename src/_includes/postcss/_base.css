@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'Piazzolla';
+	font-weight: 100 900;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: 'Regular';
+	src: url('/assets/fonts/Piazzolla[opsz,wght].woff2') format('woff2');
+}
+
 :root {
 	--red: #ffa600;
 	--darkred: #7f0036;
@@ -57,7 +66,7 @@ h1 {
 }
 
 * {
-	font-variation-settings: 'wght' var(--var-weight);
+	font-variation-settings: 'wght'var(--var-weight);
 }
 
 html {
@@ -92,6 +101,7 @@ p,
 
 .tmpl-post,
 .tmpl-post__content {
+
 	ol ol,
 	ol ul,
 	ul ul {
@@ -135,8 +145,7 @@ main :first-child {
 
 .nav {
 	border-bottom: 1px solid var(--lightgray);
-	transition: border-bottom var(--transition-duration)
-		var(--transition-method);
+	transition: border-bottom var(--transition-duration) var(--transition-method);
 }
 
 header:after {
@@ -250,8 +259,8 @@ a[href].direct-link:visited {
 
 a[href].direct-link:focus,
 a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
+:hover>a[href].direct-link,
+:hover>a[href].direct-link:visited {
 	color: #aaa;
 }
 
