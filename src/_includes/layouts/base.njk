@@ -17,7 +17,9 @@
     </script>
 
 	{% if metadata.isProduction %}
-        <script src="{{ '/assets/js/offline.js' | url }}" async defer></script>
+		<script>
+			{% include "../../assets/js/offline.js" %}
+		</script>
 	{% endif %}
   </body>
 </html>

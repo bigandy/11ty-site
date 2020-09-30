@@ -1,10 +1,8 @@
 @font-face {
-	font-family: 'Piazzolla';
+	font-family: Piazzolla;
 	font-weight: 100 900;
-	font-display: swap;
 	font-style: normal;
-	font-named-instance: 'Regular';
-	src: url('/assets/fonts/Piazzolla[opsz,wght].woff2') format('woff2');
+	src: url(/assets/fonts/Piazzolla[opsz,wght].woff2?) format("woff2-variations"), url(/assets/fonts/Piazzolla[opsz,wght].woff2) format("woff2");
 }
 
 :root {
@@ -20,9 +18,10 @@
 	--link-visited: var(--navy);
 	--color: var(--darkgray);
 	--background-color: var(--white);
-	--body-font-family: 'Piazzolla', serif;
+	--body-font-family: Piazzolla, serif;
 	--transition-duration: 300ms;
 	--transition-method: ease-in-out;
+	--font-weight: 400;
 }
 
 * {
@@ -50,7 +49,8 @@ body {
 h1,
 h2,
 h3 {
-	--var-weight: 900;
+	--font-weight: 900;
+	font-weight: bold;
 }
 
 h1 {
@@ -66,18 +66,19 @@ h1 {
 }
 
 * {
-	font-variation-settings: 'wght'var(--var-weight);
+
+	font-variation-settings: 'wght'var(--font-weight);
 }
 
 html {
-	--var-weight: 400;
+
 
 	font-family: --body-font-family;
 	font-size: 120%;
 }
 
 p {
-	--var-weight: 550;
+	--font-weight: 550;
 }
 
 p:last-child {
@@ -123,7 +124,8 @@ li p {
 }
 
 strong {
-	--var-weight: 800;
+	--font-weight: 800;
+	font-weight: bold;
 }
 
 [href] {
@@ -219,7 +221,7 @@ pre {
 	list-style: none;
 
 	a {
-		--var-weight: 700;
+		--font-weight: 700;
 		font-size: 200%;
 	}
 
@@ -273,7 +275,7 @@ a[href].direct-link:focus:visited,
 	background-color: var(--color);
 	border-radius: 0.25em;
 	text-decoration: none;
-	--var-weight: 777;
+	--font-weight: 777;
 	letter-spacing: 1ch;
 	padding-right: 0;
 	border: 2px solid var(--color);
