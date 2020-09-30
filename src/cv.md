@@ -23,10 +23,14 @@ date: 2018-01-01
 <h2 id="skills">Skills</h2>
 
 <ul class="grid grid--halfs">
+	<li>Typescript</li>
 	<li>React, ES Next JavaScript</li>
 	<li>Electron</li>
+	<li>Firebase firestore and serverless functions</li>
 	<li>Browser Extension</li>
 	<li>SSGs including Gatsby, Next.js, Eleventy</li>
+	<li>CSS Modules and CSS-in-JS</li>
+	<li>Modular Components with Storybook to share across team</li>
 	<li>BEM CSS with pre-processors (Sass/Less/PostCSS)</li>
 	<li>Build tools: Webpack, Gulp and npm</li>
 	<li>JavaScript, HTML5, CSS3, and PHP</li>
