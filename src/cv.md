@@ -18,7 +18,7 @@ date: 2018-01-01
 
 <h2 id="personal-statement">Personal Statement</h2>
 
-<p>I am a front-end developer with 9 years product and agency experience looking take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
+<p>I am a front-end software engineer with 10 years product and agency experience looking take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
 
 <h2 id="skills">Skills</h2>
 
