@@ -87,10 +87,10 @@ if (process.argv)
 						'cv/index.html',
 						'now/index.html',
 						'design/index.html',
-						'js/offline.js',
+						'assets/js/offline.js',
 						'assets/**/*',
 					],
-					importScripts: ['js/worker.js'],
+					importScripts: ['assets/js/worker.js'],
 					skipWaiting: false,
 				};
 				config.addPlugin(pluginPWA, workboxOptions);
