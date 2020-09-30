@@ -16,7 +16,7 @@
       {% include "../../assets/js/theme-toggle.js" %}
     </script>
 
-	{% if build.env === 'production' %}
+	{% if metadata.isProduction %}
         <script src="{{ '/js/offline.js' | url }}" async defer></script>
 	{% endif %}
   </body>
