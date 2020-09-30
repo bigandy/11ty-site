@@ -1,5 +1,7 @@
 <footer>
 	<div class="container">
 		<p>&copy; {{ _ | year }} {{metadata.author.name}}</p>
+
+		{% include "components/dark-light-switch.njk" %}
 	</div>
 </footer>
