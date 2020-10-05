@@ -1,6 +1,5 @@
 <header>
 	<div class="container">
-
 		<ul class="nav">
 			<li><h1 class="home"><a href="{{ '/' | url }}">{{ metadata.siteTitle }}</a></h1></li>
 			{%- for nav in collections.nav | reverse -%}
@@ -8,8 +7,6 @@
 				<a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
 			</li>
 			{%- endfor -%}
-
 		</ul>
-
 	</div>
 </header>

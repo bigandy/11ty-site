@@ -2,7 +2,7 @@
 	font-family: Piazzolla;
 	font-weight: 100 900;
 	font-style: normal;
-	src: url(/assets/fonts/Piazzolla[opsz,wght].woff2?) format("woff2-variations"), url(/assets/fonts/Piazzolla[opsz,wght].woff2) format("woff2");
+	src: url(/assets/fonts/Piazzolla[opsz,wght].woff2) format("woff2-variations"), url(/assets/fonts/Piazzolla[opsz,wght].woff2) format("woff2");
 }
 
 :root {
