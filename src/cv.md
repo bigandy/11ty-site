@@ -68,9 +68,10 @@ date: 2018-01-01
 -   Pre-launch client training, dealing with any client feedback via Basecamp or telephone
 
 <h3>HeathWallace Ltd – <em>Creative developer</em>&nbsp;&nbsp;– 08/2010 – 01/2013</h3>
-- I built highly accessible websites for clients including HSBC, RBS and Grant Thornton
-- Using CMSs such as WordPress, CQ5 and Sitecore to allow the client to control all content on their site
-- Knowledge Sharing through weekly masterclass sessions (I ran three : WordPress; CSS3; and Sass)
+
+-   I built highly accessible websites for clients including HSBC, RBS and Grant Thornton
+-   Using CMSs such as WordPress, CQ5 and Sitecore to allow the client to control all content on their site
+-   Knowledge Sharing through weekly masterclass sessions (I ran three : WordPress; CSS3; and Sass)
 
 <h2 id="relevant-experience">Relevant Experience</h2>
 
