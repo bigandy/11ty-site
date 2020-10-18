@@ -10,7 +10,7 @@ date: 2018-01-01
 
 <div class="grid grid--halfs">
 
-<a class="email" href="mailto:ahudson@gmail.com">ahudson@gmail.com</a>
+<a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a>
 
 <div class="tel">077 36063 671</div>
 
