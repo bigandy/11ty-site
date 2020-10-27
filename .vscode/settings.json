@@ -1,5 +1,6 @@
 {
-	// "editor.fontSize": 22,
+	"editor.fontSize": 24,
+	"editor.lineHeight": 30,
 	// "window.zoomLevel": 2,
 	"workbench.colorCustomizations": {
 		"activityBar.background": "#ffd633",
@@ -20,5 +21,5 @@
 	"markdown.format.wrapAttributes": "force",
 
 	// Maximum amount of characters per line (0 = disable).
-	"markdown.format.wrapLineLength": 80,
+	"markdown.format.wrapLineLength": 60,
 }

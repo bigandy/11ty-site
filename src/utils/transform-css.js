@@ -5,7 +5,7 @@ const fs = require('fs').promises;
 module.exports = async (filename) => {
 	const rawFilepath = path.join(
 		__dirname,
-		`../_includes/${filename.replace(/'/g, '')}`
+		`../../_includes/${filename.replace(/'/g, '')}`
 	);
 	const code = await fs.readFile(rawFilepath);
 

@@ -1,0 +1,10 @@
+<h2>Books List</h2>
+<ol class="">
+{% for book in bookslist | reverse %}
+  <li class="postlist-item">
+    {{ book.data.title }}
+
+
+  </li>
+{% endfor %}
+</ol>

@@ -1,7 +1,14 @@
 <footer>
 	<div class="container">
-		<p>&copy; {{ _ | year }} {{metadata.author.name}}</p>
-
-		{% include "components/dark-light-switch.njk" %}
+		<ul class="nav">
+		<li>&copy; {{ _ | year }} {{metadata.author.name}}</li>
+		<li></li>
+		{%- for nav in collections.footnav | reverse -%}
+			<li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
+				<a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
+			</li>
+			{%- endfor -%}
+			</ul>
+			{% include "components/dark-light-switch.njk" %}
 	</div>
 </footer>

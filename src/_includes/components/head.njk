@@ -7,9 +7,14 @@
 
 	<link rel="preload" href="/assets/fonts/Piazzolla[opsz,wght].woff2" as="font" type="font/woff2" crossorigin>
 
-	<style>
-		{% postcss 'postcss/styles.css' %}
-  	</style>
+
+	{% if (process.env.ELEVENTY_ENV === 'production') %}
+		<style>
+			{% postcss '../postcss/styles.css' %}
+		</style>
+	{% else %}
+		<link rel="stylesheet" href="/assets/postcss/styles.css">
+	{% endif %}
 
     <title>{{ renderData.title or title or metadata.title }} - Andrew JD Hudson</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">

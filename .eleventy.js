@@ -99,6 +99,15 @@ if (process.argv)
 			return returnPostCollection;
 		});
 
+		config.addCollection('books', (collection) => {
+			const returnPostCollection = collection.getFilteredByGlob(
+				'./src/content/books/*.md'
+			);
+			// .filter(livePosts)
+			// .filter(removeDrafts)
+			return returnPostCollection;
+		});
+
 		// Nunjucks filters
 		config.addNunjucksFilter('year', function () {
 			const date = new Date();
@@ -111,6 +120,7 @@ if (process.argv)
 		config.addPassthroughCopy('src/assets/images');
 		config.addPassthroughCopy('src/assets/fonts');
 		config.addPassthroughCopy('src/assets/js');
+		config.addPassthroughCopy('src/assets/postcss');
 		config.addPassthroughCopy('_redirects');
 
 		/* Markdown Plugins */

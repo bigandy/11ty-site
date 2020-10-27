@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Now
 tags:
-    - nav
+    - footnav
 navtitle: Now
 templateClass: tmpl-post
 date: 2017-01-01
