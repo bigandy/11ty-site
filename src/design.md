@@ -24,5 +24,5 @@ The design of this site is a work in progress. Here are some sites that I take i
 
 ## Performance Improvements
 
--   [ ] Inline the CSS
--   [ ] Local fonts
+-   ~~Inline the CSS~~
+-   Local fonts or No fonts
