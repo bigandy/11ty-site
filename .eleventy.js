@@ -118,7 +118,6 @@ if (process.argv)
 		config.addCollection('tagList', tagList);
 
 		config.addPassthroughCopy('src/assets/images');
-		config.addPassthroughCopy('src/assets/fonts');
 		config.addPassthroughCopy('src/assets/js');
 		config.addPassthroughCopy('src/assets/postcss');
 		config.addPassthroughCopy('_redirects');
