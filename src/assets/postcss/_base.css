@@ -43,7 +43,6 @@ h1,
 h2,
 h3 {
 	--font-weight: 900;
-	font-weight: bold;
 }
 
 h1 {
@@ -53,7 +52,7 @@ h1 {
 }
 
 @media (min-width: 700px) {
-	h1 {
+	h1:not(.post-title) {
 		font-size: 100px;
 	}
 }
@@ -159,6 +158,7 @@ pre {
 	margin: 1rem 0;
 	font-size: 1em;
 	display: inline-block;
+	--font-weight: 900;
 }
 
 .home :link:not(:hover) {
@@ -174,7 +174,6 @@ pre {
 .nav li {
 	display: inline-block;
 	margin-right: 1em;
-	margin-bottom: 0;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -193,23 +192,23 @@ pre {
 
 .postlist a {
 	--font-weight: 700;
-	font-size: 200%;
+	font-size: 150%;
+	display: block;
 }
 
 .postlist li {
-	margin-bottom: 0.75rem;
+	margin-bottom: 1rem;
 }
 
 .postlist-date {
 	color: var(--color);
+	margin-bottom: 0.5em;
+	display: block;
 }
 
-.postlist-item .postlist-date {
-	font-size: 1em;
-}
+p .postlist-date {
+	display: inline-block;
 
-.postlist-date {
-	word-spacing: -0.5px;
 }
 
 .postlist-link {
@@ -254,15 +253,15 @@ a[href].direct-link:focus:visited,
 }
 .tag:hover {
 	border-color: var(--color);
-	background: var(--backgound-color);
+	background: var(--background-color);
+	color: var(--color);
+}
+
+.tag:visited {
 	color: var(--background-color);
 }
 
-a.tag:visited {
-	color: var(--background-color);
-}
-
-a.tag:visited:hover {
+.tag:visited:hover {
 	color: var(--color);
 	background: var(--background-color)
 }
@@ -332,6 +331,7 @@ a.tag:visited:hover {
 }
 
 .post-taglist-label {
+	margin-top: 3em;
 	margin-bottom: 0.5em;
 }
 
@@ -354,6 +354,10 @@ a.tag:visited:hover {
 
 .page-total {
 	margin: 0 1rem;
+}
+
+footer {
+	margin-top: 3em;
 }
 
 footer .nav {

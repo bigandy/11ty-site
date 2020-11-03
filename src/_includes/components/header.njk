@@ -1,7 +1,7 @@
 <header>
 	<div class="container">
 		<ul class="nav">
-			<li><h1 class="home"><a href="{{ '/' | url }}">{{ metadata.siteTitle }}</a></h1></li>
+			<li class="home"><a href="{{ '/' | url }}">{{ metadata.siteTitle }}</a></li>
 			{%- for nav in collections.nav | reverse -%}
 			<li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
 				<a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
