@@ -1,8 +1,8 @@
 ---
-title: 'Weeknotes 2020 #30 #31 #32 #33'
+title: 3.5 weeks in France
 date: 2020-08-16
 draft: false
-description: France!
+description: Our first holiday since last Christmas.
 tags: ['weeknotes']
 ---
 
@@ -14,9 +14,8 @@ Our journey to France was straightforward. Pick up Emma from nursery and drive t
 
 The first week and a half were spent working and the weather was good so the children often went to the beach or to town with their grandparents. Being at home was ok and we could go for a run or walk to get some exercise.
 
-The next two weeks we actually had a very good holiday. Trips to the beach on ile de Re, to see family, to each ice-cream. Marion's brother, his wife and their 1-year old stayed with us for 5 days and the weather was super hot. Their baby doesn't sleep too well and we all were exhausted at the end of 5 days. Then finally we had a few more days of beach and cooler weather before coming back to *quarantine* in UK.
+The next two weeks we actually had a very good holiday. Trips to the beach on ile de Re, to see family, to each ice-cream. Marion's brother, his wife and their 1-year old stayed with us for 5 days and the weather was super hot. Their baby doesn't sleep too well and we all were exhausted at the end of 5 days. Then finally we had a few more days of beach and cooler weather before coming back to _quarantine_ in UK.
 
 ## Impending Quarantine
 
 We knew it was going to happen after the rising number of daily cases in France, especially so after Spain was removed from UK's safe list. But when they announced it on the final Friday (before we were due to return to UK)we were still caught off guard. But there was not much we could have done. A brief thought went to trying to dash back to UK before the deadline but we'd rather spend the final days with Marion's parents and enjoy the end of our holiday before putting up with it in the UK when we were back. My parents volunteered to host us for the 2-week quarantine so we accepted.
-

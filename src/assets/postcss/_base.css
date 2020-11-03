@@ -51,12 +51,6 @@ h1 {
 	margin-top: 0;
 }
 
-@media (min-width: 700px) {
-	h1:not(.post-title) {
-		font-size: 100px;
-	}
-}
-
 * {
 	font-variation-settings: 'wght'var(--font-weight);
 }

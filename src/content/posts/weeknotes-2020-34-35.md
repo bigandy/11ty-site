@@ -1,12 +1,11 @@
 ---
-title: 'Weeknotes 2020 #34 #35'
+title: Quarantine at the parents
 date: 2020-08-30
 draft: true
-description: Quarantine!
+description: Post-holiday quarantine at the parents.
 tags: ['weeknotes']
 ---
 
 ## Two weeks of Quarantine at my parents!
 
-The ferry took us smoothly back across la Manche from Caen to Portsmouth and we all took a snooze in our cabin. Arriving in the UK we drove through the dark evening back to our home in Wallingford. finally, but not for long. A sleep and then back in the car - to my parents to Quarantine for 2 weeks.
-
+Having had an excellent holiday in France we were lucky to be able to spend our quarantine sentence at my parents home. They got to see the kids, we got to work. We did two massive puzzles, watched the Tour de France. It was great.
