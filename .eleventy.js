@@ -15,6 +15,7 @@ if (process.argv)
 		config.addPlugin(pluginSyntaxHighlight);
 
 		config.addPlugin(pluginRss);
+		config.addPlugin(require('./src/_11ty/optimize-html.js'));
 
 		config.setDataDeepMerge(true);
 
