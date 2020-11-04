@@ -70,17 +70,17 @@ if (process.argv)
 					cacheId: 'andrewhudson-dev',
 					swDest: './dist/sw.js',
 					globPatterns: [
-						...[
-							...new Set(
-								returnPostCollection
-									.map(
-										(post) =>
-											`${post.template.parsed.name}/index.html`
-									)
-									.reverse()
-									.slice(0, 10)
-							),
-						],
+						// ...[
+						// 	...new Set(
+						// 		returnPostCollection
+						// 			.map(
+						// 				(post) =>
+						// 					`${post.template.parsed.name}/index.html`
+						// 			)
+						// 			.reverse()
+						// 			.slice(0, 5)
+						// 	),
+						// ],
 						'index.html',
 						'about/index.html',
 						'archive/index.html',
@@ -88,7 +88,7 @@ if (process.argv)
 						'now/index.html',
 						'design/index.html',
 						'assets/js/offline.js',
-						'assets/**/*',
+						// 'assets/**/*',
 					],
 					importScripts: ['assets/js/worker.js'],
 					skipWaiting: false,
