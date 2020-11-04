@@ -60,10 +60,6 @@ html {
 	font-size: 120%;
 }
 
-p {
-	--font-weight: 550;
-}
-
 p:last-child {
 	margin-bottom: 0;
 }
