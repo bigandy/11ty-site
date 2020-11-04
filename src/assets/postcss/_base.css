@@ -203,7 +203,7 @@ p .postlist-date {
 
 .postlist-link {
 	display: inline-block;
-	padding: 0.25em 0.1875em;
+	padding: 0.25em 0;
 	font-weight: 700;
 }
 
