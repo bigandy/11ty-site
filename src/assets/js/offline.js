@@ -118,5 +118,3 @@ if ('serviceWorker' in navigator) {
 	// Initially check if the client is offline
 	window.addEventListener('load', offlineHandler);
 }
-
-document.documentElement.classList.remove('no-js');
