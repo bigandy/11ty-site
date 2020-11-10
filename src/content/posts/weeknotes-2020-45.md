@@ -1,7 +1,7 @@
 ---
 title: 'Weekend of Childlessness'
 subTitle: 'Weeknotes 2020 #45'
-date: 2020-11-01
+date: 2020-11-08
 draft: false
 description: Marion's birthday weekend without the kids.
 tags: ['weeknotes']
