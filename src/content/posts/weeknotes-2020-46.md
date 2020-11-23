@@ -1,7 +1,7 @@
 ---
 title: 'Raspberry Pi'
 subTitle: 'Weeknotes 2020 #46'
-date: 2020-11-08
+date: 2020-11-15
 draft: false
 description: Took out the Raspberry Pi from the depths of the cupboard.
 tags: ['weeknotes']
