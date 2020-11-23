@@ -1,10 +1,11 @@
 <h2>Books List</h2>
-<ol class="">
-{% for book in bookslist | reverse %}
-  <li class="postlist-item">
-    {{ book.data.title }}
+<ul class="">
+	{% for book in bookslist %}
+	<li class="postlist-item">
+		Title: {{ book.data.title }}<br />
 
-
-  </li>
-{% endfor %}
-</ol>
+		Started Date: {{ book.data.dateStarted | readableDate }}
+		{% if book.data.dateFinished %}<br />Finished Date: {{ book.data.dateFinished | readableDate }}{% endif %}
+	</li>
+	{% endfor %}
+</ul>
