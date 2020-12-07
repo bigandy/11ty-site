@@ -9,7 +9,7 @@ tags: ['weeknotes']
 
 This week:
 
-- Continuing to make progress with the House Controller Next project. This week I have hooked up the DHT22 sensor to record temperature and humidity values (inside only at the moment). I am storing the data in Hasura (for the moment) and accessing it via GraphQL which is super cool. The data is not that interesting at the moment and I will look to see if I can get another sensor that I can put in a shady part of the back garden so I have inside and outside measurements.
+- Continuing to make progress with the House Controller Next project. This week I have hooked up the DHT22 sensor to record temperature and humidity values (currently inside only). I am storing the data in Hasura (for the moment; probably will go to SQLite and Prisma if I can get the latter working on my Pi) and accessing it via GraphQL which is super cool. The data is not that interesting (because it is inside and doesn't vary that much) and I will look to see if I can get another sensor that I can put in a shady part of the back garden so I have inside and outside measurements.
 
 - On Saturday we put up the Christmas tree and lights, we went for a cold walk around Queensford Lakes and had a delicious sausage roll and coffee from the cafe there. I received my Neopixels but then found out that I need 5v power supply as there are so many LEDs and they draw a lot of current when there are 144 of them! I tidied up the garage.
 
