@@ -69,21 +69,6 @@ if (process.argv)
 			return returnPostCollection;
 		});
 
-		const sortBooks = (a, b) => {
-			const aDateStarted = a.data.dateStarted;
-			const bDateStarted = b.data.dateStarted;
-
-			return aDateStarted - bDateStarted;
-		};
-
-		config.addCollection('books', (collection) => {
-			const returnPostCollection = collection
-				.getFilteredByGlob('./src/content/books/*.md')
-				.filter(livePosts);
-
-			return returnPostCollection;
-		});
-
 		// Nunjucks filters
 		config.addNunjucksFilter('year', function () {
 			const date = new Date();
