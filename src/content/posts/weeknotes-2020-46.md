@@ -1,59 +1,23 @@
----
-title: Raspberry Pi from MacOS via SD Card
+title: 'Raspberry Pi'
 subTitle: 'Weeknotes 2020 #46'
 date: 2020-11-15
-draft: true
-description: -
+draft: false
+description: Took out the Raspberry Pi from the depths of the cupboard.
 tags: ['weeknotes']
+
 ---
 
--   get the image: https://www.raspberrypi.org/software/operating-systems/
--   install the image: https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
--   `diskutil list` to find out the rdisk that your SD is associated with
--   `diskutil unmountDisk /dev/diskN` replacing the rdiskN with the number of the disk your SD card is associated with
--   `sudo dd bs=1m if=path_of_your_image.img of=/dev/rdiskN; sync` replacing the rdiskN with the number of the disk your SD card is associated with. In my case this is `sudo dd bs=1m if=/Users/andrew/Downloads/2020-08-20-raspios-buster-armhf-lite.img of=/dev/rdisk3; sync` (you can see the progress by pressing ctrl+t)
--   this will put the image on /Volumes/boot which will be accessible from the command line
--   `sudo diskutil eject /dev/rdiskN` to eject the SD card.
+This week:
 
-## Set up Wifi on the card
+-   It rained heavily all of Saturday and I made good use of the time to set up my raspberry pi again. It seems as though I set it up each time I get it out so I am writing notes for myself so there's a place I can look back on to remind myself how to do things.
+-   With the Raspberry Pi I started to connect all of the things in the house that are accessible via an API e.g. Hue lights, Sonos so I can make a Nextjs site and control things rather than having to go via 17 million different apps to do the same thing e.g. turn all the lights and music off in the lounge.
 
--   https://www.raspberrypi.org/documentation/configuration/wireless/headless.md
--   cd /Volumes/boot
--   vim wpa_suplicant.conf
--   enter wifi and country code in the file but that note that this will need to be the 2.4GHz network if you have a Raspberry Pi that does not support 5GHz.
+-   Have started taking the [Serverless Functions](https://frontendmasters.com/courses/serverless-functions) course on Frontend Masters. I use Firebase functions in my day job but its great to get a view from a course and also learn about Netlify functions at the same time. Fun!
 
-    ```
-    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-    update_config=1
-    country=<Insert 2 letter ISO 3166-1 country code here>
+-   Having started the course I am applying this knowledge and using nextjs's api routes to fire serverless functions to control my house. It is ace!
 
-    network={
-    ssid="<Name of your wireless LAN>"
-    psk="<Password for your wireless LAN>"
-    }
-    ```
+-   Ran two times. Tried to go walking at lunchtime every day which when working from home in the autumn/winter seems to be a vital thing to do.
 
--   enable ssh https://www.raspberrypi.org/documentation/remote-access/ssh/README.md easiest is to place a `ssh` file in the sd card during setup
--   eject the SD card and put in the raspberry pi and turn it on
+-   Read loads of "Dirt" which is a non-fiction book about French cuisine and the author's time spent learning to cook the French way in Lyon. Marion studied in Lyon and as soon as Covid is over we're going!
 
-## Format the SD Card
-
--   `sudo diskutil eraseDisk FAT32 RASPBIAN MBRFormat /dev/diskN` replacing diskN with your disk number found by running `diskutil list`. Note that this gives the name RASBIAN to the SD Card so now you can cd into /Volumes/RASPBIAN. I followed this site: https://www.michaelcrump.net/the-magical-command-to-get-sdcard-formatted-for-fat32/
-
-## Install Nodejs on the raspberry pi
-
--   Need to SSH into the PI first then you can do the command line work.
--   Follow this as it worked for me: https://www.instructables.com/Install-Nodejs-and-Npm-on-Raspberry-Pi/
-
-## Install Apache
-
--   https://www.raspberrypi.org/documentation/remote-access/web-server/apache.md
--   Should be able to navigate to `http://raspberrypi.lan/`
--   Files should be kept in `/var/www/html/` directory
--   Folder and file permissions for the var/www folder : https://www.raspberrypi.org/forums/viewtopic.php?t=155067
-
-## Johnny Five Button on Pi
-
--   npm install johnny-five raspi-io
--   create index.js
--
+> > > > > > > 417a4dcf9b9a7f91e3f3bcf8646c45d0ffc85d3f

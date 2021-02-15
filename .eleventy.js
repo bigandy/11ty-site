@@ -66,46 +66,6 @@ if (process.argv)
 				.filter(livePosts)
 				.filter(removeDrafts);
 
-			if (process.env.ELEVENTY_ENV === 'production') {
-				const workboxOptions = {
-					cacheId: 'andrewhudson-dev',
-					swDest: './dist/sw.js',
-					globPatterns: [
-						// ...[
-						// 	...new Set(
-						// 		returnPostCollection
-						// 			.map(
-						// 				(post) =>
-						// 					`${post.template.parsed.name}/index.html`
-						// 			)
-						// 			.reverse()
-						// 			.slice(0, 5)
-						// 	),
-						// ],
-						'index.html',
-						'about/index.html',
-						'archive/index.html',
-						'cv/index.html',
-						'now/index.html',
-						'design/index.html',
-						'assets/js/offline.js',
-						// 'assets/**/*',
-					],
-					importScripts: ['assets/js/worker.js'],
-					skipWaiting: false,
-				};
-				config.addPlugin(pluginPWA, workboxOptions);
-			}
-
-			return returnPostCollection;
-		});
-
-		config.addCollection('books', (collection) => {
-			const returnPostCollection = collection.getFilteredByGlob(
-				'./src/content/books/*.md'
-			);
-			// .filter(livePosts)
-			// .filter(removeDrafts)
 			return returnPostCollection;
 		});
 
