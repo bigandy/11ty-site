@@ -19,5 +19,3 @@ This week:
 -   Ran two times. Tried to go walking at lunchtime every day which when working from home in the autumn/winter seems to be a vital thing to do.
 
 -   Read loads of "Dirt" which is a non-fiction book about French cuisine and the author's time spent learning to cook the French way in Lyon. Marion studied in Lyon and as soon as Covid is over we're going!
-
-> > > > > > > 417a4dcf9b9a7f91e3f3bcf8646c45d0ffc85d3f
