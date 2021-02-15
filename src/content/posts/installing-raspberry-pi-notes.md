@@ -3,7 +3,6 @@ title: Raspberry Pi from MacOS via SD Card
 subTitle: 'Weeknotes 2021 #7'
 date: 2021-02-14
 draft: true
-description: -
 tags: ['weeknotes']
 ---
 
