@@ -42,3 +42,4 @@ date: 2017-01-03
 - Bose qc 35ii - bluetooth pretty ropey to be honest, or the MBP is poor with lid closed.
 - Shoes - gotta have some indoor shoes so it feels like I am working not lazing at home.
 
+Inspiration: [https://uses.tech/](https://uses.tech/)
