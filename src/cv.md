@@ -8,46 +8,34 @@ templateClass: tmpl-post cv
 date: 2018-01-01
 ---
 
-<div class="grid grid--halfs">
-
-<a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a>
-
-<div class="tel">077 36063 671</div>
-
-</div>
-
 <h2 id="personal-statement">Personal Statement</h2>
 
-<p>I am a front-end software engineer with 10 years product and agency experience looking to take the next step in my career. I am passionate about website performance, learning and applying new technologies in projects.</p>
+<p>I am a full-stack software engineer with 10+ years experience creating highly performant and usable products, websites, desktop applcications and browser extensions.</p>
 
 <h2 id="skills">Skills</h2>
 
 <ul class="grid grid--halfs">
-	<li>Typescript, React, ES Next JavaScript</li>
-	<li>Electron and Browser Extension development</li>
+	<li>TS, JS, CSS, CSS-in-JS and SCSS</li>
+	<li>Electron and Browser Extension</li>
+	<li>React, GraphQL and Apollo</li>
 	<li>Firebase firestore and serverless functions</li>
-	<li>Frameworks such as Gatsby, Next.js, and Eleventy</li>
-	<li>CSS Modules and CSS-in-JS, as well as scss.</li>
-	<li>Modular Components with Storybook to display to team</li>
-	<li>Cross browser and device debugging</li>
-	<li>Git / continuous deployment</li>
-	<li>User Experience, Usability, and Accessibility</li>
-	<li>WordPress development (bespoke theme, plugin and functionality)</li>
-	<li>Breaking components and views out of Figma, Sketch and Photoshop and into reality</li>
+	<li>Gatsby, Next.js, and Eleventy</li>
+	<li>CSS Modules and CSS-in-JS, and scss.</li>
+	<li>Modular Components using Storybook to document</li>
+	<li>Composing re-usable components and views out of Figma.</li>
 </ul>
 
 <h2 id="experience">Experience</h2>
 
 <h3>Venture Harbour – <em>Front-end Developer</em> – 10/2017 – Present</h3>
 
--   Webapp development with Nextjs, Firebase and Typescript.
--   Desktop Application and Chrome Extension development with React, nodejs, web sockets, and Firebase.
+-   Webapp development with Nextjs, GraphQL and Typescript.
+-   Desktop Application and Chrome Extension development with React, nodejs, web-sockets, and Firebase.
 -   Styling with CSS Modules, CSS-in-JS, and scss, and implementation of a design system using Storybook.
 -   Created multiple PWA using custom WordPress logic and Workbox.
--   Merge Request reviewing for team members’ code
--   Work across multiple projects in 6-week cycles, demoing work to team in regular weekly meetings, with daily standup and excellent communication via Slack, Hangouts and documentation in Notion.
+-   Peer review and test colleagues code
 -   Optimise Performance of each of our sites and products and automate testing and CI for each - deployment.
--   6-weekly internal conference presentations on advanced CSS and web components.
+-   Internal conference presentations to colleagues.
 
 <h3>Taylor &amp; Francis – <em>Web Developer</em> – 10/2016 – 09/2017</h3>
 
@@ -78,9 +66,9 @@ date: 2018-01-01
 <p>Here are a selection of the sites, app and browser extensions that I have made:</p>
 
 <ul class="cv-portfolio-list">
-	<li><a href="https://truenorth.io" rel="noopener" target="_blank">TrueNorth</a> - marketing web app (currently in development) using Nextjs, Typescript, and firebase.</li>
+	<li><a href="https://truenorth.io" rel="noopener" target="_blank">TrueNorth</a> - marketing web app (currently in beta) using Nextjs, Typescript, GraphQL, Apollo and Prisma.</li>
 	<li>
-		<a href="https://www.sereneapp.com" rel="noopener" target="_blank">Serene App</a> – Productivity Application for MacOS users using Electron, Firebase, React and nodejs.
+		<a href="https://www.sereneapp.com" rel="noopener" target="_blank">Serene App</a> – Productivity Application for MacOS users using Electron, Firebase, React and nodejs. and companion <a href="https://chrome.google.com/webstore/detail/serene-extension/nbealbhmmmaiiiddmianmjoecmipnjij" rel="noopener" target="_blank">Browser Extensions</a>
 	</li>
 	<li>
 		<a href="https://chrome.google.com/webstore/detail/serene-extension/nbealbhmmmaiiiddmianmjoecmipnjij" rel="noopener" target="_blank">Serene Chrome Extension</a> using React, socket.io, Firebase and WebExtensions API.
@@ -94,7 +82,7 @@ date: 2018-01-01
 	<li>
 		<a href="https://www.photocrowd.com" rel="noopener" target="_blank">photocrowd.com</a> – front-end development with React/Relay, Less, and webpack
 	</li>
-	<li>
+	<!-- <li>
 		<a href="https://electrichosting.net" rel="noopener" target="_blank">electrichosting.net</a> – WordPress site using ACF Pro so any part of the site was manageable by the client
 	</li>
 	<li>
@@ -111,17 +99,17 @@ date: 2018-01-01
 	</li>
 	<li>
 		<a href="https://www.epf.cc/" rel="noopener" target="_blank">epf.cc</a> – responsive single page WordPress site
-	</li>
+	</li> -->
 	<li>
 		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.com/bigandy</a> – my GitHub account
 	</li>
 	<li>
 		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - powered currently by Eleventy using data exported from my old WordPress site. PostCSS for the CSS.
 	</li>
-	<li>
+	<!-- <li>
 		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
-	</li>
-	<li>CSS Battle: <a href="https://cssbattle.dev/player/bigandy" rel="noopener" target="_blank">Profile</a> I love the challenge of re-creating an image with pure css
+	</li> -->
+	<!-- <li>CSS Battle: <a href="https://cssbattle.dev/player/bigandy" rel="noopener" target="_blank">Profile</a> I love the challenge of re-creating an image with pure css</li> -->
 </ul>
 
 <h2 id="education">Education</h2>
@@ -138,3 +126,11 @@ date: 2018-01-01
 	<li>Photography</li>
 	<li>Coffee</li>
 </ul>
+
+<div class="grid grid--halfs">
+
+<a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a>
+
+<div class="tel">077 36063 671</div>
+
+</div>
