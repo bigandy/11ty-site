@@ -8,13 +8,15 @@ templateClass: tmpl-post cv
 date: 2018-01-01
 ---
 
+<div class="contact">Email: <a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a>Telephone: <a href="tel:07736063671" class="tel">077 36063 671</a></div>
+
 <h2 id="personal-statement">Personal Statement</h2>
 
 <p>I am a full-stack software engineer with 10+ years experience creating highly performant and usable products, websites, desktop applcications and browser extensions.</p>
 
 <h2 id="skills">Skills</h2>
 
-<ul class="grid grid--halfs">
+<ul class="grid p-grid--halfs">
 	<li>TS, JS, CSS, CSS-in-JS and SCSS</li>
 	<li>Electron and Browser Extension</li>
 	<li>React, GraphQL and Apollo</li>
@@ -27,7 +29,7 @@ date: 2018-01-01
 
 <h2 id="experience">Experience</h2>
 
-<h3>Venture Harbour – <em>Front-end Developer</em> – 10/2017 – Present</h3>
+<h3>Venture Harbour – <em>Software Engineer</em> – 10.2017 – Present</h3>
 
 -   Webapp development with Nextjs, GraphQL and Typescript.
 -   Desktop Application and Chrome Extension development with React, nodejs, web-sockets, and Firebase.
@@ -37,25 +39,25 @@ date: 2018-01-01
 -   Optimise Performance of each of our sites and products and automate testing and CI for each - deployment.
 -   Internal conference presentations to colleagues.
 
-<h3>Taylor &amp; Francis – <em>Web Developer</em> – 10/2016 – 09/2017</h3>
+<h3>Taylor &amp; Francis – <em>Web Developer</em> – 10.2016 – 09.2017</h3>
 
 -   I created custom performant WordPress and Expression Engine sites
 -   I hand-crafted a node tool to benchmark and monitor Business Sites using the Web Page Test API and display with React
 -   Perform performance audits and carry out improvements on business and society sites
 
-<h3>Photocrowd – <em>Front-end Developer</em> – 03/2016 – 08/2016</h3>
+<h3>Photocrowd – <em>Front-end Developer</em> – 03.2016 – 08.2016</h3>
 
 -   Creating new components and pages using React/Relay and Less from Photoshop designs
 -   Implementing Webpack into the development process to allow for code modularity, linting, and writing future JS (ES2015) code with Babel
 -   Applying BEM code methodology for new CSS components
 
-<h3>Electric Studio – <em>Front-end WordPress Developer</em>&nbsp;&nbsp;– 01/2013 – 02/2016</h3>
+<h3>Electric Studio – <em>Front-end WordPress Developer</em> – 01.2013 – 02.2016</h3>
 
 -   I created highly customised WordPress sites from Photoshop designs, with custom post-types, taxonomies, meta boxes, shortcodes and functions.
 -   The sites were performant, using best practices and technologies, built within budget and in timeframes.
 -   Pre-launch client training, dealing with any client feedback via Basecamp or telephone
 
-<h3>HeathWallace Ltd – <em>Creative developer</em>&nbsp;&nbsp;– 08/2010 – 01/2013</h3>
+<h3>HeathWallace Ltd – <em>Creative developer</em> – 08.2010 – 01.2013</h3>
 
 -   I built highly accessible websites for clients including HSBC, RBS and Grant Thornton
 -   Using CMSs such as WordPress, CQ5 and Sitecore to allow the client to control all content on their site
@@ -114,23 +116,17 @@ date: 2018-01-01
 
 <h2 id="education">Education</h2>
 
-<ul class="grid grid--halfs">
+<ul class="p-grid p-grid--halfs">
 	<li>Masters CIW Web Designer</li>
 	<li>MChem (hons) Chemistry – University of Manchester</li>
 </ul>
 
 <h2 id="interests">Interests</h2>
 
-<ul class="grid grid--halfs">
+<ul class="p-grid p-grid--halfs">
 	<li>Running</li>
 	<li>Photography</li>
 	<li>Coffee</li>
 </ul>
 
-<div class="grid grid--halfs">
 
-<a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a>
-
-<div class="tel">077 36063 671</div>
-
-</div>

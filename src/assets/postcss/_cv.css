@@ -13,55 +13,55 @@
 	margin-left: 1.5em;
 }
 
+.contact a {
+	display: inline-block;
+	margin-right: 1em;
+}
+
 @media print {
-	.cv {
-		header,
-		footer {
-			display: none;
-		}
+	.cv header,
+	.cv footer {
+		display: none;
+	}
 
-		h1 {
-			margin-bottom: 2rem;
+	.cv h1 {
+		margin-bottom: 1rem;
+	}
+	.cv h1::before {
+		content: 'Andrew Hudson - ';
+	}
 
-			&::before {
-				content: "Andrew Hudson - ";
-			}
-		}
+	.cv .p-grid {
+		display: grid;
+		grid-template-columns: repeat(var(--grid-number, 1), 1fr);
+	}
 
-		h2 {
-			border-bottom-color: inherit;
-			margin-top: 1rem;
-		}
+	.cv .p-grid--halfs {
+		--grid-number: 2;
+	}
 
-		ul.skills {
-			margin-left: 1rem;
-		}
+	.cv .p-grid--thirds {
+		--grid-number: 3;
+	}
 
-		.grid {
-			display: grid;
-			grid-template-columns: repeat(var(--grid-number, 1), 1fr);
+	.cv .p-grid li {
+		padding-right: 1.5rem;
+	}
 
-			&--halfs {
-				--grid-number: 2;
-			}
+	.cv h2 {
+		border-bottom-color: inherit;
+		margin-top: 1rem;
+	}
 
-			&--thirds {
-				--grid-number: 3;
-			}
+	.cv ul.skills {
+		margin-left: 1rem;
+	}
 
-			li {
-				padding-right: 1.5rem;
-			}
-		}
+	.cv ul:last-child {
+		margin-bottom: 0;
+	}
 
-		ul {
-			&:last-child {
-				margin-bottom: 0;
-		   }
-		}
-
-		main {
-			padding-bottom: 0;
-		}
+	.cv main {
+		padding-bottom: 0;
 	}
 }
