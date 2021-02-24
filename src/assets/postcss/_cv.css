@@ -1,14 +1,16 @@
-.cv {
-	h2 {
-		margin-top: 1.5em;
-		margin-bottom: 0;
-		border-bottom: 2px solid green;
-		display: inline-block;
-	}
+.cv h2 {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+	border-bottom: 2px solid green;
+	display: inline-block;
+}
 
-	ul:not(.nav) {
-		margin-left: 1.5em;
-	}
+.cv h1 + h2 {
+	margin-top: 0;
+}
+
+.cv ul:not(.nav) {
+	margin-left: 1.5em;
 }
 
 @media print {
