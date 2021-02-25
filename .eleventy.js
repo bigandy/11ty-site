@@ -46,12 +46,26 @@ if (process.argv)
 			});
 		};
 
-		const removeDrafts = (p) => {
+		const removeWeeknotes = (post) => {
+			if (post.data.tags) {
+				return !post.data.tags.includes('weeknotes');
+			}
+			return post;
+		};
+
+		const showWeeknotes = (post) => {
+			if (post.data.tags) {
+				return post.data.tags.includes('weeknotes');
+			}
+			return post;
+		};
+
+		const removeDrafts = (post) => {
 			if (isDev) {
-				return p;
+				return post;
 			}
 
-			return p.data.draft !== true;
+			return post.data.draft !== true;
 		};
 
 		// Filters
@@ -63,6 +77,17 @@ if (process.argv)
 		config.addCollection('posts', (collection) => {
 			const returnPostCollection = collection
 				.getFilteredByGlob('./src/content/posts/*.md')
+				.filter(removeWeeknotes)
+				.filter(livePosts)
+				.filter(removeDrafts);
+
+			return returnPostCollection;
+		});
+
+		config.addCollection('weeknotes', (collection) => {
+			const returnPostCollection = collection
+				.getFilteredByGlob('./src/content/posts/*.md')
+				.filter(showWeeknotes)
 				.filter(livePosts)
 				.filter(removeDrafts);
 

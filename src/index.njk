@@ -3,14 +3,22 @@ layout: layouts/home.njk
 tags:
   - footnav
 navtitle: Home
-templateClass: tmpl-post
+templateClass: tmpl-post homepage
 ---
 
 {% set postsNumber = 10 %}
 
-<h1>Latest Posts</h1>
+<h2>Latest Posts</h2>
 
 {% set postslist = collections.posts | firstNElements(-postsNumber) %}
 {% include "components/postslist.njk" %}
 
 <p>All posts can be found in <a href="{{ '/archive/' | url }}">the archive</a>.</p>
+
+
+<h2>Weeknotes</h2>
+
+{% set postslist = collections.weeknotes | firstNElements(-postsNumber) %}
+{% include "components/postslist.njk" %}
+
+<p>All weeknotes can be found in <a href="{{ '/weeknotes/' | url }}">the weeknotes collection</a>.</p>

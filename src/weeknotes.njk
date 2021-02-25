@@ -1,0 +1,38 @@
+---
+layout: layouts/home.njk
+tags:
+  - nav
+navtitle: Weeknotes
+templateClass: tmpl-post
+date: 2018-03-02
+pagination:
+  data: collections.weeknotes
+  size: 10
+  reverse: true
+permalink: /weeknotes/{% if pagination.pageNumber >- 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+---
+
+<h1>Weeknotes {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>
+
+
+
+{% set postslist = pagination.items | reverse %}
+{% include "components/postslist.njk" %}
+
+<div class="page-selector">
+	{% if pagination.previousPageHref %}
+	<a href="{{ pagination.previousPageHref }}" class="page-numbers page-pagination">
+		Previous
+	</a>
+	{% else %}
+	<span class="page-numbers">Previous</span>
+	{% endif %}
+	<span class="page-numbers page-total">
+	Page: {{ pagination.pageNumber + 1 }} of {{ pagination.links | length  }}
+	</span>
+	{% if pagination.nextPageHref %}
+	<a href="{{ pagination.nextPageHref }}" class="page-numbers page-pagination">Next</a>
+	{% else %}
+	<span class="page-numbers">Next</span>
+	{% endif %}
+</div>
