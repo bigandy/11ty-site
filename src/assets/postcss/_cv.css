@@ -13,12 +13,20 @@
 	margin-left: 1.5em;
 }
 
+.contact {
+	margin-bottom: 1rem;
+}
+
 .contact a {
 	display: inline-block;
 	margin-right: 1em;
 }
 
 @media print {
+	.contact {
+		margin-bottom: 0;
+	}
+
 	.cv header,
 	.cv footer {
 		display: none;

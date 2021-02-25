@@ -8,7 +8,7 @@ templateClass: tmpl-post cv
 date: 2018-01-01
 ---
 
-<div class="contact">Email: <a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a>Telephone: <a href="tel:07736063671" class="tel">077 36063 671</a></div>
+<div class="contact"><a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a><a href="tel:07736063671" class="tel">077 36063 671</a></div>
 
 <h2 id="personal-statement">Personal Statement</h2>
 
@@ -17,8 +17,8 @@ date: 2018-01-01
 <h2 id="skills">Skills</h2>
 
 <ul class="grid p-grid--halfs">
-	<li>TS, JS, CSS, CSS-in-JS and SCSS</li>
-	<li>Electron and Browser Extension</li>
+	<li>TS, JS, CSS, CSS-in-JS and Node</li>
+	<li>Electron and Browser Extensions</li>
 	<li>React, GraphQL and Apollo</li>
 	<li>Firebase firestore and serverless functions</li>
 	<li>Gatsby, Next.js, and Eleventy</li>
@@ -32,7 +32,7 @@ date: 2018-01-01
 <h3>Venture Harbour – <em>Software Engineer</em> – 10.2017 – Present</h3>
 
 -   Webapp development with Nextjs, GraphQL and Typescript.
--   Desktop Application and Chrome Extension development with React, nodejs, web-sockets, and Firebase.
+-   Desktop Application and Browser Extension development with React, nodejs, web-sockets, and Firebase.
 -   Styling with CSS Modules, CSS-in-JS, and scss, and implementation of a design system using Storybook.
 -   Created multiple PWA using custom WordPress logic and Workbox.
 -   Peer review and test colleagues code
