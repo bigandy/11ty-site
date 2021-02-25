@@ -11,7 +11,9 @@
 	--link-visited: var(--navy);
 	--color: var(--darkgray);
 	--background-color: var(--white);
-	--body-font-family: Piazzolla, serif;
+	--body-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+		sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	--transition-duration: 300ms;
 	--transition-method: ease-in-out;
 	--font-weight: 400;
@@ -52,7 +54,7 @@ h1 {
 }
 
 * {
-	font-variation-settings: 'wght'var(--font-weight);
+	font-variation-settings: 'wght' var(--font-weight);
 }
 
 html {
@@ -117,7 +119,8 @@ main :first-child {
 
 .nav {
 	border-bottom: 1px solid var(--lightgray);
-	transition: border-bottom var(--transition-duration) var(--transition-method);
+	transition: border-bottom var(--transition-duration)
+		var(--transition-method);
 }
 
 pre,
@@ -198,7 +201,6 @@ pre {
 
 p .postlist-date {
 	display: inline-block;
-
 }
 
 .postlist-link {
@@ -210,6 +212,7 @@ p .postlist-date {
 .postlist-item--draft {
 	border-left: 5px solid red;
 	padding-left: 15px;
+	display: none;
 }
 
 .postlist-item-active .postlist-link {
@@ -223,8 +226,8 @@ a[href].direct-link:visited {
 
 a[href].direct-link:focus,
 a[href].direct-link:focus:visited,
-:hover>a[href].direct-link,
-:hover>a[href].direct-link:visited {
+:hover > a[href].direct-link,
+:hover > a[href].direct-link:visited {
 	color: #aaa;
 }
 
@@ -258,7 +261,7 @@ a[href].direct-link:focus:visited,
 
 .tag:visited:hover {
 	color: var(--color);
-	background: var(--background-color)
+	background: var(--background-color);
 }
 
 .warning {
@@ -362,5 +365,4 @@ footer .nav {
 
 theme-toggle {
 	display: inline-block;
-
 }
