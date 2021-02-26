@@ -1,7 +1,6 @@
 const fs = require('fs');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const pluginPWA = require('eleventy-plugin-pwa');
 
 const htmlDateString = require('./src/_11ty/filters/htmlDateString.js');
 const readableDate = require('./src/_11ty/filters/readableDate.js');

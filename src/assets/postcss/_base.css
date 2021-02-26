@@ -16,7 +16,6 @@
 		sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	--transition-duration: 300ms;
 	--transition-method: ease-in-out;
-	--font-weight: 400;
 }
 
 * {
@@ -44,7 +43,7 @@ body {
 h1,
 h2,
 h3 {
-	--font-weight: 900;
+	font-weight: bold;
 }
 
 .homepage h2,
@@ -54,12 +53,7 @@ h1 {
 	margin-top: 0;
 }
 
-* {
-	font-variation-settings: 'wght' var(--font-weight);
-}
-
 html {
-	font-family: --body-font-family;
 	font-size: 120%;
 }
 
@@ -97,7 +91,6 @@ li p {
 }
 
 strong {
-	--font-weight: 800;
 	font-weight: bold;
 }
 
@@ -152,7 +145,7 @@ pre {
 	margin: 1rem 0;
 	font-size: 1em;
 	display: inline-block;
-	--font-weight: 900;
+	font-weight: bold;
 }
 
 .home :link:not(:hover) {
@@ -185,7 +178,7 @@ pre {
 }
 
 .postlist a {
-	--font-weight: 700;
+	font-weight: bold;
 	font-size: 150%;
 	display: block;
 }
@@ -241,7 +234,7 @@ a[href].direct-link:focus:visited,
 	background-color: var(--color);
 	border-radius: 0.25em;
 	text-decoration: none;
-	--font-weight: 777;
+	font-weight: bold;
 	letter-spacing: 1ch;
 	padding-right: 0;
 	border: 2px solid var(--color);
