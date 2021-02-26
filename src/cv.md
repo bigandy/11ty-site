@@ -22,9 +22,7 @@ date: 2018-01-01
 	<li>React, GraphQL and Apollo</li>
 	<li>Firebase firestore and serverless functions</li>
 	<li>Gatsby, Next.js, and Eleventy</li>
-	<li>CSS Modules and CSS-in-JS, and scss.</li>
-	<li>Modular Components using Storybook to document</li>
-	<li>Composing re-usable components and views out of Figma.</li>
+	<li>Modular Components using Storybook to document and test</li>
 </ul>
 
 <h2 id="experience">Experience</h2>
