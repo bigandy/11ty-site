@@ -7,8 +7,8 @@
 			<li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
 				<a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
 			</li>
-			{%- endfor -%}
-			</ul>
-			{% include "components/dark-light-switch.njk" %}
+		{%- endfor -%}
+		</ul>
+		{% include "components/dark-light-switch.njk" %}
 	</div>
 </footer>
