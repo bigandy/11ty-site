@@ -123,6 +123,7 @@ date: 2018-01-01
 
 <ul class="p-grid p-grid--halfs">
 	<li>Running</li>
+	<li>Cycling</li>
 	<li>Photography</li>
 	<li>Coffee</li>
 </ul>
