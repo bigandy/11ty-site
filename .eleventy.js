@@ -8,19 +8,21 @@ const firstNElements = require('./src/_11ty/filters/firstNElements.js');
 const tagList = require('./src/_11ty/getTagList');
 const isDev = process.argv.includes('dev');
 
+const path = require('path');
+
 if (process.argv)
-	module.exports = function (config) {
+	module.exports = function (eleventyConfig) {
 		// Plugins
-		config.addPlugin(pluginSyntaxHighlight);
+		eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
-		config.addPlugin(pluginRss);
-		config.addPlugin(require('./src/_11ty/optimize-html.js'));
+		eleventyConfig.addPlugin(pluginRss);
+		eleventyConfig.addPlugin(require('./src/_11ty/optimize-html.js'));
 
-		config.setDataDeepMerge(true);
+		eleventyConfig.setDataDeepMerge(true);
 
-		config.addLayoutAlias('post', 'layouts/post.njk');
+		eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
-		config.addNunjucksAsyncShortcode(
+		eleventyConfig.addNunjucksAsyncShortcode(
 			'postcss',
 			require('./src/utils/transform-css')
 		);
@@ -68,14 +70,17 @@ if (process.argv)
 		};
 
 		// Filters
-		config.addFilter('readableDate', readableDate);
-		config.addFilter('htmlDateString', htmlDateString);
-		config.addFilter('firstNElements', firstNElements);
-		config.addFilter('removeDraftsFromTagsList', removeDraftsFromTagsList);
+		eleventyConfig.addFilter('readableDate', readableDate);
+		eleventyConfig.addFilter('htmlDateString', htmlDateString);
+		eleventyConfig.addFilter('firstNElements', firstNElements);
+		eleventyConfig.addFilter(
+			'removeDraftsFromTagsList',
+			removeDraftsFromTagsList
+		);
 
-		config.addCollection('posts', (collection) => {
+		eleventyConfig.addCollection('posts', (collection) => {
 			const returnPostCollection = collection
-				.getFilteredByGlob('./src/content/posts/*.md')
+				.getFilteredByGlob('./src/content/posts/**/*.md')
 				.filter(removeWeeknotes)
 				.filter(livePosts)
 				.filter(removeDrafts);
@@ -83,9 +88,9 @@ if (process.argv)
 			return returnPostCollection;
 		});
 
-		config.addCollection('weeknotes', (collection) => {
+		eleventyConfig.addCollection('weeknotes', (collection) => {
 			const returnPostCollection = collection
-				.getFilteredByGlob('./src/content/posts/*.md')
+				.getFilteredByGlob('./src/content/posts/**/*.md')
 				.filter(showWeeknotes)
 				.filter(livePosts)
 				.filter(removeDrafts);
@@ -94,18 +99,18 @@ if (process.argv)
 		});
 
 		// Nunjucks filters
-		config.addNunjucksFilter('year', function () {
+		eleventyConfig.addNunjucksFilter('year', function () {
 			const date = new Date();
 			return date.getFullYear();
 		});
 
 		// Collections
-		config.addCollection('tagList', tagList);
+		eleventyConfig.addCollection('tagList', tagList);
 
-		config.addPassthroughCopy('src/assets/images');
-		config.addPassthroughCopy('src/assets/js');
-		config.addPassthroughCopy('src/assets/postcss');
-		config.addPassthroughCopy('_redirects');
+		eleventyConfig.addPassthroughCopy('src/assets/images');
+		eleventyConfig.addPassthroughCopy('src/assets/js');
+		eleventyConfig.addPassthroughCopy('src/assets/postcss');
+		eleventyConfig.addPassthroughCopy('_redirects');
 
 		/* Markdown Plugins */
 		let markdownIt = require('markdown-it');
@@ -122,12 +127,12 @@ if (process.argv)
 			permalinkSymbol: '#',
 		};
 
-		config.setLibrary(
+		eleventyConfig.setLibrary(
 			'md',
 			markdownIt(options).use(markdownItAnchor, opts)
 		);
 
-		config.setBrowserSyncConfig({
+		eleventyConfig.setBrowserSyncConfig({
 			callbacks: {
 				ready: function (err, browserSync) {
 					const content_404 = fs.readFileSync('src/404.md');
