@@ -360,3 +360,10 @@ footer .nav {
 theme-toggle {
 	display: inline-block;
 }
+
+.notes {
+	margin-top: 4em;
+	padding: 2em;
+	background: lightblue;
+	border: 4px dashed white;
+}
