@@ -106,9 +106,9 @@ date: 2018-01-01
 	<li>
 		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - powered currently by Eleventy using data exported from my old WordPress site. PostCSS for the CSS.
 	</li>
-	<!-- <li>
+	<li>
 		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
-	</li> -->
+	</li>
 	<!-- <li>CSS Battle: <a href="https://cssbattle.dev/player/bigandy" rel="noopener" target="_blank">Profile</a> I love the challenge of re-creating an image with pure css</li> -->
 </ul>
 
@@ -123,8 +123,7 @@ date: 2018-01-01
 
 <ul class="p-grid p-grid--halfs">
 	<li>Running</li>
+	<li>Cycling</li>
 	<li>Photography</li>
 	<li>Coffee</li>
 </ul>
-
-
