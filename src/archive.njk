@@ -2,6 +2,7 @@
 layout: layouts/home.njk
 tags:
   - footnav
+  - nav
 navtitle: Archive
 templateClass: tmpl-post
 date: 2018-01-02
@@ -10,6 +11,7 @@ pagination:
   size: 10
   reverse: true
 permalink: /archive/{% if pagination.pageNumber >- 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+title: Archive
 ---
 
 <h1>Archive {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>

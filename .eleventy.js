@@ -78,6 +78,14 @@ if (process.argv)
 			removeDraftsFromTagsList
 		);
 
+		// Nunjucks filters
+		eleventyConfig.addNunjucksFilter('year', function () {
+			const date = new Date();
+			return date.getFullYear();
+		});
+
+		// Collections
+		eleventyConfig.addCollection('tagList', tagList);
 		eleventyConfig.addCollection('posts', (collection) => {
 			const returnPostCollection = collection
 				.getFilteredByGlob('./src/content/posts/**/*.md')
@@ -87,7 +95,6 @@ if (process.argv)
 
 			return returnPostCollection;
 		});
-
 		eleventyConfig.addCollection('weeknotes', (collection) => {
 			const returnPostCollection = collection
 				.getFilteredByGlob('./src/content/posts/**/*.md')
@@ -97,15 +104,6 @@ if (process.argv)
 
 			return returnPostCollection;
 		});
-
-		// Nunjucks filters
-		eleventyConfig.addNunjucksFilter('year', function () {
-			const date = new Date();
-			return date.getFullYear();
-		});
-
-		// Collections
-		eleventyConfig.addCollection('tagList', tagList);
 
 		eleventyConfig.addPassthroughCopy('src/assets/images');
 		eleventyConfig.addPassthroughCopy('src/assets/js');

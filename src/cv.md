@@ -12,15 +12,15 @@ date: 2018-01-01
 
 <h2 id="personal-statement">Personal Statement</h2>
 
-<p>I am a full-stack software engineer with 10+ years experience creating highly performant and usable products, websites, desktop applications and browser extensions.</p>
+<p>I am a full-stack software engineer with 11+ years experience creating highly performant and usable products, websites, desktop applications and browser extensions.</p>
 
 <h2 id="skills">Skills</h2>
 
 <ul class="grid p-grid--halfs">
-	<li>TS, JS, CSS, CSS-in-JS and Node</li>
-	<li>Electron and Browser Extensions</li>
+	<li>TypeScript, JS, CSS, CSS-in-JS and Node</li>
 	<li>React, GraphQL and Apollo</li>
 	<li>Firebase firestore and serverless functions</li>
+	<li>Electron and Browser Extensions</li>
 	<li>Gatsby, Next.js, and Eleventy</li>
 	<li>Modular Components using Storybook to document and test</li>
 </ul>

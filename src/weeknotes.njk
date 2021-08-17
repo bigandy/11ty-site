@@ -4,12 +4,13 @@ tags:
   - nav
 navtitle: Weeknotes
 templateClass: tmpl-post
-date: 2018-03-02
+date: 2016-03-02
 pagination:
   data: collections.weeknotes
   size: 10
   reverse: true
 permalink: /weeknotes/{% if pagination.pageNumber >- 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
+title: Weeknotes
 ---
 
 <h1>Weeknotes {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>
