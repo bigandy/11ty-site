@@ -12,54 +12,67 @@ date: 2018-01-01
 
 <h2 id="personal-statement">Personal Statement</h2>
 
-<p>I am a full-stack software engineer with 11+ years experience creating highly performant and usable products, websites, desktop applications and browser extensions.</p>
+<p>I am a full-stack software engineer with 11+ years experience creating highly performant and usable products, websites, desktop applications, and browser extensions.</p>
 
 <h2 id="skills">Skills</h2>
 
-<ul class="grid p-grid--halfs">
-	<li>TypeScript, JS, CSS, CSS-in-JS and Node</li>
-	<li>React, GraphQL and Apollo</li>
-	<li>Firebase firestore and serverless functions</li>
-	<li>Electron and Browser Extensions</li>
-	<li>Gatsby, Next.js, and Eleventy</li>
-	<li>Modular Components using Storybook to document and test</li>
+<ul class="skills">
+	<li>TypeScript, React, and Node</li>
+	<li>All the variations of CSS (scss / CSS / CSS-in-JS / CSS Modules)</li>
+	<li>GraphQL, Apollo, and Databases (Firebase and Postgres)</li>
+	<li>Serverless functions with custom API routes</li>
+	<li>Electron and Browser Extension development</li>
+	<li>Gatsby, Next.js, Eleventy, and CMS including WordPress</li>
+	<li>Engineering modular components and showcasing with Storybook to document and test</li>
 </ul>
 
 <h2 id="experience">Experience</h2>
 
 <h3>Venture Harbour – <em>Software Engineer</em> – 10.2017 – Present</h3>
 
--   Webapp development with Nextjs, GraphQL and Typescript.
--   Desktop Application and Browser Extension development with React, nodejs, web-sockets, and Firebase.
--   Styling with CSS Modules, CSS-in-JS, and scss, and implementation of a design system using Storybook.
--   Created multiple PWA using custom WordPress logic and Workbox.
--   Peer review and test colleagues code
--   Optimise Performance of each of our sites and products and automate testing and CI for each - deployment.
--   Internal conference presentations to colleagues.
+<ul>
+	<li>Web app development with Next.js, GraphQL and Typescript.</li>
+	<li>Crafting beautiful, usable components, pages, and sites from designs in Figma.</li>
+	<li>Peer review and test colleagues code</li>
+	<li>Break down problems into solutions and solutions into tasks, estimating time and sharing with the team</li>
+	<li>Research solutions and create custom demos before moving into code</li>
+	<li>Desktop Application and Browser Extension development with React, nodejs, web-sockets, and Firebase.</li>
+	<li>I have created multiple PWA using custom WordPress code and Workbox.</li>
+	<li>Optimise Performance of each of our sites and products and automate testing and CI for each - deployment.</li>
+	<li>Internal conference presentations to colleagues.</li>
+</ul>
 
 <h3>Taylor &amp; Francis – <em>Web Developer</em> – 10.2016 – 09.2017</h3>
 
--   I created custom performant WordPress and Expression Engine sites
--   I hand-crafted a node tool to benchmark and monitor Business Sites using the Web Page Test API and display with React
--   Perform performance audits and carry out improvements on business and society sites
+<ul>
+<li>I created custom performant WordPress and Expression Engine sites</li>
+<li>I hand-crafted a node tool to benchmark and monitor Business Sites using the Web Page Test API and display with React</li>
+<li>Perform performance audits and carry out improvements on business and society sites</li>
+</ul>
 
 <h3>Photocrowd – <em>Front-end Developer</em> – 03.2016 – 08.2016</h3>
 
--   Creating new components and pages using React/Relay and Less from Photoshop designs
--   Implementing Webpack into the development process to allow for code modularity, linting, and writing future JS (ES2015) code with Babel
--   Applying BEM code methodology for new CSS components
+<ul>
+<li>Creating new components and pages using React/Relay and Less from Photoshop designs</li>
+<li>Implementing Webpack into the development process to allow for code modularity, linting, and writing future JS (ES2015) code with Babel</li>
+<li>Applying BEM code methodology for new CSS components</li>
+</ul>
 
 <h3>Electric Studio – <em>Front-end WordPress Developer</em> – 01.2013 – 02.2016</h3>
 
--   I created highly customised WordPress sites from Photoshop designs, with custom post-types, taxonomies, meta boxes, shortcodes and functions.
--   The sites were performant, using best practices and technologies, built within budget and in timeframes.
--   Pre-launch client training, dealing with any client feedback via Basecamp or telephone
+<ul>
+<li>I created highly customised WordPress sites from Photoshop designs, with custom post-types, taxonomies, meta boxes, shortcodes and functions.</li>
+<li>The sites were performant, using best practices and technologies, built within budget and in timeframes.</li>
+<li>Pre-launch client training, dealing with any client feedback via Basecamp or telephon</li>
+</ul>
 
 <h3>HeathWallace Ltd – <em>Creative developer</em> – 08.2010 – 01.2013</h3>
 
--   I built highly accessible websites for clients including HSBC, RBS and Grant Thornton
--   Using CMSs such as WordPress, CQ5 and Sitecore to allow the client to control all content on their site
--   Knowledge Sharing through weekly masterclass sessions (I ran three : WordPress; CSS3; and Sass)
+<ul>
+<li>I built highly accessible websites for clients including HSBC, RBS and Grant Thornton</li>
+<li>Using CMSs such as WordPress, CQ5 and Sitecore to allow the client to control all content on their site</li>
+<li>Knowledge Sharing through weekly masterclass sessions (I ran three : WordPress; CSS3; and Sass)</li>
+</ul>
 
 <h2 id="relevant-experience">Relevant Experience</h2>
 
