@@ -5,12 +5,12 @@ date: 2020-12-31
 draft: false
 description: Some highlights of 2020
 tags: ['review']
+author: 'Andrew'
 ---
 
 # This Year
 
 Obviously this year was dominated by Covid and its related carnage but overall the year was a good one as well as a tiring one.
-
 
 ## Family
 

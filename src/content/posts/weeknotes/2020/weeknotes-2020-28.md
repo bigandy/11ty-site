@@ -4,6 +4,7 @@ date: 2020-07-12
 draft: false
 description: Fondue BBQ!
 tags: ['weeknotes']
+author: 'andrew'
 ---
 
 -   On Saturday we had a long long overdue fondue with friends morphed into a BBQ as it is summer and we needed to be outdoors to reduce the risk of catching _the virus_. As a result that was all we did on Saturday: eat cheese and meat and then fall into a deep cheese coma.

@@ -4,6 +4,7 @@ date: 2021-03-28
 draft: false
 description:
 tags: ['how-to']
+author: 'andrew'
 ---
 
 ## How to use get_iplayer
@@ -14,7 +15,6 @@ tags: ['how-to']
 
 -   <pre><code>get_iplayer --type=radio "Gilles Peterson"</code></pre>
 -   This returns a list of the 5 latest shows with their corresponding IDs e.g. <strong>Gilles Peterson - Words & Music From Pino Palladino, BBC Radio 6 Music, m000t5dn</strong> where <strong>m000t5dn</strong> is the ID.
-	<img src="/assets/images/get_iplayer-search-for-gilles-peterson.png" loading="lazy" height="128" width="720" />
 
 ### How to download this show
 

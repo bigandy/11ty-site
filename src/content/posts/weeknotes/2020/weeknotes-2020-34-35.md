@@ -4,6 +4,7 @@ date: 2020-08-30
 draft: true
 description: Post-holiday quarantine at the parents.
 tags: ['weeknotes']
+author: 'andrew'
 ---
 
 ## Two weeks of Quarantine at my parents!

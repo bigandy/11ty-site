@@ -2,8 +2,9 @@
 title: 'Morning Runner'
 date: 2016-07-08 13:22:16
 draft: false
-description: "Some people might say that there is never enough time in the day to go running. But there is always time. In the morning before everyone is up!"
+description: 'Some people might say that there is never enough time in the day to go running. But there is always time. In the morning before everyone is up!'
 tags: ['Running']
+author: 'Andrew'
 ---
 
 Some people might say that there is never enough time in the day to go running, especially with a toddler and a full-time job. But there is always time for something you want to make time for.

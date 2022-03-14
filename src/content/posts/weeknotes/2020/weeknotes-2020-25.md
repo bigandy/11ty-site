@@ -4,6 +4,7 @@ date: 2020-06-21
 draft: false
 description: We met my parents! Emma (re-)started nursery!
 tags: ['weeknotes']
+author: 'andrew'
 ---
 
 -   Saturday we met up with my parents for a walk and then went back to their garden and had a delicious picnic outside with cheeses and charcuterie and

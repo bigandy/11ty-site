@@ -4,6 +4,7 @@ date: 2020-06-07
 draft: false
 description: Back to School!
 tags: ['weeknotes']
+author: 'andrew'
 ---
 
 -   Arthur went to school for the first time in 10+ weeks. Just for 2 days on

@@ -2,8 +2,9 @@
 title: 'Running - Five weeks'
 date: 2012-11-27 20:37:19
 draft: false
-description: ""
+description: ''
 tags: ['Running']
+author: 'Andrew'
 ---
 
 Last five weeks have been really good as I have been running on average least twice a week every week since October 28th when I woke up early to go running along the river. I have been helped by going running with a friend and also the work running club. It helps with the motivation if you have other people to go running with - at least in the tricky first month.

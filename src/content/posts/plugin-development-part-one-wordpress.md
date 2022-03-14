@@ -2,8 +2,9 @@
 title: 'Plugin Development (part one) [wordpress]'
 date: 2011-03-30 17:58:46
 draft: false
-description: ""
+description: ''
 tags: ['life']
+author: 'Andrew'
 ---
 
 This is the first time that I have started to make a plugin and here I shall write about the process of making it. To begin with I will explain why you might want to make a plugin, then I will go into the process behind creating one.

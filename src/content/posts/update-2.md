@@ -2,8 +2,9 @@
 title: 'update'
 date: 2010-11-04 13:41:55
 draft: false
-description: ""
+description: ''
 tags: ['web-design']
+author: 'Andrew'
 ---
 
 ### current
