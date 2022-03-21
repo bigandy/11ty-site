@@ -82,7 +82,7 @@ p,
 }
 
 ul {
-	margin-left: 1.5rem;
+	/* margin-left: 1.5rem; */
 	padding-left: 0;
 }
 
@@ -169,7 +169,7 @@ pre {
 
 .nav-item-active {
 	font-weight: 700;
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 .postlist {

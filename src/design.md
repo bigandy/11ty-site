@@ -1,9 +1,9 @@
 ---
 layout: layouts/page.njk
 title: Design
-tags:
-    - footnav
-navtitle: Design
+# tags:
+#     - footnav
+# navtitle: Design
 templateClass: tmpl-post
 date: 2016-01-01
 ---

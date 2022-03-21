@@ -1,7 +1,15 @@
+.cv {
+	--theme-accent-rgb: 255, 105, 180;
+	--theme-accent: rgb(var(--theme-accent-rgb));
+}
+
+.content {
+	margin-top: 4rem;
+}
+
 .cv h2 {
 	margin-top: 0.5em;
-	margin-bottom: 0;
-	border-bottom: 2px solid green;
+	border-bottom: 2px solid var(--theme-accent);
 	display: inline-block;
 }
 
@@ -9,12 +17,24 @@
 	margin-top: 0;
 }
 
-.cv ul:not(.nav) {
-	margin-left: 1.5em;
+.cv h3 {
+	font-size: 24px;
+}
+
+.cv :is(h2 + h3) {
+	margin-top: 0;
+}
+
+.cv :is(ol, ul) {
+	padding-inline-start: 1.5rem;
+}
+
+li {
+	margin-block-end: 0.25rem;
 }
 
 .contact {
-	margin-bottom: 1rem;
+	margin-block-end: 1rem;
 }
 
 .contact a {
@@ -22,11 +42,93 @@
 	margin-right: 1em;
 }
 
+.cv article a {
+	text-decoration: underline;
+}
+
+.entrylist {
+	position: relative;
+	list-style: none;
+	margin-block-end: 3em;
+}
+
+.entry__header {
+	display: flex;
+	flex-direction: column;
+}
+
+.entry__time {
+	order: -1;
+}
+
+.entry__time span {
+	display: inline-block;
+	margin-inline-start: 0.25rem;
+}
+
+.entry__organization,
+.entry__time {
+	font-size: 0.9rem;
+}
+
+.entry__title {
+	margin-block: 0.5rem;
+}
+
+.entry__organization {
+	margin-block-end: 1rem;
+	margin-block-start: 0;
+}
+
+.entrylist::after {
+	content: '';
+	display: block;
+	height: calc(100% - 20px);
+	width: 1px;
+	background: black;
+	position: absolute;
+	left: 4px;
+	top: 10px;
+}
+
+.entrylist > li {
+	position: relative;
+	margin-block-end: 1.5rem;
+}
+
+.entrylist > li::after {
+	content: '';
+	display: block;
+	border-radius: 50%;
+	background: var(--theme-accent);
+	width: 20px;
+	aspect-ratio: 1;
+	position: absolute;
+	top: 0.25em;
+	left: -34px;
+	z-index: 1;
+}
+
+.entry__content ul {
+	padding-inline-start: 1.2rem;
+	list-style: disc;
+}
+
+.cv li::marker {
+	color: rgba(var(--theme-accent-rgb), 0.5);
+	font-size: 1.5rem;
+}
+
 @media print {
-	.contact {
-		margin-bottom: 0;
+	.cv a {
+		color: black;
 	}
 
+	.cv ul.skills {
+		margin-bottom: 0.5rem;
+	}
+
+	.cv nav,
 	.cv header,
 	.cv footer {
 		display: none;
@@ -35,6 +137,11 @@
 	.cv h1 {
 		margin-bottom: 1rem;
 	}
+
+	.cv h2 {
+		font-size: 28px;
+	}
+
 	.cv h1::before {
 		content: 'Andrew Hudson - ';
 	}
@@ -61,15 +168,37 @@
 		margin-top: 1rem;
 	}
 
-	.cv ul.skills {
-		margin-left: 1rem;
-	}
-
 	.cv ul:last-child {
 		margin-bottom: 0;
 	}
 
 	.cv main {
 		padding-bottom: 0;
+	}
+
+	.cv li::marker {
+		color: inherit;
+	}
+
+	.entrylist {
+		padding-left: 0;
+		margin-bottom: 0;
+	}
+
+	.entrylist::after,
+	.entrylist > li::after {
+		display: none;
+	}
+
+	.content {
+		margin-top: 1rem;
+	}
+
+	.cv article a {
+		text-decoration: none;
+	}
+
+	.cv h2 {
+		border-color: transparent;
 	}
 }
