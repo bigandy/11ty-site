@@ -35,6 +35,7 @@
 	"dependencies": {
 		"csso": "4.1.0",
 		"html-minifier": "4.0.0",
-		"purgecss": "3.0.0"
+		"purgecss": "3.0.0",
+		"terser": "^5.12.1"
 	}
 }

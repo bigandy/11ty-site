@@ -1,17 +1,24 @@
 {% include "components/head.njk" %}
-  <body {% if templateClass %} class="{{ templateClass }}"{% endif %}>
-    {% include "components/header.njk" %}
+<body {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+  {% include "components/header.njk" %}
 
-    <main>
-      <div class="container">
-        {{ content | safe }}
-      </div>
-    </main>
+  <main>
+    <div class="container">
+      {{ content | safe }}
+    </div>
+  </main>
 
-    {% include "components/footer.njk" %}
+  {% include "components/footer.njk" %}
 
-	{% include "components/notification.njk" %}
+  {% include "components/notification.njk" %}
 
-    <script src="/assets/js/theme-toggle.js" async defer></script>
-  </body>
+  {% set js %}
+  {% include '../../assets/js/theme-toggle.js' %}
+  {% endset %}
+
+  <script>
+    {{ js | jsmin | safe }}
+  </script>
+
+</body>
 </html>

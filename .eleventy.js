@@ -8,6 +8,8 @@ const firstNElements = require('./src/_11ty/filters/firstNElements.js');
 const tagList = require('./src/_11ty/getTagList');
 const isDev = process.argv.includes('dev');
 
+const terser = require('terser');
+
 const path = require('path');
 
 if (process.argv)
@@ -26,6 +28,20 @@ if (process.argv)
 			'postcss',
 			require('./src/utils/transform-css')
 		);
+
+		eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+			code,
+			callback
+		  ) {
+			try {
+			  const minified = await terser.minify(code);
+			  callback(null, minified.code);
+			} catch (err) {
+			  console.error("Terser error: ", err);
+			  // Fail gracefully.
+			  callback(null, code);
+			}
+		  });
 
 		// Present and past posts only
 		// https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
