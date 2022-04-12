@@ -3,10 +3,10 @@
 	"version": "1.0.1",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
-		"dev": "npx slinkity --serve --incremental",
-		"build": "npm run clean && ELEVENTY_ENV=production slinkity",
-		"watch": "npx slinkity --watch",
-		"debug": "DEBUG=* npx slinkity",
+		"dev": "npx eleventy --serve --incremental",
+		"build": "npm run clean && ELEVENTY_ENV=production eleventy",
+		"watch": "npx eleventy --watch",
+		"debug": "DEBUG=* npx eleventy",
 		"clean": "del-cli dist"
 	},
 	"author": {
@@ -15,7 +15,7 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "1.0.0",
+		"@11ty/eleventy": "2.0.0-canary.4",
 		"@11ty/eleventy-plugin-rss": "1.1.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
 		"cssnano": "4.1.10",
@@ -29,8 +29,7 @@
 		"postcss-import": "12.0.1",
 		"postcss-mixins": "6.2.3",
 		"postcss-simple-vars": "5.0.2",
-		"precss": "4.0.0",
-		"slinkity": "0.6.3"
+		"precss": "4.0.0"
 	},
 	"dependencies": {
 		"csso": "4.1.0",

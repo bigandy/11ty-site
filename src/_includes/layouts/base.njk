@@ -16,9 +16,13 @@
   {% include '../../assets/js/theme-toggle.js' %}
   {% endset %}
 
-  <script>
-    {{ js | jsmin | safe }}
-  </script>
+  {% if metadata.isProduction %}
+		<script>
+			{{ js | jsmin | safe }}
+		</script>
+	{% else %}
+		<script src="/assets/js/theme.toggle.js" async defer />
+	{% endif %}
 
 </body>
 </html>

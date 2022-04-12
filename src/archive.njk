@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 tags:
   - footnav
   - nav
@@ -12,6 +12,7 @@ pagination:
   reverse: true
 permalink: /archive/{% if pagination.pageNumber >- 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 title: Archive
+themeColor: "#3454D1"
 ---
 
 <h1>Archive {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>

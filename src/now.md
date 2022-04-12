@@ -6,6 +6,7 @@ tags:
 navtitle: Now
 templateClass: tmpl-post
 date: 2017-01-01
+themeColor: '#FA7E61'
 ---
 
 Last updated: 03 February 2022.

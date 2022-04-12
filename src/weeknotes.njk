@@ -1,5 +1,5 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
 tags:
   - nav
 navtitle: Weeknotes
@@ -11,6 +11,7 @@ pagination:
   reverse: true
 permalink: /weeknotes/{% if pagination.pageNumber >- 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html
 title: Weeknotes
+themeColor: "#3454D1"
 ---
 
 <h1>Weeknotes {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>

@@ -25,7 +25,7 @@
 	margin-top: 0;
 }
 
-.cv :is(ol, ul) {
+.cv :is(ol, ul):not(.nav) {
 	padding-inline-start: 1.5rem;
 }
 

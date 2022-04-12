@@ -6,6 +6,7 @@ tags:
 navtitle: CV
 templateClass: tmpl-post cv
 date: 2018-01-01
+themeColor: 'rgb(255, 105, 180)'
 ---
 
 <div class="contact"><a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a><a href="tel:+447736063671" class="tel">+44 77 36063 671</a><a href="https://andrewhudson.dev">andrewhudson.dev</a></div>
