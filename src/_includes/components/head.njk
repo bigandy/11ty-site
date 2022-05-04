@@ -1,13 +1,19 @@
 
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	{% if metadata.isProduction %}
+	{% if title === 'CV' or renderData.title === 'CV' %}
+		{% set cssFile = "cv.css" %}
+	{% else %}
+		{% set cssFile = "styles.css" %}
+	{% endif %}
+
+	{% if metadata.isProduction or false %}
 		<style>
-			{% postcss '../src/assets/postcss/styles.css' %}
+			{% postcss "../src/assets/postcss/"+cssFile %}
 		</style>
 	{% else %}
-		<link rel="stylesheet" href="/assets/postcss/styles.css">
+		<link rel="stylesheet" href="/assets/postcss/{{ cssFile }}">
 	{% endif %}
 
 
@@ -26,3 +32,5 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}">
 	<link rel="manifest" href="{{ '/manifest.json' }}">
   </head>
+<body>
+<h1>I am the thing::: {{ thing }}</h1>
