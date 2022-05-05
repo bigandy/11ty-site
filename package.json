@@ -3,10 +3,10 @@
 	"version": "1.0.1",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
-		"dev": "npx eleventy --serve --incremental",
-		"build": "npm run clean && ELEVENTY_ENV=production eleventy",
-		"watch": "npx eleventy --watch",
-		"debug": "DEBUG=* npx eleventy",
+		"dev": "npx @11ty/eleventy --serve --incremental",
+		"build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",
+		"watch": "npx @11ty/eleventy --watch",
+		"debug": "DEBUG=* npx @11ty/eleventy",
 		"clean": "del-cli dist"
 	},
 	"author": {
