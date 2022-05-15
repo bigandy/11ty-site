@@ -10,8 +10,6 @@ const isDev = process.argv.includes('dev');
 
 const terser = require('terser');
 
-const path = require('path');
-
 if (process.argv)
 	module.exports = function (eleventyConfig) {
 		// Plugins
