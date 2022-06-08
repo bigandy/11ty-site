@@ -227,7 +227,7 @@ themeColor: 'rgb(255, 105, 180)'
 </ul>
 
 <h2 id="education">Education</h2>
-	<ul class="p-grid p-grid--halfs">
+	<ul class="p-grid">
 		<li>MChem (hons) Chemistry – University of Manchester</li>
 	</ul>
 <h2 id="interests">Interests</h2>
