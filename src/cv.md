@@ -6,7 +6,7 @@ tags:
 navtitle: CV
 templateClass: tmpl-post cv
 date: 2018-01-01
-themeColor: 'rgb(255, 105, 180)'
+themeColor: '#d9207c'
 ---
 
 <div class="contact"><a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a></div>
