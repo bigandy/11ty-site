@@ -5,7 +5,7 @@ tags:
     - footnav
 navtitle: Uses
 date: 2017-01-03
-themeColor: '#CA9CE1'
+themeColor: '#a804fa'
 ---
 
 ## Tech I use
