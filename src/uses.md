@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Uses
 tags:
-    - footnav
+    - nav
 navtitle: Uses
 date: 2017-01-03
 themeColor: '#a804fa'

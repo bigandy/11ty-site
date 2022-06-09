@@ -1,7 +1,5 @@
 ---
 layout: layouts/base.njk
-tags:
-  - footnav
 navtitle: Home
 templateClass: tmpl-post homepage
 title: Homepage
@@ -12,3 +10,10 @@ themeColor: "#cb4f00"
 
 <p>I am a software engineer living in the UK who loves cycling, running and spending time with my family and learning new things.</p>
 
+<h2>Posts</h2>
+{% set postslist = collections.posts | reverse | firstNElements(3) | reverse %}
+{% include "components/postslist.njk" %}
+
+<h2>Weeknotes</h2>
+{% set postslist = collections.weeknotes | reverse | firstNElements(3) | reverse %}
+{% include "components/postslist.njk" %}
