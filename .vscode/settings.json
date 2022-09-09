@@ -22,4 +22,5 @@
 
 	// Maximum amount of characters per line (0 = disable).
 	"markdown.format.wrapLineLength": 60,
+	"task.allowAutomaticTasks": "on",
 }
