@@ -1,7 +1,7 @@
 ---
 title: 2021 Goals
 date: 2021-01-21
-draft: false
+draft: true
 description: Some things I'd like to achive in 2021
 tags: ['goals']
 author: 'Andrew'

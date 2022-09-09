@@ -6,10 +6,10 @@ tags:
 navtitle: CV
 templateClass: tmpl-post cv
 date: 2018-01-01
-themeColor: 'rgb(255, 105, 180)'
+themeColor: '#d9207c'
 ---
 
-<div class="contact"><a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a><a href="https://andrewhudson.dev">andrewhudson.dev</a></div>
+<div class="contact"><a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a></div>
 
 <h2 id="personal-statement">Personal Statement</h2>
 
@@ -227,7 +227,7 @@ themeColor: 'rgb(255, 105, 180)'
 </ul>
 
 <h2 id="education">Education</h2>
-	<ul class="p-grid p-grid--halfs">
+	<ul class="p-grid">
 		<li>MChem (hons) Chemistry – University of Manchester</li>
 	</ul>
 <h2 id="interests">Interests</h2>

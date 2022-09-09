@@ -2,11 +2,11 @@
 layout: layouts/page.njk
 title: Now
 tags:
-    - footnav
+    - nav
 navtitle: Now
 templateClass: tmpl-post
 date: 2017-01-01
-themeColor: '#FA7E61'
+themeColor: '#e02d03'
 ---
 
 Last updated: 03 February 2022.

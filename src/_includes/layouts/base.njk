@@ -10,9 +10,9 @@
 
   {% include "components/footer.njk" %}
 
-  {% include "components/notification.njk" %}
+  {# {% include "components/notification.njk" %} #}
 
-  {% set js %}
+  {# {% set js %}
   {% include '../../assets/js/theme-toggle.js' %}
   {% endset %}
 
@@ -21,8 +21,8 @@
 			{{ js | jsmin | safe }}
 		</script>
 	{% else %}
-		<script src="/assets/js/theme.toggle.js" async defer />
-	{% endif %}
+		<script src="/assets/js/theme-toggle.js" async defer type="module" />
+	{% endif %} #}
 
 </body>
 </html>
