@@ -6,24 +6,24 @@ tags:
 navtitle: CV
 templateClass: tmpl-post cv
 date: 2018-01-01
-themeColor: '#d9207c'
+themeColor: 'rgb(230, 113, 110)'
 ---
 
 <div class="contact"><a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a></div>
 
 <h2 id="personal-statement">Personal Statement</h2>
 
-<p>I am a senior software engineer with 11+ years experience creating highly performant and usable products, websites, desktop applications, and browser extensions.</p>
+<p>I am a senior software engineer with 12+ years experience creating highly performant and usable products, websites, desktop applications, and a browser extension.</p>
 
 <h2 id="skills">Skills</h2>
 
 <ul class="skills">
-	<li>TypeScript, React, CSS, JavaScript, HTML, Node, GraphQL, and Apollo.</li>
+	<li>TypeScript, React, CSS, and Apollo GraphQL</li>
+	<li>Next.js, Gatsby, Eleventy, and WordPress.</li>
+	<li>Modular components with showcasing with and documentation with Storybook.</li>
 	<li>Website Performance Optimisation.</li>
 	<li>Databases (Firebase and Postgres).</li>
-	<li>Serverless functions with custom API routes.</li>
-	<li>Gatsby, Next.js, Eleventy, and WordPress.</li>
-	<li>Modular components with showcasing with and documentation with Storybook.</li>
+	<li>e2e testing with Playwright</li>
 	<li>Electron and Browser Extension development.</li>
 </ul>
 
