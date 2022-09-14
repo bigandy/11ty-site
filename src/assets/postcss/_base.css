@@ -172,7 +172,6 @@ pre {
 
 .nav-item-active {
 	font-weight: 700;
-	/* text-decoration: underline; */
 }
 
 .postlist {
@@ -245,20 +244,14 @@ a[href].direct-link:focus:visited,
 		background-color var(--transition-duration) var(--transition-method),
 		color var(--transition-duration) var(--transition-method);
 }
-.tag:hover {
-	border-color: var(--color);
+.tag:hover,
+.tag:focus {
+	border-color: var(--theme-color);
 	background: var(--background-color);
-	color: var(--color);
+	color: var(--theme-color);
 }
 
-.tag:visited {
-	color: var(--background-color);
-}
 
-.tag:visited:hover {
-	color: var(--color);
-	background: var(--background-color);
-}
 
 .warning {
 	background-color: #ffc;
