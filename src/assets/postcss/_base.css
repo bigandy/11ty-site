@@ -317,6 +317,10 @@ a[href].direct-link:focus:visited,
 	margin: 0;
 }
 
+.post-taglist li:not(:last-child) {
+	margin-inline-end: 1rem;
+}
+
 .post-taglist-label {
 	margin-top: 3em;
 	margin-bottom: 0.5em;
