@@ -18,13 +18,13 @@ themeColor: 'rgb(230, 113, 110)'
 <h2 id="skills">Skills</h2>
 
 <ul class="skills">
-	<li>TypeScript, React, CSS, and Apollo GraphQL</li>
+	<li>TypeScript, React, CSS, Apollo GraphQL, and Next.js</li>
 	<li>Next.js, Gatsby, Eleventy, and WordPress.</li>
-	<li>Modular components with showcasing with and documentation with Storybook.</li>
-	<li>Website Performance Optimisation.</li>
-	<li>Databases (Firebase and Postgres).</li>
-	<li>e2e testing with Playwright</li>
-	<li>Electron and Browser Extension development.</li>
+	<li>Creation of modular re-usable components, showcase with Storybook</li>
+	<!-- <li>Website Performance Optimisation.</li> -->
+	<!-- <li>Databases (Firebase and Postgres).</li> -->
+	<li>Automated e2e testing with Playwright</li>
+	<!-- <li>Electron and Browser Extension development.</li> -->
 </ul>
 
 <h2 id="experience">Experience</h2>
