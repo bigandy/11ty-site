@@ -30,6 +30,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
+
 	color: var(--color);
 	background-color: var(--background-color);
 	font-family: var(--body-font-family);
@@ -45,6 +46,8 @@ body {
 body {
 	display: flex;
 	flex-direction: column;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 h1,
@@ -251,8 +254,6 @@ a[href].direct-link:focus:visited,
 	color: var(--theme-color);
 }
 
-
-
 .warning {
 	background-color: #ffc;
 	padding: 1em 0.625em;
@@ -346,8 +347,6 @@ a[href].direct-link:focus:visited,
 .page-total {
 	margin: 0 1rem;
 }
-
-
 
 footer .nav {
 	border-bottom: 0;

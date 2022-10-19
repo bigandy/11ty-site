@@ -115,4 +115,21 @@
 	.cv h2 {
 		border-color: transparent;
 	}
+
+	.entry__title,
+	.entry__time,
+	.entry__organization {
+		display: inline;
+		margin: unset;
+		padding-right: 0.5em;
+	}
+
+	.entry__title {
+		display: inline-block;
+		padding-right: 0.5em;
+	}
+
+	.entry__header {
+		display: block;
+	}
 }

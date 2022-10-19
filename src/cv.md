@@ -23,7 +23,7 @@ themeColor: 'rgb(230, 113, 110)'
 	<li>Creation of modular re-usable components, showcase with Storybook</li>
 	<!-- <li>Website Performance Optimisation.</li> -->
 	<!-- <li>Databases (Firebase and Postgres).</li> -->
-	<li>Automated e2e testing with Playwright</li>
+	<li>Creation of e2e tests with Playwright</li>
 	<!-- <li>Electron and Browser Extension development.</li> -->
 </ul>
 
@@ -215,15 +215,15 @@ themeColor: 'rgb(230, 113, 110)'
 	<!-- <li>
 		<a href="https://www.epf.cc/" rel="noopener" target="_blank">epf.cc</a> – responsive single page WordPress site
 	</li> -->
-	<!-- <li>
+	<li>
 		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.com/bigandy</a> – my GitHub account
 	</li>
-	<li>
+	<!-- <li>
 		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - powered currently by Astro using data exported from my old WordPress site.
 	</li> -->
-	<!-- <li>
+	<li>
 		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
-	</li> -->
+	</li>
 </ul>
 
 <h2 id="education">Education</h2>
@@ -234,7 +234,6 @@ themeColor: 'rgb(230, 113, 110)'
 
 <ul class="p-grid p-grid--halfs">
 	<li>Mountain Biking</li>
-	<!-- <li>Swimming</li> -->
-	<li>Internet of Things</li>
-	<!-- <li>Coffee</li> -->
+	<li>Movies with Family and Friends</li>
+	<li>Graphic Design and Printing</li>
 </ul>
