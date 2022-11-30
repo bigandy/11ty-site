@@ -13,17 +13,19 @@ themeColor: 'rgb(230, 113, 110)'
 
 <h2 id="personal-statement">Personal Statement</h2>
 
-<p>I am a senior software engineer with 12+ years experience creating highly performant and usable products, websites, desktop applications, and a browser extension.</p>
+<p>I am a senior software engineer with 12+ years experience creating highly performant and usable products, websites, desktop applications, and browser extensions.</p>
 
 <h2 id="skills">Skills</h2>
 
 <ul class="skills">
-	<li>TypeScript, React, CSS, Apollo GraphQL, and Next.js</li>
-	<li>Next.js, Gatsby, Eleventy, and WordPress.</li>
-	<li>Creation of modular re-usable components, showcase with Storybook</li>
+	<li>Expert in CSS, React and JavaScript</li>
+	<li>Superb level TypeScript, GraphQL, and NextJS</li>
+	<!-- <li>Next.js, Gatsby, Eleventy, and WordPress.</li> -->
+	<li>Creation of modular re-usable react and web components, showcase with Storybook</li>
+	<li>Communication via Slack and documentation of code</li>
 	<!-- <li>Website Performance Optimisation.</li> -->
 	<!-- <li>Databases (Firebase and Postgres).</li> -->
-	<li>Creation of e2e tests with Playwright</li>
+	<!-- <li>Creation of e2e tests with Playwright</li> -->
 	<!-- <li>Electron and Browser Extension development.</li> -->
 </ul>
 
