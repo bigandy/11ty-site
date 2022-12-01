@@ -21,7 +21,7 @@
 		<style>*{--theme-color: {{ themeColor }}; }</style>
 	{% endif %}
 
-	<link href="https://indieweb.social/@bigandy" rel="me" />
+	<link href="{{ metadata.mastodon.url }}" rel="me" />
 
     <title>{{ renderData.title or title or metadata.title }} - Andrew JD Hudson Software Engineer</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">

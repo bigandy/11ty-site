@@ -4,12 +4,13 @@
 	--lightgray: #e0e0e0;
 	--gray: #c0c0c0;
 	--darkgray: #333;
+	--black: #000;
 	--navy: #17050f;
 	--blue: #082840;
 	--white: #fff;
 	--link-unvisited: var(--blue);
 	--link-visited: var(--navy);
-	--color: var(--darkgray);
+	--color: var(--black);
 	--background-color: var(--white);
 	--body-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
 		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
@@ -23,7 +24,7 @@
 }
 
 a {
-	color: var(--theme-color, black);
+	color: var(--black);
 }
 
 html,
@@ -60,6 +61,12 @@ h1 {
 	font-size: 30px;
 	margin-bottom: 0.4em;
 	margin-top: 0;
+
+	text-shadow: 1px 1px 0px red, 2px 2px 0px orange;
+}
+
+h1:hover {
+	text-shadow: 2px 2px 0px red, 4px 4px 0px orange;
 }
 
 html {
@@ -154,9 +161,9 @@ pre {
 	font-weight: bold;
 }
 
-.home :link:not(:hover) {
+/* .home :link:not(:hover) {
 	text-decoration: none;
-}
+} */
 
 .nav {
 	padding: 0;
@@ -169,9 +176,9 @@ pre {
 	margin-right: 1em;
 }
 
-.nav-item a[href]:not(:hover) {
+/* .nav-item a[href]:not(:hover) {
 	text-decoration: none;
-}
+} */
 
 .nav-item-active {
 	font-weight: 700;
@@ -265,7 +272,7 @@ a[href].direct-link:focus:visited,
 
 .direct-link {
 	font-family: sans-serif;
-	text-decoration: none;
+	/* text-decoration: none; */
 	font-style: normal;
 	margin-left: 0.1em;
 }

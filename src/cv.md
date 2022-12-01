@@ -21,8 +21,8 @@ themeColor: 'rgb(230, 113, 110)'
 	<li>Expert in CSS, React and JavaScript</li>
 	<li>Superb level TypeScript, GraphQL, and NextJS</li>
 	<!-- <li>Next.js, Gatsby, Eleventy, and WordPress.</li> -->
-	<li>Creation of modular re-usable react and web components, showcase with Storybook</li>
-	<li>Communication via Slack and documentation of code</li>
+	<li>Creation of modular re-usable React and Web Components</li>
+	<!-- <li>Communication via Slack and documentation of code</li> -->
 	<!-- <li>Website Performance Optimisation.</li> -->
 	<!-- <li>Databases (Firebase and Postgres).</li> -->
 	<!-- <li>Creation of e2e tests with Playwright</li> -->
@@ -225,6 +225,9 @@ themeColor: 'rgb(230, 113, 110)'
 	</li> -->
 	<li>
 		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
+	</li>
+	<li>
+		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">web components november 2022</a> a Web Component a day with Lit
 	</li>
 </ul>
 

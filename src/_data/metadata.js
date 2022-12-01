@@ -11,4 +11,14 @@ module.exports = {
 	},
 	themeColor: '#ffcc00',
 	isProduction: process.env.ELEVENTY_ENV === 'production',
+	mastodon: {
+		url: 'https://indieweb.social/@bigandy',
+	},
+	twitter: {
+		url: 'https://twitter.com/bigandy',
+		username: '@bigandy',
+	},
+	github: {
+		url: '',
+	},
 };
