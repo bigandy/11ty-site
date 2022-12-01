@@ -9,24 +9,22 @@ date: 2017-01-01
 themeColor: '#e02d03'
 ---
 
-Last updated: 03 February 2022.
+Last updated: 30 November 2022.
 
 ## Life
 
-Covid continues. Went to France to see Marion's family for Christmas. Aside from all of the covid-19 testing it was great to get away and to see family. Much food was eaten and rest was had.
-
-For New Year we rented a holiday cottage in West Wittering with my side of the family. Much food was eaten and rest was had. On New Years Day we had a swim in the sea.
+Life is super busy with work, kids and the World Cup going on. In my spare time I have managed a few MTN Bike rides. Days are short with the Winter solstice less than a month away.
 
 ## Learning
 
-Over the Christmas break I managed to do a lot of reading ("The Manager's Path" and started "Staff Engineer"), plus some coding. I am interested lately in learning about React Native so I am working my way through a course on Frontend Masters. On the CSS front I am fascinated by all of the new CSS features that are coming especially container queries.
+I am currently doing a month-long project where I create a web component a day using Lit. The site is (https://web-components-november-2022.netlify.app)[https://web-components-november-2022.netlify.app] and I am learning every day. It is great because it forces me to learn something new every day and produce something at the end of it to share on the internet.
 
 ## Fitness
 
-Mostly mountain biking and walking at the moment. Once the Covid situation is a bit better I will go to the gym again.
+Mostly mountain biking and walking at the moment.
 
 ## Family
 
-It was great to spend lots of time with the family over Christmas. Arthur continues to love Lego, solving puzzles and is very creative. Emma is developing rapidly and has a very strong (stubborn) personality, and Emma loves unicorns, princesses and making house, and drawing. Both Arthur and Emma love playing together which is great too. Marion has been super busy with her job and does a fair bit of running.
+Both kids are now in school although sometimes Emma does not enjoy going in the morning they both have good time and talk about it in the evening. Marion is super busy with her job. Marion and I went to Iceland earlier this month which was incredible. The kids were looked after by Marions parents.
 
 Credit for now page: first seen on [Derek Sivers now page](https://sivers.org/now)
