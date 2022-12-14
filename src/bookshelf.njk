@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+tags:
+  - nav
+navtitle: Bookshelf
+templateClass: tmpl-post
+date: 2016-03-02
+title: Bookshelf
+---
+
+<h1>Bookshelf</h1>
+
+<p>This is a work-in-progress page that is pulling in data from my Notion books database (also a work in progress and really out of date!). The content and design of this page will change.</p>
+
+<p>Inspiration for this page is:</p>
+
+<ul>
+	<li><a href="https://daverupert.com/bookshelf/">daverupert.com/bookshelf</a></li>
+</ul>
+
+{% for book in notion %}
+	{% Book book=book %}
+{% endfor %}

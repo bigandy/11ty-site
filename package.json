@@ -3,7 +3,7 @@
 	"version": "1.0.1",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
-		"dev": "npx @11ty/eleventy --serve",
+		"dev": "npx @11ty/eleventy --serve --quiet",
 		"build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",
 		"watch": "npx @11ty/eleventy --watch",
 		"debug": "DEBUG=* npx @11ty/eleventy",
@@ -16,6 +16,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@11ty/eleventy": "2.0.0-canary.16",
+		"@11ty/eleventy-fetch": "3.0.0",
 		"@11ty/eleventy-plugin-rss": "1.1.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
 		"cssnano": "4.1.10",
@@ -32,6 +33,7 @@
 		"precss": "4.0.0"
 	},
 	"dependencies": {
+		"@notionhq/client": "2.2.2",
 		"csso": "4.1.0",
 		"html-minifier": "4.0.0",
 		"purgecss": "3.0.0",

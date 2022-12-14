@@ -5,6 +5,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const htmlDateString = require('./src/_11ty/filters/htmlDateString.js');
 const readableDate = require('./src/_11ty/filters/readableDate.js');
 const firstNElements = require('./src/_11ty/filters/firstNElements.js');
+const Book = require('./src/_includes/components/book.js');
 const tagList = require('./src/_11ty/getTagList');
 const isDev = process.argv.includes('dev');
 
@@ -20,6 +21,8 @@ if (process.argv)
 
 		eleventyConfig.setDataDeepMerge(true);
 
+		eleventyConfig.addShortcode('Book', Book);
+
 		eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
 		eleventyConfig.addNunjucksAsyncShortcode(
@@ -27,19 +30,19 @@ if (process.argv)
 			require('./src/utils/transform-css')
 		);
 
-		eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
-			code,
-			callback
-		  ) {
-			try {
-			  const minified = await terser.minify(code);
-			  callback(null, minified.code);
-			} catch (err) {
-			  console.error("Terser error: ", err);
-			  // Fail gracefully.
-			  callback(null, code);
+		eleventyConfig.addNunjucksAsyncFilter(
+			'jsmin',
+			async function (code, callback) {
+				try {
+					const minified = await terser.minify(code);
+					callback(null, minified.code);
+				} catch (err) {
+					console.error('Terser error: ', err);
+					// Fail gracefully.
+					callback(null, code);
+				}
 			}
-		  });
+		);
 
 		// Present and past posts only
 		// https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
