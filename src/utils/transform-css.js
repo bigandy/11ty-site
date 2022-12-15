@@ -10,10 +10,8 @@ module.exports = async (filename) => {
 	const code = await fs.readFile(rawFilepath);
 
 	return await postcss([
-		require('precss'),
 		require('postcss-import'),
 		require('postcss-custom-selectors'),
-		// require('autoprefixer'),
 		require('cssnano'),
 	])
 		.process(code, { from: rawFilepath })
