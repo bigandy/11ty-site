@@ -30,7 +30,7 @@ module.exports = async function () {
 	});
 
 	// do some expensive operation here, this is simplified for brevity
-	const queryResults = query?.results || null;
+	const queryResults = query?.results.reverse() || null;
 
 	await asset.save(queryResults, 'json');
 

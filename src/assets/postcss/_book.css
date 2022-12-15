@@ -1,0 +1,32 @@
+.book-filtering {
+	display: none;
+}
+
+/* Basic filtering with css :has() */
+@supports selector(:has(.book)) {
+	.book-filtering {
+		display: block;
+	}
+
+	.book-filtering:has(#finished:checked) ~ .book:not(.book--finished) {
+		display: none;
+	}
+
+	.book-filtering:has(#unfinished:checked) ~ .book:is(.book--finished) {
+		display: none;
+	}
+}
+
+.book {
+	border: 1px solid;
+	padding: 1rem;
+	margin-block: 2rem;
+}
+
+.book:not(.book--finished) {
+	border-color: rosybrown;
+}
+
+.book--finished {
+	border-color: greenyellow;
+}
