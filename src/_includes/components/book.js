@@ -5,9 +5,9 @@ function Book({ book }) {
 
 	const createdDate = book.created_time;
 	const finishedDate = book.properties['Date Finished']?.date?.start || '';
-	console.log({
-		finishedDate,
-	});
+	// console.log({
+	// 	finishedDate,
+	// });
 
 	const isFinished = Boolean(finishedDate !== '');
 

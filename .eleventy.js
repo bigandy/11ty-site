@@ -137,9 +137,9 @@ if (process.argv)
 		};
 
 		let opts = {
-			permalink: true,
-			permalinkClass: 'direct-link',
-			permalinkSymbol: '#',
+			// permalink: true,
+			// permalinkClass: 'direct-link',
+			// permalinkSymbol: '#',
 		};
 
 		eleventyConfig.setLibrary(

@@ -9,11 +9,7 @@ module.exports = async (filename) => {
 	);
 	const code = await fs.readFile(rawFilepath);
 
-	return await postcss([
-		require('postcss-import'),
-		require('postcss-custom-selectors'),
-		require('cssnano'),
-	])
+	return await postcss([require('postcss-import'), require('cssnano')])
 		.process(code, { from: rawFilepath })
 		.then((result) => result.css)
 		.catch((e) => console.log('error', e));
