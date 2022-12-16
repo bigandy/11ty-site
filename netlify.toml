@@ -1,3 +1,5 @@
 [build]
   publish = "dist"
   command = "ELEVENTY_ENV=production eleventy"
+[dev]
+  browser = "none"

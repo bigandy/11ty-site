@@ -21,6 +21,16 @@
 	border: 1px solid;
 	padding: 1rem;
 	margin-block: 2rem;
+	display: grid;
+}
+
+.book:has(img) {
+	grid-template-columns: max-content 1fr;
+	column-gap: 1em;
+}
+
+.book:has(img) img {
+	order: -1;
 }
 
 .book:not(.book--finished) {

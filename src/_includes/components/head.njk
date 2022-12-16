@@ -2,7 +2,9 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	{% if title === 'CV' or renderData.title === 'CV' %}
+	{% if title === 'Bookshelf' or renderData.title === 'Bookshelf' %}
+		{% set cssFile = "bookshelf.css" %}
+	{% elif title === 'CV' or renderData.title === 'CV' %}
 		{% set cssFile = "cv.css" %}
 	{% else %}
 		{% set cssFile = "styles.css" %}

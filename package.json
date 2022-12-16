@@ -4,6 +4,7 @@
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
 		"dev": "npx @11ty/eleventy --serve --quiet",
+		"ntl:dev": "BROWSER=none netlify dev",
 		"build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",
 		"watch": "npx @11ty/eleventy --watch",
 		"debug": "DEBUG=* npx @11ty/eleventy",
