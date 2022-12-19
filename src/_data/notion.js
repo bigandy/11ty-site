@@ -19,49 +19,53 @@ const googleBookSearch = async (title) => {
 };
 
 module.exports = async function () {
-	// Pass in your unique custom cache key
-	// (normally this would be tied to your API URL)
-	let asset = new AssetCache('notion_book_list');
+	try {
+		// Pass in your unique custom cache key
+		// (normally this would be tied to your API URL)
+		let asset = new AssetCache('notion_book_list');
 
-	// // check if the cache is fresh within the last day
-	if (asset.isCacheValid('1d')) {
-		// return cached data.
-		return asset.getCachedValue(); // a promise
+		// // check if the cache is fresh within the last day
+		if (asset.isCacheValid('1d')) {
+			// return cached data.
+			return asset.getCachedValue(); // a promise
+		}
+
+		const query = await notion.databases.query({
+			database_id: Notion_DB_ID,
+		});
+
+		// do some expensive operation here, this is simplified for brevity
+		const queryResults = query?.results.reverse() || null;
+
+		// Go through the list and get the thumbnail for each image;
+		console.log({ queryResults });
+
+		const list = queryResults.map(async (book) => {
+			const bookTitle = book.properties.Name.title[0].plain_text;
+			const bookAuthor =
+				book.properties?.Author.rich_text[0]?.plain_text || 'unknown';
+
+			const createdDate = book.created_time;
+			const finishedDate =
+				book.properties['Date Finished']?.date?.start || '';
+
+			const thumbnail = await googleBookSearch(bookTitle);
+
+			return {
+				bookTitle,
+				bookAuthor,
+				createdDate,
+				finishedDate,
+				thumbnail,
+			};
+		});
+
+		const results = await Promise.all([...list]);
+
+		await asset.save(results, 'json');
+
+		return results;
+	} catch (error) {
+		console.error(error);
 	}
-
-	const query = await notion.databases.query({
-		database_id: Notion_DB_ID,
-	});
-
-	// do some expensive operation here, this is simplified for brevity
-	const queryResults = query?.results.reverse() || null;
-
-	// Go through the list and get the thumbnail for each image;
-	console.log({ queryResults });
-
-	const list = queryResults.map(async (book) => {
-		const bookTitle = book.properties.Name.title[0].plain_text;
-		const bookAuthor =
-			book.properties?.Author.rich_text[0]?.plain_text || 'unknown';
-
-		const createdDate = book.created_time;
-		const finishedDate =
-			book.properties['Date Finished']?.date?.start || '';
-
-		const thumbnail = await googleBookSearch(bookTitle);
-
-		return {
-			bookTitle,
-			bookAuthor,
-			createdDate,
-			finishedDate,
-			thumbnail,
-		};
-	});
-
-	const results = await Promise.all([...list]);
-
-	await asset.save(results, 'json');
-
-	return results;
 };

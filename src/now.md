@@ -2,29 +2,26 @@
 layout: layouts/page.njk
 title: Now
 tags:
-    - footnav
+    - nav
 navtitle: Now
 templateClass: tmpl-post
 date: 2017-01-01
 themeColor: '#e02d03'
 ---
 
-Last updated: 30 November 2022.
+<p><small>Last updated: <time>19/12/2022</time></small></p>
 
-## Life
+<p>I am Currently Doing this:</p>
 
-Life is super busy with work, kids and the World Cup going on. In my spare time I have managed a few MTN Bike rides. Days are short with the Winter solstice less than a month away.
+- Coming to terms with the result of the World Cup Final (France lost on penalties).
+- Coming to terms with the fact that the World Cup is over and there is no longer live sport to watch during the evenings.
+- Putting Christmas decorations and lights up.
+- Attempting to put curtains up in the lounge.
+- Laughing at what is going on at Twitter with Musk deciding that people should not be able to share links to other social media platforms, then putting a vote out to see if he should leave Twitter.
+- Looking forward to spending some time with family and friends over Christmas.
+- Recovering from an [epic winter bike ride with friends last Friday afternoon](https://www.strava.com/activities/8257390391).
 
-## Learning
 
-I am currently doing a month-long project where I create a web component a day using Lit. The site is (https://web-components-november-2022.netlify.app)[https://web-components-november-2022.netlify.app] and I am learning every day. It is great because it forces me to learn something new every day and produce something at the end of it to share on the internet.
 
-## Fitness
-
-Mostly mountain biking and walking at the moment.
-
-## Family
-
-Both kids are now in school although sometimes Emma does not enjoy going in the morning they both have good time and talk about it in the evening. Marion is super busy with her job. Marion and I went to Iceland earlier this month which was incredible. The kids were looked after by Marions parents.
 
 Credit for now page: first seen on [Derek Sivers now page](https://sivers.org/now)

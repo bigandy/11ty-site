@@ -3,7 +3,7 @@ module.exports = {
 	siteTitle: 'Andrew JD Hudson',
 	url: 'https://andrewhudson.dev/',
 	description:
-		'Andrew JD Hudson is a front-end engineer with 10 years experience',
+		'Andrew JD Hudson is a senior front-end engineer with 12+ years experience',
 	shortname: 'AH',
 	author: {
 		name: 'Andrew JD Hudson',
@@ -13,12 +13,10 @@ module.exports = {
 	isProduction: process.env.ELEVENTY_ENV === 'production',
 	mastodon: {
 		url: 'https://indieweb.social/@bigandy',
-	},
-	twitter: {
-		url: 'https://twitter.com/bigandy',
 		username: '@bigandy',
 	},
 	github: {
-		url: '',
+		url: 'https://github.com/bigandy',
+		username: 'bigandy',
 	},
 };
