@@ -20,7 +20,7 @@
 
 
 	{% if themeColor %}
-		<style>*{--theme-color: {{ themeColor }}; }</style>
+		<style>:root {--theme-color: {{ themeColor }}; }</style>
 	{% endif %}
 
 	<link href="{{ metadata.mastodon.url }}" rel="me" />

@@ -27,6 +27,8 @@ a {
 	color: var(--black);
 }
 
+
+
 html,
 body {
 	padding: 0;
@@ -113,7 +115,7 @@ strong {
 
 footer,
 main {
-	padding: 1rem 0;
+	padding-block: 1rem;
 }
 
 main {
@@ -331,8 +333,8 @@ a[href].direct-link:focus:visited,
 
 .container {
 	max-width: 1000px;
-	margin: 0 auto;
-	padding: 0 1em;
+	margin-inline: auto;
+	padding-inline: 1em;
 }
 
 .page-selector {
@@ -361,3 +363,4 @@ footer .nav {
 	background: lightblue;
 	border: 4px dashed white;
 }
+
