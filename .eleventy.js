@@ -103,6 +103,14 @@ if (process.argv)
 
 		// Collections
 		eleventyConfig.addCollection('tagList', tagList);
+		eleventyConfig.addCollection('allposts', (collection) => {
+			const returnPostCollection = collection
+				.getFilteredByGlob('./src/content/posts/**/*.md')
+				.filter(livePosts)
+				.filter(removeDrafts);
+
+			return returnPostCollection;
+		});
 		eleventyConfig.addCollection('posts', (collection) => {
 			const returnPostCollection = collection
 				.getFilteredByGlob('./src/content/posts/**/*.md')
