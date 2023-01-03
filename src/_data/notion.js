@@ -56,7 +56,7 @@ module.exports = async function () {
 				bookAuthor,
 				createdDate,
 				finishedDate,
-				thumbnail: thumbnail.replaceAll('http:', 'https:'),
+				thumbnail: thumbnail?.replaceAll('http:', 'https:'),
 			};
 		});
 
