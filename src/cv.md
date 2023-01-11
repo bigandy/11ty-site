@@ -20,13 +20,13 @@ themeColor: 'hotpink'
 <ul class="skills">
 	<li>Expert in CSS, React and JavaScript</li>
 	<li>Superb level TypeScript, GraphQL, and NextJS</li>
-	<!-- <li>Next.js, Gatsby, Eleventy, and WordPress.</li> -->
+	<li>Next.js, Gatsby, Eleventy, and WordPress.</li>
 	<li>Creation of modular re-usable React and Web Components</li>
-	<!-- <li>Communication via Slack and documentation of code</li> -->
-	<!-- <li>Website Performance Optimisation.</li> -->
-	<!-- <li>Databases (Firebase and Postgres).</li> -->
-	<!-- <li>Creation of e2e tests with Playwright</li> -->
-	<!-- <li>Electron and Browser Extension development.</li> -->
+	<li>Communication via Slack and documentation of code</li>
+	<li>Website Performance Optimisation.</li>
+	<li>Databases (Firebase and Postgres).</li>
+	<li>Creation of e2e tests with Playwright</li>
+	<li>Electron and Browser Extension development.</li>
 </ul>
 
 <h2 id="experience">Experience</h2>
@@ -193,9 +193,9 @@ themeColor: 'hotpink'
 	<li>
 		<a href="https://brokernotes.co" rel="noopener" target="_blank">brokernotes.co</a> – a WordPress-based Progressive Web App with custom features with React, the WordPress Rest API and WordPress.
 	</li>
-	<!-- <li>
+	<li>
 		<a href="https://www.ventureharbour.com" rel="noopener" target="_blank">ventureharbour.com</a> – turn into Progressive Web App (PWA) and add new features.
-	</li> -->
+	</li>
 	<li>
 		<a href="https://www.photocrowd.com" rel="noopener" target="_blank">photocrowd.com</a> – front-end development with React/Relay, Less, and webpack
 	</li>
@@ -220,9 +220,9 @@ themeColor: 'hotpink'
 	<li>
 		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.com/bigandy</a> – my GitHub account
 	</li>
-	<!-- <li>
-		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - powered currently by Astro using data exported from my old WordPress site.
-	</li> -->
+	<li>
+		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - powered currently by 11ty using data exported from my old WordPress site.
+	</li>
 	<li>
 		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
 	</li>

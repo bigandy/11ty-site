@@ -1,42 +1,44 @@
-.book-filtering {
-	display: none;
-}
-
-/* Basic filtering with css :has() */
-@supports selector(:has(.book)) {
+@layer book {
 	.book-filtering {
-		display: block;
-	}
-
-	.book-filtering:has(#finished:checked) ~ .book:not(.book--finished) {
 		display: none;
 	}
 
-	.book-filtering:has(#unfinished:checked) ~ .book:is(.book--finished) {
-		display: none;
+	/* Basic filtering with css :has() */
+	@supports selector(:has(.book)) {
+		.book-filtering {
+			display: block;
+		}
+
+		.book-filtering:has(#finished:checked) ~ .book:not(.book--finished) {
+			display: none;
+		}
+
+		.book-filtering:has(#unfinished:checked) ~ .book:is(.book--finished) {
+			display: none;
+		}
 	}
-}
 
-.book {
-	border: 1px solid;
-	padding: 1rem;
-	margin-block: 2rem;
-	display: grid;
-}
+	.book {
+		border: 1px solid;
+		padding: 1rem;
+		margin-block: 2rem;
+		display: grid;
+	}
 
-.book:has(img) {
-	grid-template-columns: max-content 1fr;
-	column-gap: 1em;
-}
+	.book:has(img) {
+		grid-template-columns: max-content 1fr;
+		column-gap: 1em;
+	}
 
-.book:has(img) img {
-	order: -1;
-}
+	.book:has(img) img {
+		order: -1;
+	}
 
-.book:not(.book--finished) {
-	border-color: rosybrown;
-}
+	.book:not(.book--finished) {
+		border-color: rosybrown;
+	}
 
-.book--finished {
-	border-color: greenyellow;
+	.book--finished {
+		border-color: greenyellow;
+	}
 }
