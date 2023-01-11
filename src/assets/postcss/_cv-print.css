@@ -1,5 +1,13 @@
-@layer cv.print {
+@layer print {
 	@media print {
+		.container {
+			padding: unset;
+		}
+
+		.background {
+			display: none;
+		}
+
 		h1,
 		.contact {
 			display: block;
