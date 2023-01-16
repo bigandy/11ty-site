@@ -10,14 +10,20 @@ const notion = new Client({
 const Notion_DB_ID = process.env.NOTION_DB;
 
 const googleBookSearch = async (title) => {
-	const results = await fetch(
-		'https://www.googleapis.com/books/v1/volumes?q=' + title
-	);
-	const json = await results.json();
+	try {
+		const results = await fetch(
+			'https://www.googleapis.com/books/v1/volumes?q=' + title
+		);
+		const json = await results.json();
 
-	// take the first, assume that it is the correct one.
-	const thumbnail = json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
-	return thumbnail;
+		// take the first, assume that it is the correct one.
+		const thumbnail = json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
+		return thumbnail;
+	} catch (error) {
+		console.error(error);
+		return '';
+	}
+
 };
 
 module.exports = async function () {
