@@ -19,14 +19,14 @@ themeColor: 'hotpink'
 
 <ul class="skills">
 	<li>Expert in CSS, React and JavaScript</li>
-	<li>Superb level TypeScript, GraphQL, and NextJS</li>
-	<li>Next.js, Gatsby, Eleventy, and WordPress.</li>
+	<li>TypeScript and GraphQL</li>
+	<li>Next.js, Gatsby, Eleventy, and WordPress</li>
 	<li>Creation of modular re-usable React and Web Components</li>
-	<li>Communication via Slack and documentation of code</li>
-	<li>Website Performance Optimisation.</li>
-	<li>Databases (Firebase and Postgres).</li>
+	<li>Website Performance Optimisation</li>
+	<li>Databases (Firebase, MySQL and Postgres)</li>
 	<li>Creation of e2e tests with Playwright</li>
-	<li>Electron and Browser Extension development.</li>
+	<li>Electron and Browser Extension development</li>
+	<li>Communication via Slack and documentation of code</li>
 </ul>
 
 <h2 id="experience">Experience</h2>
@@ -37,7 +37,7 @@ themeColor: 'hotpink'
 			<div class="entry__header">
 				<h3 class="entry__title p-name">Senior Software Engineer</h3>
 				<p class="entry__time">
-				<time class="dt-start" datetime="2017-10">October 2017</time
+				<time class="dt-start" datetime="2017-10">2017</time
 				><span>–</span> <span>Present</span>
 				</p>
 				<p class="entry__organization p-org h-card">
@@ -47,7 +47,6 @@ themeColor: 'hotpink'
 					target="_blank"
 					rel="noopener noreferrer"
 					>Venture Harbour</a>
-				<span aria-hidden="true">·</span>
 				<span class="p-location">Wallingford, UK</span>
 				</p>
 			</div>
@@ -67,8 +66,8 @@ themeColor: 'hotpink'
 		<div class="entry__header">
 			<h3 class="entry__title p-name">Full Stack Web Developer</h3>
 			<p class="entry__time">
-			<time class="dt-start" datetime="2016-10">October 2016</time
-			><span>–</span> <time class="dt-end" datetime="2017-10">October 2017</time
+			<time class="dt-start" datetime="2016-10">2016</time
+			><span>–</span> <time class="dt-end" datetime="2017-10">2017</time
 			>
 			</p>
 			<p class="entry__organization p-org h-card">
