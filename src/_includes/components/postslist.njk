@@ -1,7 +1,6 @@
 <ul class="postlist">
 {% for post in postslist | reverse %}
-  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %} {% if post.data.draft == true %} postlist-item--draft {% endif %}">
-<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  <li class="postlist-item">
     <a href="{{ post.url | url }}" class="postlist-link">
 		{% if post.data.title %}
 			{{ post.data.title }}
@@ -10,10 +9,28 @@
 		{% endif %}
 	</a>
 
+	<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+
 
     {%- if post.data.description -%}
       <div>{{ post.data.description }}</div>
     {%- endif -%}
+
+
+
+	{%- if post.data.tags.length > 1 -%}
+		<p class="" style="padding-top:1em;display:inline-block;padding-right:0.5rem">Tagged: </p>
+		<ul class="post-taglist list--inline">
+			{% for tag in post.data.tags %}
+				{%- if tag != "posts" -%}
+					{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+					<li>
+						<a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+					</li>
+				{%- endif -%}
+			{% endfor %}
+		</ul>
+	{%- endif -%}
   </li>
 {% endfor %}
 </ul>

@@ -1,6 +1,6 @@
 {% include "components/head.njk" %}
 <body {% if templateClass %} class="{{ templateClass }}" {% endif %}>
-  {% include "components/header.njk" %}
+
 
 
 <svg width="0" height="0">
@@ -11,12 +11,14 @@
   </filter>
 </svg>
 
-  <div class="background"></div>
+<div class="container">
+
+  {% include "components/header.njk" %}
 
   <main>
-    <div class="container">
+
       {{ content | safe }}
-    </div>
+
   </main>
 
   {% include "components/footer.njk" %}
@@ -34,6 +36,8 @@
 	{% else %}
 		<script src="/assets/js/theme-toggle.js" async defer type="module" />
 	{% endif %} #}
+</div>
+  <div class="background"></div>
 
 </body>
 </html>

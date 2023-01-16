@@ -109,8 +109,6 @@
 	}
 
 	body {
-		display: flex;
-		flex-direction: column;
 		overflow-y: scroll;
 		overflow-x: hidden;
 		color: var(--color);
@@ -120,9 +118,15 @@
 	}
 
 	.container {
+		display: flex;
+		flex-direction: column;
 		z-index: 2;
+		min-height: 100vh;
 		position: relative;
 		background: white;
+		max-width: 1000px;
+		margin-inline: auto;
+		padding-inline: 3rem;
 	}
 
 	.background {
@@ -173,9 +177,13 @@
 		margin-block: 0;
 	}
 
-	footer .container,
-	main .container {
+	footer ,
+	main  {
 		padding-block: 2rem;
+	}
+
+	body > svg {
+		display: block;
 	}
 
 	main {
@@ -244,16 +252,6 @@
 		font-weight: 700;
 	}
 
-	.postlist-item--draft {
-		border-left: 5px solid red;
-		padding-left: 15px;
-		display: none;
-	}
-
-	.postlist-item-active .postlist-link {
-		font-weight: bold;
-	}
-
 	.tag {
 		display: inline-block;
 		vertical-align: text-top;
@@ -302,11 +300,7 @@
 		margin-bottom: 0.5em;
 	}
 
-	.container {
-		max-width: 1000px;
-		margin-inline: auto;
-		padding-inline: 3rem;
-	}
+
 
 	.page-selector {
 		margin: 3rem 0 0 0.5rem;
