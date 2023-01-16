@@ -20,13 +20,13 @@ themeColor: 'hotpink'
 <ul class="skills">
 	<li>Expert in CSS, React and JavaScript</li>
 	<li>TypeScript and GraphQL</li>
-	<li>Next.js, Gatsby, Eleventy, and WordPress</li>
+	<!-- <li>Next.js, Astro, Gatsby, Eleventy, and WordPress</li> -->
 	<li>Creation of modular re-usable React and Web Components</li>
 	<li>Website Performance Optimisation</li>
-	<li>Databases (Firebase, MySQL and Postgres)</li>
-	<li>Creation of e2e tests with Playwright</li>
+	<!-- <li>Databases (Firebase, MySQL and Postgres)</li> -->
+	<!-- <li>Creation of e2e tests with Playwright</li> -->
 	<li>Electron and Browser Extension development</li>
-	<li>Communication via Slack and documentation of code</li>
+	<!-- <li>Communication via Slack and documentation of code</li> -->
 </ul>
 
 <h2 id="experience">Experience</h2>
@@ -55,8 +55,9 @@ themeColor: 'hotpink'
 				<li>Web app development with Next.js, GraphQL and Typescript.</li>
 				<li>Creation of component library with Storybook to showcase and document.</li>
 				<li>Break down problems into solutions and solutions into tasks, creating prototypes when required.</li>
-				<li>Desktop Application and Browser Extension development.</li>
-				<li>Optimise Performance of each of our sites and products and automate testing and CI for each deployment.</li>
+				<li>Electron Application and Browser Extension development.</li>
+				<li>Optimise Performance key products so that we are on top of the Google SEO rankings and give our customers a fast user experience</li>
+				<li>I mentor the rest of the engineering team on front-end topics regularly producing demos and presentations on what I have made and learned</li>
 			</ul>
 		</div>
 		</article>
@@ -179,7 +180,7 @@ themeColor: 'hotpink'
 
 <h2 id="relevant-experience">Relevant Experience</h2>
 
-<p>Here are a selection of the sites, app and browser extension that I have made:</p>
+<p>Here is a selection of the sites, app and browser extensions that I have made:</p>
 
 <ul class="cv-portfolio-list">
 	<li>
@@ -220,14 +221,15 @@ themeColor: 'hotpink'
 		<a href="https://github.com/bigandy" rel="noopener" target="_blank">github.com/bigandy</a> – my GitHub account
 	</li>
 	<li>
-		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - powered currently by 11ty using data exported from my old WordPress site.
+		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - built using 11ty.
 	</li>
 	<li>
 		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
 	</li>
 	<li>
-		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">web components november 2022</a> a Web Component a day with Lit
+		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">web components november 2022</a> a Web Component a day project with Lit
 	</li>
+	<li>Hoof-it <a href="https://chrome.google.com/webstore/detail/hoof-it/cjbciiijgopjnnianojijdifljkjkpjp?hl=en-GB" rel="noopener" target="_blank">Chrome Extension</a> <a href="https://addons.mozilla.org/en-GB/firefox/addon/hoof-it/" rel="noopener" target="_blank">Firefox add-on</a> Extension</li>
 </ul>
 
 <h2 id="education">Education</h2>
@@ -239,5 +241,6 @@ themeColor: 'hotpink'
 <ul class="p-grid p-grid--halfs">
 	<li>Mountain Biking</li>
 	<li>Movies with Family and Friends</li>
+	<li>Pottery</li>
 	<li>Graphic Design and Printing</li>
 </ul>
