@@ -2,6 +2,8 @@ const { Client } = require('@notionhq/client');
 
 const { AssetCache } = require('@11ty/eleventy-fetch');
 
+import fetch from 'node-fetch';
+
 const notion = new Client({
 	auth: process.env.NOTION_KEY,
 });
