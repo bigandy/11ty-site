@@ -126,7 +126,13 @@
 		background: white;
 		max-width: 1000px;
 		margin-inline: auto;
-		padding-inline: 3rem;
+		padding-inline: 1rem;
+	}
+
+	@media (min-width: 600px) {
+		.container {
+			padding-inline: 3rem;
+		}
 	}
 
 	.background {
