@@ -46,12 +46,11 @@ module.exports = async function () {
 		const queryResults = query?.results.reverse() || null;
 
 		// Go through the list and get the thumbnail for each image;
-		console.log({ queryResults });
 
 		const list = queryResults.map(async (book) => {
-			const bookTitle = book.properties.Name.title[0].plain_text;
+			const bookTitle = book.properties.Name.title[0]?.plain_text ?? "unknown title";
 			const bookAuthor =
-				book.properties?.Author.rich_text[0]?.plain_text || 'unknown';
+				book.properties?.Author.rich_text[0]?.plain_text ?? 'unknown author';
 
 			const createdDate = book.created_time;
 			const finishedDate =
