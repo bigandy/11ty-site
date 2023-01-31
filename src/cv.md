@@ -229,7 +229,7 @@ themeColor: 'hotpink'
 	<li>
 		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">web components november 2022</a> a Web Component a day project with Lit
 	</li>
-	<li>Hoof-it <a href="https://chrome.google.com/webstore/detail/hoof-it/cjbciiijgopjnnianojijdifljkjkpjp?hl=en-GB" rel="noopener" target="_blank">Chrome Extension</a> <a href="https://addons.mozilla.org/en-GB/firefox/addon/hoof-it/" rel="noopener" target="_blank">Firefox add-on</a> Extension</li>
+	<li>Hoof-it <a href="https://chrome.google.com/webstore/detail/hoof-it/cjbciiijgopjnnianojijdifljkjkpjp?hl=en-GB" rel="noopener" target="_blank">Chrome Extension</a> <a href="https://addons.mozilla.org/en-GB/firefox/addon/hoof-it/" rel="noopener" target="_blank">Firefox add-on</a></li>
 </ul>
 
 <h2 id="education">Education</h2>
