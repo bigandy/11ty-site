@@ -18,13 +18,15 @@ themeColor: 'hotpink'
 <h2 id="skills">Skills</h2>
 
 <ul class="skills">
-	<li>Expert in CSS, React and JavaScript</li>
+	<li>Expert in CSS, HTML, React and JavaScript</li>
 	<li>TypeScript and GraphQL</li>
 	<!-- <li>Next.js, Astro, Gatsby, Eleventy, and WordPress</li> -->
-	<li>Creation of modular re-usable React and Web Components</li>
+	<li>Creation of modular reusable components using React and Lit</li>
 	<li>Website Performance Optimisation</li>
+	<li>Good awareness of accessibility issues</li>
+	<li>Solid understanding of Figma and other design tools</li>
 	<!-- <li>Databases (Firebase, MySQL and Postgres)</li> -->
-	<!-- <li>Creation of e2e tests with Playwright</li> -->
+	<li>Creation of e2e tests and automation with Playwright</li>
 	<li>Electron and Browser Extension development</li>
 	<!-- <li>Communication via Slack and documentation of code</li> -->
 </ul>
@@ -52,11 +54,11 @@ themeColor: 'hotpink'
 			</div>
 		<div class="entry__content p-summary">
 			<ul>
-				<li>Web app development with Next.js, GraphQL and Typescript.</li>
+				<li>Web app development with CSS-in-JS, Next.js, GraphQL and Typescript.</li>
 				<li>Creation of component library with Storybook to showcase and document.</li>
-				<li>Break down problems into solutions and solutions into tasks, creating prototypes when required.</li>
-				<li>Electron Application and Browser Extension development.</li>
-				<li>Optimise Performance key products so that we are on top of the Google SEO rankings and give our customers a fast user experience</li>
+				<li>Break down problems into solutions and solutions into tasks, creating prototypes before jumping in to the work.</li>
+				<!-- <li>Electron Application and Browser Extension development.</li>
+				<li>Optimise Performance key products so that we are on top of the Google SEO rankings and give our customers a fast user experience</li> -->
 				<li>I mentor the rest of the engineering team on front-end topics regularly producing demos and presentations on what I have made and learned</li>
 			</ul>
 		</div>

@@ -1,12 +1,16 @@
 ---
 title: Container Queries
 subTitle: 'An introduction to Container Queries'
-date: 2023-01-20
-publishDate: 'January 20 2023'
+date: 2023-01-31
+publishDate: 'January 31 2023'
 draft: true
 description:
-tags: ['css', 'container-queries']
+tags:
+- 'css'
+- 'container-queries'
 ---
+
+Up there with :has(), container queries are one of my most desired CSS features of many years. I am very excited for this new CSS feature and I want to go in detail how I am excited for them and how to use them.
 
 ## What are Container Queries?
 
@@ -23,7 +27,7 @@ Imagine a world where you have a calendar component and you want to change the U
 This would style the `.title` class when the viewport is wider than 600px. Otherwise the style will fall back to what is outside of that query.
 
 ## What is the browser support for Container Queries?
-Browser support for Container Queries (so far this means inline-size based queries) is good in all of the main browsers with the exception of Firefox. The next stable Firefox release (due in February 2023) will have support for container queries.
+Browser support for Container Queries (so far this means inline-size based queries) is good in all of the main browsers with the exception of Firefox. The next stable Firefox release (due on Valentines Day - 14 February - 2023) will have support for container queries.
 
 ## What is the future of Container Queries?
 
