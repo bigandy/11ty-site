@@ -70,6 +70,20 @@
 			color: black;
 		}
 
+		.cv a:not(.contact a)::after {
+			content: " (↦ " attr(href) ")";
+			word-wrap: break-word;
+			font-style: italic;
+			font-size: .9em;
+			white-space: wrap;
+			opacity: .75;
+			display: inline;
+			color: #006fc6!important;
+			text-decoration: none!important;
+			background-image: none!important;
+			text-shadow: none!important;
+		}
+
 		.entrylist > li {
 			list-style: disc;
 			margin-block-end: 1rem;
