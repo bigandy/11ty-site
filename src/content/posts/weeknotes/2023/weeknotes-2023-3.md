@@ -4,7 +4,7 @@ subTitle: 'Weeknotes 2023 #3'
 date: 2023-01-16
 publishDate: 'January 16 2023'
 draft: false
-description:
+description: ""
 tags: ['weeknotes']
 ---
 

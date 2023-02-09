@@ -2,7 +2,7 @@
 title: Seasons Greetings
 date: 2021-12-27
 draft: false
-description:
+description: ""
 tags: ['weeknotes']
 ---
 

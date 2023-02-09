@@ -2,7 +2,7 @@
 title: Raspberry Pi Springs back to Life!
 date: 2021-03-21
 draft: true
-description:
+description: ""
 tags: ['raspberry-pi']
 author: 'Andrew'
 ---

@@ -3,7 +3,7 @@ title: Clumps! Dashboard!
 subTitle: 'Weeknotes 2020 #48'
 date: 2020-11-29
 draft: false
-description:
+description: ""
 tags: ['weeknotes']
 author: 'andrew'
 ---

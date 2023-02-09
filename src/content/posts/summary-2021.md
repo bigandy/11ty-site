@@ -2,7 +2,7 @@
 title: The Year that was 2021
 date: 2022-01-01
 draft: true
-description:
+description: ""
 tags: ['weeknotes']
 ---
 

@@ -4,7 +4,7 @@ subTitle: 'Weeknotes 2020 #53'
 date: 2021-01-03
 publishDate: 'January 3 2021'
 draft: false
-description:
+description: ""
 tags: ['weeknotes']
 ---
 
