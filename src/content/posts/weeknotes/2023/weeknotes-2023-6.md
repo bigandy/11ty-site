@@ -13,7 +13,7 @@ Here's what I got up to over the last week:
 
 -   Went for two Mountain bike rides! The first was solo out to the [Spire and Spoke on Thursday evening](https://www.strava.com/activities/8495264573) (I went full out non-stop and still was back by 9-30), and the second was on Sunday morning with Alistair and G to a new destination - the [Maker Space in Nuffield](https://www.strava.com/activities/8508934422). Did two Zwift sessions. Definitely over did it this week so next week will have to be less hardcore!
 
--   Spring is almost here, I can feel it! The daylight hours are getting longer so that in the evening I can go for a walk and then pick the kids up and it still is dark. I love it! Snowdrops are out, daffodils are preparing themselves to come out soon too.
+-   Spring is almost here, I can feel it! The daylight hours are getting longer so that in the evening I can go for a walk and then pick the kids up and it still is light. I love it! Snowdrops are out, daffodils are preparing themselves to come out soon too.
 
 -   Received some more bad news at work which affects all of us.
 
