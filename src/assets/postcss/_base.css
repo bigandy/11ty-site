@@ -37,11 +37,6 @@
 		font-size: 120%;
 	}
 
-	header {
-		view-transition-name: header;
-    	contain: layout;
-	}
-
 	h1,
 	h2,
 	h3 {
@@ -130,7 +125,13 @@
 		position: relative;
 		background: white;
 		max-width: 1000px;
+		margin-inline: auto;
 		padding-inline: 1rem;
+	}
+
+	main {
+		view-transition-name: container;
+    	contain: layout;
 	}
 
 	@media (min-width: 600px) {
