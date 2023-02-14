@@ -37,6 +37,11 @@
 		font-size: 120%;
 	}
 
+	header {
+		view-transition-name: header;
+    	contain: layout;
+	}
+
 	h1,
 	h2,
 	h3 {
@@ -125,7 +130,6 @@
 		position: relative;
 		background: white;
 		max-width: 1000px;
-		margin-inline: auto;
 		padding-inline: 1rem;
 	}
 
@@ -139,7 +143,7 @@
 		position: absolute;
 		inset: 0;
 		background: repeating-radial-gradient(
-			50px 50px at 0 0,
+			50px 50px at 100% 0%,
 			red,
 			darkslateblue
 		);
@@ -184,7 +188,7 @@
 	}
 
 	footer ,
-	main  {
+	main {
 		padding-block: 2rem;
 	}
 
