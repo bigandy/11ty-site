@@ -3,7 +3,7 @@ pagination:
   data: collections.allposts
   size: 1
   alias: preview
-permalink: "/img/social-preview-images/{{ preview.data.date | readablePostDate }}-{{ preview.data.title | slug }}-preview.svg"
+permalink: "/img/social-preview-images/{{ preview.data.date | readablePostDate }}-{{ preview.url | url | replaceSlashes }}-preview.svg"
 eleventyExcludeFromCollections: true
 
 ---

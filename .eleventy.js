@@ -92,9 +92,17 @@ if (process.argv)
 		eleventyConfig.addFilter('readableDate', readableDate);
 		eleventyConfig.addFilter("readablePostDate", (dateObj) => {
 			return DateTime.fromJSDate(dateObj, {
-				zone: "Europe/Amsterdam",
-			}).setLocale('en').toLocaleString(DateTime.DATE_FULL);
+				zone: "Europe/London",
+			}).setLocale('en').toLocaleString({ locale: 'en-gb' }).replaceAll('/', '-');
 		});
+		eleventyConfig.addFilter('encodeurl', (title) => {
+			return encodeURI(title).replaceAll(' ', '');
+		});
+
+		eleventyConfig.addFilter('replaceSlashes', str => {
+			return str.replaceAll('/', '');
+		})
+
 		eleventyConfig.addFilter('htmlDateString', htmlDateString);
 		eleventyConfig.addFilter('firstNElements', firstNElements);
 		eleventyConfig.addFilter(
