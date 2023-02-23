@@ -1,6 +1,7 @@
 module.exports = {
-	title: 'Andrew JD Hudson',
+	title: 'Andrew JD Hudson - Senior Front-end engineer',
 	siteTitle: 'Andrew JD Hudson',
+	shortUrl: "andrewhudson.dev",
 	url: 'https://andrewhudson.dev/',
 	description:
 		'Andrew JD Hudson is a senior front-end engineer with 12+ years experience',

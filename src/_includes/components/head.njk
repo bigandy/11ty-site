@@ -36,4 +36,13 @@
 	<link href="{{ metadata.mastodon.url }}" rel="me" />
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<meta name="view-transition" content="same-origin">
+
+
+	<meta property="og:title" content="{{ renderData.title or title or metadata.title }}" />
+	<meta property="og:description" content="{{ renderData.description or description or  metadata.description }}">
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+ 	<meta property="og:image" content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ renderData.title or title | slug }}-preview.jpeg" />
+
+	<meta property="og:site_name" content="{{ metadata.shortUrl }}">
   </head>

@@ -11,13 +11,6 @@
 
 	<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
 
-
-    {%- if post.data.description -%}
-      <div>{{ post.data.description }}</div>
-    {%- endif -%}
-
-
-
 	{%- if post.data.tags.length > 1 -%}
 		<p class="" style="padding-top:1em;display:inline-block;padding-right:0.5rem">Tagged: </p>
 		<ul class="post-taglist list--inline">

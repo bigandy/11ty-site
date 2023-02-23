@@ -3,7 +3,7 @@
 	"version": "1.0.1",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
-		"dev": "npx @11ty/eleventy --serve --quiet",
+		"dev": "npx @11ty/eleventy --serve",
 		"ntl:dev": "BROWSER=none netlify dev",
 		"build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",
 		"watch": "npx @11ty/eleventy --watch",
@@ -27,6 +27,7 @@
 		"node-fetch": "2.6.1"
 	},
 	"dependencies": {
+		"@11ty/eleventy-img": "3.0.0",
 		"@notionhq/client": "2.2.2",
 		"cssnano": "5.1.14",
 		"csso": "5.0.5",
