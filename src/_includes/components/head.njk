@@ -43,7 +43,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
-	{% if tags.includes('posts') %}
+	{% if tags and tags.includes('posts') %}
  	<meta property="og:image" content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ page.url | url | replaceSlashes }}-preview.jpeg" />
 	<meta property="og:secure_url" content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ page.url | url | replaceSlashes }}-preview.jpeg" />
 	{% else %}
