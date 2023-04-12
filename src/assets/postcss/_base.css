@@ -131,7 +131,7 @@
 
 	main {
 		view-transition-name: container;
-    	contain: layout;
+		contain: layout;
 	}
 
 	@media (min-width: 600px) {
@@ -188,7 +188,7 @@
 		margin-block: 0;
 	}
 
-	footer ,
+	footer,
 	main {
 		padding-block: 2rem;
 	}
@@ -263,7 +263,7 @@
 		font-weight: 700;
 	}
 
-	.tag {
+	.tag-link {
 		display: inline-block;
 		vertical-align: text-top;
 		text-transform: uppercase;
@@ -281,12 +281,13 @@
 				var(--transition-method),
 			background-color var(--transition-duration) var(--transition-method),
 			color var(--transition-duration) var(--transition-method);
-	}
-	.tag:hover,
-	.tag:focus {
-		border-color: var(--theme-color);
-		background: var(--background-color);
-		color: var(--theme-color);
+
+		&:hover,
+		&:focus {
+			border-color: var(--theme-color);
+			background: var(--background-color);
+			color: var(--theme-color);
+		}
 	}
 
 	.warning {
@@ -310,8 +311,6 @@
 		margin-top: 3em;
 		margin-bottom: 0.5em;
 	}
-
-
 
 	.page-selector {
 		margin: 3rem 0 0 0.5rem;

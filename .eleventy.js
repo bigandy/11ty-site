@@ -1,7 +1,8 @@
-const { DateTime } = require("luxon");
+const { DateTime } = require('luxon');
 const fs = require('fs');
-const Image = require("@11ty/eleventy-img");
+const Image = require('@11ty/eleventy-img');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 const htmlDateString = require('./src/_11ty/filters/htmlDateString.js');
@@ -90,18 +91,21 @@ if (process.argv)
 
 		// Filters
 		eleventyConfig.addFilter('readableDate', readableDate);
-		eleventyConfig.addFilter("readablePostDate", (dateObj) => {
+		eleventyConfig.addFilter('readablePostDate', (dateObj) => {
 			return DateTime.fromJSDate(dateObj, {
-				zone: "Europe/London",
-			}).setLocale('en').toLocaleString({ locale: 'en-gb' }).replaceAll('/', '-');
+				zone: 'Europe/London',
+			})
+				.setLocale('en')
+				.toLocaleString({ locale: 'en-gb' })
+				.replaceAll('/', '-');
 		});
 		eleventyConfig.addFilter('encodeurl', (title) => {
 			return encodeURI(title).replaceAll(' ', '');
 		});
 
-		eleventyConfig.addFilter('replaceSlashes', str => {
+		eleventyConfig.addFilter('replaceSlashes', (str) => {
 			return str.replaceAll('/', '');
-		})
+		});
 
 		eleventyConfig.addFilter('htmlDateString', htmlDateString);
 		eleventyConfig.addFilter('firstNElements', firstNElements);
@@ -110,23 +114,22 @@ if (process.argv)
 			removeDraftsFromTagsList
 		);
 
-		eleventyConfig.addFilter('splitlines', function(input) {
+		eleventyConfig.addFilter('splitlines', function (input) {
 			const parts = input.split(' ');
-			const lines = parts.reduce(function(prev, current) {
+			const lines = parts.reduce(function (prev, current) {
+				if (!prev.length) {
+					return [current];
+				}
 
-			if (!prev.length) {
-				return [current];
-			}
+				let lastOne = prev[prev.length - 1];
 
-			let lastOne = prev[prev.length - 1];
+				if (lastOne.length + current.length > 19) {
+					return [...prev, current];
+				}
 
-			if (lastOne.length + current.length > 19) {
-				return [...prev, current];
-			}
+				prev[prev.length - 1] = lastOne + ' ' + current;
 
-			prev[prev.length - 1] = lastOne + ' ' + current;
-
-			return prev;
+				return prev;
 			}, []);
 
 			return lines;
@@ -206,31 +209,35 @@ if (process.argv)
 			},
 		});
 
-
 		eleventyConfig.on('afterBuild', () => {
-			const socialPreviewImagesDir = "dist/img/social-preview-images/";
+			const socialPreviewImagesDir = 'dist/img/social-preview-images/';
 			fs.readdir(socialPreviewImagesDir, function (err, files) {
 				if (files?.length > 0) {
 					files.forEach(function (filename) {
-						if (filename.endsWith(".svg")) {
-
+						if (filename.endsWith('.svg')) {
 							let imageUrl = socialPreviewImagesDir + filename;
 							Image(imageUrl, {
-								formats: ["jpeg"],
-								outputDir: "./" + socialPreviewImagesDir,
-								filenameFormat: function (id, src, width, format, options) {
-
-									let outputFilename = filename.substring(0, (filename.length-4));
+								formats: ['jpeg'],
+								outputDir: './' + socialPreviewImagesDir,
+								filenameFormat: function (
+									id,
+									src,
+									width,
+									format,
+									options
+								) {
+									let outputFilename = filename.substring(
+										0,
+										filename.length - 4
+									);
 
 									return `${outputFilename}.${format}`;
-
-								}
+								},
 							});
-
 						}
-					})
+					});
 				}
-			})
+			});
 		});
 
 		return {
@@ -252,5 +259,4 @@ if (process.argv)
 				data: '_data',
 			},
 		};
-
 	};

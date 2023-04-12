@@ -21,7 +21,7 @@ themeColor: "#3454D1"
 				{%- if tag != "posts" -%}
 					{% set tagUrl %}/tags/{{ tag }}/{% endset %}
 					<li>
-						<a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+						<a href="{{ tagUrl | url }}" class="tag-link">{{ tag }}</a>
 					</li>
 				{%- endif -%}
 			{% endfor %}
