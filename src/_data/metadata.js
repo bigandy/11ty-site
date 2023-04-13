@@ -1,7 +1,7 @@
 module.exports = {
 	title: 'Andrew JD Hudson - Senior Front-end engineer',
 	siteTitle: 'Andrew JD Hudson',
-	shortUrl: "andrewhudson.dev",
+	shortUrl: 'andrewhudson.dev',
 	url: 'https://andrewhudson.dev/',
 	description:
 		'Andrew JD Hudson is a senior front-end engineer with 12+ years experience',
@@ -12,6 +12,7 @@ module.exports = {
 	},
 	themeColor: '#ffcc00',
 	isProduction: process.env.ELEVENTY_ENV === 'production',
+	showDrafts: process.env.ELEVENTY_DRAFTS === 'true',
 	mastodon: {
 		url: 'https://indieweb.social/@bigandy',
 		username: '@bigandy',

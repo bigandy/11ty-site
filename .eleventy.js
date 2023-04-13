@@ -10,12 +10,14 @@ const readableDate = require('./src/_11ty/filters/readableDate.js');
 const firstNElements = require('./src/_11ty/filters/firstNElements.js');
 const Book = require('./src/_includes/components/book.js');
 const tagList = require('./src/_11ty/getTagList');
-const isDev = process.argv.includes('dev');
+const isDev = process.env.ELEVENTY_DRAFTS === 'true';
+const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 
 const terser = require('terser');
 
 if (process.argv)
 	module.exports = function (eleventyConfig) {
+		eleventyConfig.addPlugin(EleventyVitePlugin);
 		// Plugins
 		eleventyConfig.addPlugin(pluginSyntaxHighlight);
 

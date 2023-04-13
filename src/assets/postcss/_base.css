@@ -257,6 +257,13 @@
 		display: inline-block;
 	}
 
+	.postlist-item--draft {
+		border-left: 1rem solid orange;
+		padding-left: 1rem;
+		margin-left: -2rem;
+		border-radius: 1rem;
+	}
+
 	.postlist-link {
 		display: inline-block;
 		padding-bottom: 0.5em;
