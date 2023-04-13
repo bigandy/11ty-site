@@ -10,14 +10,17 @@ const readableDate = require('./src/_11ty/filters/readableDate.js');
 const firstNElements = require('./src/_11ty/filters/firstNElements.js');
 const Book = require('./src/_includes/components/book.js');
 const tagList = require('./src/_11ty/getTagList');
-const isDev = process.env.ELEVENTY_DRAFTS === 'true';
+const showDrafts = process.env.ELEVENTY_DRAFTS === 'true';
+const isProduction = process.env.ELEVENTY_ENV === 'production';
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 
 const terser = require('terser');
 
 if (process.argv)
 	module.exports = function (eleventyConfig) {
-		eleventyConfig.addPlugin(EleventyVitePlugin);
+		if (!isProduction) {
+			eleventyConfig.addPlugin(EleventyVitePlugin);
+		}
 		// Plugins
 		eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
@@ -54,7 +57,7 @@ if (process.argv)
 		const now = new Date();
 		const livePosts = (p) => p.date <= now;
 		const removeDraftsFromTagsList = (drafts) => {
-			if (isDev) {
+			if (showDrafts) {
 				return drafts;
 			}
 
@@ -84,7 +87,7 @@ if (process.argv)
 		};
 
 		const removeDrafts = (post) => {
-			if (isDev) {
+			if (showDrafts) {
 				return post;
 			}
 
