@@ -14,12 +14,21 @@
 		margin-top: 0;
 	}
 
-	.cv h3 {
+	/* .cv h3 {
 		font-size: 24px;
-	}
+	} */
 
 	.cv :is(h2 + h3) {
 		margin-top: 0;
+	}
+
+	main ul {
+		margin-block: 2rem;
+		padding-inline-start: 1.25rem;
+	}
+
+	ol {
+		margin-inline-start: 2rem;
 	}
 
 	li {
@@ -59,10 +68,10 @@
 		margin-inline-start: 0.25rem;
 	}
 
-	.entry__organization,
+	/* .entry__organization,
 	.entry__time {
 		font-size: 0.9rem;
-	}
+	} */
 
 	.entry__title {
 		margin-block: 0.5rem;
@@ -76,12 +85,12 @@
 	.entrylist::after {
 		content: '';
 		display: block;
-		height: calc(100% - 20px);
+		height: calc(100% - 3rem);
 		width: 1px;
 		background: black;
 		position: absolute;
-		left: -24px;
-		top: 10px;
+		left: -4px;
+		top: 3rem;
 	}
 
 	.entrylist > li {
@@ -97,7 +106,7 @@
 		width: 20px;
 		aspect-ratio: 1;
 		position: absolute;
-		top: 0.25em;
+		top: 2rem;
 		left: -34px;
 		z-index: 1;
 	}

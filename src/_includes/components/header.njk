@@ -1,10 +1,12 @@
 <header>
-	<ul class="nav">
-		<li class="home"><a href="{{ '/' | url }}">{{ metadata.siteTitle }}</a></li>
-		{%- for nav in collections.nav | reverse -%}
-		<li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
-			<a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a>
-		</li>
-		{%- endfor -%}
-	</ul>
+	<nav>
+		<ul class="nav list--plain list--items-inline">
+			<li><a href="{{ '/' | url }}" class="home {% if page.url.trim() == '/' %} nav-item-active{% endif %}">{{ metadata.siteTitle }}</a></li>
+			{%- for nav in collections.nav | reverse -%}
+			<li class="nav-item">
+				<a href="{{ nav.url | url }}" class="{% if nav.url == page.url %} nav-item-active{% endif %}">{{ nav.data.navtitle }}</a>
+			</li>
+			{%- endfor -%}
+		</ul>
+	</nav>
 </header>

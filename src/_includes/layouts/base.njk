@@ -2,17 +2,6 @@
 <body {% if templateClass %} class="{{ templateClass }}" {% endif %}>
 
 
-
-<svg width="0" height="0">
-  <filter id="grainy" x="0" y="0" width="100%" height="100%">
-    <feTurbulence type="fractalNoise" baseFrequency=".537"></feTurbulence>
-    <feColorMatrix type="saturate" values="0"></feColorMatrix>
-    <feBlend in="SourceGraphic" mode="multiply"></feBlend>
-  </filter>
-</svg>
-
-<div class="container">
-
   {% include "components/header.njk" %}
 
   <main>
@@ -23,8 +12,6 @@
 
   {% include "components/footer.njk" %}
 
-</div>
-  <div class="background"></div>
 
 </body>
 </html>

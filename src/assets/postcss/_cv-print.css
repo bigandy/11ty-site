@@ -1,30 +1,18 @@
 @layer print {
 	@media print {
-
 		main {
 			padding-block: 0;
 		}
 
-		.container {
-			padding: unset;
+		main ul {
+			padding-inline-start: 0;
 		}
 
 		.background {
 			display: none;
 		}
 
-		h1,
 		.contact {
-			display: inline-block;
-		}
-
-		h1 {
-			text-shadow: unset;
-			color: black;
-		}
-
-		.contact {
-			padding-inline-start: 1em;
 			font-size: 14px;
 			margin-block-end: 0;
 		}
@@ -36,6 +24,14 @@
 
 		ul {
 			margin-block-end: 0;
+		}
+
+		ol {
+			margin-inline-start: 0;
+		}
+
+		main {
+			max-width: 65ch;
 		}
 
 		.cv li::marker {
@@ -71,17 +67,17 @@
 		}
 
 		.cv a:not(.contact a)::after {
-			content: " (↦ " attr(href) ")";
+			content: ' (↦ ' attr(href) ')';
 			word-wrap: break-word;
 			font-style: italic;
-			font-size: .9em;
+			font-size: 0.9em;
 			white-space: wrap;
-			opacity: .75;
+			opacity: 0.75;
 			display: inline;
-			color: #006fc6!important;
-			text-decoration: none!important;
-			background-image: none!important;
-			text-shadow: none!important;
+			color: #006fc6 !important;
+			text-decoration: none !important;
+			background-image: none !important;
+			text-shadow: none !important;
 		}
 
 		.entrylist > li {
@@ -170,11 +166,10 @@
 
 		.entry__time::before,
 		.entry__time::after {
-			content: "/";
+			content: '/';
 			display: inline-block;
 			position: relative;
 			color: lightgrey;
-
 		}
 
 		.entry__time::before {

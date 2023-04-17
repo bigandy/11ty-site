@@ -7,19 +7,19 @@
 		{% else %}
 			<code>{{ post.url }}</code>
 		{% endif %}
-	</a>
+	</a> 
 
 	<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
 
 	{%- if post.data.tags.length > 1 -%}
-		<p class="" style="padding-top:1em;display:inline-block;padding-right:0.5rem">Tagged: </p>
-		<ul class="post-taglist list--inline">
+		<ul class="post-taglist list--plain list--items-inline">
+			<li>Tagged:</li>
 			{% for tag in post.data.tags %}
 				{%- if tag != "posts" -%}
 					{% set tagUrl %}/tags/{{ tag }}/{% endset %}
 					<li>
 						<a href="{{ tagUrl | url }}" class="tag-link">{{ tag }}</a>
-					</li>
+					</li> 
 				{%- endif -%}
 			{% endfor %}
 		</ul>

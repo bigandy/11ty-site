@@ -1,5 +1,5 @@
 ---
-title: 'Testing out Syntax Highlighter in Post'
+title: 'HTML Post with Syntax Highlighting'
 subTitle: ''
 date: 2023-04-12
 publishDate: 'April 12 2023'
@@ -7,6 +7,26 @@ draft: true
 description: ''
 tags:
 ---
+
+# Heading level one
+
+## Heading level two
+
+### Heading level three
+
+#### Heading level four
+
+##### Heading level five
+
+###### Heading level six
+
+<ol>
+	<li>List item one</li>
+	<li>List item two</li>
+	<li>List item three</li>
+</ol>
+
+# Testing out Syntax Highlighter in Post
 
 ## CSS
 

@@ -20,8 +20,12 @@
 	{% endif %}
 
 	{% if themeColor %}
-		<style>:root {--theme-color: {{ themeColor }}; }</style>
+		<style>:root {--theme-color: {{ themeColor or metadata.themeColor }}; }</style>
 	{% endif %}
+
+	<!-- HTML in your document's head -->
+	<link rel="preconnect" href="https://rsms.me/">
+	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
 
