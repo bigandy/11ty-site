@@ -24,7 +24,6 @@
 		position: fixed;
 		inset: 0;
 		z-index: -1;
-		fill-opacity: 0.5;
 	}
 
 	.background-svg path {
