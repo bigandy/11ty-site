@@ -20,6 +20,28 @@
 		--step-5: clamp(2.49rem, calc(1.76rem + 3.63vw), 4.58rem);
 	}
 
+	.background-svg {
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		fill-opacity: 0.5;
+	}
+
+	.background-svg path {
+		fill: var(--theme-color, green);
+	}
+
+	header,
+	footer,
+	main {
+		background: rgb(255 255 255 / 0.9);
+		padding-inline: 3vmax;
+	}
+
+	header {
+		padding-block: 1vmax;
+	}
+
 	/* CSS */
 	:root {
 		font-family: 'Inter', sans-serif;
@@ -32,7 +54,6 @@
 
 	html,
 	body {
-		padding: 0;
 		margin: 0;
 		min-height: 100%;
 	}
@@ -56,7 +77,6 @@
 
 	body {
 		font-size: var(--step-0);
-		padding: 1vmax 3vmax;
 		line-height: 1.5;
 		display: flex;
 		flex-direction: column;
@@ -67,17 +87,24 @@
 		flex: 1;
 	}
 
-	h1 {
-		font-size: var(--step-5);
+	h1,
+	h2,
+	h3 {
+		font-weight: 800;
+		line-height: 1.1;
 		text-wrap: balance;
 	}
 
-	h2 {
+	h1 {
 		font-size: var(--step-4);
 	}
 
-	h3 {
+	h2 {
 		font-size: var(--step-3);
+	}
+
+	h3 {
+		font-size: var(--step-2);
 	}
 
 	small {
