@@ -144,7 +144,7 @@
 
 	.post-content a {
 		--gap: 0.3ex;
-		--line-color: var(--color-primary);
+		--line-color: var(--theme-color, --color-primary);
 		color: currentColor;
 		text-decoration-color: var(--line-color);
 		text-decoration-thickness: var(--gap);
@@ -185,7 +185,8 @@
 	}
 
 	p,
-	article {
+	article,
+	li {
 		max-width: 65ch;
 	}
 
