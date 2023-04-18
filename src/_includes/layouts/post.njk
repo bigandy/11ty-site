@@ -14,20 +14,8 @@ themeColor: "#3454D1"
 	<div class="post-content">
 		{{ content | safe }}
 	</div>
-
-	{%- if tags.length > 1 -%}
-		<p class="post-taglist-label">Tagged: </p>
-		<ul class="post-taglist list--inline">
-			{% for tag in tags %}
-				{%- if tag != "posts" -%}
-					{% set tagUrl %}/tags/{{ tag }}/{% endset %}
-					<li>
-						<a href="{{ tagUrl | url }}" class="tag-link">{{ tag }}</a>
-					</li>
-				{%- endif -%}
-			{% endfor %}
-		</ul>
-	{%- endif -%}
+	
+	{% include "components/taglist.njk" %}
 
 </div>
 

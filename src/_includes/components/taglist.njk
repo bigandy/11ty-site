@@ -1,0 +1,13 @@
+{%- if tags.length > 1 -%}
+    <ul class="post-taglist list--plain list--items-inline">
+        <li>Tagged:</li>
+        {% for tag in tags %}
+            {%- if tag != "posts" -%}
+                {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                <li>
+                    <a href="{{ tagUrl | url }}" class="tag-link">{{ tag }}</a>
+                </li> 
+            {%- endif -%}
+        {% endfor %}
+    </ul>
+{%- endif -%}

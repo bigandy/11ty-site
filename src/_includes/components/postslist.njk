@@ -10,20 +10,8 @@
 	</a> 
 
 	<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-
-	{%- if post.data.tags.length > 1 -%}
-		<ul class="post-taglist list--plain list--items-inline">
-			<li>Tagged:</li>
-			{% for tag in post.data.tags %}
-				{%- if tag != "posts" -%}
-					{% set tagUrl %}/tags/{{ tag }}/{% endset %}
-					<li>
-						<a href="{{ tagUrl | url }}" class="tag-link">{{ tag }}</a>
-					</li> 
-				{%- endif -%}
-			{% endfor %}
-		</ul>
-	{%- endif -%}
+	{% set tags =  post.data.tags %}
+	{% include "components/taglist.njk" %}
   </li>
 {% endfor %}
 </ul>
