@@ -206,6 +206,12 @@
 	h3 {
 		max-width: 28ch;
 	}
+
+	footer svg {
+		height: 0.75lh;
+		width: 0.75lh;
+		vertical-align: -0.15lh;
+	}
 }
 
 @layer utils {

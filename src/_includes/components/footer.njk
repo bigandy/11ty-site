@@ -1,3 +1,3 @@
 <footer>
-		<p><small>&copy; {{ _ | year }} {{metadata.author.name}} <br /> <a rel="me" href="{{ metadata.mastodon.url }}">{{ metadata.mastodon.username}} on Mastodon</a> | <a href="{{ metadata.github.url}}">{{ metadata.github.username}} on Github</a> | <a href="/feed.xml">RSS Feed</a></small></p>
+		<p><small>&copy; {{ _ | year }} {{metadata.author.name}} | {% include "components/mastodon-icon.njk" %} <a rel="me" href="{{ metadata.mastodon.url }}">{{ metadata.mastodon.username}} on Mastodon</a> | {% include "components/github-icon.njk" %} <a href="{{ metadata.github.url}}">{{ metadata.github.username}} on Github</a> | {% include "components/rss-icon.njk" %} <a href="/feed.xml">RSS Feed</a></small></p>
 </footer>
