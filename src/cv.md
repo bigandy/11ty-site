@@ -40,7 +40,8 @@ themeColor: 'hotpink'
 				<h3 class="entry__title p-name">Senior Software Engineer</h3>
 				<p class="entry__time">
 				<time class="dt-start" datetime="2017-10">2017</time
-				><span>–</span> <span>Present</span>
+				><span>–</span> <time class="dt-end" datetime="2023-02">February 2023</time
+				>
 				</p>
 				<p class="entry__organization p-org h-card">
 				<a
