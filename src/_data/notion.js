@@ -12,10 +12,9 @@ const Notion_DB_ID = process.env.NOTION_DB;
 const googleBookSearch = async (title, author) => {
 	try {
 		const results = await fetch(
-			'https://www.googleapis.com/books/v1/volumes?q=' +
-				title +
-				' ' +
-				author
+			`https://www.googleapis.com/books/v1/volumes?q=${encodeURI(
+				title + author
+			)}`
 		);
 		const json = await results.json();
 
