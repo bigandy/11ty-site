@@ -9,21 +9,24 @@ const notion = new Client({
 });
 const Notion_DB_ID = process.env.NOTION_DB;
 
-const googleBookSearch = async (title) => {
+const googleBookSearch = async (title, author) => {
 	try {
 		const results = await fetch(
-			'https://www.googleapis.com/books/v1/volumes?q=' + title
+			'https://www.googleapis.com/books/v1/volumes?q=' +
+				title +
+				' ' +
+				author
 		);
 		const json = await results.json();
 
 		// take the first, assume that it is the correct one.
-		const thumbnail = json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
+		const thumbnail =
+			json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
 		return thumbnail;
 	} catch (error) {
 		console.error(error);
 		return '';
 	}
-
 };
 
 module.exports = async function () {
@@ -48,15 +51,17 @@ module.exports = async function () {
 		// Go through the list and get the thumbnail for each image;
 
 		const list = queryResults.map(async (book) => {
-			const bookTitle = book.properties.Name.title[0]?.plain_text ?? "unknown title";
+			const bookTitle =
+				book.properties.Name.title[0]?.plain_text ?? 'unknown title';
 			const bookAuthor =
-				book.properties?.Author.rich_text[0]?.plain_text ?? 'unknown author';
+				book.properties?.Author.rich_text[0]?.plain_text ??
+				'unknown author';
 
 			const createdDate = book.created_time;
 			const finishedDate =
 				book.properties['Date Finished']?.date?.start || '';
 
-			const thumbnail = await googleBookSearch(bookTitle);
+			const thumbnail = await googleBookSearch(bookTitle, bookAuthor);
 
 			return {
 				bookTitle,
