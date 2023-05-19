@@ -20,14 +20,15 @@ themeColor: 'hotpink'
 <ul class="skills">
 	<li>Expert in CSS, HTML, React and JavaScript</li>
 	<li>TypeScript and GraphQL</li>
-	<!-- <li>Next.js, Astro, Gatsby, Eleventy, and WordPress</li> -->
-	<li>Creation of modular reusable components using React and Lit</li>
-	<li>Website Performance Optimisation</li>
-	<li>Good awareness of accessibility issues</li>
-	<li>Solid understanding of Figma and other design tools</li>
-	<!-- <li>Databases (Firebase, MySQL and Postgres)</li> -->
-	<li>Creation of e2e tests and automation with Playwright</li>
+	<li>Next.js, Astro, Gatsby, Eleventy, and WordPress</li>
+	<li>Creation of modular reusable components using React or Lit</li>
+	<li>Solid experience of implementing the T3 stack (Tailwind/TRPC/Prisma/Next.js)</li>
 	<li>Electron and Browser Extension development</li>
+	<li>Excellent awareness of accessibility issues</li>
+	<!-- <li>Solid understanding of Figma and other design tools</li> -->
+	<li>Website Performance Optimisation</li>
+	<li>Creation of e2e tests and automation with Playwright</li>
+	<!-- <li>Databases (Firebase, MySQL and Postgres)</li> -->
 	<!-- <li>Communication via Slack and documentation of code</li> -->
 </ul>
 
@@ -40,7 +41,7 @@ themeColor: 'hotpink'
 				<h3 class="entry__title p-name">Senior Software Engineer</h3>
 				<p class="entry__time">
 				<time class="dt-start" datetime="2017-10">2017</time
-				><span>–</span> <time class="dt-end" datetime="2023-02">February 2023</time
+				><span>–</span> <time class="dt-end" datetime="2023-03">March 2023</time
 				>
 				</p>
 				<p class="entry__organization p-org h-card">
@@ -58,9 +59,9 @@ themeColor: 'hotpink'
 				<li>Web app development with CSS-in-JS, Next.js, GraphQL and Typescript.</li>
 				<li>Creation of component library with Storybook to showcase and document.</li>
 				<li>Break down problems into solutions and solutions into tasks, creating prototypes before jumping in to the work.</li>
-				<!-- <li>Electron Application and Browser Extension development.</li>
-				<li>Optimise Performance key products so that we are on top of the Google SEO rankings and give our customers a fast user experience</li> -->
-				<li>I mentor the rest of the engineering team on front-end topics regularly producing demos and presentations on what I have made and learned</li>
+				<li>Electron Application and Browser Extension development.</li>
+				<!-- <li>Optimise Performance key products so that we are on top of the Google SEO rankings and give our customers a fast user experience</li> -->
+				<li>I mentored the rest of the engineering team on front-end topics regularly producing demos and presentations on what I made and learned</li>
 			</ul>
 		</div>
 		</article>
