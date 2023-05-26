@@ -3,7 +3,7 @@
 	"version": "1.0.1",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
-		"dev": "npx @11ty/eleventy --serve --incremental",
+		"dev": "npx @11ty/eleventy --serve --incremental --quiet",
 		"dev:drafts": "ELEVENTY_DRAFTS=true npx @11ty/eleventy --serve --incremental",
 		"ntl:dev": "BROWSER=none netlify dev",
 		"build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",

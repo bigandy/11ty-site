@@ -24,6 +24,7 @@
 
 		ul {
 			margin-block-end: 0;
+			padding-left: 1rem;
 		}
 
 		ol {
@@ -41,12 +42,26 @@
 		.cv ul.skills,
 		.cv ol.entrylist,
 		.cv .entry__content ul {
-			padding-inline-start: 0;
+			padding-inline-start: 0.5rem;
 			margin-block: 0.5rem;
+		}
+
+		.cv ul {
+			margin-block-start: 0;
+		}
+
+		.cv [id='education'],
+		.cv [id='interests'] {
+			margin-block-end: 0.5rem;
 		}
 
 		.cv .entry__content ul {
 			margin-block: 0.5rem;
+		}
+
+		.cv h1 {
+			margin-block-end: 1rem;
+			font-size: var(--step-2);
 		}
 
 		.cv h2 {
@@ -66,8 +81,8 @@
 			color: black;
 		}
 
-		.cv a:not(.contact a)::after {
-			content: ' (↦ ' attr(href) ')';
+		.cv a:not(.u-url):not(.contact a)::after {
+			content: ' (' attr(href) ')';
 			word-wrap: break-word;
 			font-style: italic;
 			font-size: 0.9em;
@@ -93,11 +108,6 @@
 		.cv header,
 		.cv footer {
 			display: none;
-		}
-
-		.cv h1 {
-			margin-block-start: 0;
-			margin-block-end: 1rem;
 		}
 
 		.cv .skills {
@@ -161,7 +171,7 @@
 		.entry__organization {
 			display: inline;
 			margin: unset;
-			padding-right: 0.5em;
+			padding-right: 0.25rem;
 		}
 
 		.entry__time::before,
@@ -173,18 +183,18 @@
 		}
 
 		.entry__time::before {
-			padding-left: 0.5em;
-			left: -0.5em;
+			padding-right: 0.25em;
+			left: 0;
 		}
 
 		.entry__time::after {
-			padding-right: 0.5em;
-			right: -0.5em;
+			padding-right: 0.25em;
+			right: -0.25em;
 		}
 
 		.entry__title {
 			display: inline-block;
-			padding-right: 0.5em;
+			/* padding-right: 0.5em; */
 		}
 
 		.entry__header {

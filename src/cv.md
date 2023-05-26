@@ -11,23 +11,23 @@ themeColor: 'hotpink'
 
 <div class="contact"><a href="mailto:ahudson@gmail.com">ahudson@gmail.com</a></div>
 
-<h2 id="personal-statement">Personal Statement</h2>
+<!-- <h2 id="personal-statement">Personal Statement</h2> -->
 
 <p>I am a senior software engineer with 12+ years experience creating highly performant and usable products, websites, desktop applications, and browser extensions.</p>
 
 <h2 id="skills">Skills</h2>
 
 <ul class="skills">
-	<li>Expert in CSS, HTML, React and JavaScript</li>
-	<li>TypeScript and GraphQL</li>
-	<li>Next.js, Astro, Gatsby, Eleventy, and WordPress</li>
-	<li>Creation of modular reusable components using React or Lit</li>
-	<li>Solid experience of implementing the T3 stack (Tailwind/TRPC/Prisma/Next.js)</li>
-	<li>Electron and Browser Extension development</li>
-	<li>Excellent awareness of accessibility issues</li>
+	<li>Expert in CSS, HTML and JavaScript</li>
+	<li>Creation of modular reusable components using React and Lit</li>
+	<li>Next.js, TypeScript, and GraphQL</li>
+	<!-- <li>Next.js, Astro, Gatsby, Eleventy, and WordPress</li> -->
+	<!-- <li>Solid experience of implementing the T3 stack (Tailwind/TRPC/Prisma/Next.js)</li> -->
+	<!-- <li>Browser Extension development</li> -->
+	<!-- <li>Excellent awareness of accessibility issues</li> -->
 	<!-- <li>Solid understanding of Figma and other design tools</li> -->
 	<li>Website Performance Optimisation</li>
-	<li>Creation of e2e tests and automation with Playwright</li>
+	<!-- <li>Creation of e2e tests and automation with Playwright</li> -->
 	<!-- <li>Databases (Firebase, MySQL and Postgres)</li> -->
 	<!-- <li>Communication via Slack and documentation of code</li> -->
 </ul>
@@ -51,17 +51,18 @@ themeColor: 'hotpink'
 					target="_blank"
 					rel="noopener noreferrer"
 					>Venture Harbour</a>
+				<span aria-hidden="true">·</span>
 				<span class="p-location">Wallingford, UK</span>
 				</p>
 			</div>
 		<div class="entry__content p-summary">
 			<ul>
 				<li>Web app development with CSS-in-JS, Next.js, GraphQL and Typescript.</li>
-				<li>Creation of component library with Storybook to showcase and document.</li>
+				<!-- <li>Creation of component library with Storybook to showcase and document.</li> -->
 				<li>Break down problems into solutions and solutions into tasks, creating prototypes before jumping in to the work.</li>
 				<li>Electron Application and Browser Extension development.</li>
-				<!-- <li>Optimise Performance key products so that we are on top of the Google SEO rankings and give our customers a fast user experience</li> -->
 				<li>I mentored the rest of the engineering team on front-end topics regularly producing demos and presentations on what I made and learned</li>
+				<!-- <li>Optimise Front-end performance of key products to improve the Google SEO rankings and give our users a better user experience</li> -->
 			</ul>
 		</div>
 		</article>
@@ -188,6 +189,9 @@ themeColor: 'hotpink'
 
 <ul class="cv-portfolio-list">
 	<li>
+		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">Web Components November 2022</a> a Web Component a day project with Lit
+	</li>
+	<li>
 		<a href="https://truenorth.io" rel="noopener" target="_blank">TrueNorth</a> - a marketing web app using NextJS, Typescript, GraphQL, Apollo, Prisma, with a Material-UI based component library.
 	</li>
 	<li><a href="https://mergeco.in" target="_blank">MergeCoin</a> a proof of concept Github based team productivity app that incentivizes and rewards PR code and reviews. Tailwind, NextJS, Github API.</li>
@@ -228,12 +232,9 @@ themeColor: 'hotpink'
 		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - built using 11ty.
 	</li>
 	<li>
-		Codepen: <a href="https://codepen.io/bigandy" rel="noopener" target="_blank">personal</a> and <a href="https://codepen.io/ventureharbour" rel="noopener" target="_blank">work</a>
+		<a href="https://codepen.io/bigandy" rel="noopener" target="_blank">my Codepen</a>
 	</li>
-	<li>
-		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">web components november 2022</a> a Web Component a day project with Lit
-	</li>
-	<li>Hoof-it <a href="https://chrome.google.com/webstore/detail/hoof-it/cjbciiijgopjnnianojijdifljkjkpjp?hl=en-GB" rel="noopener" target="_blank">Chrome Extension</a> <a href="https://addons.mozilla.org/en-GB/firefox/addon/hoof-it/" rel="noopener" target="_blank">Firefox add-on</a></li>
+	<li>Hoof-it <a href="https://chrome.google.com/webstore/detail/hoof-it/cjbciiijgopjnnianojijdifljkjkpjp?hl=en-GB" rel="noopener" target="_blank">Chrome Extension</a> / <a href="https://addons.mozilla.org/en-GB/firefox/addon/hoof-it/" rel="noopener" target="_blank">Firefox add-on</a></li>
 </ul>
 
 <h2 id="education">Education</h2>
