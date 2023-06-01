@@ -189,18 +189,18 @@ themeColor: 'hotpink'
 
 <ul class="cv-portfolio-list">
 	<li>
-		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">Web Components November 2022</a> a Web Component a day project with Lit
+		<a href="https://web-components-november-2022.netlify.app" rel="noopener" target="_blank">Web Components November 2022</a> - a Web Component a day project with Lit.
 	</li>
 	<li>
 		<a href="https://truenorth.io" rel="noopener" target="_blank">TrueNorth</a> - a marketing web app using NextJS, Typescript, GraphQL, Apollo, Prisma, with a Material-UI based component library.
 	</li>
-	<li><a href="https://mergeco.in" target="_blank">MergeCoin</a> a proof of concept Github based team productivity app that incentivizes and rewards PR code and reviews. Tailwind, NextJS, Github API.</li>
+	<li><a href="https://mergeco.in" target="_blank">MergeCoin</a> - a proof of concept Github based team productivity app that incentivizes and rewards PR code and reviews. Tailwind, NextJS, Github API.</li>
 	<li>
 		<a href="https://www.sereneapp.com" rel="noopener" target="_blank">Serene App</a> – Productivity Application for MacOS users using Electron, Firebase, and React. With companion <a href="https://chrome.google.com/webstore/detail/serene-extension/nbealbhmmmaiiiddmianmjoecmipnjij" rel="noopener" target="_blank">Chrome Extension</a>
 	</li>
-	<li>
+	<!-- <li>
 		<a href="https://brokernotes.co" rel="noopener" target="_blank">brokernotes.co</a> – a WordPress-based Progressive Web App with custom features with React, the WordPress Rest API and WordPress.
-	</li>
+	</li> -->
 	<li>
 		<a href="https://www.ventureharbour.com" rel="noopener" target="_blank">ventureharbour.com</a> – turn into Progressive Web App (PWA) and add new features.
 	</li>
@@ -232,7 +232,7 @@ themeColor: 'hotpink'
 		<a href="https://andrewhudson.dev" rel="noopener" target="_blank">andrewhudson.dev</a> – This site - built using 11ty.
 	</li>
 	<li>
-		<a href="https://codepen.io/bigandy" rel="noopener" target="_blank">my Codepen</a>
+		<a href="https://codepen.io/bigandy" rel="noopener" target="_blank">Personal Codepen</a>
 	</li>
 	<li>Hoof-it <a href="https://chrome.google.com/webstore/detail/hoof-it/cjbciiijgopjnnianojijdifljkjkpjp?hl=en-GB" rel="noopener" target="_blank">Chrome Extension</a> / <a href="https://addons.mozilla.org/en-GB/firefox/addon/hoof-it/" rel="noopener" target="_blank">Firefox add-on</a></li>
 </ul>

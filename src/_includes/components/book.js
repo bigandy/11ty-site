@@ -4,6 +4,7 @@ function Book({ book }) {
 	const { bookTitle, bookAuthor, createdDate, finishedDate, thumbnail } =
 		book;
 	const isFinished = Boolean(finishedDate !== '');
+
 	return `<div class="book ${isFinished ? 'book--finished' : ''}">
 		<div class="book-meta">
 			<h2 class="book-title">${bookTitle}</h2>
