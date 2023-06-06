@@ -1,8 +1,9 @@
 const { Client } = require('@notionhq/client');
 
 const { AssetCache } = require('@11ty/eleventy-fetch');
-
 const fetch = require('node-fetch');
+const groupBy = require('lodash.groupby');
+const dayjs = require('dayjs');
 
 const notion = new Client({
 	auth: process.env.NOTION_KEY,
@@ -73,11 +74,22 @@ module.exports = async function () {
 			};
 		});
 
-		const results = await Promise.all([...list]);
+		const books = await Promise.all([...list]);
 
-		await asset.save(results, 'json');
+		const groupedBooks = groupBy(books, (book) => {
+			const finishedDate = dayjs(book.finishedDate);
+			return finishedDate.isValid()
+				? finishedDate.format('MM-YYYY')
+				: 'unfinished';
+		});
 
-		return results;
+		// Currently, I do not want to do anythihng with the unfinished books
+		// This removes the unfinished key from the object
+		const { unfinished, ...months } = groupedBooks;
+
+		await asset.save(months, 'json');
+
+		return months;
 	} catch (error) {
 		console.error(error);
 	}

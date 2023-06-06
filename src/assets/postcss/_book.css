@@ -1,36 +1,44 @@
 @layer book {
-	.book-filtering {
-		display: none;
+	.month-title {
+		font-size: var(--step-1);
 	}
 
-	.book-title {
-		font-size: var(--step-2);
-	}
-
-	/* Basic filtering with css :has() */
-	@supports selector(:has(.book)) {
-		.book-filtering {
-			display: block;
-		}
-
-		.book-filtering:has(#finished:checked) ~ .book:not(.book--finished) {
-			display: none;
-		}
-
-		.book-filtering:has(#unfinished:checked) ~ .book:is(.book--finished) {
-			display: none;
-		}
-	}
-
-	.book {
+	.month {
 		border: 1px solid;
 		padding: 1rem;
 		margin-block: 2rem;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
 	}
 
-	.book:has(img) {
+	.books {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1rem;
+	}
+
+	.book {
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		border: 1px solid;
+		background: var(--theme-color);
+		color: white;
+		/* sub-grid? */
+	}
+
+	.book h3 {
+		font-size: var(--step-1);
+		margin-block: 1rem;
+	}
+
+	.book img {
+		max-width: 100%;
+	}
+
+	.book p {
+		font-size: var(--step--1);
+		margin-block: 0.25rem 0.5rem;
+	}
+
+	/* .book:has(img) {
 		grid-template-columns: max-content 1fr;
 		column-gap: 1em;
 	}
@@ -45,5 +53,5 @@
 
 	.book--finished {
 		border-color: greenyellow;
-	}
+	} */
 }

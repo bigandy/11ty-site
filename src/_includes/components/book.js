@@ -1,25 +1,43 @@
-const htmlDateString = require('../../_11ty/filters/htmlDateString.js');
+const dayjs = require('dayjs');
+const customParseFormat = require('dayjs/plugin/customParseFormat');
+dayjs.extend(customParseFormat);
 
-function Book({ book }) {
-	const { bookTitle, bookAuthor, createdDate, finishedDate, thumbnail } =
-		book;
-	const isFinished = Boolean(finishedDate !== '');
+function Book({ months }) {
+	if (!months) {
+		return 'no books found';
+	}
+	return Object.entries(months)
+		.map(([month, books]) => {
+			const monthFomatted = dayjs(month, 'MM-YYYY').format('MMMM YYYY');
+			return `<div class="month">
+				<h2 class="month-title">${monthFomatted}</h2>
+				<div class="books">
+				${books
+					.map((book) => {
+						const {
+							bookTitle,
+							bookAuthor,
+							finishedDate,
+							thumbnail,
+						} = book;
 
-	return `<div class="book ${isFinished ? 'book--finished' : ''}">
-		<div class="book-meta">
-			<h2 class="book-title">${bookTitle}</h2>
+						const isFinished = Boolean(finishedDate !== '');
 
-			<p>Author: ${bookAuthor}</p>
-			<p>Date: ${htmlDateString(new Date(createdDate))}</p>
+						const finishedDateFormatted =
+							dayjs(finishedDate).format('DD MMM YYYY');
 
-			${isFinished ? `<p>Finished on: ${finishedDate}</p>` : ''}
-		</div>
-	  	${
-			thumbnail
-				? `<img width="128" height="192" src="${thumbnail}" alt="thumbnail for ${bookTitle}" />`
-				: '<img width="128" height="192" src="" loading="lazy" alt="No Book Image Found" />'
-		}
-	</div>`;
+						return `<div class="book">
+							<h3>${bookTitle}</h3>
+							<p>${bookAuthor}</p>
+							<p>${isFinished ? 'Finished' : 'Started'}: on ${finishedDateFormatted}</p>
+							<img src="${thumbnail}" alt="${bookTitle}" />
+						</div>`;
+					})
+					.join(' ')}
+			</div>
+		</div>`;
+		})
+		.join(' ');
 }
 
 module.exports = Book;

@@ -20,13 +20,4 @@ themeColor: 'lab(36 10.54 -63.15)'
 	<li><a href="https://hidde.blog/books/">hidde.blog/books</a></li>
 </ul>
 
-<div class="book-filtering">
-	<h2>Filter the books</h2>
-	<label for="all">All</label><input type="radio" id="all" name="filtering" checked />
-	<label for="finished">Finished</label><input type="radio" id="finished" name="filtering" />
-	<label for="unfinished">Unfinished</label><input type="radio" id="unfinished" name="filtering" />
-</div>
-
-{% for book in notion %}
-	{% Book book=book %}
-{% endfor %}
+{% Book months=notion %}
