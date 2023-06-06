@@ -7,7 +7,7 @@ const fetch = require('node-fetch');
 const notion = new Client({
 	auth: process.env.NOTION_KEY,
 });
-const Notion_DB_ID = process.env.NOTION_DB;
+const NOTION_DB_ID = process.env.NOTION_DB;
 
 const googleBookSearch = async (title, author) => {
 	try {
@@ -31,24 +31,22 @@ const googleBookSearch = async (title, author) => {
 module.exports = async function () {
 	try {
 		// Pass in your unique custom cache key
-		// (normally this would be tied to your API URL)
-		let asset = new AssetCache('notion_book_list');
+		const asset = new AssetCache('notion_book_list');
 
-		// // check if the cache is fresh within the last day
+		// check if the cache is fresh within the last day
 		if (asset.isCacheValid('1d')) {
-			// return cached data.
-			return asset.getCachedValue(); // a promise
+			// if so, return the cached value
+			return asset.getCachedValue();
 		}
 
+		// if not, fetch the data and cache it
 		const query = await notion.databases.query({
-			database_id: Notion_DB_ID,
+			database_id: NOTION_DB_ID,
 		});
 
-		// do some expensive operation here, this is simplified for brevity
-		const queryResults = query?.results.reverse() || null;
+		const queryResults = query?.results || null;
 
 		// Go through the list and get the thumbnail for each image;
-
 		const list = queryResults.map(async (book) => {
 			const bookTitle =
 				book.properties.Name.title[0]?.plain_text ?? 'unknown title';
@@ -59,8 +57,12 @@ module.exports = async function () {
 			const createdDate = book.created_time;
 			const finishedDate =
 				book.properties['Date Finished']?.date?.start || '';
+			let thumbnail = book.properties?.Image?.url ?? null;
 
-			const thumbnail = await googleBookSearch(bookTitle, bookAuthor);
+			// if we don't have the thumbnail, call googleBookSearch to get from API
+			if (!thumbnail) {
+				thumbnail = await googleBookSearch(bookTitle, bookAuthor);
+			}
 
 			return {
 				bookTitle,
