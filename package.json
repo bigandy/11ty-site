@@ -4,6 +4,7 @@
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
 		"dev": "npx @11ty/eleventy --serve --incremental --quiet",
+		"start": "ELEVENTY_ENV=production npx @11ty/eleventy --serve",
 		"dev:drafts": "ELEVENTY_DRAFTS=true npx @11ty/eleventy --serve --incremental",
 		"ntl:dev": "BROWSER=none netlify dev",
 		"build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",
@@ -28,15 +29,15 @@
 		"luxon": "3.3.0",
 		"markdown-it": "13.0.1",
 		"markdown-it-anchor": "8.6.7",
-		"node-fetch": "2.6.1"
+		"node-fetch": "2.6.1",
+		"postcss": "8.4.24",
+		"postcss-nesting": "11.2.2"
 	},
 	"dependencies": {
-		"@11ty/eleventy-plugin-vite": "4.0.0",
 		"@notionhq/client": "2.2.4",
 		"cssnano": "5.1.14",
 		"csso": "5.0.5",
 		"html-minifier": "4.0.0",
-		"postcss": "8.4.21",
 		"postcss-comment": "2.0.0",
 		"postcss-import": "15.1.0",
 		"terser": "5.16.9"
