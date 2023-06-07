@@ -11,8 +11,6 @@ const firstNElements = require('./src/_11ty/filters/firstNElements.js');
 const Book = require('./src/_includes/components/book.js');
 const tagList = require('./src/_11ty/getTagList');
 const showDrafts = process.env.ELEVENTY_DRAFTS === 'true';
-const isProduction = process.env.ELEVENTY_ENV === 'production';
-const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite');
 
 const terser = require('terser');
 
@@ -20,9 +18,6 @@ const terser = require('terser');
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  */
 module.exports = function (eleventyConfig) {
-	if (!isProduction) {
-		eleventyConfig.addPlugin(EleventyVitePlugin);
-	}
 	// Plugins
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
