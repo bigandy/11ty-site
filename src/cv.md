@@ -13,19 +13,19 @@ themeColor: 'hotpink'
 
 <!-- <h2 id="personal-statement">Personal Statement</h2> -->
 
-<p>I am a senior software engineer with 12+ years experience creating highly performant and usable products, websites, desktop applications, and browser extensions.</p>
+<p>I am a senior software engineer with 12+ years experience creating custom products, websites, desktop applications, and browser extensions.</p>
 
 <h2 id="skills">Skills</h2>
 
 <ul class="skills">
 	<li>Expert in CSS, HTML and JavaScript</li>
-	<li>Creation of modular reusable components using React and Lit</li>
+	<li>Creation of modular reusable components using React, Lit and Svelte</li>
 	<li>Next.js, TypeScript, and GraphQL</li>
-	<!-- <li>Next.js, Astro, Gatsby, Eleventy, and WordPress</li> -->
+	<li>Astro, Eleventy, and WordPress</li>
 	<!-- <li>Solid experience of implementing the T3 stack (Tailwind/TRPC/Prisma/Next.js)</li> -->
 	<!-- <li>Browser Extension development</li> -->
 	<!-- <li>Excellent awareness of accessibility issues</li> -->
-	<!-- <li>Solid understanding of Figma and other design tools</li> -->
+	<li>Solid understanding of Figma and other design tools</li>
 	<li>Website Performance Optimisation</li>
 	<!-- <li>Creation of e2e tests and automation with Playwright</li> -->
 	<!-- <li>Databases (Firebase, MySQL and Postgres)</li> -->
@@ -40,7 +40,7 @@ themeColor: 'hotpink'
 			<div class="entry__header">
 				<h3 class="entry__title p-name">Senior Software Engineer</h3>
 				<p class="entry__time">
-				<time class="dt-start" datetime="2017-10">2017</time
+				<time class="dt-start" datetime="2017-10">October 2017</time
 				><span>–</span> <time class="dt-end" datetime="2023-03">March 2023</time
 				>
 				</p>

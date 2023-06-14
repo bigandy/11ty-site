@@ -4,7 +4,8 @@
 			<li><a href="{{ '/' | url }}" class="home {% if page.url.trim() == '/' %} nav-item-active{% endif %}">{{ metadata.siteTitle }}</a></li>
 			{%- for nav in collections.nav | reverse -%}
 			<li class="nav-item">
-				<a href="{{ nav.url | url }}" class="{% if nav.url == page.url %} nav-item-active{% endif %}">{{ nav.data.navtitle }}</a>
+				<a href="{{ nav.url | url }}" class="{% if nav.url == page.url %} nav-item-active{% endif %}">{{ nav.data.navtitle }}
+				</a>
 			</li>
 			{%- endfor -%}
 		</ul>
