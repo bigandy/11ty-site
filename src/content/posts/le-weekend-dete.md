@@ -1,5 +1,5 @@
 ---
-title: "Le Weekend d'Ã©tÃ©"
+title: "Le Weekend d'Août"
 date: 2009-06-14 18:10:06
 draft: false
 description: ''
