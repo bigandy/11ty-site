@@ -200,6 +200,31 @@
 		display: inline-block;
 	}
 
+	.post-taglist {
+		margin-trim: inline-end; /* Safari Supports This! */
+	}
+
+	.post-content + .post-taglist {
+		margin-top: 2rem;
+	}
+
+	.post-taglist li {
+		margin-inline-end: 0.5rem;
+	}
+
+	.post-taglist li:not(:last-child) a {
+		margin-inline-end: 0.5rem;
+	}
+
+	.post-taglist li:not(:last-child) a::after {
+		content: '/';
+		color: canvasText;
+		margin-inline-start: 0.5rem;
+		text-decoration: none;
+		position: absolute;
+		opacity: 0.75;
+	}
+
 	p,
 	article,
 	li {
