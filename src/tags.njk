@@ -9,7 +9,7 @@ pagination:
     - post
     - posts
 layout: layouts/base.njk
-renderData:
+eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag }}/
 themeColor: "#3454D1"
