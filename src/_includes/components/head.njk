@@ -25,11 +25,6 @@
 		<style>:root {--theme-color: {{ themeColor or metadata.themeColor }}; }</style>
 	{% endif %}
 
-	<!-- HTML in your document's head -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
-
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
 
 	<meta name="theme-color" content="{{ metadata.themeColor }}">
