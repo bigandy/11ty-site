@@ -213,16 +213,23 @@
 	}
 
 	.post-taglist li:not(:last-child) a {
-		margin-inline-end: 0.5rem;
+		margin-inline-end: 0.25rem;
+		padding-inline-end: 0.25rem;
+	}
+
+	.post-taglist a {
+		position: relative;
 	}
 
 	.post-taglist li:not(:last-child) a::after {
-		content: '/';
 		color: canvasText;
-		margin-inline-start: 0.5rem;
+		content: '/';
+		opacity: 0.75;
+		position: absolute;
 		text-decoration: none;
 		position: absolute;
-		opacity: 0.75;
+		right: -11px;
+		top: -3px;
 	}
 
 	p,
