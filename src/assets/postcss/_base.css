@@ -257,9 +257,15 @@
 	}
 
 	footer svg {
-		height: 0.75lh;
-		width: 0.75lh;
-		vertical-align: -0.15lh;
+		height: 21.5859px;
+		width: 21.5859px;
+		vertical-align: -4.31836px;
+
+		@supports (height: 0.75lh) {
+			height: 0.75lh;
+			width: 0.75lh;
+			vertical-align: -0.15lh;
+		}
 	}
 }
 
