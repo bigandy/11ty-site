@@ -172,6 +172,7 @@ module.exports = function (eleventyConfig) {
 		return returnPostCollection;
 	});
 
+	eleventyConfig.addPassthroughCopy('src/robots.txt');
 	eleventyConfig.addPassthroughCopy('src/assets/images');
 	eleventyConfig.addPassthroughCopy('src/assets/fonts');
 	eleventyConfig.addPassthroughCopy('src/assets/js');
