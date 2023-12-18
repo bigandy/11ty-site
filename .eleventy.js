@@ -1,28 +1,34 @@
-const { DateTime } = require('luxon');
-const fs = require('fs');
-const Image = require('@11ty/eleventy-img');
-const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+import { DateTime } from 'luxon';
+import fs from 'fs';
+import Image from '@11ty/eleventy-img';
+import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 
-const pluginRss = require('@11ty/eleventy-plugin-rss');
+import pluginRss from '@11ty/eleventy-plugin-rss';
 
-const htmlDateString = require('./src/_11ty/filters/htmlDateString.js');
-const readableDate = require('./src/_11ty/filters/readableDate.js');
-const firstNElements = require('./src/_11ty/filters/firstNElements.js');
-const Book = require('./src/_includes/components/book.js');
-const tagList = require('./src/_11ty/getTagList');
+import { htmlDateString } from './src/_11ty/filters/htmlDateString.js';
+import { readableDate } from './src/_11ty/filters/readableDate.js';
+import { firstNElements } from './src/_11ty/filters/firstNElements.js';
+import Book from './src/_includes/components/book.js';
+import tagList from './src/_11ty/getTagList.js';
+import transformCSS from './src/utils/transform-css.js';
+import optimizeHTML from './src/_11ty/optimize-html.js';
+
+import markdownIt from 'markdown-it';
+import markdownItAnchor from 'markdown-it-anchor';
+
 const showDrafts = process.env.ELEVENTY_DRAFTS === 'true';
 
-const terser = require('terser');
+import { minify } from 'terser';
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
  */
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
 	// Plugins
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
 	eleventyConfig.addPlugin(pluginRss);
-	eleventyConfig.addPlugin(require('./src/_11ty/optimize-html.js'));
+	eleventyConfig.addPlugin(optimizeHTML);
 
 	eleventyConfig.setDataDeepMerge(true);
 
@@ -30,16 +36,13 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
-	eleventyConfig.addNunjucksAsyncShortcode(
-		'postcss',
-		require('./src/utils/transform-css')
-	);
+	eleventyConfig.addNunjucksAsyncShortcode('postcss', transformCSS);
 
 	eleventyConfig.addNunjucksAsyncFilter(
 		'jsmin',
 		async function (code, callback) {
 			try {
-				const minified = await terser.minify(code);
+				const minified = await minify(code);
 				callback(null, minified.code);
 			} catch (err) {
 				console.error('Terser error: ', err);
@@ -180,8 +183,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('_redirects');
 
 	/* Markdown Plugins */
-	let markdownIt = require('markdown-it');
-	let markdownItAnchor = require('markdown-it-anchor');
+
 	let options = {
 		html: true,
 		breaks: true,
@@ -263,4 +265,4 @@ module.exports = function (eleventyConfig) {
 			data: '_data',
 		},
 	};
-};
+}

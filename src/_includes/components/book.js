@@ -1,8 +1,8 @@
-const dayjs = require('dayjs');
-const customParseFormat = require('dayjs/plugin/customParseFormat');
-dayjs.extend(customParseFormat);
+import dayjs from 'dayjs';
+// import customParseFormat from 'dayjs/esm/plugin/customParseFormat';
+// dayjs.extend(customParseFormat);
 
-function Book({ months }) {
+export default function Book({ months }) {
 	if (!months) {
 		return 'no books found';
 	}
@@ -39,5 +39,3 @@ function Book({ months }) {
 		})
 		.join(' ');
 }
-
-module.exports = Book;

@@ -1,20 +1,31 @@
-const path = require('path');
-const postcss = require('postcss');
-const fs = require('fs').promises;
+import path from 'path';
+import postcss from 'postcss';
+import fs from 'fs';
 
-module.exports = async (filename) => {
+import postCSSImport from 'postcss-import';
+
+import postCSSNesting from 'postcss-nesting';
+import CSSNano from 'cssnano';
+
+import { URL } from 'url';
+
+const __dirname = new URL('.', import.meta.url).pathname;
+
+export default async (filename) => {
 	const rawFilepath = path.join(
 		__dirname,
 		`../../_includes/${filename.replace(/'/g, '')}`
 	);
-	const code = await fs.readFile(rawFilepath);
 
-	return await postcss([
-		require('postcss-import'),
-		require('postcss-nesting'),
-		require('cssnano'),
-	])
+	const code = await fs.readFileSync(rawFilepath);
+
+	return await postcss([postCSSImport(), postCSSNesting(), CSSNano()])
 		.process(code, { from: rawFilepath })
-		.then((result) => result.css)
-		.catch((e) => console.log('error', e));
+		.then((result) => {
+			return result.css;
+		})
+		.catch((e) => {
+			console.log('error', e);
+			throw new Error(e.message);
+		});
 };

@@ -1,4 +1,4 @@
-const { DateTime } = require('luxon');
+import { DateTime } from 'luxon';
 
 const getNumberSuffix = (num) => {
 	if (num === 11 || num === 12 || num === 13) {
@@ -19,7 +19,7 @@ const getNumberSuffix = (num) => {
 	}
 };
 
-const readableDate = (dateObj) => {
+export const readableDate = (dateObj) => {
 	const formatDate = DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
 		'd-LLLL-yyyy'
 	);
@@ -29,5 +29,3 @@ const readableDate = (dateObj) => {
 
 	return `${outputDay} ${month} ${year}`;
 };
-
-module.exports = readableDate;

@@ -1,9 +1,9 @@
-const { Client } = require('@notionhq/client');
+import { Client } from '@notionhq/client';
 
-const { AssetCache } = require('@11ty/eleventy-fetch');
-const fetch = require('node-fetch');
-const groupBy = require('lodash.groupby');
-const dayjs = require('dayjs');
+import { AssetCache } from '@11ty/eleventy-fetch';
+import fetch from 'node-fetch';
+import groupBy from 'lodash.groupby';
+import dayjs from 'dayjs';
 
 const notion = new Client({
 	auth: process.env.NOTION_KEY,
@@ -29,7 +29,7 @@ const googleBookSearch = async (title, author) => {
 	}
 };
 
-module.exports = async function () {
+export default async function () {
 	try {
 		// Pass in your unique custom cache key
 		const asset = new AssetCache('notion_book_list');
@@ -93,4 +93,4 @@ module.exports = async function () {
 	} catch (error) {
 		console.error(error);
 	}
-};
+}

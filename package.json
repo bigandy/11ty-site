@@ -1,6 +1,7 @@
 {
 	"name": "andrewhudson.dev",
 	"version": "1.0.1",
+	"type": "module",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
 		"dev": "npx @11ty/eleventy --serve --incremental --quiet",
@@ -18,7 +19,7 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "2.0.1",
+		"@11ty/eleventy": "3.0.0-alpha.2",
 		"@11ty/eleventy-fetch": "4.0.0",
 		"@11ty/eleventy-img": "3.1.8",
 		"@11ty/eleventy-plugin-rss": "1.2.0",

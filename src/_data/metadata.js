@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	title: 'Andrew JD Hudson - Senior Front-end engineer',
 	siteTitle: 'Andrew JD Hudson',
 	shortUrl: 'andrewhudson.dev',

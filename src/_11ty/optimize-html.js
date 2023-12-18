@@ -19,7 +19,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-const minify = require('html-minifier').minify;
+import { minify } from 'html-minifier';
 
 /**
  * Inlines the CSS.
@@ -46,7 +46,7 @@ const minifyHtml = (rawContent, outputPath) => {
 	return content;
 };
 
-module.exports = {
+export default {
 	initArguments: {},
 	configFunction: async (eleventyConfig) => {
 		const isProduction = process.env.ELEVENTY_ENV === 'production';
