@@ -1,6 +1,6 @@
 import path from 'path';
 import postcss from 'postcss';
-import fs from 'fs';
+import fs from 'fs/promises';
 
 import postCSSImport from 'postcss-import';
 
@@ -17,9 +17,9 @@ export default async (filename) => {
 		`../../_includes/${filename.replace(/'/g, '')}`
 	);
 
-	const code = await fs.readFileSync(rawFilepath);
+	const code = await fs.readFile(rawFilepath);
 
-	return await postcss([postCSSImport(), postCSSNesting(), CSSNano()])
+	return await postcss([postCSSImport, postCSSNesting, CSSNano])
 		.process(code, { from: rawFilepath })
 		.then((result) => {
 			return result.css;
