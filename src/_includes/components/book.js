@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
-// import customParseFormat from 'dayjs/esm/plugin/customParseFormat';
-// dayjs.extend(customParseFormat);
+import customParseFormat from 'dayjs/plugin/customParseFormat.js';
+dayjs.extend(customParseFormat);
 
 export default function Book({ months }) {
 	if (!months) {
