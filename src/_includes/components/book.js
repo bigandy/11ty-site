@@ -7,6 +7,7 @@ export default function Book({ months }) {
 		return 'no books found';
 	}
 	return Object.entries(months)
+		.sort(([a], [b]) => dayjs(b, 'MM-YYYY').diff(dayjs(a, 'MM-YYYY')))
 		.map(([month, books]) => {
 			const monthFomatted = dayjs(month, 'MM-YYYY').format('MMMM YYYY');
 			return `<div class="month">
