@@ -1,5 +1,3 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
-# Optional: Redirect default Netlify subdomain to primary domain
-https://unruffled-bhabha-811d0b.netlify.com/* https://andrewhudson.dev/:splat 301!
-https://big-andy.co.uk/* https://andrewhudson.dev/:splat 301!
+https://andrewhudson.dev/* https://big-andy.co.uk/:splat 301!
