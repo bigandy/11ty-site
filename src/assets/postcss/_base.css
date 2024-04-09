@@ -20,7 +20,7 @@
 		font-style: normal;
 		font-weight: 800;
 		font-display: swap;
-		src: url('../fonts/Inter/Inter-ExtraBold.woff2') format('woff2');
+		src: url('/assets/fonts/Inter/Inter-ExtraBold.woff2') format('woff2');
 	}
 
 	*,
