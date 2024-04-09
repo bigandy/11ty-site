@@ -31,7 +31,7 @@ export default function Book({ months }) {
 							<h3>${bookTitle}</h3>
 							<p>${bookAuthor}</p>
 							<p>${isFinished ? 'Finished' : 'Started'}: on ${finishedDateFormatted}</p>
-							<img src="${thumbnail}" alt="${bookTitle}" />
+							<img src="${thumbnail}" alt="${bookTitle}" loading="lazy" />
 						</div>`;
 					})
 					.join(' ')}

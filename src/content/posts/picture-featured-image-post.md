@@ -15,7 +15,7 @@ The new <picture> element is incredible if you want to serve different images ba
 <source media="(min-width: 1000px)" srcset="large.jpg" />
 <source media="(min-width: 750px)" srcset="medium.jpg" />
 <source media="(min-width: 500px)" srcset="small.jpg" />
-<img src="fallback-image.jpg" />
+<img src="fallback-image.jpg" loading="lazy" />
 </picture>
 ```
 
