@@ -1,61 +1,112 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>{{ renderData.title or title or metadata.title }} - Andrew JD Hudson - Senior Software Engineer</title>
+        <title>
+            {{ renderData.title or title or metadata.title }} - Andrew JD Hudson
+            - Senior Software Engineer
+        </title>
 
-	<link rel="preload" href="/assets/fonts/Inter/Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+        <link
+            rel="preload"
+            href="/assets/fonts/Inter/Inter-ExtraBold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
 
-	{% if title === 'Bookshelf' or renderData.title === 'Bookshelf' %}
-		{% set cssFile = "bookshelf.css" %}
-	{% elif title === 'CV' or renderData.title === 'CV' %}
-		{% set cssFile = "cv.css" %}
-	{% else %}
-		{% set cssFile = "styles.css" %}
-	{% endif %}
+        {% if title === 'Bookshelf' or renderData.title === 'Bookshelf' %} {%
+        set cssFile = "bookshelf.css" %} {% elif title === 'CV' or
+        renderData.title === 'CV' %} {% set cssFile = "cv.css" %} {% else %} {%
+        set cssFile = "styles.css" %} {% endif %} {% if metadata.isProduction or
+        false %}
+        <style>
+            {% postcss "../src/assets/postcss/"+cssFile %}
+        </style>
+        {% else %}
+        <link rel="stylesheet" href="/assets/postcss/{{ cssFile }}" />
+        {% endif %} {% if themeColor %}
+        <style>
+            :root {--theme-color: {{ themeColor or metadata.themeColor }}; }
+        </style>
+        {% endif %}
 
-	{% if metadata.isProduction or false %}
-		<style>
-			{% postcss "../src/assets/postcss/"+cssFile %}
-		</style>
-	{% else %}
-		<link rel="stylesheet" href="/assets/postcss/{{ cssFile }}">
-	{% endif %}
+        <meta
+            name="Description"
+            content="{{ renderData.description or description or metadata.description }}"
+        />
 
-	{% if themeColor %}
-		<style>:root {--theme-color: {{ themeColor or metadata.themeColor }}; }</style>
-	{% endif %}
+        <meta name="theme-color" content="{{ metadata.themeColor }}" />
 
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="{{ '/assets/images/favicon/favicon-32x32.png' | url }}"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}"
+        />
+        <link rel="manifest" href="{{ '/manifest.json' }}" />
 
-	<meta name="theme-color" content="{{ metadata.themeColor }}">
+        <link
+            rel="alternate"
+            href="{{ metadata.feed.path | url }}"
+            type="application/atom+xml"
+            title="{{ metadata.title }}"
+        />
+        <link href="{{ metadata.mastodon.url }}" rel="me" />
+        <meta name="generator" content="{{ eleventy.generator }}" />
+        <meta name="view-transition" content="same-origin" />
 
-	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicon/apple-touch-icon.png' | url }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | url }}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}">
-	<link rel="manifest" href="{{ '/manifest.json' }}">
+        <meta
+            property="og:title"
+            content="{{ renderData.title or title or metadata.title }}"
+        />
+        <meta
+            property="og:description"
+            content="{{ renderData.description or description or  metadata.description }}"
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
-	<link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-	<link href="{{ metadata.mastodon.url }}" rel="me" />
-	<meta name="generator" content="{{ eleventy.generator }}">
-	<meta name="view-transition" content="same-origin">
+        {% if tags and tags.includes('posts') %}
+        <meta
+            property="og:image"
+            content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ page.url | url | replaceSlashes }}-preview.jpeg"
+        />
+        <meta
+            property="og:secure_url"
+            content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ page.url | url | replaceSlashes }}-preview.jpeg"
+        />
+        {% else %}
+        <meta
+            property="og:image"
+            content="{{ site.url }}/img/social-preview-images/fallback-preview.jpeg"
+        />
+        <meta
+            property="og:image:secure_url"
+            content="{{ site.url }}/img/social-preview-images/fallback-preview.jpeg"
+        />
+        {% endif %}
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bigandy" />
+        <meta name="twitter:creator" content="@bigandy" />
 
-	<meta property="og:title" content="{{ renderData.title or title or metadata.title }}" />
-	<meta property="og:description" content="{{ renderData.description or description or  metadata.description }}">
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+        <meta property="og:site_name" content="{{ metadata.shortUrl }}" />
 
-	{% if tags and tags.includes('posts') %}
- 	<meta property="og:image" content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ page.url | url | replaceSlashes }}-preview.jpeg" />
-	<meta property="og:secure_url" content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ page.url | url | replaceSlashes }}-preview.jpeg" />
-	{% else %}
-	<meta property="og:image" content="{{ site.url }}/img/social-preview-images/fallback-preview.jpeg" />
-  	<meta property="og:image:secure_url" content="{{ site.url }}/img/social-preview-images/fallback-preview.jpeg" />
-	{% endif %}
-
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@bigandy" />
-	<meta name="twitter:creator" content="@bigandy" />
-
-	<meta property="og:site_name" content="{{ metadata.shortUrl }}">
-  </head>
+        <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+        <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+    </head>
+</html>
