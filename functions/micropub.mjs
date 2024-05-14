@@ -1,9 +1,9 @@
-const querystring = require('node:querystring');
-const slugify = require('@sindresorhus/slugify');
+import querystring from 'node:querystring';
+import slugify from '@sindresorhus/slugify';
 
 // Use GitHub's Octokit and a plugin to commit our newly created posts to a repo
-let { Octokit } = require('@octokit/rest');
-Octokit = Octokit.plugin(require('octokit-commit-multiple-files'));
+import { Octokit } from '@octokit/rest';
+// Octokit = Octokit.plugin(require('octokit-commit-multiple-files'));
 const octokit = new Octokit({
 	auth: process.env.GITHUB_ACCESS_TOKEN,
 });
@@ -15,30 +15,39 @@ const getURLDate = (str) => {
 	return time;
 };
 
-exports.handler = (event, context, callback) => {
-	// Check if request matches token we expect from Quill.
+export default async (req) => {
+	const authorization = req.headers.get('authorization');
+
+	console.log({ req });
+
+	// 	// Check if request matches token we expect from Quill.
 	if (
-		!event.headers['authorization'] ||
-		event.headers['authorization'] != 'Bearer ' + process.env.QUILL_TOKEN
+		!authorization ||
+		authorization != 'Bearer ' + process.env.QUILL_TOKEN
 	) {
-		// Respond with 401 Unauthorized and some debugging messaging
-		return callback(null, {
-			statusCode: 401,
-			body: "Looks like you don't have the right bearer token, dorkboy.",
-		});
+		// 		// Respond with 401 Unauthorized and some debugging messaging
+		return new Response(
+			"Looks like you don't have the right bearer token, dorkboy.",
+			{
+				status: 401,
+			}
+		);
 	}
+	// else {
+	// 	return new Response('All is good in the western woods', {
+	// 		status: 200,
+	// 	});
+	// }
 	// Get the content of the post out
-	const { content } = querystring.parse(event.body);
+	const { content } = querystring.parse(req.body);
 	// Get the time the build is occurring for frontmatter and filenaming
 	const date = new Date();
 	const filename = slugify(getURLDate(date));
-
 	// Convert date and content into Markdown template
 	const template = `---
-date: ${date.toISOString()}
----
-${decodeURIComponent(content)}`;
-
+	date: ${date.toISOString()}
+	---
+	${decodeURIComponent(content)}`;
 	// Create files in repo
 	return octokit
 		.createOrUpdateFiles({
@@ -60,12 +69,12 @@ ${decodeURIComponent(content)}`;
 				},
 			],
 		})
-		.then((response) => {
+		.then(() => {
 			// Return the 201 Created response and the location of the newly-created post
 			// This actually expects a more specific location than the /notes path, so
 			// that's one enhancement that could be made.
 			// https://www.w3.org/TR/micropub/#h-response
-			callback(null, {
+			return new Response(null, {
 				statusCode: 201,
 				headers: {
 					Location: `https://${process.env.DOMAIN_NAME}/notes`,
@@ -74,7 +83,7 @@ ${decodeURIComponent(content)}`;
 		})
 		.catch((error) => {
 			console.log('error', error);
-			return callback(null, {
+			return new Response(null, {
 				statusCode: 400,
 				body: JSON.stringify(error),
 			});
