@@ -49,25 +49,30 @@ export default async (req) => {
 	---
 	${decodeURIComponent(content)}`;
 	// Create files in repo
+
+	const contentEncoded = Base64.encode(content);
+
 	return octokit
-		.createOrUpdateFiles({
+		.createOrUpdateFileContents({
 			owner: process.env.GITHUB_USERNAME,
 			repo: process.env.GITHUB_REPO_NAME,
 			branch: 'main',
-			changes: [
-				{
-					message: `📝 - Adding note: ${filename}`,
-					files: {
-						// Create our markdown file in the content directory
-						[`src/content/notes/${filename}.md`]: {
-							contents: Buffer.from(template).toString('base64'),
-						},
-						// Create a JSON file that indicates our most-recently-published file.
-						// (Used in the deploy-succeeded function)
-						// 'functions/micropub-latest.json': `{ "latest": "notes/${filename}.md" }`,
-					},
-				},
-			],
+			content: Buffer.from(template).toString('base64'),
+			path: `src/content/notes/${filename}.md`,
+			// changes: [
+			// 	{
+			// 		message: `📝 - Adding note: ${filename}`,
+			// 		files: {
+			// 			// Create our markdown file in the content directory
+			// 			[`src/content/notes/${filename}.md`]: {
+			// 				contents: Buffer.from(template).toString('base64'),
+			// 			},
+			// 			// Create a JSON file that indicates our most-recently-published file.
+			// 			// (Used in the deploy-succeeded function)
+			// 			// 'functions/micropub-latest.json': `{ "latest": "notes/${filename}.md" }`,
+			// 		},
+			// 	},
+			// ],
 		})
 		.then(() => {
 			// Return the 201 Created response and the location of the newly-created post
