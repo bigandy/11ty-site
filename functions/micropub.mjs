@@ -57,20 +57,7 @@ export default async (req) => {
 			branch: 'main',
 			content: Buffer.from(template).toString('base64'),
 			path: `src/content/notes/${filename}.md`,
-			// changes: [
-			// 	{
-			// 		message: `📝 - Adding note: ${filename}`,
-			// 		files: {
-			// 			// Create our markdown file in the content directory
-			// 			[`src/content/notes/${filename}.md`]: {
-			// 				contents: Buffer.from(template).toString('base64'),
-			// 			},
-			// 			// Create a JSON file that indicates our most-recently-published file.
-			// 			// (Used in the deploy-succeeded function)
-			// 			// 'functions/micropub-latest.json': `{ "latest": "notes/${filename}.md" }`,
-			// 		},
-			// 	},
-			// ],
+			message: `📝 - Adding note: ${filename}`,
 		})
 		.then(() => {
 			// Return the 201 Created response and the location of the newly-created post
