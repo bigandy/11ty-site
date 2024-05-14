@@ -50,8 +50,6 @@ export default async (req) => {
 	${decodeURIComponent(content)}`;
 	// Create files in repo
 
-	const contentEncoded = Base64.encode(content);
-
 	return octokit
 		.createOrUpdateFileContents({
 			owner: process.env.GITHUB_USERNAME,
