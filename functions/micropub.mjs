@@ -45,9 +45,9 @@ export default async (req) => {
 	const filename = slugify(getURLDate(date));
 	// Convert date and content into Markdown template
 	const template = `---
-	date: ${date.toISOString()}
-	---
-	${decodeURIComponent(content)}`;
+date: ${date.toISOString()}
+---
+${decodeURIComponent(content)}`;
 	// Create files in repo
 
 	return await octokit.repos
