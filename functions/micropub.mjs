@@ -18,7 +18,7 @@ const getURLDate = (str) => {
 export default async (req) => {
 	const authorization = req.headers.get('authorization');
 
-	console.log({ req });
+	console.log({ body: req.body });
 
 	// 	// Check if request matches token we expect from Quill.
 	if (
@@ -50,7 +50,7 @@ export default async (req) => {
 	${decodeURIComponent(content)}`;
 	// Create files in repo
 
-	const { data } = await octokit.repos
+	return await octokit.repos
 		.createOrUpdateFileContents({
 			owner: process.env.GITHUB_USERNAME,
 			repo: process.env.GITHUB_REPO_NAME,
@@ -78,7 +78,4 @@ export default async (req) => {
 				body: JSON.stringify(error),
 			});
 		});
-
-	console.log({ data });
-	return data;
 };
