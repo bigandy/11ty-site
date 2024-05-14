@@ -50,7 +50,7 @@ export default async (req) => {
 	${decodeURIComponent(content)}`;
 	// Create files in repo
 
-	return octokit
+	const { data } = await octokit.repos
 		.createOrUpdateFileContents({
 			owner: process.env.GITHUB_USERNAME,
 			repo: process.env.GITHUB_REPO_NAME,
@@ -78,4 +78,7 @@ export default async (req) => {
 				body: JSON.stringify(error),
 			});
 		});
+
+	console.log({ data });
+	return data;
 };
