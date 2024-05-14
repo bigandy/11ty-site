@@ -165,6 +165,7 @@ export default async function (eleventyConfig) {
 
 		return returnPostCollection;
 	});
+
 	eleventyConfig.addCollection('weeknotes', (collection) => {
 		const returnPostCollection = collection
 			.getFilteredByGlob('./src/content/posts/**/*.md')
@@ -181,6 +182,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/assets/js');
 	eleventyConfig.addPassthroughCopy('src/assets/postcss');
 	eleventyConfig.addPassthroughCopy('_redirects');
+	eleventyConfig.addPassthroughCopy('functions');
 
 	/* Markdown Plugins */
 
@@ -247,7 +249,7 @@ export default async function (eleventyConfig) {
 	});
 
 	return {
-		templateFormats: ['md', 'njk', '11ty.js'],
+		templateFormats: ['md', 'njk', '11ty.js', 'html'],
 
 		// If your site lives in a different subdirectory, change this.
 		// Leading or trailing slashes are all normalized away, so don’t worry about it.

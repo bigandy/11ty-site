@@ -107,9 +107,23 @@
 
         <meta property="og:site_name" content="{{ metadata.shortUrl }}" />
 
-        <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
-        <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
-        <link rel="micropub" href="https://big-andy.co.uk/micropub" />
-        <link rel="webmention" href="https://webmention.io/big-andy.co.uk/webmention" />
+          <!-- Micropub endpoint; tells micropub clients where to send publish requests for this user -->
+            <!-- https://www.w3.org/TR/micropub/#endpoint-discovery -->
+            <link rel="micropub" href="https://{{ pkg.projectDomain }}/.netlify/functions/micropub">
+
+            <!-- IndieAuth authorization endpoint; tells services trying to authorize us where to procure our authorization -->
+            <!-- https://indieauth.spec.indieweb.org/#authorization-endpoint -->
+            <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
+            <!-- IndieAuth tokenization endpoint, lets us get a Bearer token for our micropub requests -->
+            <!-- https://indieauth.spec.indieweb.org/#token-endpoint -->
+            <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+            <!-- Link rel="me" that verifies us with a service that IndieAuth can corroborate -->
+            <link rel="me" href="{{ pkg.authorGitHubUrl }}">
+
+            <!-- Webmention.io discovery endpoint -->
+            <!-- https://webmention.io/#use-it -->
+            <link rel="webmention" href="https://webmention.io/{{ pkg.projectDomain }}/webmention" />
     </head>
 </html>

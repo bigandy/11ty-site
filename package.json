@@ -32,7 +32,10 @@
 		"markdown-it-anchor": "8.6.7",
 		"node-fetch": "2.6.1",
 		"postcss": "8.4.24",
-		"postcss-nesting": "11.2.2"
+		"postcss-nesting": "11.2.2",
+		"@octokit/rest": "20.1.1",
+		"dotenv": "16.4.5",
+		"octokit-commit-multiple-files": "5.0.2"
 	},
 	"dependencies": {
 		"@notionhq/client": "2.2.4",
@@ -42,5 +45,15 @@
 		"postcss-comment": "2.0.0",
 		"postcss-import": "15.1.0",
 		"terser": "5.16.9"
+	},
+	"projectDomain": "big-andy.co.uk",
+	"authorName": "Andrew Hudson",
+	"authorUrl": "https://big-andy.co.uk",
+	"authorGitHubUrl": "https://github.com/bigandy",
+	"authorPhoto": "https://avatars.githubusercontent.com/u/603328?v=4",
+	"authorAdr": {
+		"locality": "Wallingford",
+		"region": "England",
+		"country": "UK"
 	}
 }
