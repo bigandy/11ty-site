@@ -133,12 +133,12 @@ ${decodeURIComponent(content as string)}`;
 					message: `📝 - Adding note: ${filename}`,
 					files: {
 						// Create our markdown file in the content directory
-						[`notes/${filename}.md`]: {
+						[`src/notes/${filename}.md`]: {
 							contents: Buffer.from(template).toString('base64'),
 						},
 						// Create a JSON file that indicates our most-recently-published file.
 						// (Used in the deploy-succeeded function)
-						'functions/micropub-latest.json': `{ "latest": "notes/${filename}.md" }`,
+						// 'functions/micropub-latest.json': `{ "latest": "notes/${filename}.md" }`,
 					},
 				},
 			],
