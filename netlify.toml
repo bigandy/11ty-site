@@ -4,3 +4,7 @@
   functions = "functions"
 [dev]
   browser = "none"
+
+# Let Netlify know to make our "latest-published" file available to the deploy-succeeded function
+[functions]
+  included_files = ["./functions/micropub-latest.json"]
