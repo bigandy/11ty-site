@@ -28,24 +28,25 @@ themeColor: 'lab(36 10.54 -63.15)'
     
     <section>
         <!-- Iterate over every post -->
-        <ul>
+        <ul style="border-top: 3px solid; margin-top: 3rem; list-style: none; padding-left: 0">
         {% for note in collections.notes | reverse %}
-        <li class="h-entry">
+        <li class="h-entry" style="border-bottom: 3px solid; max-width: unset; padding-inline: 2rem; padding-bottom:1rem">
             <!-- <h1 class="p-name">{% if note.data.title %}{{ note.data.title }}{% else %}{{ note.date }}{% endif %}</h1> -->
-            <!-- <time class="dt-published" datetime="{{ note.date }}">{{ note.date }}</time> -->
+            
             <div class="e-content">{{ note.content | safe }}</div>
             <a class="u-url" href="{{ note.url }}">Permalink</a>
 
             {% if note.data.categories %}
             <div>
-                <p style="display: inline-block"><strong>Categories: </strong></p>
-                <ul class="p-category  list--inline">
+                <p style="display: inline-block; margin-bottom:0"><strong>Categories: </strong></p>
+                <ul class="p-category  list--inline" style="margin-right: 1rem">
                     {% for category in note.data.categories %}
-                    <li>{{ category }}</li>
+                        <li>{{ category }}</li>
                     {% endfor %}
                 </ul>
             </div>
             {% endif %}
+            <p>Posted on:<time class="dt-published" datetime="{{ note.date }}">{{ note.date }}</time></p>
         </li>
         {% endfor %}
     </ul>
