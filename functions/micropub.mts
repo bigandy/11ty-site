@@ -111,8 +111,8 @@ export const handler: Handler = async (event: HandlerEvent) => {
 		};
 	}
 	// Get the content of the post out
-	const { content } = querystring.parse(event.body!);
-	console.log({ body: event.body });
+	const { content, category } = querystring.parse(event.body!);
+	console.log({ body: event.body, category });
 	// Get the time the build is occurring for frontmatter and filenaming
 	const date = new Date();
 	const filename = slugify(getURLDate(date));
