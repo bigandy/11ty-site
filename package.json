@@ -38,6 +38,7 @@
 		"postcss-nesting": "11.2.2"
 	},
 	"dependencies": {
+		"@netlify/functions": "2.6.3",
 		"@notionhq/client": "2.2.4",
 		"cssnano": "5.1.14",
 		"csso": "5.0.5",
