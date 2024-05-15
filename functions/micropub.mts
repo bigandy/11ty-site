@@ -118,9 +118,9 @@ export const handler: Handler = async (event, context) => {
 
 	// Convert date and content into Markdown template
 	const template = `---
-	date: ${date.toISOString()}
-	---
-	${decodeURIComponent(content as string)}`;
+date: ${date.toISOString()}
+---
+${decodeURIComponent(content as string)}`;
 
 	// Create files in repo
 	return octokit
