@@ -16,6 +16,14 @@
         <div class="e-content">
             {{ content | safe }}
         </div>
+        <div>
+            <h2>Categories</h2>
+            <ul class="p-category">
+                {% for category in categories %}
+                <li>{{ category }}</li>
+                {% endfor %}
+            </ul>
+        </div>
         <a class="u-url u-uid" href="{{ url }}">Permalink</a>
         <div class="p-author h-card">
             <img class="u-photo" width="80" src="{{ pkg.authorPhoto }}" alt="photo of {{ pkg.authorName }}" />

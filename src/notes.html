@@ -47,6 +47,17 @@
             <time class="dt-published" datetime="{{ note.date }}">{{ note.date }}</time>
             <div class="e-content">{{ note.content | safe }}</div>
             <a class="u-url" href="{{ note.url }}">Permalink</a>
+
+            {% if note.data.categories %}
+            <div>
+                <h2>Categories</h2>
+                <ul class="p-category">
+                    {% for category in note.data.categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </article>
         {% endfor %}
     </section>

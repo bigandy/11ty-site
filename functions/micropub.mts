@@ -112,7 +112,7 @@ export const handler: Handler = async (event: HandlerEvent) => {
 	}
 	// Get the content of the post out
 	const { content, ...rest } = querystring.parse(event.body!);
-	console.log({ body: event.body, rest });
+	console.log({ body: event.body, res, categories: rest['category[]'] });
 	// Get the time the build is occurring for frontmatter and filenaming
 	const date = new Date();
 	const filename = slugify(getURLDate(date));
@@ -120,7 +120,7 @@ export const handler: Handler = async (event: HandlerEvent) => {
 	// Convert date and content into Markdown template
 	const template = `---
 date: ${date.toISOString()}
-categories: ${rest['category[]'] ?? ['note-fallback']}
+categories: ${rest['category[]']}
 ---
 ${decodeURIComponent(content as string)}`;
 
