@@ -111,8 +111,8 @@ export const handler: Handler = async (event: HandlerEvent) => {
 		};
 	}
 	// Get the content of the post out
-	const { content, category } = querystring.parse(event.body!);
-	console.log({ category });
+	const { content } = querystring.parse(event.body!);
+	console.log({ body: event.body });
 	// Get the time the build is occurring for frontmatter and filenaming
 	const date = new Date();
 	const filename = slugify(getURLDate(date));
@@ -134,7 +134,7 @@ ${decodeURIComponent(content as string)}`;
 					message: `📝 - Adding note: ${filename}`,
 					files: {
 						// Create our markdown file in the content directory
-						[`src/notes/${filename}.md`]: {
+						[`src/content/notes/${filename}.md`]: {
 							contents: Buffer.from(template).toString('base64'),
 						},
 						// Create a JSON file that indicates our most-recently-published file.
