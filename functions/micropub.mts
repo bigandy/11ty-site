@@ -1,6 +1,6 @@
 import type { Handler } from '@netlify/functions';
-import querystring from 'node:querystring';
 import slugify from '@sindresorhus/slugify';
+import querystring from 'node:querystring';
 
 // Use GitHub's Octokit and a plugin to commit our newly created posts to a repo
 import { Octokit } from '@octokit/rest';
@@ -97,8 +97,8 @@ const getURLDate = (str) => {
 // 		});
 // };
 
-export const handler: Handler = async (event, context) => {
-	console.log({ event, context });
+export const handler: Handler = async (event) => {
+	// console.log({ event, context });
 	// Check if request matches token we expect from Quill.
 	if (
 		!event.headers['authorization'] ||
@@ -111,7 +111,8 @@ export const handler: Handler = async (event, context) => {
 		};
 	}
 	// Get the content of the post out
-	const { content } = querystring.parse(event.body!);
+	const { content, category } = querystring.parse(event.body!);
+	console.log({ category });
 	// Get the time the build is occurring for frontmatter and filenaming
 	const date = new Date();
 	const filename = slugify(getURLDate(date));
