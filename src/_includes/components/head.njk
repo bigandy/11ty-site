@@ -90,7 +90,7 @@
             property="og:secure_url"
             content="{{ site.url }}/img/social-preview-images/{{ page.date | readablePostDate }}-{{ page.url | url | replaceSlashes }}-preview.jpeg"
         />
-        {% else %}
+        {% elseif '/notes' not in page.url %}
         <meta
             property="og:image"
             content="{{ site.url }}/img/social-preview-images/fallback-preview.jpeg"
