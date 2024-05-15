@@ -248,6 +248,20 @@ export default async function (eleventyConfig) {
 		});
 	});
 
+	eleventyConfig.addFilter('webmentionsByUrl', (webmentions, url) =>
+		webmentions.filter((webmention) => webmention['wm-target'] === url)
+	);
+	eleventyConfig.addFilter('getLikes', (webmentions) =>
+		webmentions.filter(
+			(webmention) => webmention['wm-property'] === 'like-of'
+		)
+	);
+	eleventyConfig.addFilter('getReplies', (webmentions) =>
+		webmentions.filter(
+			(webmention) => webmention['wm-property'] === 'in-reply-to'
+		)
+	);
+
 	return {
 		templateFormats: ['md', 'njk', '11ty.js', 'html'],
 
