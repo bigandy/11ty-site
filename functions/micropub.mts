@@ -1,4 +1,4 @@
-import type { Handler } from '@netlify/functions';
+import type { Handler, HandlerEvent } from '@netlify/functions';
 import slugify from '@sindresorhus/slugify';
 import querystring from 'node:querystring';
 
@@ -97,7 +97,7 @@ const getURLDate = (str) => {
 // 		});
 // };
 
-export const handler: Handler = async (event) => {
+export const handler: Handler = async (event: HandlerEvent) => {
 	// console.log({ event, context });
 	// Check if request matches token we expect from Quill.
 	if (
