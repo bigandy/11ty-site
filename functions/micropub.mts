@@ -120,6 +120,7 @@ export const handler: Handler = async (event: HandlerEvent) => {
 	// Convert date and content into Markdown template
 	const template = `---
 date: ${date.toISOString()}
+categories: ${rest['category[]'] ?? ['note-fallback']}
 ---
 ${decodeURIComponent(content as string)}`;
 
