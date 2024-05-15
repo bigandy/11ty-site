@@ -117,10 +117,17 @@ export const handler: Handler = async (event: HandlerEvent) => {
 	const date = new Date();
 	const filename = slugify(getURLDate(date));
 
+	const categories =
+		rest['category[]']
+			?.toString()
+			.split(',')
+			.map((cat) => `"${cat}"`)
+			.join(', ') || '';
+
 	// Convert date and content into Markdown template
 	const template = `---
 date: ${date.toISOString()}
-categories: [${rest['category[]']}]
+categories: [${categories}]
 ---
 ${decodeURIComponent(content as string)}`;
 
