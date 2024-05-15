@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note</title>
-    <link rel="micropub" href="https://{{ pkg.projectDomain }}/.netlify/functions/micropub">
-    <link rel="webmention" href="https://webmention.io/{{ pkg.projectDomain }}/webmention" />
-</head>
-
-<body class="post">
+---
+layout: layouts/page.njk
+themeColor: 'lab(36 10.54 -63.15)'
+templateClass: note
+---
     <article class="h-entry">
         {% if title %}<h1 class="p-name">{{ title }}</h1>{% endif %}
         <time class="dt-published" datetime="{{ page.date }}">{{ page.date }}</time>
@@ -25,7 +18,7 @@
             </ul>
         </div>
         <a class="u-url u-uid" href="{{ url }}">Permalink</a>
-        <div class="p-author h-card">
+        <!-- <div class="p-author h-card">
             <img class="u-photo" width="80" src="{{ pkg.authorPhoto }}" alt="photo of {{ pkg.authorName }}" />
             <div><a class="p-name u-url" href="{{ pkg.authorUrl }}">{{ pkg.authorName }}</a></div>
             <address class="p-adr">
@@ -33,9 +26,6 @@
                 <span class="p-region">{{ pkg.authorAdr.region }}</span>
                 <span class="p-country-name">{{ pkg.authorAdr.country }}</span>
             </address>
-        </div>
+        </div> -->
     </article>
-    <a href="https://brid.gy/publish/mastodon"></a>
-</body>
-
-</html>
+    <!-- <a href="https://brid.gy/publish/mastodon"></a> -->

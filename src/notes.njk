@@ -1,0 +1,55 @@
+---
+layout: layouts/base.njk
+tags:
+  - nav
+navtitle: Notes
+templateClass: tmpl-post
+date: 2014-03-02
+title: Notes
+themeColor: 'lab(36 10.54 -63.15)'
+---
+
+<h1>Notes</h1>
+
+    <!-- h-card markup that indicates the author of these posts -->
+    <!-- https://microformats.org/wiki/h-card -->
+    <!-- <div class="h-card">
+        <img class="u-photo" width="80" src="{{ pkg.authorPhoto }}" alt="photo of {{ pkg.authorName }}" />
+        <div><a class="p-name u-url" href="{{ pkg.authorUrl }}">{{ pkg.authorName }}</a></div>
+        <address class="p-adr">
+            <span class="p-locality">{{ pkg.authorAdr.locality }}</span>, 
+            <span class="p-region">{{ pkg.authorAdr.region }}</span> 
+            <span class="p-country-name">{{ pkg.authorAdr.country }}</span>
+        </address>
+    </div> -->
+    <div style="padding: 1.5rem; border: 5px dotted var(--theme-color); background: white">
+    <p style="margin: 0; max-width: unset;">This is a current work in progress page. I am using a modified version <a href="https://github.com/xdesro/posse-with-11ty"  target="_blank">Henry Desroches' Posse with 11ty repo</a> to be able to post content from <a href="https://quill.p3k.io" target="_blank">quill.p3k.io</a> save to the <a href="https://github.com/bigandy/11ty-site" target="_blank">github.com/bigandy/11ty-site github repository</a> and then publish here.</p>
+</div>
+    
+    <section>
+        <!-- Iterate over every post -->
+        <ul>
+        {% for note in collections.notes | reverse %}
+        <li class="h-entry">
+            <!-- <h1 class="p-name">{% if note.data.title %}{{ note.data.title }}{% else %}{{ note.date }}{% endif %}</h1> -->
+            <!-- <time class="dt-published" datetime="{{ note.date }}">{{ note.date }}</time> -->
+            <div class="e-content">{{ note.content | safe }}</div>
+            <a class="u-url" href="{{ note.url }}">Permalink</a>
+
+            {% if note.data.categories %}
+            <div>
+                <p style="display: inline-block"><strong>Categories: </strong></p>
+                <ul class="p-category  list--inline">
+                    {% for category in note.data.categories %}
+                    <li>{{ category }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    </section>
+</body>
+
+</html>

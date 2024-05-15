@@ -1,8 +1,7 @@
 import slugify from '@sindresorhus/slugify';
 
 const getURLDate = (str) => {
-	const time = str.toLocaleString('sv-SE', {
-		timeZone: 'America/Denver',
+	const time = str.toLocaleString('en-GB', {
 		hour12: false,
 	});
 	return time;
@@ -11,7 +10,7 @@ const getURLDate = (str) => {
 export default function () {
 	return {
 		tags: 'notes',
-		layout: '_note.html',
+		layout: 'components/note.njk',
 		permalink: function (data) {
 			return `/notes/${slugify(getURLDate(data.date))}/index.html`;
 		},
