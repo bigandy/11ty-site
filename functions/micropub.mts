@@ -147,7 +147,7 @@ ${decodeURIComponent(content as string)}`;
 						},
 						// Create a JSON file that indicates our most-recently-published file.
 						// (Used in the deploy-succeeded function)
-						'functions/micropub-latest.json': `{ "latest": "src/content/notes/${filename}.md" }`,
+						'functions/micropub-latest.json': `{ "latest": "notes/${filename}.md" }`,
 					},
 				},
 			],
