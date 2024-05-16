@@ -27,7 +27,7 @@ export const handler: Handler = async () => {
 			statusCode: 200,
 		};
 	} catch (error) {
-		console.log(error);
+		console.error(error);
 		return {
 			statusCode: 400,
 		};

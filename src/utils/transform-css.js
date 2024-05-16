@@ -24,8 +24,8 @@ export default async (filename) => {
 		.then((result) => {
 			return result.css;
 		})
-		.catch((e) => {
-			console.log('error', e);
-			throw new Error(e.message);
+		.catch((error) => {
+			console.error({ error });
+			throw new Error(error.message);
 		});
 };

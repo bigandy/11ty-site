@@ -31,7 +31,7 @@
                 {% for reply in replies %}
                 <article>
                     <header>
-                        <img src="{{ reply.author.photo}}" />
+                        <img src="{{ reply.author.photo }}" />
                         <h1>{{ reply.author.name }}</h1>
                         <a href="{{ reply.author.url }}">Go to profile</a>
                     </header>

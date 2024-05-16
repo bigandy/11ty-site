@@ -249,6 +249,7 @@ export default async function (eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter('webmentionsByUrl', (webmentions, url) => {
+		console.log({ webmentions });
 		return (
 			webmentions.filter(
 				(webmention) => webmention['wm-target'] === url
