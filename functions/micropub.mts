@@ -33,7 +33,7 @@ export const handler: Handler = async (event: HandlerEvent) => {
 		};
 	}
 	// Get the content of the post out
-	const { content, ...rest } = querystring.parse(event.body!);
+	const { content, location, ...rest } = querystring.parse(event.body!);
 	// Get the time the build is occurring for frontmatter and filenaming
 	const date = new Date();
 	const filename = slugify(getURLDate(date));
@@ -49,6 +49,7 @@ export const handler: Handler = async (event: HandlerEvent) => {
 	const template = `---
 date: ${date.toISOString()}
 categories: [${categories}]
+location: ${location}
 ---
 ${decodeURIComponent(content as string)}`;
 
