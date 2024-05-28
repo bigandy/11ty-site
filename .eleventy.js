@@ -9,6 +9,7 @@ import { htmlDateString } from './src/_11ty/filters/htmlDateString.js';
 import { readableDate } from './src/_11ty/filters/readableDate.js';
 import { firstNElements } from './src/_11ty/filters/firstNElements.js';
 import Book from './src/_includes/components/book.js';
+import PageTitle from './src/_includes/components/page-title.js';
 import tagList from './src/_11ty/getTagList.js';
 import transformCSS from './src/utils/transform-css.js';
 import optimizeHTML from './src/_11ty/optimize-html.js';
@@ -33,6 +34,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.setDataDeepMerge(true);
 
 	eleventyConfig.addShortcode('Book', Book);
+	eleventyConfig.addShortcode('PageTitle', PageTitle);
 
 	eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 

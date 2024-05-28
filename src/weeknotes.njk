@@ -16,8 +16,6 @@ themeColor: 'lab(69 -77.84 70.12)'
 
 <h1 style="view-transition-name:weeknotes">Weeknotes {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>
 
-
-
 {% set postslist = pagination.items | reverse %}
 {% include "components/postslist.njk" %}
 

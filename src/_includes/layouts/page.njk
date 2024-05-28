@@ -2,7 +2,9 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1 style="view-transition-name:{{title | slugify}}">{{ title }}</h1>
+{% set postslist = title | slugify %}
+
+{% PageTitle title=title %}
 
 {{ content | safe }}
 

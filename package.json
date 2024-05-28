@@ -40,6 +40,7 @@
 	"dependencies": {
 		"@netlify/functions": "2.6.3",
 		"@notionhq/client": "2.2.4",
+		"@sindresorhus/slugify": "2.2.1",
 		"cssnano": "5.1.14",
 		"csso": "5.0.5",
 		"html-minifier": "4.0.0",
