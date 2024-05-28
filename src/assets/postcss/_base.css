@@ -1,5 +1,9 @@
 @layer base, theme;
 
+@view-transition {
+	navigation: auto;
+}
+
 @layer theme {
 	@media (prefers-color-scheme: dark) {
 		header,
