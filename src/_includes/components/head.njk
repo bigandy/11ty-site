@@ -124,5 +124,17 @@
             <!-- Webmention.io discovery endpoint -->
             <!-- https://webmention.io/#use-it -->
             <link rel="webmention" href="https://webmention.io/{{ pkg.projectDomain }}/webmention" />
+
+            <script type="speculationrules">
+		    {
+                "prerender": [{
+                    "source": "document",
+                    "where": {
+                        "href_matches": "/*"
+                    },
+                    "eagerness": "moderate"
+                }]
+	    	}
+    	</script>
     </head>
 </html>
