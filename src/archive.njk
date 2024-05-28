@@ -14,7 +14,7 @@ permalink: /archive/{% if pagination.pageNumber >- 0 %}page-{{ pagination.pageNu
 title: Archive
 ---
 
-<h1>Archive {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>
+<h1 style="view-transition-name:archive">Archive {% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% endif %}</h1>
 
 {% set postslist = pagination.items | reverse %}
 {% include "components/postslist.njk" %}
