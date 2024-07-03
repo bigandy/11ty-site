@@ -1,10 +1,10 @@
 export default {
 	title: 'Andrew JD Hudson - Senior Front-end engineer',
 	siteTitle: 'Andrew JD Hudson',
-	shortUrl: 'andrewhudson.dev',
-	url: 'https://andrewhudson.dev/',
+	shortUrl: 'big-andy.co.uk',
+	url: 'https://big-andy.co.uk/',
 	description:
-		'Andrew JD Hudson is a senior front-end engineer with 12+ years experience',
+		'Andrew JD Hudson is a senior front-end engineer with 14+ years experience',
 	shortname: 'AH',
 	author: {
 		name: 'Andrew JD Hudson',
@@ -16,6 +16,7 @@ export default {
 	mastodon: {
 		url: 'https://indieweb.social/@bigandy',
 		username: '@bigandy',
+		creator: '@bigandy@indieweb.social',
 	},
 	github: {
 		url: 'https://github.com/bigandy',
