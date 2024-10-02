@@ -5,11 +5,6 @@ import fetch from 'node-fetch';
 import groupBy from 'lodash.groupby';
 import dayjs from 'dayjs';
 
-const notion = new Client({
-	auth: process.env.NOTION_KEY,
-});
-const NOTION_DB_ID = process.env.NOTION_DB;
-
 const googleBookSearch = async (title, author) => {
 	try {
 		const results = await fetch(
@@ -30,6 +25,18 @@ const googleBookSearch = async (title, author) => {
 };
 
 export default async function () {
+	const notionKey = process.env.NOTION_KEY;
+	const database_id = process.env.NOTION_DB;
+
+	if (!notionKey || !database_id) {
+		console.log('NO KEY OR DB ID, RETURNING EARLY.');
+		return;
+	}
+
+	const notion = new Client({
+		auth: process.env.NOTION_KEY,
+	});
+
 	try {
 		// Pass in your unique custom cache key
 		const asset = new AssetCache('notion_book_list');
@@ -42,7 +49,7 @@ export default async function () {
 
 		// if not, fetch the data and cache it
 		const query = await notion.databases.query({
-			database_id: NOTION_DB_ID,
+			database_id,
 		});
 
 		const queryResults = query?.results || null;
