@@ -1,12 +1,12 @@
 ---
-title: "Climbed a Zwift Mountain!"
+title: 'Climbed a Zwift Mountain!'
 subTitle: 'Weeknotes 2023 #5'
 date: 2023-01-30
 publishDate: 'January 30 2023'
 draft: false
-description: ""
+description: ''
 tags:
-	- 'weeknotes'
+    - 'weeknotes'
 ---
 
 Here's what I got up to over the last week:

@@ -1,12 +1,12 @@
 ---
-title: "Big Smoke Long Weekender"
+title: 'Big Smoke Long Weekender'
 subTitle: 'Weeknotes 2023 #8'
 date: 2023-02-20
 publishDate: 'February 20 2023'
 draft: false
-description: ""
+description: ''
 tags:
-	- 'weeknotes'
+    - 'weeknotes'
 ---
 
 Here's what I got up to over the last week:

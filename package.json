@@ -1,6 +1,6 @@
 {
 	"name": "andrewhudson.dev",
-	"version": "1.0.1",
+	"version": "2.0.1",
 	"type": "module",
 	"description": "A personal blog built with Eleventy static site generator.",
 	"scripts": {
@@ -19,12 +19,12 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "3.0.0-beta.1",
+		"@11ty/eleventy": "3.0.0",
 		"@11ty/eleventy-fetch": "4.0.1",
-		"@11ty/eleventy-img": "4.0.2",
-		"@11ty/eleventy-plugin-rss": "1.2.0",
+		"@11ty/eleventy-img": "5.0.0",
+		"@11ty/eleventy-plugin-rss": "2.0.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
-		"@octokit/rest": "20.1.1",
+		"@octokit/rest": "21.0.2",
 		"dayjs": "1.11.11",
 		"del-cli": "5.1.0",
 		"dotenv": "16.4.5",
@@ -39,7 +39,7 @@
 	},
 	"dependencies": {
 		"@netlify/functions": "2.6.3",
-		"@notionhq/client": "2.2.4",
+		"@notionhq/client": "2.2.15",
 		"@sindresorhus/slugify": "2.2.1",
 		"cssnano": "5.1.14",
 		"csso": "5.0.5",
@@ -54,8 +54,8 @@
 	"authorGitHubUrl": "https://github.com/bigandy",
 	"authorPhoto": "https://avatars.githubusercontent.com/u/603328?v=4",
 	"authorAdr": {
-		"locality": "Wallingford",
-		"region": "England",
-		"country": "UK"
+		"locality": "Grenoble",
+		"region": "France",
+		"country": "FR"
 	}
 }

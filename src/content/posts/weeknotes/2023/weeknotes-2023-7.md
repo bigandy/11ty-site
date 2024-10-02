@@ -1,12 +1,12 @@
 ---
-title: "Chef Masterclass!"
+title: 'Chef Masterclass!'
 subTitle: 'Weeknotes 2023 #7'
 date: 2023-02-13
 publishDate: 'February 13 2023'
 draft: false
-description: ""
+description: ''
 tags:
-	- 'weeknotes'
+    - 'weeknotes'
 ---
 
 Here's what I got up to over the last week:

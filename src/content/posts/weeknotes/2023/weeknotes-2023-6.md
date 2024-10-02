@@ -1,12 +1,12 @@
 ---
-title: "Spring Daylight Here!"
+title: 'Spring Daylight Here!'
 subTitle: 'Weeknotes 2023 #6'
 date: 2023-02-06
 publishDate: 'February 06 2023'
 draft: false
-description: ""
+description: ''
 tags:
-	- 'weeknotes'
+    - 'weeknotes'
 ---
 
 Here's what I got up to over the last week:
