@@ -1,8 +1,6 @@
 {
 	"editor.minimap.enabled": false,
 	"editor.fontSize": 18,
-	// "editor.lineHeight": 30,
-	// "window.zoomLevel": 2,
 	"workbench.colorCustomizations": {
 		"activityBar.background": "#ffd633",
 		"activityBar.activeBorder": "#009f7f",
@@ -24,4 +22,11 @@
 	// Maximum amount of characters per line (0 = disable).
 	"markdown.format.wrapLineLength": 60,
 	"task.allowAutomaticTasks": "on",
+
+	"editor.lineNumbers": "off",
+	"editor.folding": false,
+	"editor.glyphMargin": false,
+
+	// Set the amount of left/right padding in editor
+	"editor.lineDecorationsWidth": 25
 }
