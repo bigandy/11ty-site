@@ -1,4 +1,5 @@
 @view-transition {
+	/* biome-ignore lint/correctness/noUnknownProperty: a new css feature */
 	navigation: auto;
 }
 

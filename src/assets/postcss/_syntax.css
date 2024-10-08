@@ -4,11 +4,11 @@
  */
 
 @layer syntax {
-	code[class*='language-'],
-	pre[class*='language-'] {
+	code[class*="language-"],
+	pre[class*="language-"] {
 		color: rgb(42, 65, 77);
-		font-family: 'Consolas', 'Bitstream Vera Sans Mono', 'Courier New',
-			Courier, monospace;
+		font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier,
+			monospace;
 		direction: ltr;
 		text-align: left;
 		white-space: pre;
@@ -27,26 +27,26 @@
 		hyphens: none;
 	}
 
-	pre[class*='language-']::-moz-selection,
-	pre[class*='language-'] ::-moz-selection,
-	code[class*='language-']::-moz-selection,
-	code[class*='language-'] ::-moz-selection {
+	pre[class*="language-"]::-moz-selection,
+	pre[class*="language-"] ::-moz-selection,
+	code[class*="language-"]::-moz-selection,
+	code[class*="language-"] ::-moz-selection {
 		background: #b3d4fc;
 	}
 
-	pre[class*='language-']::selection,
-	pre[class*='language-'] ::selection,
-	code[class*='language-']::selection,
-	code[class*='language-'] ::selection {
+	pre[class*="language-"]::selection,
+	pre[class*="language-"] ::selection,
+	code[class*="language-"]::selection,
+	code[class*="language-"] ::selection {
 		background: #b3d4fc;
 	}
 
 	/* Code blocks */
-	pre[class*='language-'] {
+	pre[class*="language-"] {
 		padding: 1em;
 		margin: 2em 0;
 		overflow: auto;
-		background-color: mix(white, #27a4de, 80%);
+		background-color: color-mix(white, #27a4de, 80%);
 	}
 
 	.token.comment,

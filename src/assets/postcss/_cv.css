@@ -83,7 +83,7 @@
 	}
 
 	.entrylist::after {
-		content: '';
+		content: "";
 		display: block;
 		height: calc(100% - 3rem);
 		width: 1px;
@@ -99,7 +99,7 @@
 	}
 
 	.entrylist > li::after {
-		content: '';
+		content: "";
 		display: block;
 		border-radius: 50%;
 		background: var(--theme-color);

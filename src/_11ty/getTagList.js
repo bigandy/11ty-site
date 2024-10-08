@@ -1,18 +1,19 @@
 export default function getTagList(collection) {
-	let tagSet = new Set();
-	collection.getAll().forEach(function (item) {
-		if ('tags' in item.data) {
+	const tagSet = new Set();
+
+	for (const item of collection.getAll()) {
+		if ("tags" in item.data) {
 			let tags = item.data.tags;
 
-			tags = tags.filter(function (item) {
+			tags = tags.filter((item) => {
 				switch (item) {
 					// this list should match the `filter` list in tags.njk
-					case 'all':
-					case 'nav':
-					case 'footnav':
-					case 'post':
-					case 'posts':
-					case 'books':
+					case "all":
+					case "nav":
+					case "footnav":
+					case "post":
+					case "posts":
+					case "books":
 						return false;
 				}
 
@@ -23,7 +24,7 @@ export default function getTagList(collection) {
 				tagSet.add(tag);
 			}
 		}
-	});
+	}
 
 	// returning an array in addCollection works in Eleventy 0.5.3
 	return [...tagSet];

@@ -50,8 +50,8 @@
 			margin-block-start: 0;
 		}
 
-		.cv [id='education'],
-		.cv [id='interests'] {
+		.cv [id="education"],
+		.cv [id="interests"] {
 			margin-block-end: 0.5rem;
 		}
 
@@ -82,7 +82,7 @@
 		}
 
 		.cv a:not(.u-url):not(.contact a)::after {
-			content: ' (' attr(href) ')';
+			content: " (" attr(href) ")";
 			word-wrap: break-word;
 			font-style: italic;
 			font-size: 0.9em;
@@ -115,7 +115,7 @@
 		}
 
 		.cv h1::before {
-			content: 'Andrew Hudson - ';
+			content: "Andrew Hudson - ";
 		}
 
 		.cv .p-grid {
@@ -176,7 +176,7 @@
 
 		.entry__time::before,
 		.entry__time::after {
-			content: '/';
+			content: "/";
 			display: inline-block;
 			position: relative;
 			color: lightgrey;
