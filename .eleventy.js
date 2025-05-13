@@ -1,25 +1,41 @@
-import { DateTime } from 'luxon';
 import fs from 'fs';
 import Image from '@11ty/eleventy-img';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
-
 import pluginRss from '@11ty/eleventy-plugin-rss';
-
-import { htmlDateString } from './src/_11ty/filters/htmlDateString.js';
-import { readableDate } from './src/_11ty/filters/readableDate.js';
-import { firstNElements } from './src/_11ty/filters/firstNElements.js';
-import Book from './src/_includes/components/book.js';
-import PageTitle from './src/_includes/components/page-title.js';
-import tagList from './src/_11ty/getTagList.js';
-import transformCSS from './src/utils/transform-css.js';
-import optimizeHTML from './src/_11ty/optimize-html.js';
-
 import markdownIt from 'markdown-it';
 import markdownItAnchor from 'markdown-it-anchor';
 
-const showDrafts = process.env.ELEVENTY_DRAFTS === 'true';
+// Filters
+import { htmlDateString } from './src/_11ty/filters/htmlDateString.js';
+import { readableDate } from './src/_11ty/filters/readableDate.js';
+import { firstNElements } from './src/_11ty/filters/firstNElements.js';
+import { splitLinesFilter } from './src/_11ty/filters/splitLines.js';
+import { jsMinFilter } from './src/_11ty/filters/jsMin.js';
 
-import { minify } from 'terser';
+import { removeDraftsFromTagsListFilter } from './src/_11ty/filters/removeDraftsfromTagsList.js';
+
+import {
+	replaceSlashesFilter,
+	readablePostDateFilter,
+	encodeurlFilter,
+	yearFilter,
+	getWebmentionsByUrlFilter,
+	getLikesFilter,
+	getRepliesFilter,
+} from './src/_11ty/filters/utils.js';
+
+// Components
+import Book from './src/_includes/components/book.js';
+import PageTitle from './src/_includes/components/page-title.js';
+
+import transformCSS from './src/utils/transform-css.js';
+import optimizeHTML from './src/_11ty/optimize-html.js';
+
+// Collections
+import { allPostsCollection } from './src/_11ty/collections/allPosts.js';
+import { tagListCollection } from './src/_11ty/collections/tagList.js';
+import { weeknotesCollection } from './src/_11ty/collections/weeknotes.js';
+import { postsCollection } from './src/_11ty/collections/posts.js';
 
 /**
  *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
@@ -40,143 +56,36 @@ export default async function (eleventyConfig) {
 
 	eleventyConfig.addNunjucksAsyncShortcode('postcss', transformCSS);
 
-	eleventyConfig.addNunjucksAsyncFilter(
-		'jsmin',
-		async function (code, callback) {
-			try {
-				const minified = await minify(code);
-				callback(null, minified.code);
-			} catch (err) {
-				console.error('Terser error: ', err);
-				// Fail gracefully.
-				callback(null, code);
-			}
-		}
-	);
-
-	// Present and past posts only
-	// https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
-	const now = new Date();
-	const livePosts = (p) => p.date <= now;
-	const removeDraftsFromTagsList = (drafts) => {
-		if (showDrafts) {
-			return drafts;
-		}
-
-		return drafts.filter((draft) => {
-			if (!draft.data) {
-				return;
-			}
-
-			if (draft.data.draft !== true) {
-				return draft;
-			}
-		});
-	};
-
-	const removeWeeknotes = (post) => {
-		if (post.data.tags) {
-			return !post.data.tags.includes('weeknotes');
-		}
-		return post;
-	};
-
-	const showWeeknotes = (post) => {
-		if (post.data.tags) {
-			return post.data.tags.includes('weeknotes');
-		}
-		return post;
-	};
-
-	const removeDrafts = (post) => {
-		if (showDrafts) {
-			return post;
-		}
-
-		return post.data.draft !== true;
-	};
-
 	// Filters
+	eleventyConfig.addNunjucksAsyncFilter('jsmin', jsMinFilter);
 	eleventyConfig.addFilter('readableDate', readableDate);
-	eleventyConfig.addFilter('readablePostDate', (dateObj) => {
-		return DateTime.fromJSDate(dateObj, {
-			zone: 'Europe/London',
-		})
-			.setLocale('en')
-			.toLocaleString({ locale: 'en-gb' })
-			.replaceAll('/', '-');
-	});
-	eleventyConfig.addFilter('encodeurl', (title) => {
-		return encodeURI(title).replaceAll(' ', '');
-	});
+	eleventyConfig.addFilter('readablePostDate', readablePostDateFilter);
+	eleventyConfig.addFilter('encodeurl', encodeurlFilter);
 
-	eleventyConfig.addFilter('replaceSlashes', (str) => {
-		return str.replaceAll('/', '');
-	});
+	eleventyConfig.addFilter('replaceSlashes', replaceSlashesFilter);
 
 	eleventyConfig.addFilter('htmlDateString', htmlDateString);
 	eleventyConfig.addFilter('firstNElements', firstNElements);
 	eleventyConfig.addFilter(
 		'removeDraftsFromTagsList',
-		removeDraftsFromTagsList
+		removeDraftsFromTagsListFilter
 	);
 
-	eleventyConfig.addFilter('splitlines', function (input) {
-		const parts = input.split(' ');
-		const lines = parts.reduce(function (prev, current) {
-			if (!prev.length) {
-				return [current];
-			}
-
-			let lastOne = prev[prev.length - 1];
-
-			if (lastOne.length + current.length > 19) {
-				return [...prev, current];
-			}
-
-			prev[prev.length - 1] = lastOne + ' ' + current;
-
-			return prev;
-		}, []);
-
-		return lines;
-	});
+	eleventyConfig.addFilter('webmentionsByUrl', getWebmentionsByUrlFilter);
+	eleventyConfig.addFilter('getLikes', getLikesFilter);
+	eleventyConfig.addFilter('getReplies', getRepliesFilter);
+	eleventyConfig.addFilter('splitlines', splitLinesFilter);
 
 	// Nunjucks filters
-	eleventyConfig.addNunjucksFilter('year', function () {
-		const date = new Date();
-		return date.getFullYear();
-	});
+	eleventyConfig.addNunjucksFilter('year', yearFilter);
 
 	// Collections
-	eleventyConfig.addCollection('tagList', tagList);
-	eleventyConfig.addCollection('allposts', (collection) => {
-		const returnPostCollection = collection
-			.getFilteredByGlob('./src/content/posts/**/*.md')
-			.filter(livePosts)
-			.filter(removeDrafts);
+	eleventyConfig.addCollection('tagList', tagListCollection);
+	eleventyConfig.addCollection('allposts', allPostsCollection);
 
-		return returnPostCollection;
-	});
-	eleventyConfig.addCollection('posts', (collection) => {
-		const returnPostCollection = collection
-			.getFilteredByGlob('./src/content/posts/**/*.md')
-			.filter(removeWeeknotes)
-			.filter(livePosts)
-			.filter(removeDrafts);
+	eleventyConfig.addCollection('posts', postsCollection);
 
-		return returnPostCollection;
-	});
-
-	eleventyConfig.addCollection('weeknotes', (collection) => {
-		const returnPostCollection = collection
-			.getFilteredByGlob('./src/content/posts/**/*.md')
-			.filter(showWeeknotes)
-			.filter(livePosts)
-			.filter(removeDrafts);
-
-		return returnPostCollection;
-	});
+	eleventyConfig.addCollection('weeknotes', weeknotesCollection);
 
 	eleventyConfig.addPassthroughCopy('src/robots.txt');
 	eleventyConfig.addPassthroughCopy('src/assets/images');
@@ -187,37 +96,32 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('functions');
 
 	/* Markdown Plugins */
-
-	let options = {
-		html: true,
-		breaks: true,
-		linkify: true,
-	};
-
-	let opts = {
-		// permalink: true,
-		// permalinkClass: 'direct-link',
-		// permalinkSymbol: '#',
-	};
-
 	eleventyConfig.setLibrary(
 		'md',
-		markdownIt(options).use(markdownItAnchor, opts)
+		markdownIt({
+			html: true,
+			breaks: true,
+			linkify: true,
+		}).use(markdownItAnchor, {
+			// permalink: true,
+			// permalinkClass: 'direct-link',
+			// permalinkSymbol: '#',
+		})
 	);
 
-	eleventyConfig.setBrowserSyncConfig({
-		callbacks: {
-			ready: function (err, browserSync) {
-				const content_404 = fs.readFileSync('src/404.md');
+	// eleventyConfig.setBrowserSyncConfig({
+	// 	callbacks: {
+	// 		ready: function (err, browserSync) {
+	// 			const content_404 = fs.readFileSync('src/404.md');
 
-				browserSync.addMiddleware('*', (req, res) => {
-					// Provides the 404 content without redirect.
-					res.write(content_404);
-					res.end();
-				});
-			},
-		},
-	});
+	// 			browserSync.addMiddleware('*', (req, res) => {
+	// 				// Provides the 404 content without redirect.
+	// 				res.write(content_404);
+	// 				res.end();
+	// 			});
+	// 		},
+	// 	},
+	// });
 
 	eleventyConfig.on('afterBuild', () => {
 		const socialPreviewImagesDir = 'dist/img/social-preview-images/';
@@ -248,29 +152,6 @@ export default async function (eleventyConfig) {
 				});
 			}
 		});
-	});
-
-	eleventyConfig.addFilter('webmentionsByUrl', (webmentions, url) => {
-		console.log({ webmentions });
-		return (
-			webmentions.filter(
-				(webmention) => webmention['wm-target'] === url
-			) ?? []
-		);
-	});
-	eleventyConfig.addFilter('getLikes', (webmentions) => {
-		return (
-			webmentions.filter(
-				(webmention) => webmention['wm-property'] === 'like-of'
-			) ?? []
-		);
-	});
-	eleventyConfig.addFilter('getReplies', (webmentions) => {
-		return (
-			webmentions.filter(
-				(webmention) => webmention['wm-property'] === 'in-reply-to'
-			) ?? []
-		);
 	});
 
 	return {
