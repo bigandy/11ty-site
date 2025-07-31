@@ -232,10 +232,12 @@
 		top: -3px;
 	}
 
-	p,
-	article,
-	li {
-		max-width: 65ch;
+	main {
+		p,
+		article,
+		li {
+			max-width: 65ch;
+		}
 	}
 
 	.home {
@@ -257,10 +259,6 @@
 	}
 
 	footer {
-		p {
-			max-width: unset;
-		}
-
 		svg {
 			height: 0.75lh;
 			width: 0.75lh;
