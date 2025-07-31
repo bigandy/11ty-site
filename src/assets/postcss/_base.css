@@ -16,11 +16,11 @@
 
 @layer base {
 	@font-face {
-		font-family: "Inter";
+		font-family: 'Inter';
 		font-style: normal;
 		font-weight: 800;
 		font-display: swap;
-		src: url("/assets/fonts/Inter/Inter-ExtraBold.woff2") format("woff2");
+		src: url('/assets/fonts/Inter/Inter-ExtraBold.woff2') format('woff2');
 	}
 
 	*,
@@ -76,8 +76,8 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-			sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+			Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 	}
 
 	nav a {
@@ -107,7 +107,7 @@
 		font-weight: 800;
 		line-height: 1.1;
 		text-wrap: balance;
-		font-family: "Inter", sans-serif;
+		font-family: 'Inter', sans-serif;
 	}
 
 	h1 {
@@ -147,13 +147,13 @@
 	}
 
 	@property --gap {
-		syntax: "<length>";
+		syntax: '<length>';
 		initial-value: 0.3ex;
 		inherits: true;
 	}
 
 	@property --line-color {
-		syntax: "<color>";
+		syntax: '<color>';
 		initial-value: hsl(100deg 100% 50%);
 		inherits: true;
 	}
@@ -167,8 +167,9 @@
 		text-underline-offset: var(--gap);
 
 		transition: text-underline-offset 0.3s ease-in-out,
-			text-decoration-thickness 0.3s ease-in-out, text-decoration-color 0.3s
-			ease-in-out, --line-color 0.3s ease-in-out;
+			text-decoration-thickness 0.3s ease-in-out,
+			text-decoration-color 0.3s ease-in-out,
+			--line-color 0.3s ease-in-out;
 	}
 
 	.post-content a:hover:not(:active) {
@@ -222,7 +223,7 @@
 
 	.post-taglist li:not(:last-child) a::after {
 		color: canvasText;
-		content: "/";
+		content: '/';
 		opacity: 0.75;
 		position: absolute;
 		text-decoration: none;
@@ -255,12 +256,12 @@
 		max-width: 28ch;
 	}
 
-	footer svg {
-		height: 21.5859px;
-		width: 21.5859px;
-		vertical-align: -4.31836px;
+	footer {
+		p {
+			max-width: unset;
+		}
 
-		@supports (height: 0.75lh) {
+		svg {
 			height: 0.75lh;
 			width: 0.75lh;
 			vertical-align: -0.15lh;
@@ -286,11 +287,10 @@
 
 	pre,
 	code {
-		font-family:
-			Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-			"Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-			"Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-			"Courier New", Courier, monospace;
+		font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
+			'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
+			'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+			'Courier New', Courier, monospace;
 		line-height: 1.5;
 	}
 

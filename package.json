@@ -20,7 +20,7 @@
 	},
 	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "3.1.0",
+		"@11ty/eleventy": "4.0.0-alpha.3",
 		"@11ty/eleventy-fetch": "5.1.0",
 		"@11ty/eleventy-img": "6.0.3",
 		"@11ty/eleventy-plugin-rss": "2.0.4",
@@ -36,8 +36,10 @@
 		"markdown-it-anchor": "9.2.0",
 		"node-fetch": "3.3.2",
 		"octokit-commit-multiple-files": "5.0.3",
-		"postcss": "8.5.3",
-		"postcss-nesting": "13.0.1"
+		"postcss": "8.5.6",
+		"postcss-nesting": "13.0.1",
+		"postcss-comment": "2.0.0",
+		"postcss-import": "16.1.0"
 	},
 	"dependencies": {
 		"@netlify/functions": "3.1.8",
@@ -46,8 +48,6 @@
 		"cssnano": "7.0.7",
 		"csso": "5.0.5",
 		"html-minifier": "4.0.0",
-		"postcss-comment": "2.0.0",
-		"postcss-import": "16.1.0",
 		"terser": "5.39.1"
 	},
 	"projectDomain": "big-andy.co.uk",
