@@ -19,7 +19,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import { minify } from "html-minifier";
+import { minify } from 'html-minifier-terser';
 
 /**
  * Inlines the CSS.
@@ -30,7 +30,7 @@ import { minify } from "html-minifier";
 
 const minifyHtml = (rawContent, outputPath) => {
 	let content = rawContent;
-	if (outputPath?.endsWith(".html")) {
+	if (outputPath?.endsWith('.html')) {
 		content = minify(content, {
 			removeAttributeQuotes: true,
 			collapseBooleanAttributes: true,
@@ -49,10 +49,10 @@ const minifyHtml = (rawContent, outputPath) => {
 export default {
 	initArguments: {},
 	configFunction: async (eleventyConfig) => {
-		const isProduction = process.env.ELEVENTY_ENV === "production";
+		const isProduction = process.env.ELEVENTY_ENV === 'production';
 
 		if (isProduction) {
-			eleventyConfig.addTransform("minifyHtml", minifyHtml);
+			eleventyConfig.addTransform('minifyHtml', minifyHtml);
 		}
 	},
 };

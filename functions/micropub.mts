@@ -8,7 +8,6 @@ import OctoKitMultipleFilesPlugin from 'octokit-commit-multiple-files';
 
 const UpdatedOctokit = Octokit.plugin(OctoKitMultipleFilesPlugin);
 
-// Octokit = Octokit.plugin(require('octokit-commit-multiple-files'));
 const octokit = new UpdatedOctokit({
 	auth: process.env.GITHUB_ACCESS_TOKEN,
 });
