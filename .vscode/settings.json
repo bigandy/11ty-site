@@ -23,7 +23,7 @@
 	"markdown.format.wrapLineLength": 60,
 	"task.allowAutomaticTasks": "on",
 
-	"editor.lineNumbers": "off",
+	// "editor.lineNumbers": "off",
 	"editor.folding": false,
 	"editor.glyphMargin": false,
 

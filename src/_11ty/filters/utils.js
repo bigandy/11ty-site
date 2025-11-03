@@ -78,7 +78,7 @@ export const getLikesFilter = (webmentions) => {
 };
 
 export const getWebmentionsByUrlFilter = (webmentions, url) => {
-	console.log({ webmentions });
+	// console.log({ webmentions });
 	return (
 		webmentions.filter((webmention) => webmention['wm-target'] === url) ??
 		[]

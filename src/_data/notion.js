@@ -49,14 +49,16 @@ export default async function () {
 		}
 
 		// if not, fetch the data and cache it
-		const query = await notion.databases.query({
+		const database = await notion.databases.retrieve({
 			database_id,
 		});
 
-		const queryResults = query?.results || null;
+		const { results } = await notion.dataSources.query({
+            data_source_id: database.data_sources[0].id,
+        })
 
 		// Go through the list and get the thumbnail for each image;
-		const list = queryResults.map(async (book) => {
+		const list = results.map(async (book) => {
 			const bookTitle =
 				book.properties.Name.title[0]?.plain_text ?? 'unknown title';
 			const bookAuthor =
