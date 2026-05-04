@@ -19,15 +19,13 @@ import {
 	readablePostDateFilter,
 	encodeurlFilter,
 	yearFilter,
-	getWebmentionsByUrlFilter,
-	getLikesFilter,
-	getRepliesFilter,
 } from './src/_11ty/filters/utils.js';
 
 // Components
 import Book from './src/_includes/components/book.js';
 import PageTitle from './src/_includes/components/page-title.js';
 
+// Utils
 import transformCSS from './src/utils/transform-css.js';
 import optimizeHTML from './src/_11ty/optimize-html.js';
 
@@ -43,17 +41,16 @@ import { postsCollection } from './src/_11ty/collections/posts.js';
 export default async function (eleventyConfig) {
 	// Plugins
 	eleventyConfig.addPlugin(pluginSyntaxHighlight);
-
 	eleventyConfig.addPlugin(pluginRss);
 	eleventyConfig.addPlugin(optimizeHTML);
 
 	eleventyConfig.setDataDeepMerge(true);
 
-	eleventyConfig.addShortcode('Book', Book);
-	eleventyConfig.addShortcode('PageTitle', PageTitle);
-
 	eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
+	// Shortcodes
+	eleventyConfig.addShortcode('Book', Book);
+	eleventyConfig.addShortcode('PageTitle', PageTitle);
 	eleventyConfig.addNunjucksAsyncShortcode('postcss', transformCSS);
 
 	// Filters
@@ -61,9 +58,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addFilter('readableDate', readableDate);
 	eleventyConfig.addFilter('readablePostDate', readablePostDateFilter);
 	eleventyConfig.addFilter('encodeurl', encodeurlFilter);
-
 	eleventyConfig.addFilter('replaceSlashes', replaceSlashesFilter);
-
 	eleventyConfig.addFilter('htmlDateString', htmlDateString);
 	eleventyConfig.addFilter('firstNElements', firstNElements);
 	eleventyConfig.addFilter(
@@ -71,20 +66,13 @@ export default async function (eleventyConfig) {
 		removeDraftsFromTagsListFilter
 	);
 
-	eleventyConfig.addFilter('webmentionsByUrl', getWebmentionsByUrlFilter);
-	eleventyConfig.addFilter('getLikes', getLikesFilter);
-	eleventyConfig.addFilter('getReplies', getRepliesFilter);
 	eleventyConfig.addFilter('splitlines', splitLinesFilter);
-
-	// Nunjucks filters
 	eleventyConfig.addNunjucksFilter('year', yearFilter);
 
 	// Collections
 	eleventyConfig.addCollection('tagList', tagListCollection);
 	eleventyConfig.addCollection('allposts', allPostsCollection);
-
 	eleventyConfig.addCollection('posts', postsCollection);
-
 	eleventyConfig.addCollection('weeknotes', weeknotesCollection);
 
 	eleventyConfig.addPassthroughCopy('src/robots.txt');
@@ -93,7 +81,6 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/assets/js');
 	eleventyConfig.addPassthroughCopy('src/assets/postcss');
 	eleventyConfig.addPassthroughCopy('_redirects');
-	eleventyConfig.addPassthroughCopy('functions');
 
 	/* Markdown Plugins */
 	eleventyConfig.setLibrary(
@@ -103,25 +90,9 @@ export default async function (eleventyConfig) {
 			breaks: true,
 			linkify: true,
 		}).use(markdownItAnchor, {
-			// permalink: true,
-			// permalinkClass: 'direct-link',
-			// permalinkSymbol: '#',
+
 		})
 	);
-
-	// eleventyConfig.setBrowserSyncConfig({
-	// 	callbacks: {
-	// 		ready: function (err, browserSync) {
-	// 			const content_404 = fs.readFileSync('src/404.md');
-
-	// 			browserSync.addMiddleware('*', (req, res) => {
-	// 				// Provides the 404 content without redirect.
-	// 				res.write(content_404);
-	// 				res.end();
-	// 			});
-	// 		},
-	// 	},
-	// });
 
 	eleventyConfig.on('afterBuild', () => {
 		const socialPreviewImagesDir = 'dist/img/social-preview-images/';
@@ -156,11 +127,6 @@ export default async function (eleventyConfig) {
 
 	return {
 		templateFormats: ['md', 'njk', '11ty.js', 'html'],
-
-		// If your site lives in a different subdirectory, change this.
-		// Leading or trailing slashes are all normalized away, so don’t worry about it.
-		// If you don’t have a subdirectory, use ' or '/' (they do the same thing)
-		// This is only used for URLs (it does not affect your file structure)
 		pathPrefix: '/',
 
 		markdownTemplateEngine: 'njk',

@@ -1,4 +1,4 @@
-import { DateTime } from "luxon";
+import { Temporal } from "temporal-polyfill-lite";
 
 const getNumberSuffix = (num) => {
 	if (num === 11 || num === 12 || num === 13) {
@@ -20,12 +20,14 @@ const getNumberSuffix = (num) => {
 };
 
 export const readableDate = (dateObj) => {
-	const formatDate = DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-		"d-LLLL-yyyy",
-	);
+	const [month, day, year] = dateObj.toLocaleDateString('en-gb').split('/').map(s => +s);
+			// console.log({month, day, year});
 
-	const [day, month, year] = formatDate.split("-");
+	const date = Temporal.PlainDate.from({ year, month, day });
+
+	// const { day, month, year } = formatDate;
 	const outputDay = `${day}${getNumberSuffix(day)}`;
 
-	return `${outputDay} ${month} ${year}`;
+	// return 'TODO';
+	return `${outputDay} ${date.toLocaleString('en-gb', { month: "long" })} ${year}`;
 };

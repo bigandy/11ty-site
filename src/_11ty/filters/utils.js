@@ -1,12 +1,25 @@
-import { DateTime } from 'luxon';
+import { Temporal } from "temporal-polyfill-lite";
 
 export const showDrafts = process.env.ELEVENTY_DRAFTS === 'true';
 
 // Present and past posts only
 // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
-const now = new Date();
+const today = Temporal.Now.plainDateISO();
 
-export const livePostsFilter = (p) => p.date <= now;
+export const getPostDate = postDate => {
+	const [month, day, year] = postDate.toLocaleDateString('en-gb').split('/').map(s => +s);
+
+	return Temporal.PlainDate.from({ year, month, day });
+};
+
+export const livePostsFilter = (p) => {
+	const compare = Temporal.PlainDate.compare(
+		today,
+		getPostDate(p.date),
+	);
+
+	return compare > -1;
+};
 
 export const showWeeknotesFilter = (post) => {
 	if (post.data.tags) {
@@ -44,12 +57,7 @@ export const removeDraftsFromTagsListFilter = (drafts) => {
 };
 
 export const readablePostDateFilter = (dateObj) => {
-	return DateTime.fromJSDate(dateObj, {
-		zone: 'Europe/London',
-	})
-		.setLocale('en')
-		.toLocaleString({ locale: 'en-gb' })
-		.replaceAll('/', '-');
+	return getPostDate(dateObj);
 };
 
 export const encodeurlFilter = (title) => {
@@ -57,30 +65,5 @@ export const encodeurlFilter = (title) => {
 };
 
 export const yearFilter = () => {
-	const date = new Date();
-	return date.getFullYear();
-};
-
-export const getRepliesFilter = (webmentions) => {
-	return (
-		webmentions.filter(
-			(webmention) => webmention['wm-property'] === 'in-reply-to'
-		) ?? []
-	);
-};
-
-export const getLikesFilter = (webmentions) => {
-	return (
-		webmentions.filter(
-			(webmention) => webmention['wm-property'] === 'like-of'
-		) ?? []
-	);
-};
-
-export const getWebmentionsByUrlFilter = (webmentions, url) => {
-	// console.log({ webmentions });
-	return (
-		webmentions.filter((webmention) => webmention['wm-target'] === url) ??
-		[]
-	);
+	return today.year;
 };

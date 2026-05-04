@@ -1,106 +1,92 @@
-import { Client } from '@notionhq/client';
+import { AssetCache } from "@11ty/eleventy-fetch";
+import { Client } from "@notionhq/client";
 
-import { AssetCache } from '@11ty/eleventy-fetch';
-import dayjs from 'dayjs';
-import groupBy from 'lodash.groupby';
+const notionKey = process.env.NOTION_KEY;
+const database_id = process.env.NOTION_DB;
 
-import 'dotenv/config';
+const notion = new Client({
+	auth: notionKey,
+});
 
-const googleBookSearch = async (title, author) => {
-	try {
-		const results = await fetch(
-			`https://www.googleapis.com/books/v1/volumes?q=${encodeURI(
-				title + author
-			)}`
-		);
-		const json = await results.json();
-
-		// take the first, assume that it is the correct one.
-		const thumbnail =
-			json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
-		return thumbnail;
-	} catch (error) {
-		console.error(error);
-		return '';
-	}
-};
 
 export default async function () {
-	const notionKey = process.env.NOTION_KEY;
-	const database_id = process.env.NOTION_DB;
-
-	if (!notionKey || !database_id) {
-		console.log('NO KEY OR DB ID, RETURNING EARLY.');
-		return;
-	}
-
-	const notion = new Client({
-		auth: process.env.NOTION_KEY,
-	});
-
 	try {
+		// check if in cache here.
 		// Pass in your unique custom cache key
-		const asset = new AssetCache('notion_book_list');
+		const asset = new AssetCache("notion_book_list");
 
 		// check if the cache is fresh within the last day
-		if (asset.isCacheValid('1d')) {
+		if (asset.isCacheValid("1d")) {
 			// if so, return the cached value
 			return asset.getCachedValue();
 		}
 
-		// if not, fetch the data and cache it
 		const database = await notion.databases.retrieve({
 			database_id,
 		});
 
 		const { results } = await notion.dataSources.query({
-            data_source_id: database.data_sources[0].id,
-        })
+			data_source_id: database.data_sources[0].id,
+		});
 
 		// Go through the list and get the thumbnail for each image;
 		const list = results.map(async (book) => {
 			const bookTitle =
-				book.properties.Name.title[0]?.plain_text ?? 'unknown title';
+				book.properties.Name.title[0]?.plain_text ?? "unknown title";
 			const bookAuthor =
-				book.properties?.Author.rich_text[0]?.plain_text ??
-				'unknown author';
+				book.properties?.Author.rich_text[0]?.plain_text ?? "unknown author";
 
-			const createdDate = book.created_time;
-			const finishedDate =
-				book.properties['Date Finished']?.date?.start || '';
+			const finishedDate = book.properties["Date Finished"]?.date?.start || "";
+			const rating = book.properties["Rating (out of 10)"]?.select?.name;
 			let thumbnail = book.properties?.Image?.url ?? null;
+			const bookIsFrench = book.properties?.French?.checkbox;
+			const bookIsAudio = book.properties?.["Audio Book"]?.checkbox;
 
 			// if we don't have the thumbnail, call googleBookSearch to get from API
 			if (!thumbnail) {
-				thumbnail = await googleBookSearch(bookTitle, bookAuthor);
+				// thumbnail = await googleBookSearch(bookTitle, bookAuthor);
+				thumbnail = "";
 			}
 
 			return {
+				bookIsFrench,
+				bookIsAudio,
 				bookTitle,
 				bookAuthor,
-				createdDate,
 				finishedDate,
-				thumbnail: thumbnail?.replaceAll('http:', 'https:'),
+				thumbnail: thumbnail?.replaceAll("http:", "https:"),
+				rating: Number(rating),
 			};
 		});
 
-		const books = await Promise.all([...list]);
+		const books = (await Promise.all([...list])).filter(({finishedDate}) => finishedDate !== '');
 
-		const groupedBooks = groupBy(books, (book) => {
-			const finishedDate = dayjs(book.finishedDate);
-			return finishedDate.isValid()
-				? finishedDate.format('MM-YYYY')
-				: 'unfinished';
-		});
+		await asset.save(books, "json");
 
-		// Currently, I do not want to do anythihng with the unfinished books
-		// This removes the unfinished key from the object
-		const { unfinished, ...months } = groupedBooks;
+		return books;
+	} catch (error) {
+		console.error("error in getting books", error);
 
-		await asset.save(months, 'json');
+		return [];
+	}
+};
 
-		return months;
+const googleBookSearch = async (title, author) => {
+	try {
+		const results = await fetch(
+			`https://www.googleapis.com/books/v1/volumes?q=${encodeURI(
+				title + author,
+			)}`,
+		);
+		const json = await results.json();
+
+		console.log({json})
+
+		// take the first, assume that it is the correct one.
+		const thumbnail = json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
+		return thumbnail;
 	} catch (error) {
 		console.error(error);
+		return "";
 	}
-}
+};
