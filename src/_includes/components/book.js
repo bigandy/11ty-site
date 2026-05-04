@@ -22,9 +22,9 @@ const getPlainDateFromString = (monthYearString) => {
 
 const getGroupedBooks = (books) => {
 	const group = Object.groupBy(books, ({ finishedDate }) => {
-		const date = Temporal.PlainDate.from(finishedDate);
+		const {month, year} = Temporal.PlainDate.from(finishedDate);
 
-		return `${padStartNumber(date.month)}-${date.year}`;
+		return `${padStartNumber(month)}-${year}`;
 	});
 
 	const groups = Object.entries(group);
@@ -36,13 +36,16 @@ const getGroupedBooks = (books) => {
 
 			return Temporal.PlainDate.compare(bDate, aDate);
 	    })
-	    .map(([key, value]) => {
-	        return [key, value];
+	    .map(([month, books]) => {
+	        return [month, books.sort(sortByFinishDate)];
 	    });
 
 	return sortedGroups;
 };
 
+const sortByFinishDate = (a, b) => {
+	return Temporal.PlainDate.compare(b.finishedDate, a.finishedDate);
+};
 
 export default function Book({ books }) {
 	if (!books) {
@@ -62,9 +65,13 @@ export default function Book({ books }) {
 				${books.map((book) => {
 						const { bookTitle, bookAuthor, finishedDate, thumbnail } = book;
 
+						const {year, month, day} = Temporal.PlainDate.from(finishedDate);
+
+
 						return `<div class="book">
 							<h3>${bookTitle}</h3>
 							<p>${bookAuthor}</p>
+							<p>Finished on: ${padStartNumber(day)}-${padStartNumber(month)}-${year}</p>
 							<img src="${thumbnail}" alt="${bookTitle}"  loading="lazy" />
 						</div>`;
 					})
