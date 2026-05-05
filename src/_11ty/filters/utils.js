@@ -1,5 +1,3 @@
-import { Temporal } from "temporal-polyfill-lite";
-
 export const showDrafts = process.env.ELEVENTY_DRAFTS === 'true';
 
 // Present and past posts only

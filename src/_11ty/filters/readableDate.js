@@ -1,5 +1,3 @@
-import { Temporal } from "temporal-polyfill-lite";
-
 const getNumberSuffix = (num) => {
 	if (num === 11 || num === 12 || num === 13) {
 		return "th";
