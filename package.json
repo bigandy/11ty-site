@@ -11,7 +11,7 @@
 		"build": "npm run clean && ELEVENTY_ENV=production npx @11ty/eleventy",
 		"watch": "npx @11ty/eleventy --watch",
 		"debug": "DEBUG=* npx @11ty/eleventy",
-		"clean": "del-cli dist",
+		"clean": "npx del-cli dist",
 		"lint": "biome check ./src"
 	},
 	"author": {
@@ -26,20 +26,14 @@
 		"@11ty/eleventy-plugin-rss": "3.0.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
 		"@biomejs/biome": "2.4.14",
-		"cssnano": "7.1.8",
-		"csso": "5.0.5",
-		"del-cli": "7.0.0",
-		"dotenv": "17.4.2",
-		"html-minifier-terser": "7.2.0",
+		"cssnano": "8.0.0",
+		"html-minifier-next": "6.2.4",
 		"markdown-it": "14.1.1",
 		"markdown-it-anchor": "9.2.0",
-		"postcss": "8.5.13",
-		"postcss-comment": "2.0.0",
+		"postcss": "8.5.14",
 		"postcss-import": "16.1.1",
 		"postcss-nesting": "14.0.0",
-		"terser": "5.46.2"
-	},
-	"dependencies": {
+		"terser": "5.46.2",
 		"@notionhq/client": "5.20.0",
 		"@sindresorhus/slugify": "3.0.0"
 	},

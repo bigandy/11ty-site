@@ -19,7 +19,8 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import { minify } from 'html-minifier-terser';
+import { minify } from 'html-minifier-next';
+
 
 /**
  * Inlines the CSS.
