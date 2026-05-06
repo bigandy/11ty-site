@@ -10,6 +10,10 @@ const notion = new Client({
 
 
 export default async function () {
+	if (!notionKey || !database_id) {
+		console.error('ERROR: please enter the correct credentials for Notion connection');
+		return;
+	}
 	try {
 		// check if in cache here.
 		// Pass in your unique custom cache key
@@ -71,22 +75,22 @@ export default async function () {
 	}
 };
 
-const googleBookSearch = async (title, author) => {
-	try {
-		const results = await fetch(
-			`https://www.googleapis.com/books/v1/volumes?q=${encodeURI(
-				title + author,
-			)}`,
-		);
-		const json = await results.json();
+// const googleBookSearch = async (title, author) => {
+// 	try {
+// 		const results = await fetch(
+// 			`https://www.googleapis.com/books/v1/volumes?q=${encodeURI(
+// 				title + author,
+// 			)}`,
+// 		);
+// 		const json = await results.json();
 
-		console.log({json})
+// 		console.log({json})
 
-		// take the first, assume that it is the correct one.
-		const thumbnail = json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
-		return thumbnail;
-	} catch (error) {
-		console.error(error);
-		return "";
-	}
-};
+// 		// take the first, assume that it is the correct one.
+// 		const thumbnail = json?.items[0].volumeInfo?.imageLinks?.thumbnail ?? null;
+// 		return thumbnail;
+// 	} catch (error) {
+// 		console.error(error);
+// 		return "";
+// 	}
+// };
