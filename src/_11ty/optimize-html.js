@@ -42,6 +42,7 @@ const minifyHtml = (rawContent, outputPath) => {
 			html5: true,
 			decodeEntities: true,
 			removeOptionalTags: true,
+			minifySVG: true,
 		});
 	}
 	return content;
