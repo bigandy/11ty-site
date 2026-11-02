@@ -7,7 +7,7 @@ const getMonthYear = (date) => {
 };
 
 const getPlainDateFromString = (monthYearString) => {
-	const [month, year] = monthYearString.split("-");
+	const [month, year] = monthYearString.split('-');
 
 	const plainDate = Temporal.PlainDate.from({
 		day: 1,
@@ -20,7 +20,7 @@ const getPlainDateFromString = (monthYearString) => {
 
 const getGroupedBooks = (books) => {
 	const group = Object.groupBy(books, ({ finishedDate }) => {
-		const {month, year} = Temporal.PlainDate.from(finishedDate);
+		const { month, year } = Temporal.PlainDate.from(finishedDate);
 
 		return `${padStartNumber(month)}-${year}`;
 	});
@@ -28,15 +28,15 @@ const getGroupedBooks = (books) => {
 	const groups = Object.entries(group);
 
 	const sortedGroups = groups
-	    .sort(([a], [b]) => {
+		.sort(([a], [b]) => {
 			const aDate = getPlainDateFromString(a);
 			const bDate = getPlainDateFromString(b);
 
 			return Temporal.PlainDate.compare(bDate, aDate);
-	    })
-	    .map(([month, books]) => {
-	        return [month, books.sort(sortByFinishDate)];
-	    });
+		})
+		.map(([month, books]) => {
+			return [month, books.sort(sortByFinishDate)];
+		});
 
 	return sortedGroups;
 };
@@ -47,35 +47,49 @@ const sortByFinishDate = (a, b) => {
 
 export default function Book({ books }) {
 	if (!books) {
-		return "no books found";
+		return 'no books found';
 	}
 
 	return getGroupedBooks(books)
 		.map(([month, books]) => {
-			const monthFomatted = getPlainDateFromString(month).toLocaleString('en', {
-                year: "numeric",
-                month: "long",
-            });
+			const monthFomatted = getPlainDateFromString(month).toLocaleString(
+				'en',
+				{
+					year: 'numeric',
+					month: 'long',
+				},
+			);
+
+			console.log({ books });
 
 			return `<div class="month">
 				<h2 class="month-title">${monthFomatted}</h2>
 				<div class="books">
-				${books.map((book) => {
-						const { bookTitle, bookAuthor, finishedDate, thumbnail } = book;
+				${books
+					.map((book) => {
+						const {
+							bookTitle,
+							bookAuthor,
+							finishedDate,
+							thumbnail,
+							rating,
+						} = book;
 
-						const {year, month, day} = Temporal.PlainDate.from(finishedDate);
-
+						const { year, month, day } =
+							Temporal.PlainDate.from(finishedDate);
 
 						return `<div class="book">
+
 							<h3>${bookTitle}</h3>
 							<p>${bookAuthor}</p>
-							<p>Finished on: ${padStartNumber(day)}-${padStartNumber(month)}-${year}</p>
+							<p>Finished on: ${padStartNumber(day)}.${padStartNumber(month)}.${year}</p>
 							<img src="${thumbnail}" alt="${bookTitle}"  loading="lazy" />
+							<div class="rating" title="I give this book a rating of ${rating} out of 10">${rating}</div>
 						</div>`;
 					})
-					.join(" ")}
+					.join(' ')}
 			</div>
 		</div>`;
 		})
-		.join(" ");
+		.join(' ');
 }
