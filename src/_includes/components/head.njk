@@ -29,7 +29,10 @@
 		<link rel="stylesheet" href="/assets/postcss/{{ cssFile }}" />
 		{% endif %} {% if themeColor %}
 		<style>
-			:root {--theme-color: {{ themeColor or metadata.themeColor }}; }
+			:root {
+			    --theme-color: {{ themeColor or metadata.themeColor }};
+			    {% if backgroundOpacity %} --opacity: {{ backgroundOpacity }}; {% endif %}
+			}
 		</style>
 		{% endif %}
 
@@ -107,17 +110,19 @@
 		<!-- Mastodon -->
 		<meta property="fediverse:creator" content="{{ metadata.creator }}" />
 
-		<link rel="me" href="{{ pkg.authorGitHubUrl }}">
+		<link rel="me" href="{{ pkg.authorGitHubUrl }}" />
 
 		<script type="speculationrules">
 			{
-				"prerender": [{
-					"source": "document",
-					"where": {
-						"href_matches": "/*"
-					},
-					"eagerness": "moderate"
-				}]
+				"prerender": [
+					{
+						"source": "document",
+						"where": {
+							"href_matches": "/*"
+						},
+						"eagerness": "moderate"
+					}
+				]
 			}
 		</script>
 	</head>

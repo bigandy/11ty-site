@@ -1,15 +1,18 @@
 ---
-layout: layouts/base.njk  
+layout: layouts/base.njk
 navtitle: Home
 templateClass: tmpl-post homepage
 title: Homepage
-themeColor: "lab(81 23.61 108.45)"
+themeColor: 'lab(81 23.61 108.45)'
+backgroundOpacity: 0.8
 ---
- 
+
 {% PageTitle title="hi, I'm Andrew. Welcome to my site", id="home" %}
 
-<p>I am a senior software engineer living in Grenoble, France who loves cycling, running and spending time with my family and learning new things.</p>
-
+<p>
+	I am a senior software engineer living in Grenoble, France who loves
+	cycling, running and spending time with my family and learning new things.
+</p>
 
 <h2>Posts</h2>
 {% set postslist = collections.posts | reverse | firstNElements(10) | reverse %}

@@ -56,7 +56,7 @@
 	header,
 	footer,
 	main {
-		background: rgb(255 255 255 / 0.9);
+		background: alpha(from white / var(--opacity, 0.9));
 		padding-inline: 3vmax;
 	}
 
