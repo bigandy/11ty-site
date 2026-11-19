@@ -1,0 +1,6 @@
+{% if date %}
+<p>
+	Posted on:
+	<time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+</p>
+{% endif %}

@@ -3,7 +3,7 @@ title: 'Not Running [from iPhone]'
 date: 2010-03-25 15:38:20
 draft: false
 description: ''
-tags: ['accident', 'injury', 'knee', 'life', 'Running', 'Running']
+tags: ['accident', 'injury', 'knee', 'life', 'running', 'running']
 author: 'Andrew'
 ---
 

@@ -3,7 +3,7 @@ title: 'First ever parkrun'
 date: 2016-09-19 17:19:52
 draft: false
 description: 'On Saturday morning I ran my first ever parkrun - Didcot Parkrun. 5k is a fast and painful all out distance, but once complete it sets up the weekend nicely.'
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

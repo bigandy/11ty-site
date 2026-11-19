@@ -3,7 +3,7 @@ title: 'Let the Training Begin! [Running!]'
 date: 2009-12-07 17:56:57
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

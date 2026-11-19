@@ -3,7 +3,7 @@ title: 'Entered Reading Half'
 date: 2017-01-09 15:03:54
 draft: false
 description: 'Starting 2017 with great intentions to do more running I have signed up for Reading half marathon on the 19th March.'
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

@@ -1,9 +1,7 @@
+import { posts as fallbackPosts } from './_dummy-data.js';
+
 const padStartNumber = (number) => {
 	return `0${number}`.slice(-2);
-};
-
-const getMonthYear = (date) => {
-	return `${padStartNumber(date.month)}-${date.year}`;
 };
 
 const getPlainDateFromString = (monthYearString) => {
@@ -45,24 +43,25 @@ const sortByFinishDate = (a, b) => {
 	return Temporal.PlainDate.compare(b.finishedDate, a.finishedDate);
 };
 
-export default function Book({ books }) {
-	if (!books) {
+export default function Book({ books = fallbackPosts }) {
+	if (books.length === 0) {
 		return 'no books found';
 	}
 
-	return getGroupedBooks(books)
-		.map(([month, books]) => {
-			const monthFomatted = getPlainDateFromString(month).toLocaleString(
-				'en',
-				{
+	const isUsingFallback = Object.is(books, fallbackPosts);
+
+	return (
+		`${isUsingFallback ? '<div class="warning">USING DUMMY DATA</div>' : ''}` +
+		getGroupedBooks(books.filter(Boolean))
+			.map(([month, books]) => {
+				const monthFomatted = getPlainDateFromString(
+					month,
+				).toLocaleString('en', {
 					year: 'numeric',
 					month: 'long',
-				},
-			);
+				});
 
-			console.log({ books });
-
-			return `<div class="month">
+				return `<div class="month">
 				<h2 class="month-title">${monthFomatted}</h2>
 				<div class="books">
 				${books
@@ -79,7 +78,6 @@ export default function Book({ books }) {
 							Temporal.PlainDate.from(finishedDate);
 
 						return `<div class="book">
-
 							<h3>${bookTitle}</h3>
 							<p>${bookAuthor}</p>
 							<p>Finished on: ${padStartNumber(day)}.${padStartNumber(month)}.${year}</p>
@@ -90,6 +88,7 @@ export default function Book({ books }) {
 					.join(' ')}
 			</div>
 		</div>`;
-		})
-		.join(' ');
+			})
+			.join(' ')
+	);
 }

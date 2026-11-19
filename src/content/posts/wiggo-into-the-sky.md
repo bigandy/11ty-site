@@ -3,7 +3,7 @@ title: 'Wiggo into the Sky'
 date: 2009-12-10 18:35:31
 draft: false
 description: ''
-tags: ['cycling', 'Running']
+tags: ['cycling', 'running']
 author: 'Andrew'
 ---
 

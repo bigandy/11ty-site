@@ -3,7 +3,7 @@ title: 'First Training Runs with Forerunner 405'
 date: 2010-06-24 07:34:31
 draft: false
 description: ''
-tags: ['GR20', 'Running']
+tags: ['GR20', 'running']
 author: 'Andrew'
 ---
 

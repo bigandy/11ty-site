@@ -1,3 +1,5 @@
+import { getPostDate } from './utils.js';
+
 const getNumberSuffix = (num) => {
 	if (num === 11 || num === 12 || num === 13) {
 		return "th";
@@ -18,14 +20,17 @@ const getNumberSuffix = (num) => {
 };
 
 export const readableDate = (dateObj) => {
-	const [month, day, year] = dateObj.toLocaleDateString('en-gb').split('/').map(s => +s);
-			// console.log({month, day, year});
+	try {
+		const date = getPostDate(dateObj);
+		const {year, day} = date;
+		const outputDay = `${day}${getNumberSuffix(day)}`;
 
-	const date = Temporal.PlainDate.from({ year, month, day });
+		return `${outputDay} ${
+			date.toLocaleString('en-gb', { month: "long" })
+		} ${year}`;
+	} catch (error) {
+		console.error(`readableDate ERROR: ${dateObj}`, error);
+		return dateObj;
+	}
 
-	// const { day, month, year } = formatDate;
-	const outputDay = `${day}${getNumberSuffix(day)}`;
-
-	// return 'TODO';
-	return `${outputDay} ${date.toLocaleString('en-gb', { month: "long" })} ${year}`;
 };

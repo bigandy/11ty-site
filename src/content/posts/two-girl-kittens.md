@@ -3,7 +3,7 @@ title: 'Two Girl Kittens'
 date: 2012-11-28 14:14:42
 draft: false
 description: ''
-tags: ['cats', 'Aside']
+tags: ['cats', 'aside']
 author: 'Andrew'
 ---
 

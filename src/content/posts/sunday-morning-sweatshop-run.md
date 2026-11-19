@@ -3,7 +3,7 @@ title: 'Sunday Morning Sweatshop Run'
 date: 2012-12-16 16:49:23
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

@@ -22,7 +22,7 @@ import {
 } from './src/_11ty/filters/utils.js';
 
 // Components
-import Book from './src/_includes/components/book.js';
+import Book from './src/_includes/components/book/book.js';
 import PageTitle from './src/_includes/components/page-title.js';
 
 // Utils
@@ -63,7 +63,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addFilter('firstNElements', firstNElements);
 	eleventyConfig.addFilter(
 		'removeDraftsFromTagsList',
-		removeDraftsFromTagsListFilter
+		removeDraftsFromTagsListFilter,
 	);
 
 	eleventyConfig.addFilter('splitlines', splitLinesFilter);
@@ -89,9 +89,7 @@ export default async function (eleventyConfig) {
 			html: true,
 			breaks: true,
 			linkify: true,
-		}).use(markdownItAnchor, {
-
-		})
+		}).use(markdownItAnchor, {}),
 	);
 
 	eleventyConfig.on('afterBuild', () => {
@@ -109,11 +107,11 @@ export default async function (eleventyConfig) {
 								src,
 								width,
 								format,
-								options
+								options,
 							) {
 								let outputFilename = filename.substring(
 									0,
-									filename.length - 4
+									filename.length - 4,
 								);
 
 								return `${outputFilename}.${format}`;

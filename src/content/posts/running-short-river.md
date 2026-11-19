@@ -3,7 +3,7 @@ title: 'Running - Short River'
 date: 2009-12-09 21:55:55
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

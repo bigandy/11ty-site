@@ -10,7 +10,7 @@ tags:
         'css',
         'css tricks',
         'podcast',
-        'Aside',
+        'aside',
         'zeldman',
     ]
 author: 'Andrew'

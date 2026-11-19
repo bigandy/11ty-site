@@ -3,7 +3,7 @@ title: 'Along Canal Bridge [30min - 3.91miles]'
 date: 2010-02-18 20:08:08
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

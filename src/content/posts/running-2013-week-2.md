@@ -3,7 +3,7 @@ title: 'Running 2013 – Week 2'
 date: 2013-01-23 14:32:57
 draft: false
 description: ''
-tags: ['Running', 'running 2013']
+tags: ['running', 'running 2013']
 author: 'Andrew'
 ---
 

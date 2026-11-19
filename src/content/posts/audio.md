@@ -3,7 +3,7 @@ title: 'James Burke - Admiral Shovel and the Toilet Roll'
 date: 2012-09-10 16:15:29
 draft: false
 description: ''
-tags: ['audio', 'dconstruct', 'html5', 'html5 audio', 'james burke', 'Audio']
+tags: ['audio', 'dconstruct', 'html5', 'html5 audio', 'james burke']
 author: 'Andrew'
 ---
 

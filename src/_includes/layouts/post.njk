@@ -1,25 +1,22 @@
 ---
 layout: layouts/base.njk
 templateClass: tmpl-post
-themeColor: "#3454D1"
+themeColor: '#3454D1'
 ---
+
 <article>
-<h1 class="post-title">{{ title }}</h1>
+	<h1 class="post-title">{{ title }}</h1>
 
-<div class="post-inner">
-	{% if date %}
-		<p>Posted on: <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time></p>
-	{% endif %}
-
-	<div class="post-content">
-		{{ content | safe }}
+	<div class="post-inner">
+		<div class="post-content">{{ content | safe }}</div>
 	</div>
-	
-	{% include "components/taglist.njk" %}
 
-</div>
+	<div class="post-meta">
+		{% include "components/posted-on.njk" %} {% include
+		"components/taglist.njk" %}
+	</div>
 
-<p>
-	<a href="{{ '/' | url }}">← Home</a>
-</p>
+	<p>
+		<a href="{{ '/' | url }}">← Home</a>
+	</p>
 </article>

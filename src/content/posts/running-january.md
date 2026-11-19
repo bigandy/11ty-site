@@ -3,7 +3,7 @@ title: 'Running January'
 date: 2017-01-31 11:40:27
 draft: false
 description: 'Today is the final day of January and at lunch I will go for a run. I have run at least three times a week for four weeks now.'
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

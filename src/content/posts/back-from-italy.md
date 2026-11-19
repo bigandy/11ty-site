@@ -3,7 +3,7 @@ title: 'Back from Italy'
 date: 2011-07-21 20:26:38
 draft: false
 description: ''
-tags: ['aside', 'Aside']
+tags: ['aside']
 author: 'Andrew'
 ---
 

@@ -3,7 +3,7 @@ title: "I've Entered Henley Half-Marathon"
 date: 2013-08-20 13:38:09
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

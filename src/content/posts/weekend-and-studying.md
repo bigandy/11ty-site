@@ -10,7 +10,6 @@ tags:
         'coding',
         'Foals',
         'html5',
-        'HTML5',
         'JS',
         'life',
         'oxford',

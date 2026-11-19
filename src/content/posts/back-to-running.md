@@ -3,7 +3,7 @@ title: 'Back to Running!'
 date: 2011-04-18 21:13:03
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

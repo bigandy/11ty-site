@@ -21,6 +21,15 @@
 		gap: 1rem;
 	}
 
+	.warning {
+		border: 10px double red;
+		padding: 1rem;
+		margin-block: 1rem;
+		background: white;
+		color: black;
+		/*color-scheme: only normal;*/
+	}
+
 	.book {
 		background: var(--theme-color);
 		color: white;

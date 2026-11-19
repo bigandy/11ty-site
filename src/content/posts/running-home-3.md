@@ -3,7 +3,7 @@ title: 'Running Home #3 [20m40s]'
 date: 2010-02-19 17:55:21
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

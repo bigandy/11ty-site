@@ -3,7 +3,7 @@ title: 'Mid-summer'
 date: 2011-06-21 07:29:38
 draft: false
 description: ''
-tags: ['aside', 'Aside']
+tags: ['aside']
 author: 'Andrew'
 ---
 

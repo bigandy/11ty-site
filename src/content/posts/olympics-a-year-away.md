@@ -12,7 +12,7 @@ tags:
         'london 2012',
         'olympic warm-up event',
         'olympics',
-        'Aside',
+        'aside',
     ]
 author: 'Andrew'
 ---

@@ -3,7 +3,7 @@ title: 'Running - Five weeks'
 date: 2012-11-27 20:37:19
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

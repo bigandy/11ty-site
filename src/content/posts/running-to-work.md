@@ -3,7 +3,7 @@ title: 'Running to Work [20m07s - 2.69miles]'
 date: 2010-02-16 17:16:33
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

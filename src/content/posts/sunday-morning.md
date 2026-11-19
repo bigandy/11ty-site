@@ -3,7 +3,7 @@ title: 'Sunday Morning'
 date: 2010-11-28 10:28:39
 draft: false
 description: ''
-tags: ['CIW', 'HTML5', 'life', 'web-design']
+tags: ['CIW', 'html5', 'life', 'web-design']
 author: 'Andrew'
 ---
 

@@ -3,7 +3,7 @@ title: 'Running with Ale'
 date: 2012-10-31 14:22:08
 draft: false
 description: 'Last night I went running with Ale around Prospect Park. 4.5 miles in 45:58.'
-tags: ['ale', 'prospect park', 'Running', 'Running', 'training']
+tags: ['ale', 'prospect park', 'running', 'running', 'training']
 author: 'Andrew'
 ---
 

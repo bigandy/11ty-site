@@ -3,7 +3,7 @@ title: 'Cold Feet'
 date: 2012-11-05 16:49:42
 draft: false
 description: ''
-tags: ['ale', 'freezing', 'life', 'Aside', 'Running', 'winter', 'work']
+tags: ['ale', 'freezing', 'life', 'aside', 'running', 'winter', 'work']
 author: 'Andrew'
 ---
 

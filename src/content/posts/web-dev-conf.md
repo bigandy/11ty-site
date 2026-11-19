@@ -3,7 +3,7 @@ title: 'Web Dev Conf'
 date: 2011-10-20 13:06:54
 draft: false
 description: ''
-tags: ['dev', 'Aside']
+tags: ['dev', 'aside']
 author: 'Andrew'
 ---
 

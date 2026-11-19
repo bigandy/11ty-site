@@ -3,7 +3,7 @@ title: 'Gathering Festival this weekend'
 date: 2012-10-15 15:34:49
 draft: false
 description: ''
-tags: ['music', 'Aside']
+tags: ['music', 'aside']
 author: 'Andrew'
 ---
 

@@ -3,7 +3,7 @@ title: 'Going on Holiday to France'
 date: 2012-09-14 20:24:20
 draft: false
 description: ''
-tags: ['holiday', 'Aside']
+tags: ['holiday', 'aside']
 author: 'Andrew'
 ---
 

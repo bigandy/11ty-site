@@ -1,17 +1,17 @@
 <ul class="postlist">
-{% for post in postslist | reverse %}
-  <li class="postlist-item  {% if post.data.draft %}postlist-item--draft{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">
-		{% if post.data.title %}
+	{% for post in postslist | reverse %}
+	<li class="postlist-item  {% if post.data.draft %}postlist-item--draft{% endif %}">
+		<a href="{{ post.url | url }}" class="postlist-link">
+			{% if post.data.title %}
 			{{ post.data.title }}
-		{% else %}
+			{% else %}
 			<code>{{ post.url }}</code>
-		{% endif %}
-	</a>
+			{% endif %}
+		</a>
 
-	<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-	{% set tags =  post.data.tags %}
-	{% include "components/taglist.njk" %}
-  </li>
-{% endfor %}
+		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+		{% set tags =  post.data.tags %}
+		{% include "components/taglist.njk" %}
+	</li>
+	{% endfor %}
 </ul>

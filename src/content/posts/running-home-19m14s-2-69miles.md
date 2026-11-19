@@ -3,7 +3,7 @@ title: 'Running Home [19m14s - 2.69miles]'
 date: 2010-02-15 22:24:31
 draft: false
 description: ''
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

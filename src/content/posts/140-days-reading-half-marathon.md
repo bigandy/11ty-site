@@ -3,7 +3,7 @@ title: '140 days - Reading Half Marathon'
 date: 2012-10-29 07:04:36
 draft: false
 description: ''
-tags: ['Reading half marathon', 'Running', 'Running', 'training']
+tags: ['Reading half marathon', 'running', 'running', 'training']
 author: 'Andrew'
 ---
 

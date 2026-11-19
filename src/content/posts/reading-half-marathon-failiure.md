@@ -3,7 +3,7 @@ title: 'Reading Half-Marathon Failiure'
 date: 2013-03-18 11:38:56
 draft: false
 description: 'This year I didn’t run the Reading Half-Marathon. I’d signed up for it on the 30th of August last year and I totally was committed to doing it, right until the beginning of February when I changed jobs.'
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

@@ -3,7 +3,7 @@ title: 'Morning Runner'
 date: 2016-07-08 13:22:16
 draft: false
 description: 'Some people might say that there is never enough time in the day to go running. But there is always time. In the morning before everyone is up!'
-tags: ['Running']
+tags: ['running']
 author: 'Andrew'
 ---
 

@@ -1,22 +1,39 @@
 export const showDrafts = process.env.ELEVENTY_DRAFTS === 'true';
-
 // Present and past posts only
 // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
 const today = Temporal.Now.plainDateISO();
 
 export const getPostDate = postDate => {
-	const [month, day, year] = postDate.toLocaleDateString('en-gb').split('/').map(s => +s);
+	try {
+		const datePostDate = new Date(postDate);
 
-	return Temporal.PlainDate.from({ year, month, day });
+		const plainDate = Temporal.PlainDate.from({
+			year: datePostDate.getFullYear(),
+			month: datePostDate.getMonth() + 1,
+			day: datePostDate.getDate()
+		});
+
+		return plainDate;
+
+	} catch (error) {
+		console.error(`(getPostDate) ERROR: ${postDate}`, error);
+	}
+
 };
 
-export const livePostsFilter = (p) => {
-	const compare = Temporal.PlainDate.compare(
-		today,
-		getPostDate(p.date),
-	);
+export const livePostsFilter = ({date}) => {
+	try {
+		const postDate = getPostDate(date);
 
-	return compare > -1;
+		const compare = Temporal.PlainDate.compare(
+			today,
+			postDate,
+		);
+
+		return compare > -1;
+	} catch (error) {
+		console.error(`(livePostsFilter) ERROR: ${date}`, error);
+	}
 };
 
 export const showWeeknotesFilter = (post) => {
