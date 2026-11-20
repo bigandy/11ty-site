@@ -4,3 +4,5 @@
 [dev]
   browser = "none"
 
+[[plugins]]
+    package = "./plugins/books-cache"
