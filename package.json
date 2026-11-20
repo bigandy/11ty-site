@@ -1,8 +1,8 @@
 {
 	"name": "andrewhudson.dev",
-	"version": "2.0.1",
+	"version": "3.0.1",
 	"type": "module",
-	"description": "A personal blog built with Eleventy static site generator.",
+	"description": "My personal blog built with Eleventy static site generator.",
 	"scripts": {
 		"dev": "npx @11ty/eleventy --serve --quiet",
 		"start": "ELEVENTY_ENV=production npx @11ty/eleventy --serve",
