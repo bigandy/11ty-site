@@ -16,17 +16,6 @@
 		"statusBarItem.hoverBackground": "#cca300",
 		"statusBar.foreground": "#15202b"
 	},
-	"peacock.color": "#ffcc00",
-	"markdown.format.wrapAttributes": "force",
-
-	// Maximum amount of characters per line (0 = disable).
-	"markdown.format.wrapLineLength": 60,
-	"task.allowAutomaticTasks": "on",
-
-	// "editor.lineNumbers": "off",
 	"editor.folding": false,
 	"editor.glyphMargin": false,
-
-	// Set the amount of left/right padding in editor
-	"editor.lineDecorationsWidth": 25
 }
