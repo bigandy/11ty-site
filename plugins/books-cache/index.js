@@ -1,4 +1,5 @@
-// index.js
+// Thanks to https://mxb.dev/blog/persistent-build-folders-netlify/
+
 
 // Before the build runs,
 // restore a directory we cached in a previous build.
